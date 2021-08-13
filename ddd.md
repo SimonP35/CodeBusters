@@ -25,6 +25,7 @@
 |-|-|-|-|
 |id|INT|PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED|Score's ID|
 |value|TIME|NOT NULL|Remaining time|
+|user_id|INT(11)|NOT NULL|User's id related to Score|
 |created_at|TIMESTAMP|NOT NULL DEFAULT CURRENT_TIMESTAMP|Date of creation|
 
 ## Content
@@ -65,7 +66,6 @@
 |email|VARCHAR(180)|NOT NULL|User's email|
 |password|VARCHAR(255)|NOT NULL|User's password|
 |nickname|VARCHAR(255)|NOT NULL|User's nickname|
-|score_id|INT(11)|NOT NULL|Score's id related to User|
 |created_at|TIMESTAMP|NOT NULL DEFAULT CURRENT_TIMESTAMP|Date of creation|
 |updated_at|TIMESTAMP|NULL|Date of update|
 
