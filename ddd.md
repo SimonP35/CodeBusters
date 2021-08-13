@@ -55,6 +55,7 @@
 |image|VARCHAR(255)|NOT NULL|Scenario's image|
 |name|VARCHAR(32)|NOT NULL|Scenario's name|
 |slug|VARCHAR(32)|NOT NULL|Scenario's slug|
+|rating|TINYINT(1)|NULL|Scenario's rating|
 |duration|SMALLINT(6)|NOT NULL|Scenario's duration|
 |created_at|TIMESTAMP|NOT NULL DEFAULT CURRENT_TIMESTAMP|Date of creation|
 |updated_at|TIMESTAMP|NULL|Date of update|
