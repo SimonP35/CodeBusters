@@ -24,7 +24,7 @@
 |Field|Types|Spécificity|Description|
 |-|-|-|-|
 |id|INT|PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED|Score's ID|
-|value|TIME|NOT NULL|Remaining time|
+|value|TIME|NOT NULL|Duration|
 |user_id|INT(11)|NOT NULL|User's id related to Score|
 |created_at|TIMESTAMP|NOT NULL DEFAULT CURRENT_TIMESTAMP|Date of creation|
 
