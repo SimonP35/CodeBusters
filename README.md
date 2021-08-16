@@ -16,4 +16,5 @@
 - Mocodo
 - arborescence.png
 - compa_nav.md
-- maquettes
+- Maquettes
+- Wireframes
