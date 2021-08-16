@@ -16,3 +16,4 @@
 - Objects.mcd (Mocodo)
 - arborescence.png
 - compa_nav.md
+- maquettes
