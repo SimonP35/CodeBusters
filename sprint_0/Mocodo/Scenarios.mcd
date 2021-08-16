@@ -1,0 +1,19 @@
+SCENE: image, created_at, updated_at
+HAVE, 11 SCENE, NN SCENARIO
+SCENARIO: name, slug, duration, level, rating, description, image, status, created_at, updated_at
+FINISH, 1N SCENARIO, 11 END
+
+HAS, 11 OBJECT, 1N SCENE
+BOT: message, created_at, updated_at
+START, 1N SCENARIO, 11 SYNOPSIS
+END: image, description, video, created_at, updated_at
+
+OBJECT: name, image, status, description, created_at, updated_at
+IS LINK TO, 11 BOT, 0N OBJECT
+SYNOPSIS: image, description, created_at, updated_at
+USER: email, password, nickname, created_at, updated_at
+
+BELONGS TO, 11 CONTENT, 01 OBJECT
+CONTENT: image, description, answer, created_at, updated_at
+SCORE: value, created_at
+MAKE, 1N SCORE, 0N USER
