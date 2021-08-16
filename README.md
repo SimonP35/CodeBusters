@@ -8,7 +8,7 @@
 - Product Owner / Dev Back Symfony (PHP) : Simon PEJAC
 - Git Master / Dev Front End React (Javascript) : Valentin VAN WEYDEVELT
 
-## Contenu du repository : 
+## Contenu du repository :
 
 - cahier_des_charges_pres.md
 - users_stories.md
