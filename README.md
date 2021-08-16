@@ -13,7 +13,7 @@
 - cahier_des_charges_pres.md
 - users_stories.md
 - ddd.md
-- Objects.mcd (Mocodo)
+- Mocodo
 - arborescence.png
 - compa_nav.md
 - maquettes
