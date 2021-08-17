@@ -16,10 +16,11 @@ La particularité de ce projet est qu’il ne répond pas à une problématique 
 
 * Plateforme de jeux en ligne :
 
-1. Le site permet au visiteur d'avoir accès aux descriptifs (synopsis, niveau, thématique) des scénarios disponibles (1 seul scénario en V1)
+1. Le site permet au visiteur d'avoir accès aux descriptifs (synopsis, niveau, thématique, commentaires utilisateurs) des scénarios disponibles (1 seul scénario en V1)
 2. Une fonctionnalité d'authentification de l'utilisateur
 3. Un formulaire de contact et mentions légales
-4. Un scénario de jeu (réservé aux utilisateurs connectés)
+4. Les 4 scénarios les plus populaires apparaissent sur la homepage
+5. Un scénario de jeu (réservé aux utilisateurs connectés)
 
 * Jeu :
 
@@ -34,7 +35,7 @@ La particularité de ce projet est qu’il ne répond pas à une problématique 
 
 * Espace utilisateur authentifié qui donne accès à :
 
-1. Création d'un compte & profil ( nickname, email, mot de passe, récupération du mot de passe oublié )
+1. Création et modification d'un compte & profil ( nickname, email, mot de passe, récupération du mot de passe oublié )
 2. Historique des scores et classement via tableau High Scores
 3. Rating et commentaire des scénarios
 4. Accès aux scénarios de jeu
