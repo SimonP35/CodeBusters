@@ -2,37 +2,55 @@
 
 ## Présentation du projet
 
-CodeBusters est une plateforme d’escape game en ligne qui propose différents scénarios qui gravitent dans l’univers du développement web. Sur un ton décalé, le produit se veut divertissant tout autant que réaliste dans ses énigmes, le propos étant de plonger le joueur dans le milieu en l’invitant à résoudre des énigmes décalées mais instructives. 
+CodeBusters est une plateforme d’Escape Games en ligne qui gravitent dans l’univers du développement web. Sur un ton décalé, le produit se veut divertissant tout autant que réaliste dans ses énigmes, le propos étant de plonger le joueur dans le milieu en l’invitant à résoudre des énigmes décalées mais instructives. Chaque scénario est possible en multijoueurs et permet à l'utilisateur d'inviter des amis à participer à sa partie.
 
-Le principe du jeu est de terminer le parcours d’énigmes dans un temps donné maximal.  Le joueur, soumis à la pression du temps, sera invité à retenter sa chance en cas d’échec, afin d’améliorer son score. 
+Le principe du jeu est de terminer le parcours d’énigmes dans un temps donné maximal.  L'équipe de joueurs, soumise à la pression du temps, sera invitée à retenter sa chance en cas d’échec, afin d’améliorer son score.
 
-Chaque partie démarre avec une mise en contexte et le joueur est accompagné par un timer et un chatbot qui le guide dans son évolution.
+Chaque partie démarre avec une mise en contexte et l'équipe de joueurs est accompagnée par un timer et un chatbot qui la guide dans son évolution.
 
 ## Besoins
 
-La particularité de ce projet est qu’il ne répond pas à une problématique ou un manque pratique, mais vient s’inscrire dans l’univers du divertissement en ligne. Au-delà de l’aspect ludique, le produit se veut fédérateur de la communauté francophone du développement web et de manière plus élargie, des métiers du numériques grâce à sa volonté d’inscrire un aspect instructif et didactique des langages informatiques. Dans sa version bêta, le produit pourra faire découvrir au joueur quelques rudiments de code et de l’univers professionnel du développement web.
+La particularité de ce projet est qu’il ne répond pas à une problématique ou un manque pratique, mais vient s’inscrire dans l’univers du divertissement en ligne. Au-delà de l’aspect ludique, le produit se veut fédérateur de la communauté francophone du développement web et de manière plus élargie, des métiers du numériques grâce à sa volonté d’inscrire un aspect instructif et didactique des langages informatiques. Dans sa version bêta, le produit pourra faire découvrir au joueur et son équipe quelques rudiments de code et de l’univers professionnel du développement web.
 
-## Fonctionnalités
+## Fonctionnalités du MVP
 
-Le MVP de CodeBusters est une version de jeu qui comprend un seul scénario, de 5 énigmes, à réussir dans un temps imparti avec issue victorieuse ou échec et invitation à rejouer. L’utilisateur aura la possibilité de jouer en visiteur simple ou de se connecter afin d’avoir accès à l’historique de ses scores.
+* Plateforme de jeux en ligne :
 
-## MVP
+1. Le site permet au visiteur d'avoir accès aux descriptifs (synopsis, niveau, thématique, commentaires utilisateurs) des scénarios disponibles (1 seul scénario en V1)
+2. Une fonctionnalité d'authentification de l'utilisateur
+3. Un formulaire de contact et mentions légales
+4. Les 4 scénarios les plus populaires apparaissent sur la homepage
+5. Un scénario de jeu (réservé aux utilisateurs connectés)
 
-* Etape 1 : Page d’accueil avec 1 scénario de jeu proposé.
+* Jeu :
 
-* Etape 2 : Scénario accessible avec 1 énigme proposée et issue active (victoire ou échec).
+1. Salle d'attente de la partie multijoueurs avec pseudos des joueurs
+2. Plateau de jeu interactif dynamique (4 faces) partagé par les joueurs
+3. Des objets interactifs qui déclenchent des événements
+4. 5 énigmes à résoudre
+5. Une introduction animée
+6. Un Timer
+7. Un Bot de guidage
+8. Un bandeau "team" où apparaissent les nicknames des joueurs
 
-* Etape 3 : Scénario accessible avec plusieurs énigmes proposées et issue active.
+* Espace utilisateur authentifié qui donne accès à :
 
-* Etape 4 : Scénario complet avec toutes les énigmes proposées et issue active.
-
-* Etape finale : Scénario complet et authentification utilisateur proposée avec historique des scores.
-
+1. Création et modification d'un compte & profil ( nickname, email, mot de passe, récupération du mot de passe oublié )
+2. Historique des scores et classement via tableau High Scores
+3. Rating et commentaire des scénarios
+4. Accès aux scénarios de jeu
+5. Création de partie multijoueurs
+6. Invitation pour autres joueurs (création d'un slug à partager)
+7. Salle d'attente pour joueurs
+  
 ## Evolution potentielle
 
-Les évolutions potentielles sont multiples, d’un point de vue fonctionnel, comme d’un point de vue conceptuel. Il sera envisagé dans les versions suivantes d’étoffer le contenu du jeu grâce à d’autres scénarios, énigmes, et actions. L’ajout d’un inventaire est prévu, afin d’ouvrir un potentiel d’interaction du joueur et d’enrichir le panel d’énigmes. Il est également envisagé d’ajouter la fonctionnalité d’inscription/connexion afin que le joueur ait une traçabilité de ses parties, scores et puisse se positionner sur un tableau de scores. Côté expérience utilisateur, l’ajout du son (ambiance, bruitage, musique) est prévu, ainsi que des animations plus poussées.
+Les évolutions potentielles sont multiples, d’un point de vue fonctionnel, comme d’un point de vue conceptuel.
 
-A terme, le site pourra donc proposer un large choix de scénarios, répartis sur plusieurs niveaux et langages thématiques et devra envisager la traduction vers l’anglais, afin d’élargir son public. Afin de gérer au plus facilement le contenu en scénarios ainsi que les utilisateurs, il est envisagé de construire un back office avec accès administrateur.
+1. Implémentation d'un chatbot pour que les joueurs puissent communiquer
+2. Implémentation de nouveaux scénarios (niveaux, thématiques)
+3. Ajout de son pour améliorer l'immersion et l'UX
+4. Ajout de trophées pour les scores
 
 ## Cible
 
