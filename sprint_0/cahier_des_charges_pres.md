@@ -21,6 +21,7 @@ La particularité de ce projet est qu’il ne répond pas à une problématique 
 3. Un formulaire de contact et mentions légales
 4. Les 4 scénarios les plus populaires apparaissent sur la homepage
 5. Un scénario de jeu (réservé aux utilisateurs connectés)
+6. Un back office pour que les utilisateurs les utilisateurs
 
 * Jeu :
 
