@@ -24,14 +24,13 @@ La particularité de ce projet est qu’il ne répond pas à une problématique 
 
 * Jeu :
 
-1. Salle d'attente de la partie multijoueurs avec pseudos des joueurs
-2. Plateau de jeu interactif dynamique (4 faces) partagé par les joueurs
-3. Des objets interactifs qui déclenchent des événements
-4. 5 énigmes à résoudre
-5. Une introduction animée
-6. Un Timer
-7. Un Bot de guidage
-8. Un bandeau "team" où apparaissent les nicknames des joueurs
+1. Plateau de jeu interactif dynamique (4 faces) partagé par les joueurs
+2. Des objets interactifs qui déclenchent des événements
+3. 5 énigmes à résoudre
+4. Une introduction animée
+5. Un Timer
+6. Un Bot de guidage
+7. Un bandeau "team" où apparaissent les nicknames des joueurs
 
 * Espace utilisateur authentifié qui donne accès à :
 
@@ -41,7 +40,7 @@ La particularité de ce projet est qu’il ne répond pas à une problématique 
 4. Accès aux scénarios de jeu
 5. Création de partie multijoueurs
 6. Invitation pour autres joueurs (création d'un slug à partager)
-7. Salle d'attente pour joueurs
+7. Salle d'attente de la partie multijoueurs avec pseudos des joueurs
   
 ## Evolution potentielle
 
