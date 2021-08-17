@@ -11,6 +11,22 @@
 <body>
 <div id='mld'>
 <div>
+  <span class='relation'>OBJECT</span> (
+    <span class='primary'>status</span>,
+    <span class='foreign'>key</span>
+  )
+</div>
+<div>
+  <span class='relation'>COMMENT</span> (
+    <span class='foreign primary'>email</span>,
+    <span class='foreign primary'>key</span>,
+    <span class='normal'>content</span>,
+    <span class='normal'>rating</span>,
+    <span class='normal'>created_at</span>,
+    <span class='normal'>updated_at</span>
+  )
+</div>
+<div>
   <span class='relation'>USER</span> (
     <span class='primary'>email</span>,
     <span class='normal'>password</span>,
@@ -20,26 +36,11 @@
   )
 </div>
 <div>
-  <span class='relation'>COMMENT</span> (
-    <span class='foreign primary'>email</span>,
-    <span class='foreign primary'>score</span>,
-    <span class='normal'>content</span>,
-    <span class='normal'>rating</span>,
-    <span class='normal'>created_at</span>,
-    <span class='normal'>updated_at</span>
-  )
-</div>
-<div>
   <span class='relation'>GAME</span> (
-    <span class='primary'>score</span>,
+    <span class='primary'>key</span>,
+    <span class='normal'>score</span>,
     <span class='normal'>created_at</span>,
     <span class='normal'>ended_at</span>
-  )
-</div>
-<div>
-  <span class='relation'>OBJECT</span> (
-    <span class='primary'>status</span>,
-    <span class='foreign'>score</span>
   )
 </div>
 </div>
