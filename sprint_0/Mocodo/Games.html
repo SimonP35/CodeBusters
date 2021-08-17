@@ -11,9 +11,12 @@
 <body>
 <div id='mld'>
 <div>
-  <span class='relation'>OBJECT</span> (
-    <span class='primary'>status</span>,
-    <span class='foreign'>key</span>
+  <span class='relation'>USER</span> (
+    <span class='primary'>email</span>,
+    <span class='normal'>password</span>,
+    <span class='normal'>nickname</span>,
+    <span class='normal'>created_at</span>,
+    <span class='normal'>updated_at</span>
   )
 </div>
 <div>
@@ -27,20 +30,20 @@
   )
 </div>
 <div>
-  <span class='relation'>USER</span> (
-    <span class='primary'>email</span>,
-    <span class='normal'>password</span>,
-    <span class='normal'>nickname</span>,
-    <span class='normal'>created_at</span>,
-    <span class='normal'>updated_at</span>
+  <span class='relation'>ITEM</span> (
+    <span class='primary'>name</span>,
+    <span class='normal'>status</span>,
+    <span class='foreign'>key</span>
   )
 </div>
 <div>
   <span class='relation'>GAME</span> (
     <span class='primary'>key</span>,
     <span class='normal'>score</span>,
+    <span class='normal'>status</span>,
     <span class='normal'>created_at</span>,
-    <span class='normal'>ended_at</span>
+    <span class='normal'>ended_at</span>,
+    <span class='foreign'>email</span>
   )
 </div>
 </div>

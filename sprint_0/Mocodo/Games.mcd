@@ -1,7 +1,7 @@
-OBJECT: status
-COMMENT, 0N USER, 0N GAME: content, rating, created_at, updated_at
 USER: email, password, nickname, created_at, updated_at
+COMMENT, 0N USER, 0N GAME: content, rating, created_at, updated_at
+ITEM: name, status
 
-CONTAINS, 11 OBJECT, 0N GAME
-GAME: key, score, created_at, ended_at
-:
+JOIN, 0N USER, 11 GAME
+GAME: key, score, status, created_at, ended_at
+CONTAINS, 11 ITEM, 0N GAME
