@@ -3,7 +3,7 @@
 ## Général
 
 | En tant que         | Je veux                                                 | Afin de (si besoin/nécessaire)                     |
-|---------------------|---------------------------------------------------------|----------------------------------------------------|
+| ------------------- | ------------------------------------------------------- | -------------------------------------------------- |
 | visiteur            | pouvoir visualiser le sujet du site                     | mieux comprendre le sujet                          |
 | visiteur            | pouvoir visualiser les 4 jeux les plus populaires       | orienter mon choix                                 |
 | visiteur            | pouvoir cliquer sur des liens                           | naviguer sur toutes les pages                      |
@@ -23,7 +23,7 @@
 ## Durant le jeu
 
 | En tant que         | Je veux                                                       | Afin de (si besoin/nécessaire)                                                         |
-|---------------------|---------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| ------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | utilisateur         | pouvoir être en pleine écran                                  | m’immerger dans le jeu                                                                 |
 | utilisateur         | pouvoir quitter le jeu à tout moment                          | ne pas être obligé de le finir pour sortir                                             |
 | utilisateur         | pouvoir visualiser un timer                                   | connaître le temps restant                                                             |
@@ -37,8 +37,8 @@
 
 ## Admin
 
-| En tant que | Je veux                                 | Afin de (si besoin/nécessaire)                                                         |
-|-------------|-----------------------------------------|----------------------------------------------------------------------------------------|
-| Admin       | pouvoir supprimer un utilisateur        | pouvoir modérer                                                                        |
-| Admin       | pouvoir supprimer un commentaire        | pouvoir modérer                                                                        |
-| Admin       | pouvoir gérer le tableau des scores     | pouvoir modérer                                                                        |
+| En tant que | Je veux                             | Afin de (si besoin/nécessaire) |
+| ----------- | ----------------------------------- | ------------------------------ |
+| Admin       | pouvoir supprimer un utilisateur    | pouvoir modérer                |
+| Admin       | pouvoir supprimer un commentaire    | pouvoir modérer                |
+| Admin       | pouvoir gérer le tableau des scores | pouvoir modérer                |
