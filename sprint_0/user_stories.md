@@ -41,5 +41,4 @@
 |-------------|-----------------------------------------|----------------------------------------------------------------------------------------|
 | Admin       | pouvoir supprimer un utilisateur        | pouvoir modérer                                                                        |
 | Admin       | pouvoir supprimer un commentaire        | pouvoir modérer                                                                        |
-| Admin       | pouvoir changer le statut d'un scénario | le rendre accessible ou non                                                            |
 | Admin       | pouvoir gérer le tableau des scores     | pouvoir modérer                                                                        |
