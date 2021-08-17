@@ -15,10 +15,8 @@
 | utilisateur         | pouvoir modifier mon profil                             | -                                                  |
 | utilisateur         | pouvoir réinitialiser mon mot de passe suite à un oubli | - Afin de pouvoir me connecter                     |
 | utilisateur         | pouvoir visualiser mon historique de scores             | -                                                  |
-| utilisateur         | créer une partie potentiellement multijoueur            | jouer seul ou en équipe                            |
+| utilisateur         | créer une partie                                        | jouer seul                                         |
 | utilisateur         | pouvoir noter et commenter le scénario                  | partager mon avis                                  |
-| utilisateur(hôte)   | pouvoir partager un lien unique                         | donner accès à ma partie                           |
-| utilisateur(Invité) | rejoindre une partie                                    | jouer                                              |
 
 ## Durant le jeu
 
@@ -29,11 +27,7 @@
 | utilisateur         | pouvoir visualiser un timer                                   | connaître le temps restant                                                             |
 | utilisateur         | pouvoir être assister d’un bot                                | avoir des informations complémentaires ou interagir avec lui pour avancer dans le jeu. |
 | utilisateur         | pouvoir cliquer sur des objets                                | déclencher une interaction/modifications de statut d'objet                             |
-| utilisateur         | pouvoir changer de scène                                      | se déplacer sur le plateau de jeu                                                      |
-| utilisateur         | pouvoir visualiser les modifications des joueurs de la partie | avancer en même temps que les autres                                                   |
 | utilisateur         | pouvoir visualiser une page win/loose en fin de partie        | savoir si j’ai gagné ou perdu                                                          |
-| utilisateur(hôte)   | pouvoir mettre fin à la partie en tant qu'hôte                | mettre fin à la partie                                                                 |
-| utilisateur(Invité) | pouvoir quitter/rejoindre la partie en cours                  | se prémunir d'éventuels bugs de connexion                                              |
 
 ## Admin
 

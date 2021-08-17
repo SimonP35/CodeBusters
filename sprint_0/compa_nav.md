@@ -18,8 +18,10 @@
 | svg |
 | Insomnia |
 | Babel |
+| Yaml |
+| Mercure |
 
-# Compatibilité
+## Compatibilité
 
 | Technologie | Compatibilité |
 | :--------------- |:---------------:|
@@ -28,4 +30,4 @@
 | svg | Firefox 91, Safari 14.1 et Chrome 92 |
 | Ajax | Firefox 91, Safari 14.1 et Chrome 92 |
 | JavaScript ES6 | Firefox 91, Safari 14.1 et Chrome 92 |
-| React v17.0.2|  |
+| React v17.0.2 |
