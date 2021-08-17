@@ -1,0 +1,11 @@
+PLAYED, 0N USER, 0N GAME
+USER: email, password, nickname, created_at, updated_at
+POST, 11 COMMENT, 0N USER
+
+GAME: status, score, created_at, updated_at
+CONTAINS, 11 OBJECT, 0N GAME
+COMMENT: content, rating, created_at, updated_at
+
+:
+OBJECT: status
+:
