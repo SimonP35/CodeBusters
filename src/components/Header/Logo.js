@@ -1,9 +1,13 @@
 import React from 'react';
 
-import './title.scss';
+import reactLogo from './react-logo.svg';
+
+import './logo.scss';
 
 const Logo = () => (
-  <h2>LOGO</h2>
+  <div className="logo-container">
+  <img src={reactLogo} alt="react logo" />
+  </div>
 );
 
 export default Logo;
