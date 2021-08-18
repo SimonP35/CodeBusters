@@ -13,6 +13,7 @@
 | ---------- | ---------- | ----------------------------------------------- | -------------------------------------- |
 | id         | INT        | PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED | Game's ID                              |
 | status     | TINYINT(1) | NOT NULL                                        | Game's status (1= Active, 2= Inactive) |
+| scenario   | INT(11)    | NOT NULL                                        | Game's scenario                        |
 | score      | TIME       | NULL                                            | Game's score                           |
 | user_id    | INT(11)    | NOT NULL                                        | User's id                              |
 | created_at | TIMESTAMP  | NOT NULL DEFAULT CURRENT_TIMESTAMP              | Date of creation                       |

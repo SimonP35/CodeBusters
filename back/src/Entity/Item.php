@@ -27,6 +27,12 @@ class Item
      */
     private $name;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Game::class, inversedBy="items")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $game;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +58,18 @@ class Item
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getGame(): ?Game
+    {
+        return $this->game;
+    }
+
+    public function setGame(?Game $game): self
+    {
+        $this->game = $game;
 
         return $this;
     }
