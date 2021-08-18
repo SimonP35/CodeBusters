@@ -50,6 +50,11 @@ class Game
      */
     private $comments;
 
+    /**  
+     * @ORM\OneToMany(targetEntity=Item::class, mappedBy="game", orphanRemoval=true)
+     */
+    private $items;
+
     /**
      * @ORM\Column(type="smallint")
      */
@@ -58,6 +63,11 @@ class Game
     public function __construct()
     {
         $this->comments = new ArrayCollection();
+    }
+
+    public function __construct()
+    {
+        $this->items = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -113,6 +123,7 @@ class Game
         return $this;
     }
 
+<<<<<<< HEAD
     public function getUser(): ?User
     {
         return $this->user;
@@ -138,22 +149,47 @@ class Game
         if (!$this->comments->contains($comment)) {
             $this->comments[] = $comment;
             $comment->setGame($this);
+=======
+    /**
+     * @return Collection|Item[]
+     */
+    public function getItems(): Collection
+    {
+        return $this->items;
+    }
+
+    public function addItem(Item $item): self
+    {
+        if (!$this->items->contains($item)) {
+            $this->items[] = $item;
+            $item->setGame($this);
+>>>>>>> e618ccb9299276a8b5f46ec785c14541f79a57d4
         }
 
         return $this;
     }
 
+<<<<<<< HEAD
     public function removeComment(Comment $comment): self
     {
         if ($this->comments->removeElement($comment)) {
             // set the owning side to null (unless already changed)
             if ($comment->getGame() === $this) {
                 $comment->setGame(null);
+=======
+    public function removeItem(Item $item): self
+    {
+        if ($this->items->removeElement($item)) {
+            // set the owning side to null (unless already changed)
+            if ($item->getGame() === $this) {
+                $item->setGame(null);
+>>>>>>> e618ccb9299276a8b5f46ec785c14541f79a57d4
             }
         }
 
         return $this;
     }
+<<<<<<< HEAD
 
     public function getScenario(): ?int
     {
@@ -166,4 +202,6 @@ class Game
 
         return $this;
     }
+=======
+>>>>>>> e618ccb9299276a8b5f46ec785c14541f79a57d4
 }
