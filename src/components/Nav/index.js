@@ -4,7 +4,9 @@ import './nav.scss';
 
 const Nav = () => (
   <div className="nav-container">
-    <h1 className="nav-title">Coucou</h1>
+    <span className="nav-link">A propos</span>
+    <span className="nav-link">Scénarios</span>
+    <span className="nav-link">Profil</span>
   </div>
 );
 

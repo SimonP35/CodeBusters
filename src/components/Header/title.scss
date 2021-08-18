@@ -19,17 +19,18 @@
 
     .title-title {
       transition: all 0.5s;
-      -webkit-text-stroke: 2px #be1c0a;
+      -webkit-text-stroke: 2px vars.$color-title-contouring;
       font-variation-settings: "wght" 900, "ital" 1;
       font-size: 5rem;
       text-align: center;
-      color: #e01c06;
+      color: vars.$color-title-first;
       font-family: "Meta", sans-serif;
-      text-shadow: 10px 10px 0px #fa9005,
-        15px 15px 1px #f5f127,
-        20px 20px 2px #3ce408,
-        25px 25px 5px #0aeee3,
-        35px 35px 10px #060169;
+      text-shadow: 
+        10px 10px 0px vars.$color-title-two,
+        15px 15px 1px vars.$color-title-three,
+        20px 20px 2px vars.$color-title-four,
+        25px 25px 5px vars.$color-title-five,
+        35px 35px 10px vars.$color-title-last;
         text-transform:uppercase ;
         &:hover {
           font-variation-settings: "wght" 100, "ital" 0;
