@@ -3,8 +3,32 @@
 
 .nav-container {
 
+  display:flex;
+  background-color: red;
+  color: white;
+  left:auto;
+  right:auto;
+  border:none;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 5px;
+  padding: 2px;
+  width: 50vw;
+  height: 10vh;
+  border:none;
+
 .nav-link {
 
+  margin:5px;
+  padding:5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color:yellow;
+  &:hover {
+    color:white;
+  }
   
 }
 
