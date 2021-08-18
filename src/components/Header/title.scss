@@ -1,3 +1,4 @@
+@use 'src/styles/vars';
 
   @font-face {
     src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
@@ -13,22 +14,22 @@
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-    background-color: #2541DB;
     width: 100vw;
     height: 25vh;
+
     .title-title {
       transition: all 0.5s;
-      -webkit-text-stroke: 2px #02F0E0;
+      -webkit-text-stroke: 2px #be1c0a;
       font-variation-settings: "wght" 900, "ital" 1;
       font-size: 5rem;
       text-align: center;
-      color: transparent;
+      color: #e01c06;
       font-family: "Meta", sans-serif;
-      text-shadow: 10px 10px 0px #EB1E07,
-        15px 15px 0px #FC9105,
-        20px 20px 0px #FCF805,
-        25px 25px 0px #060169,
-        45px 45px 10px #060169;
+      text-shadow: 10px 10px 0px #fa9005,
+        15px 15px 1px #f5f127,
+        20px 20px 2px #3ce408,
+        25px 25px 5px #0aeee3,
+        35px 35px 10px #060169;
         text-transform:uppercase ;
         &:hover {
           font-variation-settings: "wght" 100, "ital" 0;
