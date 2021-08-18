@@ -145,8 +145,7 @@ class Game
             $this->comments[] = $comment;
             $comment->setGame($this);
         }
-
-        return $this; 
+        return $this;
     }
 
     public function removeComment(Comment $comment): self
