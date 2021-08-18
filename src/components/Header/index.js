@@ -1,7 +1,9 @@
 import React from 'react';
 
+import Title from './Title';
+
 const Header = () => (
-  <h1>Coucou</h1>
+  <Title />
 );
 
 export default Header;
