@@ -3,6 +3,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Home from 'src/components/Home';
 import About from 'src/components/About';
+import Scenarios from 'src/components/Scenarios';
 
 import NotFound from 'src/components/NotFound';
 
@@ -15,6 +16,9 @@ const Pages = () => (
     </Route>
     <Route path="/about">
       <About />
+    </Route>
+    <Route path="/scenarios">
+      <Scenarios />
     </Route>
     <Route>
       <NotFound />
