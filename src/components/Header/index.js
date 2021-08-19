@@ -1,8 +1,8 @@
 import React from 'react';
 
+import Nav from 'src/components/Nav';
 import Title from './Title';
 import Logo from './Logo';
-import Nav from 'src/components/Nav';
 
 const Header = () => (
   <header>
