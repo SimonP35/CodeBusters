@@ -25,7 +25,7 @@ class Game
     private $status;
 
     /**
-     * @ORM\Column(type="time", nullable=true)
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $score;
 

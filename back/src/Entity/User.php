@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use DateTime;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\Collection;
@@ -26,25 +27,28 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      * 
-     * @Groups("user_get")
+     * @Groups("create_user")
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("user_get")
+     * @Groups("create_user")
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("user_get")
+     * @Groups("create_user")
+     * 
+     * Minimum eight characters, at least one letter, one number and one special character.
+     * @Assert\Regex("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&-\/])[A-Za-z\d@$!%*#?&-\/]{8,}$/")
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("user_get")
+     * @Groups("create_user")
      */
     private $nickname;
 
@@ -55,7 +59,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * @ORM\Column(type="datetime")
-     * @Groups("user_get")
+     * @Groups("create_user")
      */
     private $created_at;
 

@@ -20,7 +20,7 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 class UserController extends AbstractController
 {
     /**
-     * @Route("/register", name="back_user_register", methods={"POST"})
+     * @Route("/register", name="api_user_register", methods={"POST"})
      */
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, SerializerInterface $serializer, EntityManagerInterface $entityManager, ValidatorInterface $validator): Response
     {
@@ -58,7 +58,7 @@ class UserController extends AbstractController
             Response::HTTP_CREATED,
             [],
             // Le groupe de sérialisation pour que $user soit sérialisé sans erreur de référence circulaire
-            ['groups' => 'user_get']
+            ['groups' => 'create_user']
         );
     }
 
