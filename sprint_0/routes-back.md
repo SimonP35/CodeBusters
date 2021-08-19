@@ -4,8 +4,8 @@
 
 | Routes                       | Nom de la route    | Controller  | Methodes (HTTP) | Méthode    |
 | ---------------------------- | ------------------ | ----------- | --------------- | ---------- |
-| /api/register/               | api_register       | Api\User    | POST            | register() |
-| /api/login/                  | api_login          | Api\User    | POST            | login()    |
+| /api/user/register               | api_user_register       | Api\User    | POST            | register() |
+| /api/user/login                  | api_login          | Api\User    | POST            | login()    |
 | /api/game                    | api_create_game    | Api\Game    | POST            | create()   |
 | /api/game/{id}              | api_game_end       | Api\Game    | PUT/PATCH       | update()   |
 | /api/game/{id}/item/{id}    | api_item_status    | Api\Item    | PUT/PATCH       | update()   |
