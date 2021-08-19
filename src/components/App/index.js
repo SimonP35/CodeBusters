@@ -3,7 +3,6 @@ import React from 'react';
 
 // == Import
 import Pages from 'src/components/Pages';
-
 import './styles.css';
 
 // == Composant
