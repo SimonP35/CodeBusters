@@ -27,13 +27,14 @@ class UserController extends AbstractController
         // On récupère le contenu de la requête (du JSON)
         $jsonContent = $request->getContent();
 
+        // On désérialise le JSON vers une entité User
         $user = $serializer->deserialize($jsonContent, User::class, 'json');
 
         // On hash le mot de passe
         $hashedPassword = $userPasswordHasher->hashPassword($user, $user->getPassword());
         // On le remet dans $user->password
         $user->setPassword($hashedPassword);
-
+        // On définit le rôle du user
         $user->setRoles(['ROLE_USER']);
 
         // On valide l'entité avec le service Validator
@@ -49,8 +50,7 @@ class UserController extends AbstractController
         $entityManager->persist($user);
         $entityManager->flush();
 
-        // REST nous demande un statut 201 et un header Location: url
-        // Si on le fait "à la mano"
+        // On retourne l'objet $user en JSON
         return $this->json(
             // Le user que l'on retourne en Json directement au front
             $user,
@@ -58,7 +58,6 @@ class UserController extends AbstractController
             Response::HTTP_CREATED,
             [],
             // Le groupe de sérialisation pour que $user soit sérialisé sans erreur de référence circulaire
-
             ['groups' => 'user_get']
         );
     }
@@ -77,7 +76,7 @@ class UserController extends AbstractController
     public function update(Request $request, User $user = null, UserPasswordHasherInterface $userPasswordHasher, SerializerInterface $serializer, EntityManagerInterface $entityManager, ValidatorInterface $validator): Response
     {
 
-        // User non trouvé
+        // Vérification si le user existe bien
         if ($user === null) {
             return new JsonResponse(
                 ["message" => "Cet utilisateur n'existe pas"],
@@ -92,9 +91,6 @@ class UserController extends AbstractController
         $user = $serializer->deserialize($jsonContent, User::class, 'json', [AbstractNormalizer::OBJECT_TO_POPULATE => $user]);
 
         // Hashage du mot de passe que si on a renseigné le champ mot de passe
-        // Si le mot de passe du form n'est pas vide
-        // c'est qu'on veut le changer !
-
         if (!empty($user->getPassword())) {
             // C'est là qu'on encode le mot de passe du User (qui se trouve dans $user)
             $hashedPassword = $userPasswordHasher->hashPassword($user, $user->getPassword());
@@ -114,6 +110,7 @@ class UserController extends AbstractController
         // On flush (enregistrement en BDD)
         $entityManager->flush();
 
+        // On retourne en JsonResponse vu qu'il n'y a pas d'objet
         return new JsonResponse(["message" => "Utilisateur modifié"], Response::HTTP_OK);
     }
 
@@ -122,12 +119,6 @@ class UserController extends AbstractController
      */
     public function delete(User $user = null, EntityManagerInterface $em)
     {
-        // if ($this->isCsrfTokenValid('delete'.$user->getId(), $request->request->get('_token'))) {
-        //     $entityManager = $this->getDoctrine()->getManager();
-        //     $entityManager->remove($user);
-        //     $entityManager->flush();
-        // }
-
         // On vérifie que le USER existe bien
         if (null === $user) {
 
