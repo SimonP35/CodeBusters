@@ -6669,6 +6669,11 @@ react-redux@^7.2.4:
     prop-types "^15.7.2"
     react-is "^16.13.1"
 
+react-rooter@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/react-rooter/-/react-rooter-0.1.2.tgz#810f5f74026b55980b2d80aa6fc933fb3d838804"
+  integrity sha512-s84j2TYHNL5ugkRTi4LSK/6Pfszw0sgDp6rLA5yuR4JwiHZ3RqoZnoG9MzMOzjFjSCy2UEF+HM1+sR28mnJCtg==
+
 react-router-dom@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-5.2.0.tgz#9e65a4d0c45e13289e66c7b17c7e175d0ea15662"
