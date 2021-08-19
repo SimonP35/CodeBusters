@@ -2,8 +2,9 @@
 
 namespace App\Entity;
 
-use App\Repository\ItemRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ItemRepository;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=ItemRepository::class)
@@ -14,16 +15,19 @@ class Item
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"new_game"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="smallint")
+     * @Groups({"new_game"})
      */
     private $status;
 
     /**
      * @ORM\Column(type="string", length=64)
+     * @Groups({"new_game"})
      */
     private $name;
 

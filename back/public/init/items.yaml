@@ -1,0 +1,27 @@
+computer:
+  _x: 10px
+  _y: 50px
+  picture: "img/computer.png"
+  status: 0
+  type: clickable
+
+poster:
+  _x: 25px
+  _y: 78px
+  picture: "img/poster.png"
+  status: 1
+  type: clickable
+
+terminal:
+  _x: 78px
+  _y: 12px
+  picture: "img/terminal.png"
+  status: 0
+  type: clickable
+
+book:
+  _x: 22px
+  _y: 99px
+  picture: "img/book.png"
+  status: 0
+  type: clickable

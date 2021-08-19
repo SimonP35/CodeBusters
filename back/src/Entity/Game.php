@@ -2,13 +2,16 @@
 
 namespace App\Entity;
 
-use App\Repository\GameRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\GameRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=GameRepository::class)
+ * @ORM\HasLifecycleCallbacks()
  */
 class Game
 {
@@ -16,6 +19,7 @@ class Game
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"new_game"})
      */
     private $id;
 
@@ -25,7 +29,7 @@ class Game
     private $status;
 
     /**
-     * @ORM\Column(type="time", nullable=true)
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $score;
 
@@ -35,7 +39,7 @@ class Game
     private $created_at;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $ended_at;
 
@@ -52,6 +56,7 @@ class Game
 
     /**  
      * @ORM\OneToMany(targetEntity=Item::class, mappedBy="game", orphanRemoval=true)
+     * @Groups({"new_game"})
      */
     private $items;
 
@@ -83,12 +88,12 @@ class Game
         return $this;
     }
 
-    public function getScore(): ?\DateTimeInterface
+    public function getScore(): ?int
     {
         return $this->score;
     }
 
-    public function setScore(?\DateTimeInterface $score): self
+    public function setScore(?int $score): self
     {
         $this->score = $score;
 
@@ -99,10 +104,15 @@ class Game
     {
         return $this->created_at;
     }
-
-    public function setCreatedAt(\DateTimeInterface $created_at): self
+    
+    /**
+     * Set column 'created_at'
+     * @ORM\PrePersist     
+     * @return  self
+     */ 
+    public function setCreatedAt(): self
     {
-        $this->created_at = $created_at;
+        $this->created_at = new DateTime();
 
         return $this;
     }
@@ -112,9 +122,14 @@ class Game
         return $this->ended_at;
     }
 
-    public function setEndedAt(\DateTimeInterface $ended_at): self
+    /**
+     * Set column 'ended_at'
+     * @ORM\PreUpdate  
+     * @return  self
+     */ 
+    public function setEndedAt(): self
     {
-        $this->ended_at = $ended_at;
+        $this->ended_at = new DateTime();
 
         return $this;
     }
