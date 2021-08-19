@@ -3,20 +3,15 @@
 
 .nav-container {
 
-  display:flex;
-  background-color: red;
-  color: white;
-  left:auto;
-  right:auto;
-  border:none;
-  box-sizing: border-box;
+  display:inline-flex;
+  // background-color: red;
+  border-bottom:0.5px solid white;
   align-items: center;
   justify-content: space-evenly;
   margin: 5px;
   padding: 2px;
-  width: 50vw;
+  width: 500px;
   height: 10vh;
-  border:none;
 
 .nav-link {
 
@@ -25,9 +20,12 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: bolder;
-  color:yellow;
+  color:vars.$color-nav-link;
   &:hover {
-    color:white;
+    color:vars.$color-nav-link-hover;
+    transition: vars.$transition-slow;
+    transform: scale(1.1);
+    cursor:pointer;
   }
   
 }
