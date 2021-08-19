@@ -15,6 +15,7 @@ const Home = () => (
     <main className="home-main">
       <div className="home-banniere">
         <img className="home-banniere-img" src={games} alt="banniere-img" />
+        <p className="home-banniere-text">CodeBusters le supergénérator d'escape game qui se moquent justement ce qu'on est entrain de vivre. Aka tartiner le viewport de colle avant d'y coller plein de paillettes.</p>
       </div>
       <div className="popular-scenarios-container">
         {scenarios.map((scenario) => (

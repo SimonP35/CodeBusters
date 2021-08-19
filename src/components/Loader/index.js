@@ -6,7 +6,7 @@ import './loader.scss';
 
 // == Composant
 const Loader = () => (
-  <div className="loader" />
+  <span className="loader"><span className="loader-inner" /></span>
 );
 
 // == Export
