@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from 'src/components/Header';
+import Footer from 'src/components/Footer';
+import Popup from 'src/components/Popup';
 
 import games from 'src/assets/images/games.png';
 import utils from 'src/utils';
@@ -11,6 +13,7 @@ console.log(scenarios);
 const Home = () => (
   <>
     <Header />
+    <Popup />
     <main className="home-main">
       <div className="home-banniere">
         <img className="home-banniere-img" src={games} alt="banniere-img" />
@@ -23,6 +26,7 @@ const Home = () => (
         ))}
       </div>
     </main>
+    <Footer />
   </>
 );
 
