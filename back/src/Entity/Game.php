@@ -3,8 +3,9 @@
 namespace App\Entity;
 
 use DateTime;
-use Doctrine\ORM\Mapping as ORM;
 use App\Repository\GameRepository;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Serializer\Annotation\Groups;
@@ -19,17 +20,20 @@ class Game
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups({"new_game"})
+     * @Groups({"new_game", "game_end","new_comment"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="smallint")
+     * @Groups({"new_game", "game_end"})
      */
     private $status;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
+     * @Groups({"new_game", "game_end"})
+     * @Assert\Positive
      */
     private $score;
 
@@ -46,6 +50,7 @@ class Game
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="games")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"new_game", "game_end"})
      */
     private $user;
 

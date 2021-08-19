@@ -4,8 +4,8 @@ namespace App\Entity;
 
 use DateTime;
 use Symfony\Component\Validator\Constraints as Assert;
-use Doctrine\ORM\Mapping as ORM;
 use App\Repository\UserRepository;
+use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Serializer\Annotation\Groups;
@@ -26,8 +26,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * 
-     * @Groups("create_user")
+     * @Groups({"create_user", "game_end","new_comment"})
      */
     private $id;
 
@@ -48,7 +47,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("create_user")
+     * @Groups({"create_user", "game_end", "new_game","new_comment"})
      */
     private $nickname;
 

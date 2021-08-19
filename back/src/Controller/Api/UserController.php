@@ -75,7 +75,6 @@ class UserController extends AbstractController
      */
     public function update(Request $request, User $user = null, UserPasswordHasherInterface $userPasswordHasher, SerializerInterface $serializer, EntityManagerInterface $entityManager, ValidatorInterface $validator): Response
     {
-
         // Vérification si le user existe bien
         if ($user === null) {
             return new JsonResponse(
