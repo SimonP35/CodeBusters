@@ -1,23 +1,37 @@
 @use 'src/styles/vars';
 
-.footer {
-  position: relative;
+.footer-container {
+  display:inline-flex;
   top: 53vh;
-  width: 100%;
+  width: 500px;
   height: 10vh;
-  padding-top: 28px;
-  text-transform: uppercase;
-  font-weight: bolder;
-  border: none;
   box-sizing: border-box;
   align-items: center;
   justify-content: space-evenly;
-  background-color: red;
-  color: yellow;
+  position: absolute;
+  left:38%;
+  right:auto;
+  top:90%;
+  bottom:auto;
+  // background-color: red;
+
+  .footer-link {
+
+  text-transform: uppercase;
+  color:vars.$color-nav-link;
+  &:hover {
+    color:vars.$color-nav-link-hover;
+    transition: vars.$transition-slow;
+    transform: scale(1.1);
+    cursor:pointer;
+  }
+  }
   
-  .footer-date, .footer-link {
-    margin: 15px;
-    padding: 15px;
+  .footer-date {
+
+    text-transform: uppercase;
+    font-weight: bolder;
+    color:vars.$color-nav-link;
   }
 
   

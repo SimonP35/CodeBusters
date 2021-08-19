@@ -12,6 +12,11 @@
   padding: 2px;
   width: 500px;
   height: 10vh;
+  position:absolute;
+  top:15%;
+  left:38%;
+  right:auto;
+  bottom:auto;
   font-family: 'Barlow', sans-serif;
 
 .nav-link {
@@ -20,7 +25,6 @@
   padding:5px;
   text-align: center;
   text-transform: uppercase;
-  font-weight: bolder;
   color:vars.$color-nav-link;
   &:hover {
     color:vars.$color-nav-link-hover;

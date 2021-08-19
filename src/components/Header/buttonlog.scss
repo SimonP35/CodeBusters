@@ -1,6 +1,6 @@
 @use 'src/styles/vars';
 
-.popup-container {
+.log-container {
 
 background-color:vars.$color-popup-background;
 color: vars.$color-popup-text;
@@ -18,7 +18,7 @@ border:none;
 font-family: 'Barlow', sans-serif;
 
 
-  .popup-button {
+  .log-button {
 
 background-color: vars.$color-button-background;
 color: vars.$color-button-text;
