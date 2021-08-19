@@ -65,6 +65,5 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.1.1",
     "redux-devtools-extension": "^2.13.9"
-
   }
 }
