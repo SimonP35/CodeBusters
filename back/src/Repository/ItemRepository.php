@@ -47,4 +47,26 @@ class ItemRepository extends ServiceEntityRepository
         ;
     }
     */
+    // public function findItemByGameId(int $gameId): ?array
+    // {
+    //     $entityManager = $this->getEntityManager();
+
+    //     $query = $entityManager->createQuery(
+    //         'SELECT *
+    //         FROM App\Entity\Item
+    //         WHERE game_id = :id'
+    //     )->setParameter('id', $gameId);
+
+    //     return $query->getResult();
+    // }
+
+    public function findItemByGameId($id)
+    {
+        return $this->createQueryBuilder('i')
+            ->andWhere('i.game = :id')
+            ->setParameter('id', $id)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 }
