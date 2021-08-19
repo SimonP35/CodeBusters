@@ -6,7 +6,7 @@ import './logo.scss';
 
 const Logo = () => (
   <div className="logo-container">
-    <img src={reactLogo} alt="react logo" />
+    <img src={reactLogo} alt="codebusters logo" />
   </div>
 );
 
