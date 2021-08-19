@@ -3,11 +3,8 @@
 namespace App\Controller\Api;
 
 use DateTime;
-use DateInterval;
 use App\Entity\Game;
 use App\Entity\Item;
-use App\Entity\Comment;
-use App\Form\CommentType;
 use Symfony\Component\Yaml\Yaml;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -30,19 +27,11 @@ class GameController extends AbstractController
     {
         $items = Yaml::parseFile('init/items.yaml');
 
-        // dd($items);
-
         $jsonContent = $request->getContent();
-
-        // dd($jsonContent);
 
         $user = json_decode($jsonContent, true);
 
-        // dd($userId);
-
         $user = $ur->find($user);
-
-        // dd($user);
 
         $game = new Game();
 
@@ -50,8 +39,6 @@ class GameController extends AbstractController
         ->setStatus(1)
         ->setUser($user)
         ->setScenario(1);
-
-        // dd($game);
 
         foreach($items as $key => $item) {
 
@@ -69,8 +56,6 @@ class GameController extends AbstractController
         $em->persist($game);
         $em->flush();
 
-        // dd($game);
-        
         return $this->json(['items' => $items, 'game' => $game], Response::HTTP_CREATED, [], ['groups' => 'new_game']);
     }
 
@@ -79,25 +64,15 @@ class GameController extends AbstractController
      */
     public function update(Game $game, Request $request, SerializerInterface $serializer, EntityManagerInterface $em, ValidatorInterface $vi, UserRepository $ur): Response
     {
-        // $jsonContent = $request->getContent();
-
-        // $score = json_decode($jsonContent, true);
-
         $game->setEndedAt(new DateTime());
 
         $end = $game->getEndedAt();
-
-        // dd($end);
         
         $score = $end->getTimestamp() - ($game->getCreatedAt())->getTimestamp();
-
-        // dd($score); 
 
         $game
         ->setStatus(0)
         ->setScore($score);
-
-        // dd($game);
 
         foreach($game->getItems() as $item) {
 
@@ -107,8 +82,6 @@ class GameController extends AbstractController
         $em->persist($game);
         $em->flush();
 
-        // dd($game);
-
-        return $this->json(['score' => $items, 'game' => $game], Response::HTTP_CREATED, [], ['groups' => 'new_game']);
+        return $this->json(['game' => $game], Response::HTTP_CREATED, [], ['groups' => 'new_game']);
     }
 }
