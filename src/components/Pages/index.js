@@ -1,12 +1,19 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Home from 'src/components/Home';
+import NotFound from 'src/components/NotFound';
+
 import './pages.scss';
 
 const Pages = () => (
-  <Route path="/" exact>
-    <Home />
-  </Route>
+  <Switch>
+    <Route path="/" exact>
+      <Home />
+    </Route>
+    <Route>
+      <NotFound />
+    </Route>
+  </Switch>
 );
 
 export default Pages;
