@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from 'src/components/Header';
+
 import games from 'src/assets/images/games.png';
 import utils from 'src/utils';
+
 import './home.scss';
 
 const scenarios = utils[0].fourMostPopularScenarios;
