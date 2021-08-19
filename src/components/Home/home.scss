@@ -1,0 +1,32 @@
+
+.home-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .home-banniere {
+    width: 100%;
+    height: 20%;
+    .home-banniere-img {
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .popular-scenarios-container {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    .popular-scenarios-scenario{
+      width: 5em;
+      height: 8em;
+     .popular-scenarios-scenario-image{
+       width: 100%;
+       
+     }
+    }
+  }
+}
+
