@@ -69,6 +69,8 @@ class GameController extends AbstractController
         $em->persist($game);
         $em->flush();
 
+        // dd($game);
+        
         return $this->json(['items' => $items, 'game' => $game], Response::HTTP_CREATED, [], ['groups' => 'new_game']);
     }
 
@@ -87,15 +89,15 @@ class GameController extends AbstractController
 
         // dd($end);
         
-        $score = $end->diff($game->getCreatedAt());
+        $score = $end->getTimestamp() - ($game->getCreatedAt())->getTimestamp();
 
-        // dd($score);
+        // dd($score); 
 
         $game
         ->setStatus(0)
         ->setScore($score);
 
-        dd($game);
+        // dd($game);
 
         foreach($game->getItems() as $item) {
 
@@ -105,8 +107,8 @@ class GameController extends AbstractController
         $em->persist($game);
         $em->flush();
 
-        dd($game);
+        // dd($game);
 
-        return $this->json(['items' => $items, 'game' => $game], Response::HTTP_CREATED, [], ['groups' => 'new_game']);
+        return $this->json(['score' => $items, 'game' => $game], Response::HTTP_CREATED, [], ['groups' => 'new_game']);
     }
 }

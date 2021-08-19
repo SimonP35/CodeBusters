@@ -29,7 +29,7 @@ class Game
     private $status;
 
     /**
-     * @ORM\Column(type="time", nullable=true)
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $score;
 
@@ -56,6 +56,7 @@ class Game
 
     /**  
      * @ORM\OneToMany(targetEntity=Item::class, mappedBy="game", orphanRemoval=true)
+     * @Groups({"new_game"})
      */
     private $items;
 
@@ -87,12 +88,12 @@ class Game
         return $this;
     }
 
-    public function getScore()
+    public function getScore(): ?int
     {
         return $this->score;
     }
 
-    public function setScore($score): self
+    public function setScore(?int $score): self
     {
         $this->score = $score;
 

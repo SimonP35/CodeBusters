@@ -14,7 +14,7 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
- * @Route("/api/game/{slug}/comment")
+ * @Route("/api/comment")
  */
 class CommentController extends AbstractController
 {
