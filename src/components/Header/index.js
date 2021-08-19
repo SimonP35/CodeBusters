@@ -1,9 +1,13 @@
 import React from 'react';
 
 import Title from './Title';
+import Logo from './Logo';
 
 const Header = () => (
-  <Title />
+  <>
+    <Title />
+    <Logo />
+  </>
 );
 
 export default Header;
