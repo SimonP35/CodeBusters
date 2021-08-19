@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-
 import './nav.scss';
 
 const Nav = () => (
@@ -27,7 +26,6 @@ const Nav = () => (
       to="/scenarios"
       className="nav-link"
       activeClassName="nav-link-active"
-
     >
       Scénarios
     </NavLink>
@@ -42,15 +40,4 @@ const Nav = () => (
   </nav>
 );
 
-// Nav.propTypes =
-
 export default Nav;
-
-// const Nav = () => (
-//   <div className="nav-container">
-//     <span className="nav-link">Accueil</span>
-//     <span className="nav-link">A propos</span>
-//     <span className="nav-link">Scénarios</span>
-//     <span className="nav-link">Profil</span>
-//   </div>
-// );
