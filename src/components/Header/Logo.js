@@ -1,12 +1,12 @@
 import React from 'react';
 
-import reactLogo from './react-logo.svg';
+import logo from 'src/assets/images/logocb.svg';
 
 import './logo.scss';
 
 const Logo = () => (
   <div className="logo-container">
-    <img src={reactLogo} alt="codebusters logo" />
+    <img className="logo-logo" src={logo} alt="codebusters logo" />
   </div>
 );
 

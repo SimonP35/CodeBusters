@@ -4,9 +4,9 @@ import './footer.scss';
 
 // == Composant
 const Footer = () => (
-  <footer className="footer">
+  <footer className="footer-container">
     <span className="footer-date">2021</span>
-    <span className="footer-link">Contacts</span>
+    <span className="footer-link">Contact</span>
     <span className="footer-link">Mentions légales</span>
   </footer>
 );
