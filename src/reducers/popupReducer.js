@@ -1,4 +1,4 @@
-import { CHANGE_FIELD } from 'src/actions/popup';
+import { TOGGLE_DISPLAY_POPUP_SIGNIN } from 'src/actions/buttonLog';
 
 const initialState = {
   displayLogin: false,
@@ -9,10 +9,10 @@ const initialState = {
 
 const popupReducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case CHANGE_FIELD:
+    case TOGGLE_DISPLAY_POPUP_SIGNIN:
       return {
         ...state,
-        [action.name]: action.newValue,
+        displaySignin: !state.displaySignin,
       };
     // case SAVE_USER_DATA:
     //   return {

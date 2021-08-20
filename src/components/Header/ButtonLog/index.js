@@ -3,15 +3,7 @@ import PropTypes from 'prop-types';
 
 import './buttonlog.scss';
 
-const displayLoginForm = () => {
-  console.log('click sur login');
-};
-
-const displaySigninForm = () => {
-  console.log('click sur signin');
-};
-
-const ButtonLog = ({ isLogged }) => (
+const ButtonLog = ({ isLogged, toggleDisplay }) => (
   <div className="log-container">
     {/* affichage des boutons inscription et connexion seulement si islogged vaut false */}
     {
@@ -20,14 +12,14 @@ const ButtonLog = ({ isLogged }) => (
       <>
         <button
           type="button"
-          onClick={displaySigninForm}
+          // onClick={toggleDisplay()}
           className="log-button"
           id="signin"
         >Inscription
         </button>
         <button
           type="button"
-          onClick={displayLoginForm}
+          // onClick={toggleDisplay('displayLogin')}
           className="log-button"
           id="login"
         >Connexion
@@ -40,6 +32,7 @@ const ButtonLog = ({ isLogged }) => (
 
 ButtonLog.propTypes = {
   isLogged: PropTypes.bool.isRequired,
+  toggleDisplay: PropTypes.func.isRequired,
 };
 
 export default ButtonLog;
