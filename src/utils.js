@@ -21,4 +21,20 @@ export default [
       },
     ],
   },
+  {
+    users: [
+      {
+        id: 1,
+        pseudo: 'jojo',
+        email: 'jojo@gmail.com',
+        password: 'coucou',
+      },
+      {
+        id: 2,
+        pseudo: 'bibi',
+        email: 'bibi@gmail.com',
+        password: 'hello',
+      },
+    ],
+  },
 ];

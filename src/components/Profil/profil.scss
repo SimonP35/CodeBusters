@@ -1,0 +1,13 @@
+.profil-main{
+  display: flex;
+  justify-content: center;
+  .profil-container{
+    background-color: white;
+    margin-top: 1em;
+    width: 50%;
+    .profil-title {
+      font-size: 2em;
+    }
+  }
+}
+
