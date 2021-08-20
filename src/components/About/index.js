@@ -1,5 +1,5 @@
 import React from 'react';
-import Ano from 'src/assets/img/ano.svg';
+import Ano from 'src/assets/images/ano.svg';
 
 import './about.scss';
 
