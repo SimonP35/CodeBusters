@@ -26,11 +26,17 @@ const About = () => (
       {people.map((fivep) => (
         <div className="about-profil" key={fivep.id}>
           <article className="about-profil-article" >
-            <img src={fivep.image} alt="profil" />
+            <img src={fivep.image[0]} alt="" />
             <h4 className="about-profil-name">{fivep.name}</h4>
-            <Link className="about-profil-link" to="/">twitter</Link>
-            <Link className="about-profil-link" to="/">linkedin</Link>
-            <Link className="about-profil-link" to="/">git</Link>
+            <Link className="about-profil-link" to="/">
+              <img src={fivep.image[1]} alt="" />
+            </Link>
+            <Link className="about-profil-link" to="/">
+              <img src={fivep.image[2]} alt="" />
+            </Link>
+            <Link className="about-profil-link" to="/">
+              <img src={fivep.image[3]} alt="" />
+            </Link>
           </article>
         </div>
       ))}
