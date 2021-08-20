@@ -4,15 +4,13 @@ import './login.scss';
 
 const Login = () => (
   <div className="login-container">
-    <form className="login-form">Formulaire</form>
+    <form className="login-form">
+      Formulaire de login
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input className="login-button" type="submit" />
+    </form>
   </div>
 );
 
 export default Login;
-
-// COMPOSANT POP UP : 
-
-// D'abord mettre event onclick sur les boutons du header
-// Commencer par construire le formulaire d'inscription
-// Ensuite l'adapter au formulaire de connexion
-// Mettre en place l'affichage conditionnel via un bouton onclick dans le header

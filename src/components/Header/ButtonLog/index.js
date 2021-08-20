@@ -36,3 +36,9 @@ const ButtonLog = ({}) => (
 // };
 
 export default ButtonLog;
+
+// export displayLoginForm;
+
+// export displaySigninForm;
+
+// SILOGGED : si istrue, on enlève le bouton d'inscription.
