@@ -1,7 +1,0 @@
-USER: email, password, nickname, created_at, updated_at
-COMMENT, 0N USER, 0N GAME: content, rating, created_at, updated_at
-ITEM: name, status
-
-JOIN, 0N USER, 11 GAME
-GAME: key, score, status, created_at, ended_at
-CONTAINS, 11 ITEM, 0N GAME
