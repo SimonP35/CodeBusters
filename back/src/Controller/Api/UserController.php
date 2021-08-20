@@ -27,6 +27,8 @@ class UserController extends AbstractController
         // On récupère le contenu de la requête (du JSON)
         $jsonContent = $request->getContent();
 
+        $user = new User();
+
         // On désérialise le JSON vers une entité User
         $user = $serializer->deserialize($jsonContent, User::class, 'json');
 
@@ -86,7 +88,7 @@ class UserController extends AbstractController
         // On récupère le contenu de la requête (du JSON)
         $jsonContent = $request->getContent();
 
-        // On désérialise le JSON vers une entité User
+        // On désérialise le JSON vers une entité User déjà existante
         $user = $serializer->deserialize($jsonContent, User::class, 'json', [AbstractNormalizer::OBJECT_TO_POPULATE => $user]);
 
         // Hashage du mot de passe que si on a renseigné le champ mot de passe

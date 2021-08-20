@@ -30,7 +30,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups({"create_user", "game_end","new_comment"})
+     * @Groups({"create_user", "game_end","new_comment", "read_user"})
      */
     private $id;
 
@@ -49,12 +49,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @Assert\Regex("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&-\/])[A-Za-z\d@$!%*#?&-\/]{8,}$/")
      */
     private $password;
-
-    /**
-     *
-     * @Assert\EqualTo(propertyPath="password", message="Vous n'avez pas tapé le même mot de passe")
-     */
-    public $confirm_password;
 
     /**
      * @ORM\Column(type="string", length=255)

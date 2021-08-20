@@ -26,7 +26,7 @@ class SecurityController extends AbstractController
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        return $this->render(//! chemin de la view à rendre, ['last_username' => $lastUsername, 'error' => $error]);
+        // return $this->render(//! chemin de la view à rendre, ['last_username' => $lastUsername, 'error' => $error]);
     }
 
     /**
