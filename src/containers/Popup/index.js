@@ -14,7 +14,7 @@ const mapStateToProps = (state) => ({
 
 // === mapDispatchToProps
 // si j'ai besoin de dispatcher des actions vers le store (mettre à jour le state)
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = () => ({
   // nom de la prop à remplir: fonction qui dispatch l'action
 });
 

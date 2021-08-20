@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './buttonlog.scss';
 
-const ButtonLog = ({ isLogged, toggleDisplay }) => (
+const ButtonLog = ({ isLogged, toggleDisplaySignin, toggleDisplayLogin }) => (
   <div className="log-container">
     {/* affichage des boutons inscription et connexion seulement si islogged vaut false */}
     {
@@ -12,14 +12,18 @@ const ButtonLog = ({ isLogged, toggleDisplay }) => (
       <>
         <button
           type="button"
-          // onClick={toggleDisplay()}
+          onClick={() => {
+            toggleDisplaySignin();
+          }}
           className="log-button"
           id="signin"
         >Inscription
         </button>
         <button
           type="button"
-          // onClick={toggleDisplay('displayLogin')}
+          onClick={() => {
+            toggleDisplayLogin();
+          }}
           className="log-button"
           id="login"
         >Connexion
@@ -32,13 +36,8 @@ const ButtonLog = ({ isLogged, toggleDisplay }) => (
 
 ButtonLog.propTypes = {
   isLogged: PropTypes.bool.isRequired,
-  toggleDisplay: PropTypes.func.isRequired,
+  toggleDisplaySignin: PropTypes.func.isRequired,
+  toggleDisplayLogin: PropTypes.func.isRequired,
 };
 
 export default ButtonLog;
-
-// export displayLoginForm;
-
-// export displaySigninForm;
-
-// SILOGGED : si istrue, on enlève le bouton d'inscription.
