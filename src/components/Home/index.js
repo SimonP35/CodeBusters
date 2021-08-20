@@ -7,11 +7,10 @@ import utils from 'src/utils';
 import './home.scss';
 
 const scenarios = utils[0].fourMostPopularScenarios;
-console.log(scenarios);
+// console.log(scenarios);
 const Home = () => (
   <>
     <Header />
-    <Popup />
     <main className="home-main">
       <div className="home-banniere">
         <img className="home-banniere-img" src={games} alt="banniere-img" />

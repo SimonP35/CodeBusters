@@ -1,9 +1,9 @@
 import React from 'react';
 
 import Nav from 'src/components/Nav';
+import ButtonLog from 'src/components/Header/ButtonLog';
 import Title from './Title';
 import Logo from './Logo';
-import ButtonLog from './ButtonLog';
 
 const Header = () => (
   <header className="header-container">
