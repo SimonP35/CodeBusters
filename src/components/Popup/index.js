@@ -1,6 +1,5 @@
 import React from 'react';
-
-import displayLoginForm from 'src/components/ButtonLog/index.js';
+import PropTypes from 'prop-types';
 
 import Login from './Login';
 import Signin from './Signin';
@@ -9,13 +8,25 @@ import Comment from './Comment';
 
 import './popup.scss';
 
-const Popup = () => (
-  <div className="popup-container">
-    {(displayLoginForm) && <Login />}
-    <Signin />
-    <Mobile />
-    <Comment />
-  </div>
+const Popup = ({
+  displayLogin,
+  displaySignin,
+  displayComment,
+  displayMobil,
+}) => (
+  <>
+    {displayLogin && <Login />}
+    {displaySignin && <Signin />}
+    {displayMobil && <Mobile />}
+    {displayComment && <Comment />}
+  </>
 );
+
+Popup.propTypes = {
+  displayLogin: PropTypes.bool.isRequired,
+  displaySignin: PropTypes.bool.isRequired,
+  displayComment: PropTypes.bool.isRequired,
+  displayMobil: PropTypes.bool.isRequired,
+};
 
 export default Popup;

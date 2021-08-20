@@ -6,7 +6,10 @@ import Popup from 'src/components/Popup';
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
 const mapStateToProps = (state) => ({
-  
+  displayLogin: state.popup.displayLogin,
+  displaySignin: state.popup.displaySignin,
+  displayComment: state.popup.displayComment,
+  displayMobil: state.popup.displayMobil,
 });
 
 // === mapDispatchToProps

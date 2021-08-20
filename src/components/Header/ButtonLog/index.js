@@ -13,6 +13,7 @@ const displaySigninForm = () => {
 
 const ButtonLog = ({ isLogged }) => (
   <div className="log-container">
+    {/* affichage des boutons inscription et connexion seulement si islogged vaut false */}
     {
     !isLogged
     && (
