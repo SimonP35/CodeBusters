@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Comment List{% endblock %}
+
+{% block body %}
+
+<div class="container mb-auto">
+	<div class="row d-flex">
+		<div class="col-11"><h1>Liste des Commentaires</h1></div>
+		<div class="col-1 d-flex align-items-center"><a href="{{ path('back_comment_create') }}" class="btn btn-success">Ajouter</a></div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Content</th>
+                <th>Rating</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for comment in comments %}
+            <tr>
+                <td>{{ comment.id }}</td>
+                <td>{{ comment.content|u.truncate(40, '...') }}</td>
+                <td>{{ comment.rating }}</td>
+                <form action="{{ path('back_comment_update', {id: comment.id}) }}" method="get">
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                            <button type="submit" class="btn btn-success edit"><i class="far fa-edit"></i></i></button>
+                        </div>
+                    </td>
+                </form>
+                <form action="{{ path('back_comment_delete', {id: comment.id}) }}" method="post">
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                            <button type="submit" class="btn btn-danger delete"><i class="far fa-trash-alt"></i></button>
+                        </div>
+                    </td>
+                </form>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">Aucun commentaire trouvé :'(</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
