@@ -2,6 +2,7 @@
 
 ## Back
 
+
 | Routes                      | Nom de la route    | Controller   | Methodes (HTTP) | Méthode    |
 |-----------------------------|--------------------|--------------|-----------------|------------|
 | /api/user/register          | api_user_register  | Api\User     | POST            | register() |

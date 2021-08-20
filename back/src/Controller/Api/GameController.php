@@ -73,7 +73,7 @@ class GameController extends AbstractController
     /**
      * @Route("/update/{id<\d+>}", name="api_game_update", methods={"PUT","PATCH"})
      */
-    public function update(Game $game, Request $request, SerializerInterface $serializer, EntityManagerInterface $em, ValidatorInterface $vi, UserRepository $ur): Response
+    public function update(Game $game, EntityManagerInterface $em, ValidatorInterface $vi): Response
     {
         // Vérification si la game existe bien
         if (null === $game) {
@@ -85,9 +85,10 @@ class GameController extends AbstractController
         
         $game->setEndedAt(new DateTime());
 
+        $start = $game->getCreatedAt();
         $end = $game->getEndedAt();
         
-        $score = $end->getTimestamp() - ($game->getCreatedAt())->getTimestamp();
+        $score = $end->getTimestamp() - $start->getTimestamp();
 
         $game
         ->setStatus(0)

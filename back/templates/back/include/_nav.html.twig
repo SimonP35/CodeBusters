@@ -1,0 +1,21 @@
+<nav class="dark navbar-dark bg-light container-fluid py-3">
+	<div class="row">
+		<div class="col-6">
+			<ul class="nav nav-pills ms-3">
+				<li class="nav-item">
+					<a class="nav-link text-muted {% block User %}{% endblock %}" href="{{ path('back_user_list') }}">Users</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-muted {% block Comment %}{% endblock %}" href="{{ path('back_comment_list') }}">Comments</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-6 d-flex flex-row-reverse">
+			<ul class="nav nav-pills">
+				<li class="nav-item">
+					{# <p>Email : {{ app.user.email }} // {% for role in app.user.roles %} Role : {{ role }}{% endfor %}</p>		 #}
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
