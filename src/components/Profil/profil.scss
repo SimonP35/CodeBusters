@@ -1,8 +1,13 @@
-.scenarios-main{
+.profil-main{
   display: flex;
   justify-content: center;
-  .scenarios-container {
+  .profil-container{
     background-color: white;
     margin-top: 1em;
+    width: 50%;
+    .profil-title {
+      font-size: 2em;
+    }
   }
 }
+
