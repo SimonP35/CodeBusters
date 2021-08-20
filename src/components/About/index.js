@@ -25,17 +25,18 @@ const About = () => (
       </section>
       {people.map((fivep) => (
         <div className="about-profil" key={fivep.id}>
-          <article className="about-profil-article" >
-            <img src={fivep.image[0]} alt="" />
+          <article className="about-profil-article">
+            <img className="about-profil-image" src={fivep.image[0]} alt="" />
             <h4 className="about-profil-name">{fivep.name}</h4>
+            <h5 className="about-profil-describe">{fivep.describe}</h5>
             <Link className="about-profil-link" to="/">
-              <img src={fivep.image[1]} alt="" />
+              <img className="about-profil-image" src={fivep.image[1]} alt="" />
             </Link>
             <Link className="about-profil-link" to="/">
-              <img src={fivep.image[2]} alt="" />
+              <img className="about-profil-image" src={fivep.image[2]} alt="" />
             </Link>
             <Link className="about-profil-link" to="/">
-              <img src={fivep.image[3]} alt="" />
+              <img className="about-profil-image" src={fivep.image[3]} alt="" />
             </Link>
           </article>
         </div>

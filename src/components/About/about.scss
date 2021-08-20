@@ -1,20 +1,37 @@
 .about-container {
-color: white;
+  display: flex-inline;
   .about-text {
-    
-    background-color: red;
-
+    background-color: white;
+    color: red;
+  }
+  .about-profil-image {
+    height: 30px;
+    width: 30px;
+    //padding: 5px;
+    //margin: 5px;
   }
   .about-profil {
+    
+    margin: 0;
+    padding: auto;
+    width: 100%;
+    height: 15%;
     .about-profil-article {
-      img, p {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        margin: 50px;
+     
+      .about-profil-name {
+        
+
+      }
+
+      .about-profil-describe {
+
+
+      }
+      
+      .about-profil-link {
+
+
       }
     }
-    
   }
-  
 }
