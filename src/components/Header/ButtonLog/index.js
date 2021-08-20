@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import './buttonlog.scss';
 
@@ -11,29 +11,35 @@ const displaySigninForm = () => {
   console.log('click sur signin');
 };
 
-const ButtonLog = ({}) => (
+const ButtonLog = ({ isLogged }) => (
   <div className="log-container">
-    <button
-      type="button"
-      onClick={displaySigninForm}
-      className="log-button"
-      id="signin"
-    >Inscription
-    </button>
-    <button
-      type="button"
-      onClick={displayLoginForm}
-      className="log-button"
-      id="login"
-    >Connexion
-    </button>
+    {
+    !isLogged
+    && (
+      <>
+        <button
+          type="button"
+          onClick={displaySigninForm}
+          className="log-button"
+          id="signin"
+        >Inscription
+        </button>
+        <button
+          type="button"
+          onClick={displayLoginForm}
+          className="log-button"
+          id="login"
+        >Connexion
+        </button>
+      </>
+    )
+    }
   </div>
 );
 
-// ButtonLog.propTypes = {
-//   displaySigninForm: PropTypes.func.isRequired,
-//   displayLoginForm: PropTypes.func.isRequired,
-// };
+ButtonLog.propTypes = {
+  isLogged: PropTypes.bool.isRequired,
+};
 
 export default ButtonLog;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Nav from 'src/components/Nav';
-import ButtonLog from 'src/components/Header/ButtonLog';
+import ButtonLog from 'src/containers/ButtonLog';
 import Title from './Title';
 import Logo from './Logo';
 
