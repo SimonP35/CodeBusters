@@ -4,7 +4,7 @@ import './noticeConstact.scss';
 
 // == Composant
 const LegalNoticeContact = () => (
-  <div className="notice">
+  <div className="notice-container">
     
   </div>
 );
