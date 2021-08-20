@@ -23,7 +23,7 @@
         {% for comment in comments %}
             <tr>
                 <td>{{ comment.id }}</td>
-                <td>{{ comment.content }}</td>
+                <td>{{ comment.content|u.truncate(40, '...') }}</td>
                 <td>{{ comment.rating }}</td>
                 <form action="{{ path('back_comment_update', {id: comment.id}) }}" method="get">
                     <td>
