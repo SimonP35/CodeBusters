@@ -12,6 +12,7 @@ export default Login;
 
 // COMPOSANT POP UP : 
 
+// D'abord mettre event onclick sur les boutons du header
 // Commencer par construire le formulaire d'inscription
 // Ensuite l'adapter au formulaire de connexion
 // Mettre en place l'affichage conditionnel via un bouton onclick dans le header

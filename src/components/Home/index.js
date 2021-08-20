@@ -8,7 +8,7 @@ import utils from 'src/utils';
 import './home.scss';
 
 const scenarios = utils[0].fourMostPopularScenarios;
-console.log(scenarios);
+// console.log(scenarios);
 const Home = () => (
   <>
     <Header />
