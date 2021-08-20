@@ -22,6 +22,10 @@ class Item
     /**
      * @ORM\Column(type="smallint")
      * @Groups({"new_game"})
+     * @Assert\NotBlank
+     * @Assert\Type("int") 
+     * @Assert\Length(max = 1)
+     * @Assert\Choice({0, 1}) 
      */
     private $status;
 

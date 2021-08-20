@@ -5,6 +5,8 @@ namespace App\Controller\Api;
 use App\Entity\Comment;
 use App\Form\CommentType;
 use App\Repository\CommentRepository;
+use App\Repository\GameRepository;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -31,29 +33,34 @@ class CommentController extends AbstractController
     /**
      * @Route("/create", name="api_comment_create", methods="POST")
      */
-    public function create(Request $request, SerializerInterface $serializer, EntityManagerInterface $em, ValidatorInterface $vi): Response
+    public function create(Request $request, SerializerInterface $serializer, GameRepository $gr, UserRepository $ur, EntityManagerInterface $em, ValidatorInterface $vi): Response
     {
         $jsonContent = $request->getContent();
 
         $comment = $serializer->deserialize($jsonContent, Comment::class, 'json');
+        
+        $commentArray = json_decode($jsonContent, true);
 
+        $user = $ur->find($commentArray['user']);
+        $game = $gr->find($commentArray['game']);
+
+        // On valide l'entité avec le service Validator
         $errors = $vi->validate($comment);
 
-        $newErrors = [];
-
-        foreach ($errors as $i => $error) {
-            $newErrors[$i] = [$error->getPropertyPath(), $error->getMessage()];
-        }
-
+        // Si la validation rencontre des erreurs
+        // ($errors se comporte comme un tableau et contient un élément par erreur)
         if (count($errors) > 0) {
-
-            return $this->json(['newErrors' => $newErrors], Response::HTTP_UNPROCESSABLE_ENTITY);
+            return $this->json(['errors' => $errors], Response::HTTP_UNPROCESSABLE_ENTITY);
         }
-    
-        $em->persist($comment);
+
+        $comment->setGame($game);
+        $comment->setUser($user);
+
+        // On persist, on flush
+        $em->persist($comment);        
         $em->flush();
 
-        return $this->json(['comment' => $comment], Response::HTTP_CREATED, ['Location' => $this->generateUrl( 'api_comment_list', [ 'id' => $comment->getId()] )]);
+        return $this->json(['comment' => $comment], Response::HTTP_CREATED, [], ['groups' => 'new_comment']);
     }
 
     /**
