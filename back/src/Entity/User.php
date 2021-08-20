@@ -33,6 +33,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups("create_user")
+     * @Assert\NotBlank
+     * @Assert\Email
      */
     private $email;
 
@@ -42,12 +44,15 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * 
      * Minimum eight characters, at least one letter, one number and one special character.
      * @Assert\Regex("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&-\/])[A-Za-z\d@$!%*#?&-\/]{8,}$/")
+     * @Assert\NotCompromisedPassword
+     * @Assert\NotBlank
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups({"create_user", "game_end", "new_game","new_comment"})
+     * @Assert\NotBlank
      */
     private $nickname;
 

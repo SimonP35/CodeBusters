@@ -132,7 +132,7 @@ class AppFixtures extends Fixture
 
             $comment
             ->setContent($faker->paragraph(5))
-            ->setRating(mt_rand(0, 5))
+            ->setRating(mt_rand(1, 5))
             ->setUser($usersList[array_rand($usersList)])
             ->setGame($gamesList[array_rand($gamesList)]);
 
