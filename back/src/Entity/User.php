@@ -17,8 +17,12 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * 
  * @ORM\HasLifecycleCallbacks()
- * @UniqueEntity("email")
- * @UniqueEntity("nickname")
+ * @UniqueEntity(
+ * fields={"email"},
+ * message="L'email que vous avez indiqué est déjà utilisé !")
+ * @UniqueEntity(
+ * fields={"nickname"},
+ * message="Le pseudo que vous avez indiqué est déjà utilisé ! Désolé :/")
  */
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -32,6 +36,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email()
      * @Groups("create_user")
      */
     private $email;
@@ -40,10 +45,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\Column(type="string", length=255)
      * @Groups("create_user")
      * 
-     * Minimum eight characters, at least one letter, one number and one special character.
+     * Minimum 8 charactères, une majuscule, un chiffre et un caractère spécial.
      * @Assert\Regex("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&-\/])[A-Za-z\d@$!%*#?&-\/]{8,}$/")
      */
     private $password;
+
+    /**
+     *
+     * @Assert\EqualTo(propertyPath="password", message="Vous n'avez pas tapé le même mot de passe")
+     */
+    public $confirm_password;
 
     /**
      * @ORM\Column(type="string", length=255)
