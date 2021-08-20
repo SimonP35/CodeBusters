@@ -1,5 +1,5 @@
 import React from 'react';
-import Ano from 'src/assets/img/ano.svg';
+import Ano from 'src/assets/images/ano.svg';
 
 import './about.scss';
 
@@ -53,9 +53,9 @@ const About = () => (
       <article className="about-profil-article">
         <img src={Ano} alt="" />
         <p>Elena Scrum Master</p>
-          <img src={Ano} alt="" />
-          <img src={Ano} alt="" />
-          <img src={Ano} alt="" />
+        <img src={Ano} alt="" />
+        <img src={Ano} alt="" />
+        <img src={Ano} alt="" />
       </article>
     </div>
   </div>

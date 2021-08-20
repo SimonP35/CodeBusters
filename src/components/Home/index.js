@@ -12,7 +12,6 @@ console.log(scenarios);
 const Home = () => (
   <>
     <Header />
-    <Popup />
     <main className="home-main">
       <div className="home-banniere">
         <img className="home-banniere-img" src={games} alt="banniere-img" />

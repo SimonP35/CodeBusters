@@ -5,7 +5,8 @@ import Signin from './signin';
 
 import './popup.scss';
 
-//  Ce composant apparait en haut à droite de la home page et les popup login / signin apparaissent via conditions
+//  Ce composant apparait en haut à droite de la home
+// page et les popup login / signin apparaissent via conditions
 
 const Popup = () => (
   <div className="popup-container">
