@@ -1,7 +1,7 @@
 
 // MAIN PROJET COLORS
 
-$color-background:#0d0455;
+$color-background:#07032b;
 
 $color-text-main:white;
 $color-text-title:white;
@@ -10,11 +10,11 @@ $color-text-content:white;
 $color-nav-link:yellow;
 $color-nav-link-hover:white;
 
-$color-popup-background:#0d0455;
+$color-popup-background:#07032b;
 $color-popup-text:yellow;
 $color-popup-shadow:black;
 
-$color-button-background:#0d0455;
+$color-button-background:#07032b;
 $color-button-text:yellow;
 
 // TITLE COLORS
@@ -35,3 +35,15 @@ $transition-slow: 1s;
 // SPACING
 
 //  PROJET FONT SIZES
+
+// MIXIN
+
+// DIV COMMUNE POPUP
+
+@mixin popup {
+
+  
+}
+
+// FOND ESPACE
+

@@ -2,12 +2,12 @@
 @use 'src/styles/vars';
 
 .home-main{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  // background-color: red;
-  box-sizing: border-box;
-      position:absolute;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   // background-color: red;
+   box-sizing: border-box;
+   position:absolute;
     left:20%;
     top:28%;
     right:auto;
