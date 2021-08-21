@@ -1,6 +1,12 @@
 @use 'src/styles/vars';
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
 
 .login-container {
   background-color:vars.$color-popup-background;
@@ -12,18 +18,17 @@
   position:absolute;
   left:80%;
   top:5%;
-  border-radius: 10% 10% 0 0;
-  border-bottom: 15px solid vars.$color-title-five ;  
+  border-radius: 10%;
+  border-bottom: 25px solid vars.$color-title-five ;  
   right:auto;
   bottom:auto;
-  font-family: 'Quicksand', sans-serif;
-
 
   .login-container-logged {
     border:none;
   }
 
 // Element correspond à un champ de field
+
   .login-element{
   border:none;
   color:black;
@@ -33,8 +38,10 @@
   // Bouton de connexion / déconnexion
 .login-button-ok, .login-button-off {
   border:none;
-  color:black;
-  // background-color:red;
+  color: black;
+  font-variation-settings: "wght" 900;
+  font-family: "Meta";
+  background-color: #11ffee00;
 }
 
 // Lorsque l'utilisateur est connecté

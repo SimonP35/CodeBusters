@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
 import Login from 'src/components/Popup/Login';
 // import Loader from 'src/components/Loader';
 import games from 'src/assets/images/games.png';
@@ -12,7 +10,6 @@ const scenarios = utils[0].fourMostPopularScenarios;
 // console.log(scenarios);
 const Home = () => (
   <>
-    <Header />
     <div className="home-page">
       <main className="home-main">
         <div className="home-banniere">
@@ -31,7 +28,6 @@ const Home = () => (
     </div>
     <Login />
     {/* <Loader /> */}
-    <Footer />
   </>
 );
 
