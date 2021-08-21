@@ -2,23 +2,20 @@
 
 .footer-container {
   display:inline-flex;
-  top: 53vh;
   width: 500px;
-  height: 10vh;
+  height: 100px;
   box-sizing: border-box;
-  align-items: center;
-  justify-content: space-evenly;
+  align-items: flex-end;
+  justify-content: center;
   position: absolute;
   left:38%;
-  right:auto;
-  top:95%;
+  right:0;
+  top:100%;
   bottom:auto;
   // background-color: red;
 
   .footer-link {
-
-  text-transform: uppercase;
-  color:vars.$color-nav-link;
+  color:white;
   &:hover {
     color:vars.$color-nav-link-hover;
     transition: vars.$transition-slow;
@@ -28,10 +25,8 @@
   }
   
   .footer-date {
-
-    text-transform: uppercase;
-    font-weight: bolder;
-    color:vars.$color-nav-link;
+    padding-right:10px;
+    color:white;
   }
 
   
