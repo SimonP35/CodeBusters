@@ -1,40 +1,37 @@
 
 @use 'src/styles/vars';
 
+
 .home-main{
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    justify-content: center;
-   // background-color: red;
+   background-color: vars.$color-popup-background;
    box-sizing: border-box;
    position:absolute;
-    left:20%;
+    left:33%;
     top:28%;
     right:auto;
     bottom:auto;
-    width: 1200px;
-    height: 550px;
+    width: 700px;
+    height: 800px;
+    padding:10px;
+    margin:2px;
   .home-banniere {
     margin-top:20px;
     margin-right:10px;
-    width: 300px;
+    width: 600px;
     height: 300px;
     .home-banniere-img {
       background-size: cover;
-      width: 100%;
-      height: 100%;
-    }
-    .home-banniere-text {
-      background-color: black;
-      color:white;
-      padding:5px;
-      width: 300px;
+      width: 500px;
       height: 200px;
     }
+
   }
   .popular-scenarios-container {
     width: 500px;
-    height: 500px;
+    height: 800px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -42,6 +39,8 @@
     background-color: yellow;
     margin-top:20px;
     padding-top:10px;
+    box-sizing: border-box;
+
     .popular-scenarios-scenario {
       width: 200px;
       height: 100px;
@@ -55,6 +54,8 @@
        border:none;
        padding:5px;
        margin-top:2px;
+       box-sizing: border-box;
+
      }
     }
   }

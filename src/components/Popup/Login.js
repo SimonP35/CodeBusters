@@ -27,7 +27,7 @@ const Login = ({
           </p>
           <button
             type="button"
-            className="login-button"
+            className="login-button-off"
             onClick={handleLogout}
           >
             Déconnexion
@@ -52,9 +52,9 @@ const Login = ({
           />
           <button
             type="submit"
-            className="login-form-button"
+            className="login-button-ok"
           >
-            OK
+            HOP !
           </button>
         </form>
       )}
@@ -82,11 +82,3 @@ Login.defaultProps = {
 };
 
 export default Login;
-
-      // <h4 className="login-field">Nom</h4>
-      // <input type="text" name="name" placeholder="nom" />
-      // <h4>Adresse email</h4>
-      // <input type="email" name="email" placeholder="email" />
-      // <h4>Mot de passe</h4>
-      // <input type="password" name="password" placeholder="mot de passe" />
-      // <input className="login-button" type="submit" />

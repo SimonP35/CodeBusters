@@ -16,14 +16,14 @@
 
   .input {
     padding: 0.8rem;
-    border-radius: 5px;
     width: 100%;
     border: 2px solid black;
     font-size: 1.2em;
+    border:none;
     
     
     &:focus {
-      border-color: #f0f;
+      border-color:red;
       & + .label {
         color: #f0f;
       }
