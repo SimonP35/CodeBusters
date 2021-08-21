@@ -17,7 +17,7 @@
   // background-color: red;
 
   .footer-link {
-  color:white;
+  color:yellow;
   &:hover {
     color:vars.$color-nav-link-hover;
     transition: vars.$transition-slow;
@@ -28,7 +28,7 @@
   
   .footer-date {
     padding-right:10px;
-    color:white;
+    color:yellow;
   }
 
   
