@@ -1,7 +1,7 @@
 
 // MAIN PROJET COLORS
 
-$color-background:#07032b;
+$color-background: #0d0557;
 
 $color-text-main:white;
 $color-text-title:white;
@@ -10,7 +10,7 @@ $color-text-content:white;
 $color-nav-link:yellow;
 $color-nav-link-hover:white;
 
-$color-popup-background:rgb(232, 229, 229);
+$color-popup-background:rgb(255, 227, 227);
 $color-popup-text:yellow;
 $color-popup-shadow:black;
 
@@ -35,22 +35,6 @@ $transition-slow: 1s;
 // MIXIN TEMPLAGE PAGE
 
 // MIXIN TEMPLATE POPUP
-
-@mixin popup {
-  background-color:vars.$color-popup-background;
-  color:black;
-  padding:5px;
-  width: 200px;
-  height: 200px;
-  border:none;
-  position:absolute;
-  left:80%;
-  top:5%;
-  border-radius: 10% 10% 0 0;
-  border-bottom: 20px solid vars.$color-title-five ;  
-  right:auto;
-  bottom:auto;
-}
 
 // FOND ESPACE
 

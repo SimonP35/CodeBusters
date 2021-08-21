@@ -4,9 +4,13 @@
 
 body {
   display:flex;
-  background: vars.$color-background ;
+  // background-color:vars.$color-background;  
+  // overflow: hidden;
+  background: linear-gradient(to right, #020949, #0a06c9);
   margin:0;
   max-width: 100;
   font-family: 'Quicksand', sans-serif;
 
+
 }
+

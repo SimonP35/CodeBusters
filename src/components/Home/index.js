@@ -19,7 +19,7 @@ const Home = () => (
           {scenarios.map((scenario) => (
             <div className="popular-scenarios-scenario" key={scenario.id}>
               <img className="popular-scenarios-scenario-image" src={scenario.image} alt="scenario-img" />
-              <p className="popular-scenarios-scenario-text">Viens donc te gâcher le week-end à débugger le code dégueulasse de tonton Maurice !
+              <p className="popular-scenarios-scenario-text">SCENARIO X. Viens donc te gâcher le week-end à débugger le code dégueulasse de tonton Maurice !
               </p>
             </div>
           ))}

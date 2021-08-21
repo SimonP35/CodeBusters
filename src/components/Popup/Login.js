@@ -21,6 +21,7 @@ const Login = ({
   return (
     <>
       <div className="login-container">
+        <a className="popup-button-close" href="">+</a>
         {isLogged && (
           <div className="login-container-logged">
             <p className="login-container-message">
