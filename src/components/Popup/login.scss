@@ -1,4 +1,6 @@
 @use 'src/styles/vars';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 
 .login-container {
   background-color:vars.$color-popup-background;
@@ -10,33 +12,35 @@
   position:absolute;
   left:80%;
   top:5%;
+  border-radius: 10% 10% 0 0;
+  border-bottom: 15px solid vars.$color-title-five ;  
   right:auto;
   bottom:auto;
+  font-family: 'Quicksand', sans-serif;
+
 
   .login-container-logged {
     border:none;
-
   }
 
 // Element correspond à un champ de field
   .login-element{
-
-    border:none;
-    // background-color:red;
-
+  border:none;
+  color:black;
+  // background-color:red;
   }
 
   // Bouton de connexion / déconnexion
-
 .login-button-ok, .login-button-off {
   border:none;
   color:black;
+  // background-color:red;
 }
 
 // Lorsque l'utilisateur est connecté
-
 .login-container-message {
   border:none;
-
+  color:black;
+  // background-color:red;
 }
 }

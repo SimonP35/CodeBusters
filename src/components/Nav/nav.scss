@@ -1,4 +1,5 @@
 @use 'src/styles/vars';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 
 .nav-container {
@@ -17,7 +18,7 @@
   left:38%;
   right:auto;
   bottom:auto;
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 
 .nav-link {
 

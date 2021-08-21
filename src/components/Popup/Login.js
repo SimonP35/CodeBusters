@@ -19,46 +19,49 @@ const Login = ({
   };
 
   return (
-    <div className="login-container">
-      {isLogged && (
-        <div className="login-container-logged">
-          <p className="login-container-message">
-            {loggedMessage}
-          </p>
-          <button
-            type="button"
-            className="login-button-off"
-            onClick={handleLogout}
-          >
-            Déconnexion
-          </button>
-        </div>
-      )}
-      {!isLogged && (
+    <>
+      <div className="login-container">
+        {isLogged && (
+          <div className="login-container-logged">
+            <p className="login-container-message">
+              {loggedMessage}
+            </p>
+            <button
+              type="button"
+              className="login-button-off"
+              onClick={handleLogout}
+            >
+              Déconnexion
+            </button>
+          </div>
+        )}
+        {!isLogged && (
 
-        <form autoComplete="off" className="login-element" onSubmit={handleSubmit}>
-          <Field
-            name="email"
-            placeholder="Adresse Email"
-            manageChange={changeField}
-            value={email}
-          />
-          <Field
-            name="password"
-            type="password"
-            placeholder="Mot de passe"
-            manageChange={changeField}
-            value={password}
-          />
-          <button
-            type="submit"
-            className="login-button-ok"
-          >
-            HOP !
-          </button>
-        </form>
-      )}
-    </div>
+          <form autoComplete="off" className="login-element" onSubmit={handleSubmit}>
+            <Field
+              name="email"
+              placeholder="Adresse Email"
+              manageChange={changeField}
+              value={email}
+            />
+            <Field
+              name="password"
+              type="password"
+              placeholder="Mot de passe"
+              manageChange={changeField}
+              value={password}
+            />
+            <button
+              type="submit"
+              className="login-button-ok"
+            >
+              HOP !
+            </button>
+          </form>
+        )}
+      </div>
+      <div className="login-container-bottom" />
+    </>
   );
 };
 
