@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 // on importe le composant de présentation
 import Popup from 'src/components/Popup';
-import { toggleDisplayPopupSignin } from 'src/actions/buttonLog';
+import { toggleDisplayPopupSignin, toggleDisplayPopupLogin } from 'src/actions/buttonLog';
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
 const mapStateToProps = (state) => ({
@@ -17,6 +17,9 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   toggleDisplaySignin: () => {
     dispatch(toggleDisplayPopupSignin());
+  },
+  toggleDisplayLogin: () => {
+    dispatch(toggleDisplayPopupLogin());
   },
 });
 
