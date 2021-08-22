@@ -2,7 +2,7 @@ import React from 'react';
 // import Loader from 'src/components/Loader';
 import games from 'src/assets/images/games.png';
 import utils from 'src/utils';
-import Signin from 'src/components/Popup/Signin';
+import Comment from 'src/components/Popup/Comment';
 
 import './home.scss';
 
@@ -26,7 +26,7 @@ const Home = () => (
         </div>
       </main>
     </div>
-    <Signin />
+    <Comment />
     {/* <Loader /> */}
   </>
 );

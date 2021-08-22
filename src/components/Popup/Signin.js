@@ -66,4 +66,5 @@ const Signin = ({
 //   changeField: PropTypes.func.isRequired,
 //   handleLogin: PropTypes.func.isRequired,
 // };
+
 export default Signin;
