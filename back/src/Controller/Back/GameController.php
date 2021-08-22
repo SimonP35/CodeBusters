@@ -13,16 +13,6 @@ use Symfony\Component\Routing\Annotation\Route;
 class GameController extends AbstractController
 {
     /**
-     * @Route("/", name="back_game_list", methods={"GET"})
-     */
-    public function list(GameRepository $gr): Response
-    {
-        return $this->render('back/game/list.html.twig', [
-            'games' => $gr->findAll(),
-        ]);
-    }
-
-    /**
      * @Route("/score", name="back_score_list", methods={"GET"})
      */
     public function score(GameRepository $gr): Response

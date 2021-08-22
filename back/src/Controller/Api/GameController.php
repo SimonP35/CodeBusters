@@ -118,7 +118,7 @@ class GameController extends AbstractController
     /**
      * @Route("/score", name="api_game_score", methods={"GET"})
      */
-    public function list(GameRepository $gr): Response
+    public function score(GameRepository $gr): Response
     {
         return $this->json(['games' => $gr->findOrderByScore()], Response::HTTP_OK);
     }
