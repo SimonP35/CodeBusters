@@ -23,7 +23,6 @@
   // border-top: 5px solid vars.$color-title-four ;  
   // border-left: 5px solid vars.$color-title-first ;  
   border-right: 5px solid vars.$color-title-last ;  
-
   right:auto;
   bottom:auto;
 
@@ -32,7 +31,6 @@
   }
 
 // Element correspond à un champ de field
-
   .login-element{
   border:none;
   color:black;
@@ -48,6 +46,7 @@
   background-color: #11ffee00;
 }
 
+
 // Lorsque l'utilisateur est connecté
 .login-container-message {
   border:none;
@@ -55,17 +54,15 @@
   // background-color:red;
 }
 
-// Bouton fermant
-
+// Bouton fermant (à ajouter sur le formulaire inscription, pas besoin sur mobile, ni sur commentaire, ni sur celui-ci)
 .popup-button-close {
-
   transition: all 0.5s ease;
   position: absolute;
   background-color: vars.$color-background;
   padding: 1.5px 7px;
   left: 50%;
-  margin-left: -10px;
-  margin-top: -9px;
+  margin-left: 35px;
+  margin-top: -15px;
   border-radius: 50%;
   border: 2px solid vars.$color-popup-background;
   color: vars.$color-popup-background;
