@@ -1,4 +1,4 @@
-import { CHANGE_FIELD } from 'src/actions/popup';
+import { CHANGE_FIELD } from 'src/actions/auth';
 
 const initialState = {
   email: '',
@@ -14,12 +14,6 @@ function authReducer(state = initialState, action = {}) {
         ...state,
         [action.name]: action.newValue,
       };
-    // case SAVE_USER_DATA:
-    //   return {
-    //     ...state,
-    //     isLogged: action.isLogged,
-    //     token: action.token,
-    //   };
     default:
       return state;
   //   case CLICK_ON_LOGOUT:

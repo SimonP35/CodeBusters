@@ -17,6 +17,7 @@ const Popup = ({
   toggleDisplayLogin,
   changeField,
   email,
+  password,
 }) => (
   <>
     {displayLogin && (
@@ -24,6 +25,7 @@ const Popup = ({
       toggleDisplayLogin={toggleDisplayLogin}
       changeField={changeField}
       email={email}
+      password={password}
     />
     )}
     {displaySignin && (
@@ -47,6 +49,7 @@ Popup.propTypes = {
   toggleDisplayLogin: PropTypes.func.isRequired,
   changeField: PropTypes.func.isRequired,
   email: PropTypes.string.isRequired,
+  password: PropTypes.string.isRequired,
 };
 
 export default Popup;

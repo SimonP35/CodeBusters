@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 // on importe le composant de présentation
 import Popup from 'src/components/Popup';
 import { toggleDisplayPopupSignin, toggleDisplayPopupLogin } from 'src/actions/buttonLog';
-import { changeField } from 'src/actions/popup';
+import { changeField, submitLogin } from 'src/actions/auth';
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
 const mapStateToProps = (state) => ({
@@ -12,6 +12,7 @@ const mapStateToProps = (state) => ({
   displayComment: state.popup.displayComment,
   displayMobil: state.popup.displayMobil,
   email: state.auth.email,
+  password: state.auth.password,
 });
 
 // === mapDispatchToProps
@@ -25,6 +26,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   changeField: (newValue, identifier) => {
     dispatch(changeField(newValue, identifier));
+  },
+  submitLogin: () => {
+    dispatch(submitLogin());
   },
 });
 
