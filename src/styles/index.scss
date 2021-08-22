@@ -4,7 +4,7 @@
 
 // MEDIA QUERIES : 
 
-// MOBILE DEVICE
+// MOBILE / TAB DEVICE
 
 @media (min-width:600px) {
 
@@ -26,15 +26,9 @@
   .mobile-container {
   
     background-color:vars.$color-popup-background;
-    padding:5px;
-    width: 200px;
-    height: 300px;
+    width: 400px;;
+    height: 600px;
     position:absolute;
-    margin :auto;
-    top:auto;
-    bottom:auto;
-    left:auto;
-    right:auto;
     box-sizing: border-box;
     border-bottom: 10px solid vars.$color-title-two ;
     border-top: 10px solid vars.$color-title-four ;  
@@ -45,6 +39,7 @@
     justify-content: center;
     align-items: center;
     z-index:2;
+    backdrop-filter: blur(100px);
   
   .mobile-title {
     font-family: "Meta";
@@ -88,7 +83,7 @@
 
   background-color:vars.$color-popup-background;
   padding:5px;
-  width: 400px;
+  width: 500px;
   height: 500px;
   position:absolute;
   top:auto;
@@ -101,11 +96,13 @@
   border-top: 20px solid vars.$color-title-four ;  
   border-left: 20px solid vars.$color-title-first ;  
   border-right: 20px solid vars.$color-title-last ;  
-  display:none;
+  display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 2;
+  backdrop-filter: blur(500px);
+
 
 .mobile-title {
   font-family: "Meta";

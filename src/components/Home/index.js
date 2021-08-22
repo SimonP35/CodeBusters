@@ -1,8 +1,8 @@
 import React from 'react';
+import ButtonLog from 'src/components/Header/ButtonLog';
 // import Loader from 'src/components/Loader';
 import games from 'src/assets/images/games.png';
 import utils from 'src/utils';
-import Comment from 'src/components/Popup/Comment';
 
 import './home.scss';
 
@@ -10,6 +10,7 @@ const scenarios = utils[0].fourMostPopularScenarios;
 // console.log(scenarios);
 const Home = () => (
   <>
+    <ButtonLog />
     <div className="home-page">
       <main className="home-main">
         <div className="home-banniere">
@@ -26,7 +27,6 @@ const Home = () => (
         </div>
       </main>
     </div>
-    <Comment />
     {/* <Loader /> */}
   </>
 );
