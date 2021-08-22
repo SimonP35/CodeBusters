@@ -47,4 +47,28 @@ class GameRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function findOrderByScore(){
+
+        $em = $this->getEntityManager();
+
+        $query = $em->createQuery(
+            "SELECT u.nickname, g.score, g.ended_at 
+            FROM App\Entity\Game g
+            INNER JOIN App\Entity\User u
+            WHERE g.score > 0
+            AND u.id = g.user
+            ORDER BY g.score DESC"
+        );
+    
+        // Affichage de la requête SQL générée
+        // echo $query->getSQL();
+    
+        // Retourne le nombre de lignes impactées par la requête
+        // 0 si aucune lignes impactées
+        return $query->getResult();
+    
+    }
+    
+
 }

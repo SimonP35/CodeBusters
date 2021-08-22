@@ -5,6 +5,7 @@ namespace App\Controller\Api;
 use DateTime;
 use App\Entity\Game;
 use App\Entity\Item;
+use App\Repository\GameRepository;
 use Symfony\Component\Yaml\Yaml;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -113,4 +114,13 @@ class GameController extends AbstractController
 
         return $this->json(['game' => $game], Response::HTTP_OK, [], ['groups' => 'game_end']);
     }
+
+    /**
+     * @Route("/score", name="api_game_score", methods={"GET"})
+     */
+    public function list(GameRepository $gr): Response
+    {
+        return $this->json(['games' => $gr->findOrderByScore()], Response::HTTP_OK);
+    }
+
 }
