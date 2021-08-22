@@ -1,9 +1,26 @@
 @use 'src/styles/vars';
 
-.login-container {
-  background-color: black;
-  color:white;
-  padding:5px;
-  width: 300px;
-  height: 200px;
+.login-background{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(15, 15, 15, 0.39);
+  .login-container {
+    background-color: black;
+    color:white;
+    padding:5px;
+    width: 300px;
+    height: 200px;
+    .login-closed {
+      transform: rotate(45deg);
+      font-size: 1em;
+      border: none;
+      border-radius: 1em;
+    }
+  }
 }
+

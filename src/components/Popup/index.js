@@ -15,10 +15,24 @@ const Popup = ({
   displayMobil,
   toggleDisplaySignin,
   toggleDisplayLogin,
+  changeField,
+  email,
 }) => (
   <>
-    {displayLogin && <Login toggleDisplayLogin={toggleDisplayLogin} />}
-    {displaySignin && <Signin toggleDisplaySignin={toggleDisplaySignin} />}
+    {displayLogin && (
+    <Login
+      toggleDisplayLogin={toggleDisplayLogin}
+      changeField={changeField}
+      email={email}
+    />
+    )}
+    {displaySignin && (
+    <Signin
+      toggleDisplaySignin={toggleDisplaySignin}
+      changeField={changeField}
+      email={email}
+    />
+    )}
     {displayMobil && <Mobile />}
     {displayComment && <Comment />}
   </>
@@ -31,6 +45,8 @@ Popup.propTypes = {
   displayMobil: PropTypes.bool.isRequired,
   toggleDisplaySignin: PropTypes.func.isRequired,
   toggleDisplayLogin: PropTypes.func.isRequired,
+  changeField: PropTypes.func.isRequired,
+  email: PropTypes.string.isRequired,
 };
 
 export default Popup;
