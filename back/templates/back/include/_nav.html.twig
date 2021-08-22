@@ -13,8 +13,15 @@
 		<div class="col-6 d-flex flex-row-reverse">
 			<ul class="nav nav-pills">
 				<li class="nav-item">
-					{# <p>Email : {{ app.user.email }} // {% for role in app.user.roles %} Role : {{ role }}{% endfor %}</p>		 #}
-				</li>
+					{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+					<li class="nav-item">
+						<p class="me-5">Email : {{ app.user.email }} // {% for role in app.user.roles %} Role : {{ role }}{% endfor %}</p>
+					</li>
+					<a class="btn btn-danger" href="{{ path('app_logout') }}">Deconnexion</a>
+					{% else %}	
+					<a class="btn btn-success" href="{{ path('api_login') }}">Connexion</a>
+					{% endif %}
+				</li>	
 			</ul>
 		</div>
 	</div>
