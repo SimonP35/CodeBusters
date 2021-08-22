@@ -24,6 +24,7 @@ const About = () => (
         PageMaker including versions of Lorem Ipsum.
       </section>
       <h3 className="about-subtitle">L'EQUIPE</h3>
+      {/* Est-ce que tu es sûr de ton choix sur la balise Link React pour des liens simples ? Je pense qu'une balise <a> est adaptée, Link est un routage React pour les pages du site */}
       {people.map((fivep) => (
         <div className="about-profil" key={fivep.id}>
           <article className="about-profil-article">

@@ -1,8 +1,8 @@
 import React from 'react';
-import Login from 'src/components/Popup/Login';
 // import Loader from 'src/components/Loader';
 import games from 'src/assets/images/games.png';
 import utils from 'src/utils';
+import Signin from 'src/components/Popup/Signin';
 
 import './home.scss';
 
@@ -26,7 +26,7 @@ const Home = () => (
         </div>
       </main>
     </div>
-    <Login />
+    <Signin />
     {/* <Loader /> */}
   </>
 );

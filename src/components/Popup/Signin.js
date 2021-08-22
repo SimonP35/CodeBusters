@@ -21,6 +21,7 @@ const Signin = ({
   return (
 
   <div className="signin-container">
+    <a className="popup-button-close" href="">+</a>
     <form autoComplete="off" className="signin-form"onSubmit={handleSubmit}>
       <h3 className="signin-title">Formulaire d'inscription</h3>
       <Field
@@ -65,6 +66,4 @@ const Signin = ({
 //   changeField: PropTypes.func.isRequired,
 //   handleLogin: PropTypes.func.isRequired,
 // };
-
-
 export default Signin;
