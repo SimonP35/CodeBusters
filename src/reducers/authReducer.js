@@ -49,6 +49,6 @@ function authReducer(state = initialState, action = {}) {
         nickname: '',
       };
   }
-};
+}
 
 export default authReducer;

@@ -15,6 +15,7 @@ const Signin = ({
   const handleSubmit = (evt) => {
     evt.preventDefault();
     submitSignin();
+    toggleDisplaySignin();
   };
   return (
     <div className="signin-background">

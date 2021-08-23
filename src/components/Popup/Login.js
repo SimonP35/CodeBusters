@@ -14,6 +14,7 @@ const Login = ({
   const handleSubmit = (evt) => {
     evt.preventDefault();
     submitLogin();
+    toggleDisplayLogin();
   };
   return (
     <div className="login-background">
