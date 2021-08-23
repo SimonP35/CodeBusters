@@ -87,6 +87,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $comments;
 
+    public function __toString()
+    {
+        return $this->nickname;
+    }
+
     public function __construct()
     {
         $this->games = new ArrayCollection();

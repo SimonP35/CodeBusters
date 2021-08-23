@@ -113,12 +113,8 @@ class AppFixtures extends Fixture
             ->setStatus(0)
             ->setUser($usersList[array_rand($usersList)])
             ->setScore(mt_rand(0, 1800))
+            ->setEndedAt($faker->dateTimeBetween('-10 years', 'now'))
             ->setScenario(1);
-            // On créé les items spécifiques à chaque partie
-            foreach($game->getItems() as $item) {
-
-                $manager->remove($item);
-            }
 
             $gamesList[] = $game;
 
