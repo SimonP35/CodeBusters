@@ -41,4 +41,4 @@ security:
     access_control:
         - { path: ^/profil, roles: ROLE_USER }
         - { path: ^/api/game, roles: ROLE_USER }
-        - { path: ^http://3.80.160.120/back, roles: ROLE_ADMIN }
+        - { path: http://3.80.160.120/back, roles: ROLE_ADMIN }
