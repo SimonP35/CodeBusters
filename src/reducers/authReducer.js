@@ -1,11 +1,11 @@
 import { SAVE_USER_DATA, CHANGE_FIELD, CLICK_ON_LOGOUT } from 'src/actions/auth';
 
 const initialState = {
+  nickname: '',
   email: '',
   password: '',
-  isLogged: true,
+  isLogged: false,
   token: null,
-  nickname: '',
 };
 
 function authReducer(state = initialState, action = {}) {

@@ -7,57 +7,61 @@ import './signin.scss';
 
 const Signin = ({
   toggleDisplaySignin,
-  email, 
+  email,
   changeField,
   password,
   nickname,
-  submitSignin
+  submitSignin,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     submitSignin();
   };
   return (
-  <div className="signin-background">
-    <div className="signin-container">
-      <button
-        type="button"
-        className="signin-closed"
-        onClick={() => {
-          toggleDisplaySignin();
-        }}
-      >       +
-      </button>
-      <form className="signin-form" onSubmit={handleSubmit}>
-        Formulaire d'inscription
-        <Field
-          name="nickname"
-          type="nickname"
-          placeholder="Nom"
-          manageChange={changeField}
-          value={nickname}
-        />
-        <Field
-          type="email"
-          name="email"
-          placeholder="Adresse Email"
-          manageChange={changeField}
-          value={email}
-        />
-        <Field
-          name="password"
-          type="password"
-          placeholder="Mot de passe"
-          manageChange={changeField}
-          value={password}
-        />
-        <button className="login-button" type="submit">
-          S'inscrire
+    <div className="signin-background">
+      <div className="signin-container">
+        <button
+          type="button"
+          className="signin-closed"
+          onClick={() => {
+            toggleDisplaySignin();
+          }}
+        >       +
         </button>
-      </form>
+        <form className="signin-form" onSubmit={handleSubmit}>
+          Formulaire d'inscription
+          <Field
+            name="nickname"
+            type="nickname"
+            placeholder="Nom"
+            manageChange={changeField}
+            value={nickname}
+            className="signin-field"
+          />
+          <Field
+            type="email"
+            name="email"
+            placeholder="Adresse Email"
+            manageChange={changeField}
+            value={email}
+            className="signin-field"
+          />
+          <Field
+            name="password"
+            type="password"
+            placeholder="Mot de passe"
+            manageChange={changeField}
+            value={password}
+            className="signin-field"
+          />
+          <button className="signin-button" type="submit">
+            S'inscrire
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 Signin.propTypes = {
 
