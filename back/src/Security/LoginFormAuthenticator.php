@@ -51,6 +51,8 @@ class LoginFormAuthenticator extends AbstractLoginFormAuthenticator
         }
 
         return new RedirectResponse($this->urlGenerator->generate('back_user_list'));
+
+        // return new RedirectResponse($this->urlGenerator->generate('back_user_list'));
     }
 
     protected function getLoginUrl(Request $request): string

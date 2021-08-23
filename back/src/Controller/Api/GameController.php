@@ -74,7 +74,7 @@ class GameController extends AbstractController
     /**
      * @Route("/update/{id<\d+>}", name="api_game_update", methods={"PUT","PATCH"})
      */
-    public function update(Game $game, EntityManagerInterface $em, ValidatorInterface $vi): Response
+    public function update(Game $game = null, EntityManagerInterface $em, ValidatorInterface $vi): Response
     {
         // Vérification si la game existe bien
         if (null === $game) {
