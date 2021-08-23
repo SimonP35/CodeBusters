@@ -177,12 +177,12 @@ $radial-map: (
   }
   
   &:before {
-    background: #279099;
+    background: vars.$color-title-five;
     transform: matrix(1, -1, 1, 0, $cube-size / 2, -$cube-size);
   }
   
   &:after {
-    background: #e59b2a;
+    background: vars.$color-title-two;
     transform: matrix(1, -1, 0, 1, $cube-size, -$cube-size / 2);
   }
 }

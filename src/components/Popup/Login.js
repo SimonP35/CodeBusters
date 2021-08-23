@@ -5,7 +5,6 @@ import Field from './Field';
 import './login.scss';
 
 const Login = ({
-
   toggleDisplayLogin,
   changeField,
   email,
@@ -26,7 +25,7 @@ const Login = ({
             toggleDisplayLogin();
           }}
         >
-          +
+          x
         </button>
         <form className="login-form" onSubmit={handleSubmit}>
           Formulaire de connexion

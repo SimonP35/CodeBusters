@@ -12,15 +12,13 @@ export const changeField = (newValue, identifier) => ({
   name: identifier,
 });
 
-export const submitLogin = () => ({
-  type: SUBMIT_LOGIN,
-});
-
-export const saveUserData = (token, nickname, isLogged) => ({
+export const saveUserData = (token, nickname, isLogged, email, password) => ({
   type: SAVE_USER_DATA,
   token: token,
   nickname: nickname,
   logged: isLogged,
+  email: email,
+  password: password,
 });
 
 export const handleLogOut = () => ({
@@ -28,5 +26,9 @@ export const handleLogOut = () => ({
 });
 
 export const submitSignin = () => ({
+  type: SUBMIT_SIGNIN,
+});
+
+export const submitLogin = () => ({
   type: SUBMIT_LOGIN,
 });

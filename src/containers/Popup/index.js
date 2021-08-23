@@ -33,7 +33,7 @@ const mapDispatchToProps = (dispatch) => ({
   handleLogOut: () => {
     dispatch(handleLogOut());
   },
-  submitSigngin: () => {
+  submitSignin: () => {
     dispatch(submitSignin());
   },
 });
