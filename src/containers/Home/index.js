@@ -5,12 +5,12 @@ import Home from 'src/components/Home';
 
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
-const mapStateToProps = (state) => ({
+const mapStateToProps = () => ({
 });
 
 // === mapDispatchToProps
 // si j'ai besoin de dispatcher des actions vers le store (mettre à jour le state)
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = () => ({
   // nom de la prop à remplir: fonction qui dispatch l'action
 });
 

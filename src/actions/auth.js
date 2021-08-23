@@ -15,9 +15,8 @@ export const submitLogin = () => ({
   type: SUBMIT_LOGIN,
 });
 
-export const saveUserData = (token, nickname, isLogged) => ({
+export const saveUserData = (nickname, isLogged) => ({
   type: SAVE_USER_DATA,
-  token: token,
   nickname: nickname,
   logged: isLogged,
 });
