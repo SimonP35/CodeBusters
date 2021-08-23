@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 
 import { toggleDisplayPopupSignin, toggleDisplayPopupLogin } from 'src/actions/buttonLog';
+import { handleLogOut } from 'src/actions/auth';
+
 // on importe le composant de présentation
 import ButtonLog from 'src/components/Header/ButtonLog';
 
@@ -20,7 +22,9 @@ const mapDispatchToProps = (dispatch) => ({
   toggleDisplayLogin: () => {
     dispatch(toggleDisplayPopupLogin());
   },
-
+  handleLogOut: () => {
+    dispatch(handleLogOut());
+  },
 });
 
 // === création de l'assistant
