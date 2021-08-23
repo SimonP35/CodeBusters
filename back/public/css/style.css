@@ -16,7 +16,7 @@ h1 {
 }
 
 .ghost {
-    background-image: url("/images/ghost.jpg");
+    background-image: url("./images/ghost.jpg");
 }
 
 .table {
