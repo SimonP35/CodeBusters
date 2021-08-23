@@ -13,6 +13,7 @@ const mapStateToProps = (state) => ({
   displayMobil: state.popup.displayMobil,
   email: state.auth.email,
   password: state.auth.password,
+  nickname: state.auth.nickname,
 });
 
 // === mapDispatchToProps

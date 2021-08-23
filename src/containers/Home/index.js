@@ -6,7 +6,6 @@ import Home from 'src/components/Home';
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
 const mapStateToProps = (state) => ({
-  
 });
 
 // === mapDispatchToProps

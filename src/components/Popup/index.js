@@ -16,6 +16,8 @@ const Popup = ({
   changeField,
   email,
   password,
+  nickname,
+  submitLogin,
 }) => (
   <>
     {displayLogin && (
@@ -24,6 +26,7 @@ const Popup = ({
       changeField={changeField}
       email={email}
       password={password}
+      submitLogin={submitLogin}
     />
     )}
     {displaySignin && (
@@ -31,6 +34,8 @@ const Popup = ({
       toggleDisplaySignin={toggleDisplaySignin}
       changeField={changeField}
       email={email}
+      password={password}
+      nickname={nickname}
     />
     )}
     {displayComment && <Comment />}
@@ -46,6 +51,8 @@ Popup.propTypes = {
   changeField: PropTypes.func.isRequired,
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
+  nickname: PropTypes.string.isRequired,
+  submitLogin: PropTypes.func.isRequired,
 };
 
 export default Popup;
