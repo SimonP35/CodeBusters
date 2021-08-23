@@ -29,6 +29,16 @@ function authReducer(state = initialState, action = {}) {
     //     email: '',
     //     password: '',
     //   };
+    default:
+      return state;
+  //   case CLICK_ON_LOGOUT:
+  //     return {
+  //       ...state,
+  //       isLogged: false,
+  //       email: '',
+  //       password: '',
+  //     };
+  // }
   }
 }
 

@@ -1,19 +1,18 @@
-/* actions qui concernent l'authentification */
-
 // === action types
-export const UPDATE_LOGIN_FIELD = 'UPDATE_LOGIN_FIELD';
-export const LOG_IN = 'LOG_IN';
+export const CHANGE_FIELD = 'CHANGE_FIELD';
+export const SUBMIT_LOGIN = 'SUBMIT_LOGIN';
 export const SAVE_USER_DATA = 'SAVE_USER_DATA';
 
 // === action creators
-export const updateLoginField = (newValue, name) => ({
-  type: UPDATE_LOGIN_FIELD,
+export const changeField = (newValue, identifier) => ({
+  type: CHANGE_FIELD,
+  // valeur saisi dans l'input
   newValue: newValue,
-  name: name,
+  // identifiant permettant de cibler l'input
+  name: identifier,
 });
-
-export const logIn = () => ({
-  type: LOG_IN,
+export const submitLogin = () => ({
+  type: SUBMIT_LOGIN,
 });
 
 export const saveUserData = (token, nickname, isLogged) => ({

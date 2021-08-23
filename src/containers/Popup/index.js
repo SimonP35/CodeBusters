@@ -2,19 +2,34 @@ import { connect } from 'react-redux';
 
 // on importe le composant de présentation
 import Popup from 'src/components/Popup';
-
+import { toggleDisplayPopupSignin, toggleDisplayPopupLogin } from 'src/actions/buttonLog';
+import { changeField, submitLogin } from 'src/actions/auth';
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
 const mapStateToProps = (state) => ({
   displayLogin: state.popup.displayLogin,
   displaySignin: state.popup.displaySignin,
   displayComment: state.popup.displayComment,
+  displayMobil: state.popup.displayMobil,
+  email: state.auth.email,
+  password: state.auth.password,
 });
 
 // === mapDispatchToProps
 // si j'ai besoin de dispatcher des actions vers le store (mettre à jour le state)
 const mapDispatchToProps = (dispatch) => ({
-  // nom de la prop à remplir: fonction qui dispatch l'action
+  toggleDisplaySignin: () => {
+    dispatch(toggleDisplayPopupSignin());
+  },
+  toggleDisplayLogin: () => {
+    dispatch(toggleDisplayPopupLogin());
+  },
+  changeField: (newValue, identifier) => {
+    dispatch(changeField(newValue, identifier));
+  },
+  submitLogin: () => {
+    dispatch(submitLogin());
+  },
 });
 
 // === création de l'assistant

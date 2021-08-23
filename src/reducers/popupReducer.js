@@ -1,4 +1,4 @@
-import { TOGGLE_DISPLAY_POPUP_SIGNIN } from 'src/actions/buttonLog';
+import { TOGGLE_DISPLAY_POPUP_SIGNIN, TOGGLE_DISPLAY_POPUP_LOGIN } from 'src/actions/buttonLog';
 
 const initialState = {
   displayLogin: false,
@@ -14,12 +14,11 @@ const popupReducer = (state = initialState, action = {}) => {
         ...state,
         displaySignin: !state.displaySignin,
       };
-    // case SAVE_USER_DATA:
-    //   return {
-    //     ...state,
-    //     isLogged: action.isLogged,
-    //     token: action.token,
-    //   };
+    case TOGGLE_DISPLAY_POPUP_LOGIN:
+      return {
+        ...state,
+        displayLogin: !state.displayLogin,
+      };
     default:
       return state;
   //   case CLICK_ON_LOGOUT:

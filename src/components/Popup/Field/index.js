@@ -1,67 +1,70 @@
-
+// == Import : npm
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// == Import : local
 import './field.scss';
 
-/**
- * A field to be used inside a form : label and input
- */
+// == Composant
 const Field = ({
-  identifier,
-  placeholder,
-  label,
-  type,
   value,
-  changeField,
+  type,
+  name,
+  placeholder,
+  manageChange,
 }) => {
-  const handleChange = (event) => {
-    const { value: inputValue, name } = event.target;
-    changeField(name, inputValue);
+  const handleChange = (evt) => {
+    manageChange(evt.target.value, name);
   };
 
+  const inputId = `field-${name}`;
+
   return (
-    <div className="field">
+    // modification de la class si le champ est rempli ou non
+    <div className={value.length > 0 ? 'field field--has-content' : 'field'}>
       <input
-        className="input"
-        id={identifier}
-        placeholder={placeholder}
-        name={identifier}
-        type={type}
+        // React - state
         value={value}
         onChange={handleChange}
+        // infos de base
+        id={inputId}
+        type={type}
+        className="field-input"
+        placeholder={placeholder}
+        name={name}
       />
+
       <label
-        className="label"
-        htmlFor={identifier}
+        htmlFor={inputId}
+        className="field-label"
       >
-        {label}
+        {placeholder}
       </label>
     </div>
   );
 };
 
 Field.propTypes = {
-  /** identifier for the input : used both for name and id => must be unique */
-  identifier: PropTypes.string.isRequired,
-  /** text used as placeholder */
-  placeholder: PropTypes.string.isRequired,
-  /** text used as label */
-  label: PropTypes.string.isRequired,
-  /** type of the input */
-  type: PropTypes.string,
   /** text used as value for the input */
   value: PropTypes.string,
+  /** type of the input */
+  type: PropTypes.string,
+  /** text used as name for the input (and also used as id, with a prefix) */
+  name: PropTypes.string.isRequired,
+  /** text used as placeholder and label */
+  placeholder: PropTypes.string.isRequired,
   /** called when onChange event is received by the input, two parameters :
-   * - identifier
    * - new value
+   * - name
    */
-  changeField: PropTypes.func.isRequired,
+  manageChange: PropTypes.func.isRequired,
 };
 
+// Valeurs par défaut pour les props
 Field.defaultProps = {
-  type: 'text',
   value: '',
+  type: 'text',
 };
 
+// == Export
 export default Field;
