@@ -1,0 +1,71 @@
+@use 'src/styles/vars';
+
+.comment-container {
+
+  background-color:vars.$color-popup-background;
+  color:black;
+  padding:5px;
+  width: 200px;
+  height: 200px;
+  border:none;
+  position:absolute;
+  left:50%;
+  top:50%;
+  border-radius: 10%;
+  border-bottom: 5px solid vars.$color-title-last ;
+  // border-top: 5px solid vars.$color-title-four ;  
+  // border-left: 5px solid vars.$color-title-first ;  
+  border-right: 5px solid vars.$color-title-last ;  
+  right:auto;
+  bottom:auto;
+
+  .comment-form {
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top:20px;
+
+    .comment-title {
+      font-family: "Meta";
+      font-variation-settings: "wght" 900, "ital" 1;
+      color:red;
+      padding-bottom:10px;
+      margin:2px;
+    }
+
+    .comment-textarea {
+      border:none;
+      color:black;
+    }
+
+    .comment-button {
+      border:none;
+      color: black;
+      font-variation-settings: "wght" 900;
+      font-family: "Meta";
+      background-color: #11ffee00;
+      padding-top:10px;
+    }
+  }
+  .popup-button-close {
+    transition: all 0.5s ease;
+    position: absolute;
+    background-color: vars.$color-background;
+    padding: 1.5px 7px;
+    left: 50%;
+    margin-left: 45px;
+    margin-top: -15px;
+    border-radius: 50%;
+    border: 2px solid vars.$color-popup-background;
+    color: vars.$color-popup-background;
+    -webkit-box-shadow: -4px -2px 6px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: -4px -2px 6px 0px rgba(0,0,0,0.1);
+    box-shadow: -3px 1px 6px 0px rgba(0,0,0,0.1);
+    &:hover {
+      background-color: vars.$color-background;
+      color: #fff;
+    }
+}
+}

@@ -5,7 +5,7 @@
   display: inline-block;
   width: 30px;
   height: 30px;
-  position: relative;
+  position: absolute;
   border: 4px solid vars.$color-nav-link;
   top: 50%;
   animation: loader 2s infinite ease;
@@ -17,9 +17,7 @@
   background-color: vars.$color-nav-link;
   animation: loader-inner 2s infinite ease-in;
 }
-
 }
-
 
 
 @keyframes loader {

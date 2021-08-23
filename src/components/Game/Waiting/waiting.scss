@@ -1,0 +1,208 @@
+@use 'src/styles/vars';
+
+
+$cube-size: 60; 
+$animation-duration: 3.7s;
+$easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+$base-matrix: matrix(0.9, 0.5, 0, 1, 0, 0);
+
+@function base($n) {
+  @return $n * ($cube-size - 1px);
+}
+
+.waiting-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: vars.$color-popup-background;
+  box-sizing: border-box;
+  position:absolute;
+   left:33%;
+   top:28%;
+   right:auto;
+   bottom:auto;
+   width: 700px;
+   height: 600px;
+   padding:10px;
+   margin:2px;
+   border-radius: 5% 5% 0 0;
+   border-bottom: 45px solid vars.$color-title-first ;  
+}
+
+.waiting-title {
+  font-family: "Meta";
+  font-size: 2rem;
+  text-align: center;
+  color: vars.$color-title-first;
+  // text-shadow: 8px 5px 0px vars.$color-title-two;
+  font-variation-settings: "wght" 900, "ital" 1;
+  padding-bottom:10px;
+  margin:2px;
+}
+
+.waiting-text {
+  font-family:'Quicksand', sans-serif; 
+  padding-left:50px;
+  padding-right:50px;
+  margin:2px;
+}
+
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  &.top    { animation: $animation-duration top $easing infinite;  }
+  &.bottom { animation: $animation-duration bottom $easing infinite;  }
+}
+
+$radial-map: (
+  'n': (
+    x1: base(1),
+    y1: base(-1),
+    x2: base(1),
+    y2: base(-1),
+    x3: base(2),
+    y3: base(-2),
+    x4: base(2),
+    y4: base(-2),
+  ),
+  's': (
+    x1: base(-1),
+    y1: base(1),
+    x2: base(-1),
+    y2: base(1),
+    x3: base(-2),
+    y3: base(2),
+    x4: base(-2),
+    y4: base(2),
+  ),
+  'e': (
+    x1: base(1),
+    y1: 0,
+    x2: base(2),
+    y2: 0,
+    x3: base(2),
+    y3: 0,
+    x4: base(1),
+    y4: 0,
+  ),
+  'w': (
+    x1: base(-1),
+    y1: 0,
+    x2: base(-2),
+    y2: 0,
+    x3: base(-2),
+    y3: 0,
+    x4: base(-1),
+    y4: 0,
+  ),
+  'ne': (
+    x1: base(2),
+    y1: base(-1),
+    x2: base(3),
+    y2: base(-1),
+    x3: base(4),
+    y3: base(-2),
+    x4: base(3),
+    y4: base(-2),
+  ),
+  'se': (
+    x1: 0,
+    y1: base(1),
+    x2: base(1),
+    y2: base(1),
+    x3: base(0),
+    y3: base(2),
+    x4: base(-1),
+    y4: base(2),
+  ),
+  'sw': (
+    x1: base(-2),
+    y1: base(1),
+    x2: base(-3),
+    y2: base(1),
+    x3: base(-4),
+    y3: base(2),
+    x4: base(-3),
+    y4: base(2),
+  ),
+  'nw': (
+    x1: base(0),
+    y1: base(-1),
+    x2: base(-1),
+    y2: base(-1),
+    x3: base(0),
+    y3: base(-2),
+    x4: base(1),
+    y4: base(-2),
+  )
+);
+
+@each $position, $points in $radial-map {
+  .#{$position} {
+    animation: $animation-duration $position $easing infinite;
+  }
+  @keyframes #{$position} {
+    0%, 83.33%, 100% {
+      transform: $base-matrix translate(map-get($points, x1), map-get($points, y1));
+    }
+    16.66% {
+      transform: $base-matrix translate(map-get($points, x2), map-get($points, y2));
+    }
+    33.33%, 50% {
+      transform: $base-matrix translate(map-get($points, x3), map-get($points, y3));
+    }
+    66.66% {
+      transform: $base-matrix translate(map-get($points, x4), map-get($points, y4));
+    }
+  }
+}
+
+.cube {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: $cube-size + 0px;
+  height: $cube-size + 0px;
+  margin: 0 auto;
+  background:vars.$color-title-first;
+  transform: $base-matrix;  
+
+  &:before, &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  &:before {
+    background: #279099;
+    transform: matrix(1, -1, 1, 0, $cube-size / 2, -$cube-size);
+  }
+  
+  &:after {
+    background: #e59b2a;
+    transform: matrix(1, -1, 0, 1, $cube-size, -$cube-size / 2);
+  }
+}
+
+@keyframes top {
+  0%, 33.33%, 100% {
+    transform: translate(0, base(-1));
+  }
+  50%, 83.33% {
+    transform: translate(0, base(-2));
+  }
+}
+@keyframes bottom {
+  0%, 33.33%, 100% {
+    transform: translate(0, base(1));
+  }
+  50%, 83.33% {
+    transform: translate(0, base(2));
+  }
+}
+
+html {background-color: #262626;}
+html, body {height: 100%;overflow: hidden;}

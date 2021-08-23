@@ -1,18 +1,17 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
 import utils from 'src/utils';
 
 import './about.scss';
 
 const people = utils[1].fivePeople;
-console.log(people);
+// console.log(people);
 const About = () => (
   <>
-    <Header />
     <div className="about-container">
+      <h2 className="about-title">A PROPOS</h2>
+      <h3 className="about-subtitle">LE PROJET</h3>
       <section className="about-text">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -24,6 +23,8 @@ const About = () => (
         and more recently with desktop publishing software like Aldus
         PageMaker including versions of Lorem Ipsum.
       </section>
+      <h3 className="about-subtitle">L'EQUIPE</h3>
+      {/* Est-ce que tu es sûr de ton choix sur la balise Link React pour des liens simples ? Je pense qu'une balise <a> est adaptée, Link est un routage React pour les pages du site */}
       {people.map((fivep) => (
         <div className="about-profil" key={fivep.id}>
           <article className="about-profil-article">
@@ -43,7 +44,6 @@ const About = () => (
         </div>
       ))}
     </div>
-    <Footer />
   </>
 );
 

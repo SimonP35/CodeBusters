@@ -5,7 +5,8 @@ import Header from 'src/components/Header';
 import './scenarios.scss';
 
 const Scenarios = () => (
-  <Header />
+
+  <div>Ici bientôt les scénarios</div>
 );
 
 export default Scenarios;

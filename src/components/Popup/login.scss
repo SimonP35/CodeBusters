@@ -1,9 +1,77 @@
 @use 'src/styles/vars';
 
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
+
 .login-container {
-  background-color: black;
-  color:white;
+  background-color:vars.$color-popup-background;
+  color:black;
   padding:5px;
-  width: 300px;
+  width: 200px;
   height: 200px;
+  border:none;
+  position:absolute;
+  left:80%;
+  top:5%;
+  border-radius: 10%;
+  border-bottom: 5px solid vars.$color-title-last ;
+  // border-top: 5px solid vars.$color-title-four ;  
+  // border-left: 5px solid vars.$color-title-first ;  
+  border-right: 5px solid vars.$color-title-last ;  
+  right:auto;
+  bottom:auto;
+
+  .login-container-logged {
+    border:none;
+  }
+
+// Element correspond à un champ de field
+  .login-element{
+  border:none;
+  color:black;
+  // background-color:red;
+  }
+
+  // Bouton de connexion / déconnexion
+.login-button-ok, .login-button-off {
+  border:none;
+  color: black;
+  font-variation-settings: "wght" 900;
+  font-family: "Meta";
+  background-color: #11ffee00;
+}
+
+
+// Lorsque l'utilisateur est connecté
+.login-container-message {
+  border:none;
+  color:black;
+  // background-color:red;
+}
+
+// Bouton fermant 
+.popup-button-close {
+  transition: all 0.5s ease;
+  position: absolute;
+  background-color: vars.$color-background;
+  padding: 1.5px 7px;
+  left: 50%;
+  margin-left: 35px;
+  margin-top: -15px;
+  border-radius: 50%;
+  border: 2px solid vars.$color-popup-background;
+  color: vars.$color-popup-background;
+  -webkit-box-shadow: -4px -2px 6px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: -4px -2px 6px 0px rgba(0,0,0,0.1);
+  box-shadow: -3px 1px 6px 0px rgba(0,0,0,0.1);
+  &:hover {
+    background-color: vars.$color-background;
+    color: #fff;
+  }
+}
 }
