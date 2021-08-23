@@ -10,7 +10,12 @@ const authMiddleware = (store) => (next) => (action) => {
       axios.post('http://localhost:3001/login', { email: email, password: password })
         .then((response) => {
           // console.log(response);
-          store.dispatch(saveUserData(response.data.logged, response.data.token));
+          store.dispatch(saveUserData(
+            response.data.logged,
+            response.data.token,
+            response.data.email,
+            response.data.password,
+          ));
         })
         .catch((error) => {
           // console.log(error);
@@ -22,7 +27,13 @@ const authMiddleware = (store) => (next) => (action) => {
       axios.post('http://localhost:3001/signin', { nickname: nickname, email: email, password: password })
         .then((response) => {
           // console.log(response);
-          store.dispatch(saveUserData(response.data.logged, response.data.token));
+          store.dispatch(saveUserData(
+            response.data.logged,
+            response.data.token,
+            response.data.email,
+            response.data.password,
+            response.data.nickname,
+          ));
         })
         .catch((error) => {
           // console.log(error);
