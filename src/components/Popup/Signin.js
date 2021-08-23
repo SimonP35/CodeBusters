@@ -7,10 +7,17 @@ import './signin.scss';
 
 const Signin = ({
   toggleDisplaySignin,
-  email, changeField,
+  email, 
+  changeField,
   password,
   nickname,
-}) => (
+  submitSignin
+}) => {
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    submitSignin();
+  };
+  return (
   <div className="signin-background">
     <div className="signin-container">
       <button
@@ -21,7 +28,15 @@ const Signin = ({
         }}
       >       +
       </button>
-      <form className="signin-form">
+      <form className="signin-form" onSubmit={handleSubmit}>
+        Formulaire d'inscription
+        <Field
+          name="nickname"
+          type="nickname"
+          placeholder="Nom"
+          manageChange={changeField}
+          value={nickname}
+        />
         <Field
           type="email"
           name="email"
@@ -36,25 +51,23 @@ const Signin = ({
           manageChange={changeField}
           value={password}
         />
-        <Field
-          name="nickname"
-          type="name"
-          placeholder="Nom"
-          manageChange={changeField}
-          value={nickname}
-        />
+        <button className="login-button" type="submit">
+          S'inscrire
+        </button>
       </form>
     </div>
   </div>
-
 );
 
 Signin.propTypes = {
+
   toggleDisplaySignin: PropTypes.func.isRequired,
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   nickname: PropTypes.string.isRequired,
   changeField: PropTypes.func.isRequired,
+  submitSignin: PropTypes.func.isRequired,
+
 };
 
 export default Signin;

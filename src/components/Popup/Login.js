@@ -29,7 +29,7 @@ const Login = ({
           +
         </button>
         <form className="login-form" onSubmit={handleSubmit}>
-          Formulaire de login
+          Formulaire de connexion
           <Field
             name="email"
             type="email"

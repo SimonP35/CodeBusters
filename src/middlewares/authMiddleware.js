@@ -9,11 +9,11 @@ const authMiddleware = (store) => (next) => (action) => {
       const { email, password } = store.getState().auth;
       axios.post('http://localhost:3001/login', { email: email, password: password })
         .then((response) => {
-          console.log(response);
+          // console.log(response);
           store.dispatch(saveUserData(response.data.logged, response.data.token));
         })
         .catch((error) => {
-          console.log(error);
+          // console.log(error);
         });
       break;
     }
