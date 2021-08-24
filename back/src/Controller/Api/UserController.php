@@ -3,6 +3,7 @@
 namespace App\Controller\Api;
 
 use App\Entity\User;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,6 +20,7 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
  */
 class UserController extends AbstractController
 {
+
     /**
      * @Route("/register", name="api_user_register", methods={"POST"})
      */
@@ -65,7 +67,7 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/read/{id<\d+>}", name="api_user_read", methods={"GET"})
+     * @Route("/read", name="api_user_read", methods={"GET"})
      */
     public function show(User $user): Response
     {
