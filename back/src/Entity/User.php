@@ -30,14 +30,14 @@ class User implements UserInterface, JWTUserInterface
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups({"create_user", "game_end","new_comment", "read_user", "user"})
+     * @Groups({"create_user", "game_end","new_comment", "read_user"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Email()
-     * @Groups({"create_user", "user"})
+     * @Groups({"create_user"})
      * @Assert\NotBlank
      * @Assert\Email
      */
@@ -45,7 +45,6 @@ class User implements UserInterface, JWTUserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("create_user")
      * 
      * Minimum 8 charactères, une majuscule, un chiffre et un caractère spécial.
      * @Assert\Regex("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&-\/])[A-Za-z\d@$!%*#?&-\/]{8,}$/")
@@ -56,7 +55,7 @@ class User implements UserInterface, JWTUserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"create_user", "game_end", "new_game","new_comment", "user"})
+     * @Groups({"create_user", "game_end", "new_game","new_comment"})
      * @Assert\NotBlank
      */
     private $nickname;
