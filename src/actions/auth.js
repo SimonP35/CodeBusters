@@ -12,8 +12,7 @@ export const changeField = (newValue, identifier) => ({
   name: identifier,
 });
 
-
-export const saveUserData = ( nickname, isLogged, email) => ({
+export const saveUserData = (nickname, isLogged, email) => ({
   type: SAVE_USER_DATA,
   nickname: nickname,
   logged: isLogged,
