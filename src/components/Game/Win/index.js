@@ -31,7 +31,6 @@ const Win = ({
       changeField={changeField}
       comment={comment}
       submitComment={submitComment}
-      className="win-comment"
     />
     )}
   </div>

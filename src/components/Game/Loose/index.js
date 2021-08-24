@@ -1,23 +1,48 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import Comment from 'src/components/Popup/Comment';
+import Comment from 'src/containers/Popup';
 import utils from 'src/utils';
 
 import './loose.scss';
 
-const scenario = utils[3].scenarios[1];
+const scenario = utils[3].scenarios[0];
 
-const Loose = () => (
-  <div className="win-container">
-    <h2 className="win-title">Un échec sanglant</h2>
-    <h3 className="win-subtitle"> Grosse affiche... </h3>
-    <p className="win-text">{scenario.contentloose} </p>
-    <div className="win-video-responsive">Ici data vidéo dans balise iframes responsive et autoplay
+const Loose = ({
+
+  displayComment,
+  toggleDisplayComment,
+  changeField,
+  comment,
+  submitComment,
+
+}) => (
+  <div className="loose-container">
+    <h2 className="loose-title">NUL ! </h2>
+    <h3 className="loose-subtitle"> Médaille d'or toutes catégories de loose sur le coup</h3>
+    <p className="loose-text">{scenario.contentloose} </p>
+    <h3 className="loose-subtitle">Tu n'as su finir dans le temps imparti </h3>
+    <div className="loose-video-responsive">Ici data vidéo dans balise iframes responsive et autoplay
       {/* <iframe width="560" height="315" src="{scenario.src}" frameborder="0" autoplay/> */}
     </div>
-    <Comment />
+    {displayComment && (
+    <Comment
+      toggleDisplayComment={toggleDisplayComment}
+      changeField={changeField}
+      comment={comment}
+      submitComment={submitComment}
+    />
+    )}
   </div>
 );
+
+Loose.propTypes = {
+  displayComment: PropTypes.bool.isRequired,
+  toggleDisplayComment: PropTypes.func.isRequired,
+  submitComment: PropTypes.func.isRequired,
+  changeField: PropTypes.func.isRequired,
+  comment: PropTypes.string.isRequired,
+};
 
 export default Loose;
 
