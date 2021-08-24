@@ -8,7 +8,6 @@ use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
-use Lexik\Bundle\JWTAuthenticationBundle\Security\User\JWTUserInterface;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -24,7 +23,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * fields={"nickname"},
  * message="Le pseudo que vous avez indiqué est déjà utilisé ! Désolé :/")
  */
-class User implements UserInterface, JWTUserInterface
+class User implements UserInterface
 {
     /**
      * @ORM\Id
@@ -287,9 +286,4 @@ class User implements UserInterface, JWTUserInterface
         return $this;
     }
 
-    public static function createFromPayload($username, array $payload)
-    {
-        $user = new User();
-        return $user;
-    }
 }
