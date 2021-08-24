@@ -19,32 +19,29 @@ class GameRepository extends ServiceEntityRepository
         parent::__construct($registry, Game::class);
     }
 
-    // /**
-    //  * @return Game[] Returns an array of Game objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('g')
-            ->andWhere('g.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('g.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+    public function findOrderByScore(){
 
-    /*
-    public function findOneBySomeField($value): ?Game
-    {
-        return $this->createQueryBuilder('g')
-            ->andWhere('g.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        $em = $this->getEntityManager();
+
+        $query = $em->createQuery(
+            "SELECT u.nickname, g.score, g.ended_at 
+            FROM App\Entity\Game g
+            INNER JOIN App\Entity\User u
+            WHERE g.score > 0
+            AND u.id = g.user
+            ORDER BY g.score DESC"
+        );
+    
+        return $query->getResult();
     }
-    */
+
+    //? Version Adminer
+
+    // SELECT `user`.`nickname`, `game`.`score`, `game`.`ended_at` FROM `game`
+    // INNER JOIN `user`
+    // ON `user`.`id` = `game`.`user_id`
+    // WHERE `game`.`score` > 0
+    // ORDER BY `game`.`score` DESC
+    
+
 }

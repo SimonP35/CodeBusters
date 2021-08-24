@@ -4,8 +4,8 @@ namespace App\Entity;
 
 use DateTime;
 use Symfony\Component\Validator\Constraints as Assert;
-use Doctrine\ORM\Mapping as ORM;
 use App\Repository\UserRepository;
+use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Serializer\Annotation\Groups;
@@ -17,8 +17,12 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * 
  * @ORM\HasLifecycleCallbacks()
- * @UniqueEntity("email")
- * @UniqueEntity("nickname")
+ * @UniqueEntity(
+ * fields={"email"},
+ * message="L'email que vous avez indiqué est déjà utilisé !")
+ * @UniqueEntity(
+ * fields={"nickname"},
+ * message="Le pseudo que vous avez indiqué est déjà utilisé ! Désolé :/")
  */
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -26,14 +30,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * 
-     * @Groups("create_user")
+     * @Groups({"create_user", "game_end","new_comment", "read_user", "user"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("create_user")
+     * @Assert\Email()
+     * @Groups({"create_user", "user"})
+     * @Assert\NotBlank
+     * @Assert\Email
      */
     private $email;
 
@@ -41,14 +47,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\Column(type="string", length=255)
      * @Groups("create_user")
      * 
-     * Minimum eight characters, at least one letter, one number and one special character.
+     * Minimum 8 charactères, une majuscule, un chiffre et un caractère spécial.
      * @Assert\Regex("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&-\/])[A-Za-z\d@$!%*#?&-\/]{8,}$/")
+     * @Assert\NotCompromisedPassword
+     * @Assert\NotBlank
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("create_user")
+     * @Groups({"create_user", "game_end", "new_game","new_comment", "user"})
+     * @Assert\NotBlank
      */
     private $nickname;
 
@@ -77,6 +86,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="user", orphanRemoval=true)
      */
     private $comments;
+
+    public function __toString()
+    {
+        return $this->nickname;
+    }
 
     public function __construct()
     {

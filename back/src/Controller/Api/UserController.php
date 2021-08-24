@@ -27,6 +27,8 @@ class UserController extends AbstractController
         // On récupère le contenu de la requête (du JSON)
         $jsonContent = $request->getContent();
 
+        $user = new User();
+
         // On désérialise le JSON vers une entité User
         $user = $serializer->deserialize($jsonContent, User::class, 'json');
 
@@ -75,7 +77,6 @@ class UserController extends AbstractController
      */
     public function update(Request $request, User $user = null, UserPasswordHasherInterface $userPasswordHasher, SerializerInterface $serializer, EntityManagerInterface $entityManager, ValidatorInterface $validator): Response
     {
-
         // Vérification si le user existe bien
         if ($user === null) {
             return new JsonResponse(
@@ -87,7 +88,7 @@ class UserController extends AbstractController
         // On récupère le contenu de la requête (du JSON)
         $jsonContent = $request->getContent();
 
-        // On désérialise le JSON vers une entité User
+        // On désérialise le JSON vers une entité User déjà existante
         $user = $serializer->deserialize($jsonContent, User::class, 'json', [AbstractNormalizer::OBJECT_TO_POPULATE => $user]);
 
         // Hashage du mot de passe que si on a renseigné le champ mot de passe
@@ -126,9 +127,16 @@ class UserController extends AbstractController
 
             return $this->json(['error' => $error], Response::HTTP_NOT_FOUND);
         }
+
+        // if ($this->isCsrfTokenValid('delete'.$user->getId(), $request->request->get('_token'))) {
+        //     $em->remove($user);
+        //     $em->flush();
+        // }
+
         // Il existe bien, donc on envoie la demande de suppression
         $em->remove($user);
         $em->flush();
+        
         // On renvoie l'affirmation de la suppression
         return $this->json(['message' => 'L\'utilisateur a bien été supprimé.'], Response::HTTP_OK);
 

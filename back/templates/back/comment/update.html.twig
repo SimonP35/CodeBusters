@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Update Comment{% endblock %}
+
+{% block body %}
+    <h1>Update Comment</h1>
+
+    {{ include('back/comment/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('back_comment_list') }}">Retour</a>
+
+    {{ include('back/comment/_delete_form.html.twig') }}
+{% endblock %}

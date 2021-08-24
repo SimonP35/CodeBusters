@@ -2,11 +2,15 @@
 
 namespace App\Entity;
 
+use DateTime;
 use App\Repository\CommentRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=CommentRepository::class)
+ * @ORM\HasLifecycleCallbacks()
  */
 class Comment
 {
@@ -14,16 +18,24 @@ class Comment
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"new_comment"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Groups({"new_comment"})
+     * @Assert\Length(max = 300)
      */
     private $content;
 
     /**
      * @ORM\Column(type="smallint")
+     * @Groups({"new_comment"})
+     * @Assert\NotBlank
+     * @Assert\Type("int") 
+     * @Assert\Length(max = 1)
+     * @Assert\Choice({5, 4, 3, 2, 1}) 
      */
     private $rating;
 
@@ -40,12 +52,16 @@ class Comment
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="comments")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"new_comment"})
+     * @Assert\NotBlank
      */
     private $user;
 
     /**
      * @ORM\ManyToOne(targetEntity=Game::class, inversedBy="comments")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"new_comment"})
+     * @Assert\NotBlank
      */
     private $game;
 
@@ -83,9 +99,14 @@ class Comment
         return $this->created_at;
     }
 
-    public function setCreatedAt(\DateTimeInterface $created_at): self
+    /**
+     * Set column 'created_at'
+     * @ORM\PrePersist     
+     * @return  self
+     */ 
+    public function setCreatedAt(): self
     {
-        $this->created_at = $created_at;
+        $this->created_at = new DateTime();
 
         return $this;
     }
@@ -95,9 +116,14 @@ class Comment
         return $this->updated_at;
     }
 
-    public function setUpdatedAt(?\DateTimeInterface $updated_at): self
+    /**
+     * Set column 'ended_at'
+     * @ORM\PreUpdate  
+     * @return  self
+     */ 
+    public function setUpdatedAt(): self
     {
-        $this->updated_at = $updated_at;
+        $this->updated_at = new DateTime();
 
         return $this;
     }
