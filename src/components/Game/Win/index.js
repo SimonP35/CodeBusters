@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 
 import utils from 'src/utils';
@@ -9,7 +8,7 @@ import './win.scss';
 const scenario = utils[3].scenarios[0];
 
 const Win = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   return (
     <div className="win-container">
       <h2 className="win-title">BIEN JOUÉ !</h2>
@@ -21,16 +20,13 @@ const Win = () => {
       </div>
       <button
         type="button"
-        onClick={() => dispatch({type: 'TOGGLE_DISPLAY_POPUP_COMMENT' })}
+        onClick={() => dispatch({ type: 'TOGGLE_DISPLAY_POPUP_COMMENT' })}
         className="log-button"
         id="comment"
       >Laisser un commentaire
       </button>
     </div>
-)};
-
-Win.propTypes = {
-  // toggleDisplayComment: PropTypes.func.isRequired,
+  );
 };
 
 export default Win;
