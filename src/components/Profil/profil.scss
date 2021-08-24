@@ -89,7 +89,9 @@
 
     max-width: 200px;
     max-height: 200px;
-    position:float;
+    position:absolute;
+    display: inline;
+    float:left;
   }
 
 }
