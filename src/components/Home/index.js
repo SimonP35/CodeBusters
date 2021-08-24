@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
+import Win from 'src/components/Game/Win';
 // import Loader from 'src/components/Loader';
 import games from 'src/assets/images/games.png';
 import utils from 'src/utils';
@@ -12,7 +13,8 @@ const scenarios = utils[0].fourMostPopularScenarios;
 const Home = () => (
   <>
     <Header />
-    <div className="home-page">
+    <Win />
+    {/* <div className="home-page">
       <main className="home-main">
         <div className="home-banniere">
           <img className="home-banniere-img" src={games} alt="banniere-img" />
@@ -27,7 +29,7 @@ const Home = () => (
           ))}
         </div>
       </main>
-    </div>
+    </div> */}
     {/* <Loader /> */}
     <Footer />
   </>
