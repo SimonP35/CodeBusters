@@ -4,7 +4,7 @@ const initialState = {
   nickname: '',
   email: '',
   password: '',
-  isLogged: false,
+  isLogged: true,
 };
 
 function authReducer(state = initialState, action = {}) {
