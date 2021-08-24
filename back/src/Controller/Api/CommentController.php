@@ -38,11 +38,6 @@ class CommentController extends AbstractController
 
         $comment = $serializer->deserialize($jsonContent, Comment::class, 'json');
         
-        $commentArray = json_decode($jsonContent, true);
-
-        $user = $ur->find($commentArray['user']);
-        $game = $gr->find($commentArray['game']);
-
         // On valide l'entité avec le service Validator
         $errors = $vi->validate($comment);
 
@@ -51,9 +46,6 @@ class CommentController extends AbstractController
         if (count($errors) > 0) {
             return $this->json(['errors' => $errors], Response::HTTP_UNPROCESSABLE_ENTITY);
         }
-
-        $comment->setGame($game);
-        $comment->setUser($user);
 
         // On persist, on flush
         $em->persist($comment);        

@@ -30,14 +30,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups({"create_user", "game_end","new_comment", "read_user"})
+     * @Groups({"create_user", "game_end","new_comment", "read_user", "user"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Email()
-     * @Groups("create_user")
+     * @Groups({"create_user", "user"})
      * @Assert\NotBlank
      * @Assert\Email
      */
@@ -56,7 +56,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"create_user", "game_end", "new_game","new_comment"})
+     * @Groups({"create_user", "game_end", "new_game","new_comment", "user"})
      * @Assert\NotBlank
      */
     private $nickname;
