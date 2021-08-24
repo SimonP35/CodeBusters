@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "568026dc4b0f4c4ebb641b0df924a305",
+    "content-hash": "7414d28c616ca664bb3412d3712ff4f1",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1202,16 +1202,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "2.9.4",
+            "version": "2.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
-                "reference": "b19a13f4edfaa5806109cd899f5912a7df1547b5"
+                "reference": "77cc86ed880e3f1f6c9c5819e131a8aaeeeee0da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/b19a13f4edfaa5806109cd899f5912a7df1547b5",
-                "reference": "b19a13f4edfaa5806109cd899f5912a7df1547b5",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/77cc86ed880e3f1f6c9c5819e131a8aaeeeee0da",
+                "reference": "77cc86ed880e3f1f6c9c5819e131a8aaeeeee0da",
                 "shasum": ""
             },
             "require": {
@@ -1290,9 +1290,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/orm/issues",
-                "source": "https://github.com/doctrine/orm/tree/2.9.4"
+                "source": "https://github.com/doctrine/orm/tree/2.9.5"
             },
-            "time": "2021-08-11T20:53:03+00:00"
+            "time": "2021-08-23T10:20:22+00:00"
         },
         {
             "name": "doctrine/persistence",
@@ -2128,6 +2128,67 @@
                 "source": "https://github.com/namshi/jose/tree/master"
             },
             "time": "2016-12-05T07:27:31+00:00"
+        },
+        {
+            "name": "nelmio/cors-bundle",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nelmio/NelmioCorsBundle.git",
+                "reference": "0b964b665016dfb61dd0fd2bb8c24afb1ae45a93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nelmio/NelmioCorsBundle/zipball/0b964b665016dfb61dd0fd2bb8c24afb1ae45a93",
+                "reference": "0b964b665016dfb61dd0fd2bb8c24afb1ae45a93",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/framework-bundle": "^4.3 || ^5.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.2",
+                "symfony/phpunit-bridge": "^4.3 || ^5.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nelmio\\CorsBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nelmio",
+                    "homepage": "http://nelm.io"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://github.com/nelmio/NelmioCorsBundle/contributors"
+                }
+            ],
+            "description": "Adds CORS (Cross-Origin Resource Sharing) headers support in your Symfony application",
+            "keywords": [
+                "api",
+                "cors",
+                "crossdomain"
+            ],
+            "support": {
+                "issues": "https://github.com/nelmio/NelmioCorsBundle/issues",
+                "source": "https://github.com/nelmio/NelmioCorsBundle/tree/2.1.1"
+            },
+            "time": "2021-04-20T08:27:05+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -3828,7 +3889,7 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v1.13.4",
+            "version": "v1.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
@@ -3876,7 +3937,7 @@
             "description": "Composer plugin for Symfony",
             "support": {
                 "issues": "https://github.com/symfony/flex/issues",
-                "source": "https://github.com/symfony/flex/tree/v1.13.4"
+                "source": "https://github.com/symfony/flex/tree/v1.14.1"
             },
             "funding": [
                 {
@@ -10741,5 +10802,5 @@
         "ext-iconv": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
