@@ -8,6 +8,7 @@ const ButtonLog = ({
   toggleDisplaySignin,
   toggleDisplayLogin,
   handleLogOut,
+  nickname,
 }) => (
   <div className="log-container">
     {/* Display login and signin options when not logged  */}
@@ -44,7 +45,7 @@ const ButtonLog = ({
     isLogged
     && (
       <>
-        <h3 className="log-text">Bonjour !</h3>
+        <h3 className="log-text">Bonjour ! {nickname}</h3>
         <button
           type="button"
           onClick={() => {
@@ -65,6 +66,7 @@ ButtonLog.propTypes = {
   toggleDisplaySignin: PropTypes.func.isRequired,
   toggleDisplayLogin: PropTypes.func.isRequired,
   handleLogOut: PropTypes.func.isRequired,
+  nickname: PropTypes.string.isRequired,
 };
 
 export default ButtonLog;

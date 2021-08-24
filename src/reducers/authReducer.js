@@ -4,6 +4,7 @@ import {
   CLICK_ON_LOGOUT,
   SUBMIT_LOGIN,
   SUBMIT_SIGNIN,
+  CLEAR_INPUT,
 } from 'src/actions/auth';
 
 const initialState = {
@@ -23,23 +24,22 @@ function authReducer(state = initialState, action = {}) {
     case SAVE_USER_DATA:
       return {
         ...state,
-        isLogged: action.isLogged,
+        isLogged: true,
         nickname: action.nickname,
         email: action.email,
+        password: '',
       };
-    default:
-      return state;
     case CLICK_ON_LOGOUT:
       return {
         ...state,
         isLogged: false,
         email: '',
         password: '',
+        nickname: '',
       };
     case SUBMIT_LOGIN:
       return {
         ...state,
-        isLogged: true,
         email: '',
         password: '',
       };
@@ -50,6 +50,15 @@ function authReducer(state = initialState, action = {}) {
         password: '',
         nickname: '',
       };
+    case CLEAR_INPUT:
+      return {
+        ...state,
+        email: '',
+        password: '',
+        nickname: '',
+      };
+    default:
+      return state;
   }
 }
 
