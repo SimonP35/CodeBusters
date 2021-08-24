@@ -27,7 +27,6 @@ const Home = ({ isLogged }) => {
     if (isLogged) {
       makeRedirection();
     }
-    else {}
   };
   return (
     <>

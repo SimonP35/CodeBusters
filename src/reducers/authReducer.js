@@ -1,4 +1,10 @@
-import { SAVE_USER_DATA, CHANGE_FIELD, CLICK_ON_LOGOUT, SUBMIT_LOGIN, SUBMIT_SIGNIN } from 'src/actions/auth';
+import {
+  SAVE_USER_DATA,
+  CHANGE_FIELD,
+  CLICK_ON_LOGOUT,
+  SUBMIT_LOGIN,
+  SUBMIT_SIGNIN,
+} from 'src/actions/auth';
 
 const initialState = {
   nickname: '',
