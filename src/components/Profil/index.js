@@ -5,7 +5,6 @@ import Footer from 'src/components/Footer';
 
 import games from 'src/assets/images/games.png';
 
-
 import './profil.scss';
 
 const Profil = ({ email, nickname }) => (
