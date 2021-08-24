@@ -18,7 +18,7 @@ security:
                 # La propriété "de connexion/d'affichage"
                 property: email
         jwt:
-            lexik_jwt:
+            entity:
                 class: App\Entity\User
     firewalls:
         dev:
