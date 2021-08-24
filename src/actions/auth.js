@@ -4,6 +4,7 @@ export const SUBMIT_LOGIN = 'SUBMIT_LOGIN';
 export const SAVE_USER_DATA = 'SAVE_USER_DATA';
 export const CLICK_ON_LOGOUT = 'CLICK_ON_LOGOUT';
 export const SUBMIT_SIGNIN = 'SUBMIT_SIGNIN';
+export const CLEAR_INPUT = 'CLEAR_INPUT';
 
 // === action creators
 export const changeField = (newValue, identifier) => ({
@@ -12,10 +13,9 @@ export const changeField = (newValue, identifier) => ({
   name: identifier,
 });
 
-export const saveUserData = (nickname, isLogged, email) => ({
+export const saveUserData = (nickname, email) => ({
   type: SAVE_USER_DATA,
   nickname: nickname,
-  logged: isLogged,
   email: email,
 });
 
@@ -29,4 +29,8 @@ export const submitSignin = () => ({
 
 export const submitLogin = () => ({
   type: SUBMIT_LOGIN,
+});
+
+export const clearInput = () => ({
+  type: CLEAR_INPUT,
 });
