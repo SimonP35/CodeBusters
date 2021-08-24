@@ -167,6 +167,18 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+.mobile-back {
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(15, 15, 15, 0.39);
+}
+
 .mobile-container {
 
   background-color:vars.$color-popup-background;
