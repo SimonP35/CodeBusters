@@ -10,6 +10,7 @@ import ButtonLog from 'src/components/Header/ButtonLog';
 // si j'ai besoin de lire des informations dans le state
 const mapStateToProps = (state) => ({
   isLogged: state.auth.isLogged,
+  nickname: state.auth.nickname,
 });
 
 // === mapDispatchToProps
