@@ -31,7 +31,7 @@ class AuthenticationSuccessListener
     //     'email' => $user->getUserIdentifier(),
     //     'roles' => $user->getRoles(),
     // );
-        $user = $this->serializer->serialize($user, 'json', ['groups' => 'user']);
+        $user = $this->serializer->serialize($user, 'json', ['groups' => 'create_user']);
 
         $token['data'] = [
             'user' => $user,
