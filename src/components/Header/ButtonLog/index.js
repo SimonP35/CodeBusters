@@ -3,9 +3,15 @@ import PropTypes from 'prop-types';
 
 import './buttonlog.scss';
 
-const ButtonLog = ({ isLogged, toggleDisplaySignin, toggleDisplayLogin }) => (
+const ButtonLog = ({
+  isLogged,
+  toggleDisplaySignin,
+  toggleDisplayLogin,
+  handleLogOut,
+}) => (
   <div className="log-container">
-    {/* affichage des boutons inscription et connexion seulement si islogged vaut false */}
+    {/* Display login and signin options when not logged  */}
+
     {
     !isLogged
     && (
@@ -31,6 +37,26 @@ const ButtonLog = ({ isLogged, toggleDisplaySignin, toggleDisplayLogin }) => (
       </>
     )
     }
+
+    {/* Display user message when logged  */}
+
+    {
+    isLogged
+    && (
+      <>
+        <h3 className="log-text">Bonjour !</h3>
+        <button
+          type="button"
+          onClick={() => {
+            handleLogOut();
+          }}
+          className="log-button"
+          id="logout"
+        >Déconnexion
+        </button>
+      </>
+    )
+    }
   </div>
 );
 
@@ -38,6 +64,7 @@ ButtonLog.propTypes = {
   isLogged: PropTypes.bool.isRequired,
   toggleDisplaySignin: PropTypes.func.isRequired,
   toggleDisplayLogin: PropTypes.func.isRequired,
+  handleLogOut: PropTypes.func.isRequired,
 };
 
 export default ButtonLog;

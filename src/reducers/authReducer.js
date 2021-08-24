@@ -1,10 +1,10 @@
-import { SAVE_USER_DATA, CHANGE_FIELD } from 'src/actions/auth';
+import { SAVE_USER_DATA, CHANGE_FIELD, CLICK_ON_LOGOUT, SUBMIT_LOGIN, SUBMIT_SIGNIN } from 'src/actions/auth';
 
 const initialState = {
+  nickname: '',
   email: '',
   password: '',
   isLogged: false,
-  nickname: '',
 };
 
 function authReducer(state = initialState, action = {}) {
@@ -19,17 +19,31 @@ function authReducer(state = initialState, action = {}) {
         ...state,
         isLogged: action.isLogged,
         nickname: action.nickname,
+        email: action.email,
       };
     default:
       return state;
-  //   case CLICK_ON_LOGOUT:
-  //     return {
-  //       ...state,
-  //       isLogged: false,
-  //       email: '',
-  //       password: '',
-  //     };
-  // }
+    case CLICK_ON_LOGOUT:
+      return {
+        ...state,
+        isLogged: false,
+        email: '',
+        password: '',
+      };
+    case SUBMIT_LOGIN:
+      return {
+        ...state,
+        isLogged: true,
+        email: '',
+        password: '',
+      };
+    case SUBMIT_SIGNIN:
+      return {
+        ...state,
+        email: '',
+        password: '',
+        nickname: '',
+      };
   }
 }
 

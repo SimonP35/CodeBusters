@@ -4,7 +4,6 @@ const initialState = {
   displayLogin: false,
   displaySignin: false,
   displayComment: false,
-  displayMobil: false,
 };
 
 const popupReducer = (state = initialState, action = {}) => {
@@ -21,14 +20,6 @@ const popupReducer = (state = initialState, action = {}) => {
       };
     default:
       return state;
-  //   case CLICK_ON_LOGOUT:
-  //     return {
-  //       ...state,
-  //       isLogged: false,
-  //       email: '',
-  //       password: '',
-  //     };
-  // }
   }
 };
 

@@ -5,7 +5,6 @@ import Field from './Field';
 import './login.scss';
 
 const Login = ({
-
   toggleDisplayLogin,
   changeField,
   email,
@@ -15,6 +14,7 @@ const Login = ({
   const handleSubmit = (evt) => {
     evt.preventDefault();
     submitLogin();
+    toggleDisplayLogin();
   };
   return (
     <div className="login-background">
@@ -26,16 +26,17 @@ const Login = ({
             toggleDisplayLogin();
           }}
         >
-          +
+          x
         </button>
         <form className="login-form" onSubmit={handleSubmit}>
-          Formulaire de login
+          Formulaire de connexion
           <Field
             name="email"
             type="email"
             placeholder="Adresse Email"
             manageChange={changeField}
             value={email}
+            className="login-field"
           />
           <Field
             name="password"
@@ -43,6 +44,7 @@ const Login = ({
             placeholder="mot de passe"
             manageChange={changeField}
             value={password}
+            className="login-field"
           />
           <button className="login-button" type="submit">
             Se connecter
