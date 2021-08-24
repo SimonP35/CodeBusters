@@ -26,7 +26,7 @@ const Comment = ({
       >       x
       </button>
       <form className="comment-form" onSubmit={handleSubmit}>
-        <h3 className="comment-title">Laisse un commentaire :</h3>
+        <h3 className="comment-title">Ton commentaire :</h3>
         <Field
           className="comment-textarea"
           type="texte"
@@ -35,7 +35,7 @@ const Comment = ({
           value={comment}
           name="comment"
         />
-        <button lassName="comment-button" type="submit">ENVOYER</button>
+        <button className="comment-button" type="submit">ENVOYER</button>
       </form>
     </div>
   );

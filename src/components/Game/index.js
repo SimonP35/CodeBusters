@@ -1,9 +1,9 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import Win from 'src/containers/Win';
 
 import Intro from './Intro';
 import Board from './Board';
-import Win from './Win';
 import Loose from './Loose';
 import './game.scss';
 
