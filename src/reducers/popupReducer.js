@@ -3,7 +3,7 @@ import { TOGGLE_DISPLAY_POPUP_SIGNIN, TOGGLE_DISPLAY_POPUP_LOGIN, TOGGLE_DISPLAY
 const initialState = {
   displayLogin: false,
   displaySignin: false,
-  displayComment: true,
+  displayComment: false,
 };
 
 const popupReducer = (state = initialState, action = {}) => {
