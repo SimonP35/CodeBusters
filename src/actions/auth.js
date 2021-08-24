@@ -12,13 +12,12 @@ export const changeField = (newValue, identifier) => ({
   name: identifier,
 });
 
-export const saveUserData = (token, nickname, isLogged, email, password) => ({
+
+export const saveUserData = ( nickname, isLogged, email) => ({
   type: SAVE_USER_DATA,
-  token: token,
   nickname: nickname,
   logged: isLogged,
   email: email,
-  password: password,
 });
 
 export const handleLogOut = () => ({

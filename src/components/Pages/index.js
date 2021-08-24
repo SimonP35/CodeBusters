@@ -5,9 +5,10 @@ import Home from 'src/components/Home';
 import About from 'src/components/About';
 import Scenarios from 'src/components/Scenarios';
 import LegalNoticeContact from 'src/components/LegalNoticeContact';
-import Profil from 'src/components/Profil';
+import Profil from 'src/containers/Profil';
 import Popup from 'src/containers/Popup';
 import NotFound from 'src/components/NotFound';
+import Game from 'src/components/Game';
 
 import './pages.scss';
 
@@ -28,6 +29,9 @@ const Pages = () => (
       </Route>
       <Route path="/profil">
         <Profil />
+      </Route>
+      <Route path="/game">
+        <Game />
       </Route>
       <Route>
         <NotFound />

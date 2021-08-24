@@ -1,11 +1,13 @@
 import { connect } from 'react-redux';
 
 // on importe le composant de présentation
-import Home from 'src/components/Home';
+import Profil from 'src/components/Profil';
 
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
-const mapStateToProps = () => ({
+const mapStateToProps = (state) => ({
+  email: state.auth.email,
+  nickname: state.auth.nickname,
 });
 
 // === mapDispatchToProps
@@ -15,4 +17,4 @@ const mapDispatchToProps = () => ({
 });
 
 // === création de l'assistant
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Profil);

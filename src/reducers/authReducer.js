@@ -5,7 +5,6 @@ const initialState = {
   email: '',
   password: '',
   isLogged: false,
-  token: null,
 };
 
 function authReducer(state = initialState, action = {}) {
@@ -19,10 +18,8 @@ function authReducer(state = initialState, action = {}) {
       return {
         ...state,
         isLogged: action.isLogged,
-        token: action.token,
         nickname: action.nickname,
         email: action.email,
-        password: action.password,
       };
     default:
       return state;
@@ -43,7 +40,6 @@ function authReducer(state = initialState, action = {}) {
     case SUBMIT_SIGNIN:
       return {
         ...state,
-        isLogged: true,
         email: '',
         password: '',
         nickname: '',
