@@ -13,19 +13,8 @@ class SecurityController extends AbstractController
      * 
      * @Route("/api/login", name="api_login", methods={"POST"})
      */
-    public function login(): Response
+    public function login()
     {
-        // On renvoie les infos qu'on veut au client (front)
-        die;
-        // Par ex. des infos du User connecté
-        $user = $this->getUser();
-        dd($user);
-        return $this->json([
-            // On renvoie ce qu'on veut
-            'email' => $user->getUserIdentifier(),
-            'roles' => $user->getRoles(),
-            // => à adapter selon les besoins
-            'autre chose' => 'une valeur...',
-        ]);
+        //JWT et Listener passe par ici
     }
 }
