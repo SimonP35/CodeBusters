@@ -6,6 +6,7 @@ import {
   clearInput,
 } from 'src/actions/auth';
 import { toggleDisplayPopupLogin } from 'src/actions/buttonLog';
+import { displayErrormessage } from 'src/actions/popup';
 
 const authMiddleware = (store) => (next) => (action) => {
   // console.log('on a intercepté une action dans le middleware: ', action);
@@ -41,6 +42,7 @@ const authMiddleware = (store) => (next) => (action) => {
         .catch((error) => {
           console.log(error);
           console.log(error.response);
+          store.dispatch(displayErrormessage(error.response.data.errors.detail));
         })
         .then((response) => {
           console.log(response);
