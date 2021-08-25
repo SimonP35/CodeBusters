@@ -5,7 +5,7 @@ const initialState = {
   email: '',
   password: '',
   comment: '',
-  isLogged: false,
+  isLogged: true,
 };
 
 function authReducer(state = initialState, action = {}) {

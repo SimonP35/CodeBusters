@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-import Win from 'src/components/Game/Win';
 
 // import Loader from 'src/components/Loader';
 import games from 'src/assets/images/games.png';
@@ -30,7 +29,6 @@ const Home = () => (
         </div>
       </main>
     </div>
-    <Win />
     {/* <Loader /> */}
     <Footer />
   </>

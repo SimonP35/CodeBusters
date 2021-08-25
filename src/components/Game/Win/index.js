@@ -21,7 +21,7 @@ const Win = () => {
       <button
         type="button"
         onClick={() => dispatch({ type: 'TOGGLE_DISPLAY_POPUP_COMMENT' })}
-        className="log-button"
+        className="win-button"
         id="comment"
       >Laisser un commentaire
       </button>

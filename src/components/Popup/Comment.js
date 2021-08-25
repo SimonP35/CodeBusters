@@ -16,27 +16,29 @@ const Comment = ({
     toggleDisplayComment();
   };
   return (
-    <div className="comment-container">
-      <button
-        type="button"
-        className="popup-button-close"
-        onClick={() => {
-          toggleDisplayComment();
-        }}
-      >       x
-      </button>
-      <form className="comment-form" onSubmit={handleSubmit}>
-        <h3 className="comment-title">Ton commentaire :</h3>
-        <Field
-          className="comment-textarea"
-          type="texte"
-          placeholder="Mon commentaire..."
-          manageChange={changeField}
-          value={comment}
-          name="comment"
-        />
-        <button className="comment-button" type="submit">ENVOYER</button>
-      </form>
+    <div className="comment-background">
+      <div className="comment-container">
+        <button
+          type="button"
+          className="popup-button-close"
+          onClick={() => {
+            toggleDisplayComment();
+          }}
+        >       x
+        </button>
+        <form className="comment-form" onSubmit={handleSubmit}>
+          <h3 className="comment-title">Ton commentaire :</h3>
+          <Field
+            className="comment-textarea"
+            type="texte"
+            placeholder="Mon commentaire..."
+            manageChange={changeField}
+            value={comment}
+            name="comment"
+          />
+          <button className="comment-button" type="submit">ENVOYER</button>
+        </form>
+      </div>
     </div>
   );
 };

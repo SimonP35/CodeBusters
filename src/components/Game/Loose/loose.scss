@@ -62,21 +62,18 @@
     }
   }
   .loose-button {
-    background-color: red;
-    color:white;
-    display:inline-block;
-    text-transform:uppercase;
-    font-weight: bold;
+    background-color:#11ffee00 ;
+    color: black;
     border:none;
-    width:100px;
-    height:30px;
-    position:absolute;
-    left:42%;
-    right:auto;
-    top:45%;
-    bottom:auto;
-    border-radius:10px;
-    font-family: "Meta";
-
-  }
+    font-weight: bold;
+    padding-top:10px;
+    font-size: large;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+    &:hover {
+      text-decoration: underline;
+      color:red;
+      cursor:pointer;
+    }
+}
 }

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { toggleDisplayPopupComment } from 'src/actions/buttonLog';
 
 // on importe le composant de présentation
-import Win from 'src/components/Game/Win';
+import Loose from 'src/components/Game/Loose';
 
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
@@ -21,4 +21,4 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 // === création de l'assistant
-export default connect(mapStateToProps, mapDispatchToProps)(Win);
+export default connect(mapStateToProps, mapDispatchToProps)(Loose);

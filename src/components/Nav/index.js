@@ -1,9 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import './nav.scss';
 
-const Nav = () => (
+const Nav = ({
+  isLogged,
+}) => (
   <nav className="nav-container">
     <NavLink
       exact
@@ -29,15 +32,26 @@ const Nav = () => (
     >
       Scénarios
     </NavLink>
-    <NavLink
-      exact
-      to="/profil"
-      className="nav-link"
-      activeClassName="nav-link-active"
-    >
-      Profil
-    </NavLink>
+    {/* Display user profil when logged  */}
+    {
+isLogged
+&& (
+<NavLink
+  exact
+  to="/profil"
+  className="nav-link"
+  activeClassName="nav-link-active"
+>
+  Profil
+</NavLink>
+)
+}
   </nav>
 );
 
+Nav.propTypes = {
+  isLogged: PropTypes.bool.isRequired,
+};
+
 export default Nav;
+
