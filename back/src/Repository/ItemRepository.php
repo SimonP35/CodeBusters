@@ -18,7 +18,7 @@ class ItemRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Item::class);
     }
-
+    
     // /**
     //  * @return Item[] Returns an array of Item objects
     //  */
@@ -60,13 +60,4 @@ class ItemRepository extends ServiceEntityRepository
     //     return $query->getResult();
     // }
 
-    public function findItemByGameId($id)
-    {
-        return $this->createQueryBuilder('i')
-            ->andWhere('i.game = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
 }

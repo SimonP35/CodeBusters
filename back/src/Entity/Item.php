@@ -22,7 +22,7 @@ class Item
 
     /**
      * @ORM\Column(type="smallint")
-     * @Groups({"new_game"})
+     * @Groups({"new_game", "item"})
      * @Assert\NotBlank
      * @Assert\Type("int") 
      * @Assert\Length(max = 1)

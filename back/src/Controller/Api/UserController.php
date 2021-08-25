@@ -20,16 +20,15 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
  */
 class UserController extends AbstractController
 {
-
     /**
+     * Endpoint permettant au Front d'enregistrer un utilisateur
+     * 
      * @Route("/register", name="api_user_register", methods={"POST"})
      */
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, SerializerInterface $serializer, EntityManagerInterface $entityManager, ValidatorInterface $validator): Response
     {
         // On récupère le contenu de la requête (du JSON)
         $jsonContent = $request->getContent();
-
-        $user = new User();
 
         // On désérialise le JSON vers une entité User
         $user = $serializer->deserialize($jsonContent, User::class, 'json');
@@ -45,8 +44,8 @@ class UserController extends AbstractController
         $errors = $validator->validate($user);
 
         // Si la validation rencontre des erreurs
-        // ($errors se comporte comme un tableau et contient un élément par erreur)
         if (count($errors) > 0) {
+            // On renvoie les différentes erreurs sous forme de tableau
             return $this->json(['errors' => $errors], Response::HTTP_UNPROCESSABLE_ENTITY);
         }
 
@@ -57,7 +56,7 @@ class UserController extends AbstractController
         // On retourne l'objet $user en JSON
         return $this->json(
             // Le user que l'on retourne en Json directement au front
-            $user,
+            ["message" => "Utilisateur créé", $user],
             //Le status code
             Response::HTTP_CREATED,
             [],
@@ -67,20 +66,25 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/read", name="api_user_read", methods={"GET"})
+     * Endpoint permettant au Front d'afficher un utilisateur spécifique (page profil)
+     * 
+     * @Route("/read/{id<\d+>}", name="api_user_read", methods={"GET"})
      */
-    public function show(User $user): Response
+    public function read(User $user): Response
     {
-        return $this->json($user, Response::HTTP_OK);
+        // On retourne l'objet $user en JSON
+        return $this->json(['user' => $user], Response::HTTP_OK, [], ['groups' => 'user_page']);
     }
 
     /**
+     * Endpoint permettant au Front d'éditer un utilisateur spécifique sur la page Profil
+     * 
      * @Route("/update/{id<\d+>}", name="api_user_update", methods={"PUT", "PATCH"})
      */
     public function update(Request $request, User $user = null, UserPasswordHasherInterface $userPasswordHasher, SerializerInterface $serializer, EntityManagerInterface $entityManager, ValidatorInterface $validator): Response
     {
-        // Vérification si le user existe bien
-        if ($user === null) {
+        // On vérifie que le user existe bien
+        if (null === $user) {
             return new JsonResponse(
                 ["message" => "Cet utilisateur n'existe pas"],
                 Response::HTTP_NOT_FOUND
@@ -105,43 +109,38 @@ class UserController extends AbstractController
         $errors = $validator->validate($user);
 
         // Si la validation rencontre des erreurs
-        // ($errors se comporte comme un tableau et contient un élément par erreur)
         if (count($errors) > 0) {
+            // On renvoie les différentes erreurs sous forme de tableau
             return $this->json(['errors' => $errors], Response::HTTP_UNPROCESSABLE_ENTITY);
         }
 
-        // On flush (enregistrement en BDD)
+        // On flush
         $entityManager->flush();
 
         // On retourne en JsonResponse vu qu'il n'y a pas d'objet
-        return new JsonResponse(["message" => "Utilisateur modifié"], Response::HTTP_OK);
+        return $this->json(["message" => "Utilisateur modifié", $user], Response::HTTP_OK);
     }
 
     /**
+     * Endpoint permettant au Front de supprimer un utilisateur spécifique sur la page Profil
+     * 
      * @Route("/delete/{id<\d+>}", name="api_user_delete", methods="DELETE")
      */
     public function delete(User $user = null, EntityManagerInterface $em)
     {
-        // On vérifie que le USER existe bien
+        // On vérifie que le user existe bien
         if (null === $user) {
-
-            $error = 'Cet utilisateur n\'existe pas';
-
-            return $this->json(['error' => $error], Response::HTTP_NOT_FOUND);
+            return new JsonResponse(
+                ["message" => "Cet utilisateur n'existe pas"],
+                Response::HTTP_NOT_FOUND
+            );
         }
-
-        // if ($this->isCsrfTokenValid('delete'.$user->getId(), $request->request->get('_token'))) {
-        //     $em->remove($user);
-        //     $em->flush();
-        // }
 
         // Il existe bien, donc on envoie la demande de suppression
         $em->remove($user);
         $em->flush();
         
         // On renvoie l'affirmation de la suppression
-        return $this->json(['message' => 'L\'utilisateur a bien été supprimé.'], Response::HTTP_OK);
-
-        //! Le front doit rediriger vers HOME
+        return new JsonResponse(['message' => 'L\'utilisateur a bien été supprimé.'], Response::HTTP_OK);
     }
 }

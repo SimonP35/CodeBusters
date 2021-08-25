@@ -36,7 +36,7 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Email()
-     * @Groups({"create_user"})
+     * @Groups({"create_user", "user_page"})
      * @Assert\NotBlank
      * @Assert\Email
      */
@@ -54,7 +54,7 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"create_user", "game_end", "new_game","new_comment"})
+     * @Groups({"create_user", "game_end", "new_game","new_comment", "user_page"})
      * @Assert\NotBlank
      */
     private $nickname;
@@ -66,7 +66,7 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="datetime")
-     * @Groups("create_user")
+     * @Groups({"create_user", "user_page"})
      */
     private $created_at;
 
@@ -77,11 +77,13 @@ class User implements UserInterface
 
     /**
      * @ORM\OneToMany(targetEntity=Game::class, mappedBy="user", orphanRemoval=true)
+     * @Groups("user_page")
      */
     private $games;
 
     /**
      * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="user", orphanRemoval=true)
+     * @Groups("user_page")
      */
     private $comments;
 
