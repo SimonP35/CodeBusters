@@ -22,7 +22,7 @@ class CommentController extends AbstractController
     /**
      * Endpoint permettant au Front d'accéder à la liste complète des commentaires
      * 
-     * @Route("/", name="api_comment_list", methods={"GET"})
+     * @Route("/", name="api_comment_list", methods="GET")
      */
     public function list(CommentRepository $commentRepository): Response
     {
