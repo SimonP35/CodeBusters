@@ -24,7 +24,7 @@ class AppFixtures extends Fixture
     {
         $faker = Factory::create('fr_FR');
 
-        $items = Yaml::parseFile('./public/init/items.yaml');
+        $items = Yaml::parseFile('./config/init/items.yaml');
 
         // Notre fournisseur de données, ajouté à Faker
         $faker->addProvider(new DataProvider());

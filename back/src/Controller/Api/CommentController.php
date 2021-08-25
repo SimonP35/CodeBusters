@@ -64,9 +64,9 @@ class CommentController extends AbstractController
      * Endpoint permettant au Front d'afficher un commentaire spécifique
      * (Utilisation éventuelle pour un affichage aléatoire d'un commentaire sur la page home/scénarios)
      * 
-     * @Route("/read/{id<\d+>}", name="api_comment_read", methods={"GET"})
+     * @Route("/read/{id<\d+>}", name="api_comment_read", methods="GET")
      */
-    public function read(Comment $comment = null): Response
+    public function read(Comment $comment): Response
     {
         // On retourne l'objet $comment en JSON
         return $this->json(['comment' => $comment], Response::HTTP_OK, [], ['groups' => 'new_comment']);
