@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import Home from 'src/containers/Home';
 import About from 'src/components/About';
-import Scenarios from 'src/components/Scenarios';
+import Scenarios from 'src/containers/Scenarios';
 import LegalNoticeContact from 'src/components/LegalNoticeContact';
 import Profil from 'src/containers/Profil';
 import Popup from 'src/containers/Popup';

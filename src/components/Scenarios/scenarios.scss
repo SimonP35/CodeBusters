@@ -1,8 +1,63 @@
+@use 'src/styles/vars';
+
 .scenarios-main{
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-color: vars.$color-popup-background;
+  box-sizing: border-box;
+  position:absolute;
+   top:28%;
+   width: 70%;
+   height: 700px;
+   padding:10px;
+   margin:2px;
+   
+   .scenarios-describe {
+    margin-top:10px;
+    padding-left:10px;
+    width: 600px;
+    height: 200px;
+  }
+
   .scenarios-container {
-    background-color: white;
-    margin-top: 1em;
+    width: 650px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    //background-color: yellow;
+    margin:5px;
+    padding-top:10px;
+    padding-bottom:10px;
+    box-sizing: border-box;
+
+    .scenarios-map {
+      width: 300px;
+      height: 200px;
+      display: flex;
+      flex-direction: row;
+      box-shadow: 5px 5px 5px rgb(165, 159, 159);
+      transition: all 0.5s ease;
+      cursor: pointer;
+     .scenarios-image {
+       width: 150px;
+       height: 150px;
+
+    }
+
+    .scenarios-title {
+     
+
+    }
+
+    .scenarios-comment {
+   
+
+    }
+    
+  }
   }
 }
