@@ -5,7 +5,6 @@ import classNames from 'classnames';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-
 // import Loader from 'src/components/Loader';
 import banniere from 'src/assets/images/banniere.png';
 import utils from 'src/utils';

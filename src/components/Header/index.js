@@ -7,10 +7,15 @@ import Logo from './Logo';
 
 const Header = () => (
   <header className="header-container">
-    <Title />
-    <Logo />
-    <ButtonLog />
-    <Nav />
+    <div>
+      <Title />
+      <Logo />
+      <ButtonLog />
+    </div>
+    <div>
+      <Nav />
+    </div>
+
   </header>
 );
 

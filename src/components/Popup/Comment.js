@@ -8,6 +8,7 @@ const Comment = ({
   toggleDisplayComment,
   changeField,
   comment,
+  rating,
   submitComment,
 }) => {
   const handleSubmit = (evt) => {
@@ -36,6 +37,14 @@ const Comment = ({
             value={comment}
             name="comment"
           />
+          <Field
+            className="comment-textarea"
+            type="texte"
+            placeholder="Mon vote"
+            manageChange={changeField}
+            value={rating}
+            name="rating"
+          />
           <button className="comment-button" type="submit">ENVOYER</button>
         </form>
       </div>
@@ -46,6 +55,7 @@ const Comment = ({
 Comment.propTypes = {
   toggleDisplayComment: PropTypes.func.isRequired,
   comment: PropTypes.string.isRequired,
+  rating: PropTypes.string.isRequired,
   changeField: PropTypes.func.isRequired,
   submitComment: PropTypes.func.isRequired,
 };

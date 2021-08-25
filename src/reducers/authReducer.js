@@ -5,7 +5,7 @@ import {
   SUBMIT_LOGIN,
   SUBMIT_SIGNIN,
   CLEAR_INPUT,
-  SUBMIT_COMMENT,
+
 } from 'src/actions/auth';
 
 const initialState = {
@@ -53,11 +53,6 @@ function authReducer(state = initialState, action = {}) {
         email: '',
         password: '',
         nickname: '',
-      };
-    case SUBMIT_COMMENT:
-      return {
-        ...state,
-        comment: '',
       };
     case CLEAR_INPUT:
       return {
