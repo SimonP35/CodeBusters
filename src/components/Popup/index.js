@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Login from './Login';
 import Signin from './Signin';
 import Comment from './Comment';
+import ErrorMessage from './ErrorMessage';
 
 import './popup.scss';
 
@@ -11,6 +12,8 @@ const Popup = ({
   displayLogin,
   displaySignin,
   displayComment,
+  displayErrorMessage,
+  closedErrormessage,
   toggleDisplaySignin,
   toggleDisplayLogin,
   toggleDisplayComment,
@@ -22,6 +25,7 @@ const Popup = ({
   submitLogin,
   submitSignin,
   submitComment,
+  errorContent,
 }) => (
   <>
     {displayLogin && (
@@ -43,12 +47,18 @@ const Popup = ({
       submitSignin={submitSignin}
     />
     )}
+
     {displayComment && (
     <Comment
       toggleDisplayComment={toggleDisplayComment}
       changeField={changeField}
       comment={comment}
       submitComment={submitComment}
+
+    {displayErrorMessage && (
+    <ErrorMessage
+      errorContent={errorContent}
+      closedErrormessage={closedErrormessage}
     />
     )}
   </>
@@ -58,6 +68,8 @@ Popup.propTypes = {
   displayLogin: PropTypes.bool.isRequired,
   displaySignin: PropTypes.bool.isRequired,
   displayComment: PropTypes.bool.isRequired,
+  displayErrorMessage: PropTypes.bool.isRequired,
+  closedErrormessage: PropTypes.func.isRequired,
   toggleDisplaySignin: PropTypes.func.isRequired,
   toggleDisplayLogin: PropTypes.func.isRequired,
   toggleDisplayComment: PropTypes.func.isRequired,
@@ -69,7 +81,7 @@ Popup.propTypes = {
   submitLogin: PropTypes.func.isRequired,
   submitSignin: PropTypes.func.isRequired,
   submitComment: PropTypes.func.isRequired,
-
+  errorContent: PropTypes.string.isRequired,
 };
 
 export default Popup;
