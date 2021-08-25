@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { toggleDisplayPopupComment } from 'src/actions/buttonLog';
+import { toggleDisplayPopupComment } from 'src/actions/popup';
 
 // on importe le composant de présentation
 import Win from 'src/components/Game/Win';

@@ -57,3 +57,4 @@ const authMiddleware = (store) => (next) => (action) => {
   // on passe l'action au suivant (middleware suivant ou reducer)
 
 export default authMiddleware;
+

@@ -1,5 +1,5 @@
-import { TOGGLE_DISPLAY_POPUP_SIGNIN, TOGGLE_DISPLAY_POPUP_LOGIN, TOGGLE_DISPLAY_POPUP_COMMENT } from 'src/actions/buttonLog';
-import { DISPLAY_ERRORMESSAGE, CLOSED_ERRORMESSAGE } from 'src/actions/popup';
+import { TOGGLE_DISPLAY_POPUP_SIGNIN, TOGGLE_DISPLAY_POPUP_LOGIN} from 'src/actions/buttonLog';
+import { DISPLAY_ERRORMESSAGE, CLOSED_ERRORMESSAGE, TOGGLE_DISPLAY_POPUP_COMMENT } from 'src/actions/popup';
 
 const initialState = {
   displayLogin: false,
@@ -7,6 +7,7 @@ const initialState = {
   displayComment: false,
   displayErrorMessage: false,
   errorContent: '',
+  comment: '',
 };
 
 const popupReducer = (state = initialState, action = {}) => {

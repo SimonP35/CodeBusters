@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 // on importe le composant de présentation
 import Popup from 'src/components/Popup';
 
-import { toggleDisplayPopupSignin, toggleDisplayPopupLogin, toggleDisplayPopupComment } from 'src/actions/buttonLog';
+import { toggleDisplayPopupSignin, toggleDisplayPopupLogin } from 'src/actions/buttonLog';
 import {
   changeField,
   submitLogin,
@@ -11,7 +11,7 @@ import {
   submitSignin,
   submitComment,
 } from 'src/actions/auth';
-import { closedErrormessage } from 'src/actions/popup';
+import { closedErrormessage, toggleDisplayPopupComment } from 'src/actions/popup';
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
 const mapStateToProps = (state) => ({
@@ -23,7 +23,7 @@ const mapStateToProps = (state) => ({
   email: state.auth.email,
   password: state.auth.password,
   nickname: state.auth.nickname,
-  comment: state.auth.comment,
+  comment: state.popup.comment,
 });
 
 // === mapDispatchToProps
