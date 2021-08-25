@@ -9,9 +9,8 @@ import {
   submitLogin,
   handleLogOut,
   submitSignin,
-  submitComment,
 } from 'src/actions/auth';
-import { closedErrormessage, toggleDisplayPopupComment } from 'src/actions/popup';
+import { closedErrormessage, toggleDisplayPopupComment, submitComment } from 'src/actions/popup';
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
 const mapStateToProps = (state) => ({
@@ -19,11 +18,11 @@ const mapStateToProps = (state) => ({
   displaySignin: state.popup.displaySignin,
   displayComment: state.popup.displayComment,
   displayErrorMessage: state.popup.displayErrorMessage,
+  comment: state.popup.comment,
   errorContent: state.popup.errorContent,
   email: state.auth.email,
   password: state.auth.password,
   nickname: state.auth.nickname,
-  comment: state.popup.comment,
 });
 
 // === mapDispatchToProps
