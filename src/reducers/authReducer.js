@@ -14,6 +14,7 @@ const initialState = {
   password: '',
   isLogged: false,
   token: '',
+  id: '',
 };
 
 function authReducer(state = initialState, action = {}) {
@@ -30,6 +31,7 @@ function authReducer(state = initialState, action = {}) {
         nickname: action.nickname,
         email: action.email,
         token: action.token,
+        id: action.id,
         password: '',
       };
     case CLICK_ON_LOGOUT:

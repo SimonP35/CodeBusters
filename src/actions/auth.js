@@ -13,8 +13,9 @@ export const changeField = (newValue, identifier) => ({
   name: identifier,
 });
 
-export const saveUserData = (nickname, email, token) => ({
+export const saveUserData = (id, nickname, email, token) => ({
   type: SAVE_USER_DATA,
+  id: id,
   nickname: nickname,
   email: email,
   token: token,
