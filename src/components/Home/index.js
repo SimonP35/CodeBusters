@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
+
 // import Loader from 'src/components/Loader';
 import games from 'src/assets/images/games.png';
 import utils from 'src/utils';

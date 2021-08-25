@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 
 // on importe le composant de présentation
 import Popup from 'src/components/Popup';
-import { toggleDisplayPopupSignin, toggleDisplayPopupLogin } from 'src/actions/buttonLog';
+import { toggleDisplayPopupSignin, toggleDisplayPopupLogin, toggleDisplayPopupComment } from 'src/actions/buttonLog';
+import { changeField, submitLogin, handleLogOut, submitSignin, submitComment } from 'src/actions/auth';
 import {
   changeField,
   submitLogin,
@@ -21,6 +22,7 @@ const mapStateToProps = (state) => ({
   email: state.auth.email,
   password: state.auth.password,
   nickname: state.auth.nickname,
+  comment: state.auth.comment,
 });
 
 // === mapDispatchToProps
@@ -44,6 +46,13 @@ const mapDispatchToProps = (dispatch) => ({
   submitSignin: () => {
     dispatch(submitSignin());
   },
+
+  toggleDisplayComment: () => {
+    dispatch(toggleDisplayPopupComment());
+  },
+  submitComment: () => {
+    dispatch(submitComment());
+    
   closedErrormessage: () => {
     dispatch(closedErrormessage());
   },

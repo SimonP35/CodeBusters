@@ -1,5 +1,23 @@
 @use 'src/styles/vars';
 
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2") format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.comment-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(15, 15, 15, 0.39);
+}
+
 .comment-container {
 
   background-color:vars.$color-popup-background;
@@ -10,14 +28,17 @@
   border:none;
   position:absolute;
   left:50%;
+  margin:auto;
   top:50%;
   border-radius: 10%;
   border-bottom: 5px solid vars.$color-title-last ;
-  // border-top: 5px solid vars.$color-title-four ;  
-  // border-left: 5px solid vars.$color-title-first ;  
+  border-top: 5px solid vars.$color-title-four ;  
+  border-left: 5px solid vars.$color-title-first ;  
   border-right: 5px solid vars.$color-title-last ;  
   right:auto;
   bottom:auto;
+  display: flex;
+  justify-self: center;  
 
   .comment-form {
 
@@ -55,8 +76,8 @@
     background-color: vars.$color-background;
     padding: 1.5px 7px;
     left: 50%;
-    margin-left: 45px;
-    margin-top: -15px;
+    margin-left: 30px;
+    margin-top: -20px;
     border-radius: 50%;
     border: 2px solid vars.$color-popup-background;
     color: vars.$color-popup-background;
@@ -67,5 +88,15 @@
       background-color: vars.$color-background;
       color: #fff;
     }
+}
+
+.win-video-responsive {
+background-color: grey;
+color:black;
+border: 1px solid black;
+display: inline-block;
+margin:10px;
+padding-top:5px;
+
 }
 }

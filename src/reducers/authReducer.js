@@ -11,7 +11,8 @@ const initialState = {
   nickname: '',
   email: '',
   password: '',
-  isLogged: false,
+  comment: '',
+  isLogged: true,
 };
 
 function authReducer(state = initialState, action = {}) {
@@ -49,6 +50,11 @@ function authReducer(state = initialState, action = {}) {
         email: '',
         password: '',
         nickname: '',
+      };
+    case SUBMIT_COMMENT:
+      return {
+        ...state,
+        comment: '',
       };
     case CLEAR_INPUT:
       return {

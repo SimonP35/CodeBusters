@@ -16,12 +16,15 @@ const Popup = ({
   closedErrormessage,
   toggleDisplaySignin,
   toggleDisplayLogin,
+  toggleDisplayComment,
   changeField,
   email,
   password,
   nickname,
+  comment,
   submitLogin,
   submitSignin,
+  submitComment,
   errorContent,
 }) => (
   <>
@@ -42,10 +45,16 @@ const Popup = ({
       password={password}
       nickname={nickname}
       submitSignin={submitSignin}
-
     />
     )}
-    {displayComment && <Comment />}
+
+    {displayComment && (
+    <Comment
+      toggleDisplayComment={toggleDisplayComment}
+      changeField={changeField}
+      comment={comment}
+      submitComment={submitComment}
+
     {displayErrorMessage && (
     <ErrorMessage
       errorContent={errorContent}
@@ -63,14 +72,16 @@ Popup.propTypes = {
   closedErrormessage: PropTypes.func.isRequired,
   toggleDisplaySignin: PropTypes.func.isRequired,
   toggleDisplayLogin: PropTypes.func.isRequired,
+  toggleDisplayComment: PropTypes.func.isRequired,
   changeField: PropTypes.func.isRequired,
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   nickname: PropTypes.string.isRequired,
+  comment: PropTypes.string.isRequired,
   submitLogin: PropTypes.func.isRequired,
   submitSignin: PropTypes.func.isRequired,
+  submitComment: PropTypes.func.isRequired,
   errorContent: PropTypes.string.isRequired,
-
 };
 
 export default Popup;
