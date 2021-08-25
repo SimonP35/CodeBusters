@@ -1,4 +1,4 @@
-import { TOGGLE_DISPLAY_POPUP_SIGNIN, TOGGLE_DISPLAY_POPUP_LOGIN } from 'src/actions/buttonLog';
+import { TOGGLE_DISPLAY_POPUP_SIGNIN, TOGGLE_DISPLAY_POPUP_LOGIN, TOGGLE_DISPLAY_POPUP_COMMENT } from 'src/actions/buttonLog';
 import { DISPLAY_ERRORMESSAGE, CLOSED_ERRORMESSAGE } from 'src/actions/popup';
 
 const initialState = {
@@ -20,6 +20,11 @@ const popupReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         displayLogin: !state.displayLogin,
+      };
+    case TOGGLE_DISPLAY_POPUP_COMMENT:
+      return {
+        ...state,
+        displayComment: !state.displayComment,
       };
     case DISPLAY_ERRORMESSAGE:
       return {
