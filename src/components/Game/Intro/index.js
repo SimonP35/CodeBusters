@@ -7,7 +7,7 @@ import './intro.scss';
 
 const scenario = utils[3].scenarios[0];
 
-const Intro =() => {
+const Intro = () => {
   const dispatch = useDispatch();
   return (
 

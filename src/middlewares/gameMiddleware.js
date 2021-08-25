@@ -8,9 +8,9 @@ const gameMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case startGame: {
       const { gamePlay} = store.getState().game;
-      axios.get('http://3.238.70.10/api/login', { gamePlay: gamePlay })
+      axios.post('http://3.238.70.10/api/game/create', { gamePlay: gamePlay })
         .then((response) => {
-        // Lorsqu'on reçoit la réponse, on enregistre le pseudo et la valeur true à islogged
+        // Lorsqu'on reçoit la réponse qui charge la board, on renvoie sur page board et on lance la requête sur le timer
           console.log('on a reçu le board');
         })
         .catch((error) => {
