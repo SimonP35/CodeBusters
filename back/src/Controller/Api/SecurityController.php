@@ -2,7 +2,6 @@
 
 namespace App\Controller\Api;
 
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -15,6 +14,6 @@ class SecurityController extends AbstractController
      */
     public function login()
     {
-        //JWT et Listener passe par ici
+        // JWT et Listener passe par ici
     }
 }

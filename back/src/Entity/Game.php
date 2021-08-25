@@ -32,13 +32,14 @@ class Game
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     * @Groups({"new_game", "game_end"})
+     * @Groups({"new_game", "game_end", "user_page"})
      * @Assert\Positive
      */
     private $score;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Groups("user_page")
      */
     private $created_at;
 
@@ -67,6 +68,7 @@ class Game
 
     /**
      * @ORM\Column(type="smallint")
+     * @Groups("user_page")
      */
     private $scenario;
 
