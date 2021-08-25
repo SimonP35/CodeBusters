@@ -19,6 +19,7 @@ const mapStateToProps = (state) => ({
   displayComment: state.popup.displayComment,
   displayErrorMessage: state.popup.displayErrorMessage,
   comment: state.popup.comment,
+  rating: state.popup.rating,
   errorContent: state.popup.errorContent,
   email: state.auth.email,
   password: state.auth.password,
@@ -46,7 +47,6 @@ const mapDispatchToProps = (dispatch) => ({
   submitSignin: () => {
     dispatch(submitSignin());
   },
-
   toggleDisplayComment: () => {
     dispatch(toggleDisplayPopupComment());
   },

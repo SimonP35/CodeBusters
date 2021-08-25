@@ -31,7 +31,7 @@ const authMiddleware = (store) => (next) => (action) => {
     }
     case SUBMIT_SIGNIN: {
       const { nickname, email, password } = store.getState().auth;
-      axios.post('http://3.238.70.10/api/user/register', { nickname: nickname, email: email, password: password })
+      axios.post('http://3.238.70.10/api/comment/read/40', { nickname: nickname, email: email, password: password })
         .then((response) => {
           // console.log(response);
           // si la création se passe bien
@@ -51,15 +51,20 @@ const authMiddleware = (store) => (next) => (action) => {
       break;
     }
     case SUBMIT_COMMENT: {
-      const { comment } = store.getState().popup;
-      axios.post('#', { comment: comment })
-          // Lorsqu'on reçoit la réponse, on enregistre le commentaire de l'utilisateur (à lier au scénario)
+      const { comment, rating } = store.getState().popup;
+      axios.post('http://3.238.70.10/api/comment/create', { content: comment, rating: rating })
+       // Lorsqu'on reçoit la réponse, on enregistre le commentaire de l'utilisateur (à lier au scénario)
         .then((response) => {
           console.log(response);
           // si la création se passe bien on nettoie le champs
           store.dispatch(clearInput());
         })
         .catch((error) => {
+          // console.log(error.response);
+          // store.dispatch(displayErrormessage(error.response.data.errors.detail));
+        })
+        .then((response) => {
+          // console.log(response);
         });
       break;
     }

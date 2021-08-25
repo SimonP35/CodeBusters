@@ -22,6 +22,7 @@ const Popup = ({
   password,
   nickname,
   comment,
+  rating,
   submitLogin,
   submitSignin,
   submitComment,
@@ -53,6 +54,7 @@ const Popup = ({
       toggleDisplayComment={toggleDisplayComment}
       changeField={changeField}
       comment={comment}
+      rating={rating}
       submitComment={submitComment}
     />
     )}
@@ -80,6 +82,7 @@ Popup.propTypes = {
   password: PropTypes.string.isRequired,
   nickname: PropTypes.string.isRequired,
   comment: PropTypes.string.isRequired,
+  rating: PropTypes.string.isRequired,
   submitLogin: PropTypes.func.isRequired,
   submitSignin: PropTypes.func.isRequired,
   submitComment: PropTypes.func.isRequired,

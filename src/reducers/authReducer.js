@@ -8,10 +8,6 @@ import {
 
 } from 'src/actions/auth';
 
-import {
-  SUBMIT_COMMENT,
-} from 'src/actions/popup';
-
 const initialState = {
   nickname: '',
   email: '',
@@ -54,11 +50,6 @@ function authReducer(state = initialState, action = {}) {
         email: '',
         password: '',
         nickname: '',
-      };
-    case SUBMIT_COMMENT:
-      return {
-        ...state,
-        comment: '',
       };
     case CLEAR_INPUT:
       return {

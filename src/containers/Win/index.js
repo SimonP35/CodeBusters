@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { toggleDisplayPopupComment } from 'src/actions/popup';
+import { toggleDisplayPopupComment, submitComment } from 'src/actions/popup';
 
 // on importe le composant de présentation
 import Win from 'src/components/Game/Win';
@@ -17,6 +17,9 @@ const mapDispatchToProps = (dispatch) => ({
   // nom de la prop à remplir: fonction qui dispatch l'action
   toggleDisplayComment: () => {
     dispatch(toggleDisplayPopupComment());
+  },
+  submitComment: () => {
+    dispatch(submitComment());
   },
 });
 
