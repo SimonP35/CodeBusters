@@ -2,19 +2,16 @@
 @use 'src/styles/vars';
 
 .home-main{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   width: 900px;
-   margin:1em auto;
-   background-color: vars.$color-popup-background;
-   box-sizing: border-box;
-   position:absolute;
-    top:28%;
-    height: 700px;
-    padding:10px;
-    margin:2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  margin:1em auto;
+  background-color: vars.$color-popup-background;
+  box-sizing: border-box;
+  
+
     
 
   .home-banniere {

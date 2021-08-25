@@ -1,5 +1,10 @@
-import { TOGGLE_DISPLAY_POPUP_SIGNIN, TOGGLE_DISPLAY_POPUP_LOGIN} from 'src/actions/buttonLog';
-import { DISPLAY_ERRORMESSAGE, CLOSED_ERRORMESSAGE, TOGGLE_DISPLAY_POPUP_COMMENT, SUBMIT_COMMENT } from 'src/actions/popup';
+import { TOGGLE_DISPLAY_POPUP_SIGNIN, TOGGLE_DISPLAY_POPUP_LOGIN } from 'src/actions/buttonLog';
+import {
+  DISPLAY_ERRORMESSAGE,
+  CLOSED_ERRORMESSAGE,
+  TOGGLE_DISPLAY_POPUP_COMMENT,
+  SUBMIT_COMMENT,
+} from 'src/actions/popup';
 import { CHANGE_FIELD, CLEAR_INPUT } from 'src/actions/auth';
 
 const initialState = {

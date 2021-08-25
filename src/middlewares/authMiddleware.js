@@ -26,14 +26,14 @@ const authMiddleware = (store) => (next) => (action) => {
           ));
         })
         .catch((error) => {
-          // console.log(error);
+          console.log(error);
         });
       break;
     }
     case SUBMIT_SIGNIN: {
       const { nickname, email, password } = store.getState().auth;
       axios.post('http://3.238.70.10/api/comment/read/40', { nickname: nickname, email: email, password: password })
-        .then((response) => {
+        .then(() => {
           // console.log(response);
           // si la création se passe bien
           // alors on affiche automatiquement le formulaire de connexion
@@ -45,27 +45,22 @@ const authMiddleware = (store) => (next) => (action) => {
           // console.log(error);
           // console.log(error.response);
           store.dispatch(displayErrormessage(error.response.data.errors.detail));
-        })
-        .then((response) => {
-          // console.log(response);
         });
       break;
     }
     case SUBMIT_COMMENT: {
       const { comment, rating } = store.getState().popup;
       axios.post('http://3.238.70.10/api/comment/create', { content: comment, rating: rating })
-       // Lorsqu'on reçoit la réponse, on enregistre le commentaire de l'utilisateur (à lier au scénario)
+      // Lorsqu'on reçoit la réponse, on enregistre le commentaire
+      // de l'utilisateur (à lier au scénario)
         .then((response) => {
           console.log(response);
           // si la création se passe bien on nettoie le champs
           store.dispatch(clearInput());
         })
-        .catch((error) => {
+        .catch(() => {
           // console.log(error.response);
           // store.dispatch(displayErrormessage(error.response.data.errors.detail));
-        })
-        .then((response) => {
-          // console.log(response);
         });
       break;
     }
