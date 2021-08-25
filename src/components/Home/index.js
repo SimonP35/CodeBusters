@@ -14,7 +14,7 @@ import './home.scss';
 const scenarios = utils[0].fourMostPopularScenarios;
 // console.log(scenarios);
 
-const Home = ({ isLogged }) => {
+const Home = ({ isLogged, displayErrorMessage }) => {
   const history = useHistory();
   // fonction permettant de rediriger l'utilisateur sur la page game.
   const makeRedirection = () => {
@@ -27,6 +27,9 @@ const Home = ({ isLogged }) => {
   const startGameCondition = () => {
     if (isLogged) {
       makeRedirection();
+    }
+    else {
+      displayErrorMessage('Connectez-vous pour lancer un scenario');
     }
   };
   return (
@@ -56,6 +59,7 @@ const Home = ({ isLogged }) => {
 
 Home.propTypes = {
   isLogged: PropTypes.bool.isRequired,
+  displayErrorMessage: PropTypes.func.isRequired,
 };
 
 export default Home;
