@@ -8,6 +8,7 @@ import './win.scss';
 const scenario = utils[3].scenarios[0];
 
 const Win = () => {
+  // Lorsque le container game sera créé, on passera les props et on enlève le useDispatch
   const dispatch = useDispatch();
   return (
     <div className="win-container">
