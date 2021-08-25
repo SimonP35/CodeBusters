@@ -57,7 +57,6 @@ function authReducer(state = initialState, action = {}) {
         email: '',
         password: '',
         nickname: '',
-        comment: '',
       };
     default:
       return state;
