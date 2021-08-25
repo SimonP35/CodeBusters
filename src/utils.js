@@ -10,22 +10,30 @@ export default [
       {
         id: 1,
         image: games,
+        description: 'Viens incarner le stagiaire qui devra assurer la mise en prod !',
+        rate: 5,
       },
       {
         id: 2,
         image: games,
+        description: 'Viens donc te gâcher le week-end à débugger le code dégueulasse de tonton Maurice !',
+        rate: 4,
       },
       {
         id: 3,
         image: games,
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        rate: 4,
       },
       {
         id: 4,
         image: games,
+        description: ' Vivamus at nunc hendrerit, imperdiet tellus sit amet, imperdiet tellus. ',
+        rate: 3,
       },
     ],
-  },
 
+  },
   {
     fivePeople: [
       {
@@ -40,7 +48,7 @@ export default [
         image: [ano, git, twitter, linkedin],
         name: 'Geoffrey Decobert',
         describe: 'Lead Dev Front',
-        contact: ['https://github.com/Geoffrey-Dct', 'https://twitter.com/DecobertG', 'https://www.linkedin.com/in/geoffrey-decobert-2a61951bb/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADMbOF4Bwz4M3bU5YuE8OA572tgWtCHCv4M',],
+        contact: ['https://github.com/Geoffrey-Dct', 'https://twitter.com/DecobertG', 'https://www.linkedin.com/in/geoffrey-decobert-2a61951bb/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADMbOF4Bwz4M3bU5YuE8OA572tgWtCHCv4M'],
       },
       {
         id: 3,
