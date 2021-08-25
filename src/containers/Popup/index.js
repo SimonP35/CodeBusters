@@ -2,13 +2,14 @@ import { connect } from 'react-redux';
 
 // on importe le composant de présentation
 import Popup from 'src/components/Popup';
+
 import { toggleDisplayPopupSignin, toggleDisplayPopupLogin, toggleDisplayPopupComment } from 'src/actions/buttonLog';
-import { changeField, submitLogin, handleLogOut, submitSignin, submitComment } from 'src/actions/auth';
 import {
   changeField,
   submitLogin,
   handleLogOut,
   submitSignin,
+  submitComment,
 } from 'src/actions/auth';
 import { closedErrormessage } from 'src/actions/popup';
 // === mapStateToProps
@@ -52,7 +53,7 @@ const mapDispatchToProps = (dispatch) => ({
   },
   submitComment: () => {
     dispatch(submitComment());
-    
+  },
   closedErrormessage: () => {
     dispatch(closedErrormessage());
   },

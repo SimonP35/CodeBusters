@@ -54,6 +54,8 @@ const Popup = ({
       changeField={changeField}
       comment={comment}
       submitComment={submitComment}
+    />
+    )}
 
     {displayErrorMessage && (
     <ErrorMessage

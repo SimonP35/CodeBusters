@@ -16,12 +16,7 @@ const authMiddleware = (store) => (next) => (action) => {
       const { email, password } = store.getState().auth;
       axios.post('http://3.238.70.10/api/login', { username: email, password: password })
         .then((response) => {
-        console.log(response);
         // Lorsqu'on reçoit la réponse, on enregistre le pseudo et la valeur true à islogged
-          store.dispatch(saveUserData(
-            response.data.logged,
-            response.data.email,
-            response.data.nickname,
           console.log(response.data.user);
           // Lorsqu'on reçoit la réponse, on enregistre le pseudo et l'email
           store.dispatch(saveUserData(

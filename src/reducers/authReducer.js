@@ -5,14 +5,14 @@ import {
   SUBMIT_LOGIN,
   SUBMIT_SIGNIN,
   CLEAR_INPUT,
+  SUBMIT_COMMENT,
 } from 'src/actions/auth';
 
 const initialState = {
   nickname: '',
   email: '',
   password: '',
-  comment: '',
-  isLogged: true,
+  isLogged: false,
 };
 
 function authReducer(state = initialState, action = {}) {
