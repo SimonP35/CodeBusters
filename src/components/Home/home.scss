@@ -5,26 +5,20 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
+   align-items: center;
+  width: 900px;
+  margin: auto;
    background-color: vars.$color-popup-background;
    box-sizing: border-box;
-   position:absolute;
-    left:33%;
-    top:28%;
-    right:auto;
-    bottom:auto;
-    width: 700px;
-    height: 700px;
-    padding:10px;
-    margin:2px;
+   
   .home-banniere {
-    margin-top:10px;
-    padding-left:10px;
-    width: 600px;
+    width: 100%;
     height: 200px;
     .home-banniere-img {
     background-size: cover;
-    width:600px;
-    height:200px;
+    width: 100%;
+    height: 20vh;
+    
     }
 
   }
