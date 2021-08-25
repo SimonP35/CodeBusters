@@ -14,10 +14,11 @@ export const changeField = (newValue, identifier) => ({
   name: identifier,
 });
 
-export const saveUserData = (nickname, email) => ({
+export const saveUserData = (nickname, email, token) => ({
   type: SAVE_USER_DATA,
   nickname: nickname,
   email: email,
+  token: token,
 });
 
 export const handleLogOut = () => ({
