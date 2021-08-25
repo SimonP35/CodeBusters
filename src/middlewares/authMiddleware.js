@@ -22,6 +22,7 @@ const authMiddleware = (store) => (next) => (action) => {
           store.dispatch(saveUserData(
             response.data.user.nickname,
             response.data.user.email,
+            response.data.token,
           ));
         })
         .catch((error) => {
