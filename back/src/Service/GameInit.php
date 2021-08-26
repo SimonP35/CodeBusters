@@ -32,7 +32,7 @@ class GameInit
 
     public function setGame($user)
     {
-        // Si $user est bien une instance de Request (GameController)
+        // Si $user est bien une instance de Request (C'est qu'on appelle le service depuis le GameController)
         if ($user instanceof Request) {
 
             // On récupère le contenu de la requête (du JSON)
@@ -41,10 +41,10 @@ class GameInit
             // On désérialise le JSON vers une entité User
             $game = $this->serializer->deserialize($jsonContent, Game::class, 'json');
         
-        // Sinon 
+        // Sinon (C'est qu'on appelle le service depuis les Fixtures)
         } else {
 
-            // On instancie un objet Game et on set l'entité User reçue (Fixtures)
+            // On instancie un objet Game et on set l'entité User reçue
             $game = new Game();
             $game->setUser($user);
         }
