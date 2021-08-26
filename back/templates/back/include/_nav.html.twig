@@ -19,10 +19,10 @@
 		</div>
 		<div class="col-6 d-flex flex-row-reverse">
 			<ul class="nav nav-pills">
-				<li class="nav-item">
-					<li class="nav-item">
-						<p class="me-5">Email : {{ app.user.email }} // {% for role in app.user.roles %} Role : {{ role }}{% endfor %}</p>
-					</li>
+				<li class="nav-item me-5">
+					<a class="nav-link text-muted">Email : {{ app.user.email }} // {% for role in app.user.roles %} Role : {{ role }}{% endfor %}</a>
+				</li>
+				<li>
 					<a class="btn btn-danger" href="{{ path('app_logout') }}">Deconnexion</a>
 				</li>	
 			</ul>
