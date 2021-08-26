@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-
+import Game from 'src/components/Game';
 // import Loader from 'src/components/Loader';
 import banniere from 'src/assets/images/banniere.png';
 import utils from 'src/utils';
@@ -68,6 +68,7 @@ const Home = ({ isLogged, displayErrorMessage }) => {
           })}
         </div>
       </main>
+      <Game />
       {/* <Loader /> */}
       <Footer />
     </>

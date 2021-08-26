@@ -5,8 +5,8 @@ import { Switch, Route } from 'react-router-dom';
 import Win from './Win';
 import Loose from './Loose';
 import Intro from './Intro';
-
 import Board from './Board';
+
 import './game.scss';
 
 const Game = ({ startGame }) => (

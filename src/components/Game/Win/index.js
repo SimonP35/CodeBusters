@@ -7,7 +7,7 @@ import './win.scss';
 
 const scenario = utils[3].scenarios[0];
 
-const Win = ({toggleDisplayComment}) => (
+const Win = ({ toggleDisplayComment }) => (
   <div className="win-container">
     <h2 className="win-title">BIEN JOUÉ !</h2>
     <h3 className="win-subtitle"> A toi le week-end !</h3>
