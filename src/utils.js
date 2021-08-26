@@ -99,7 +99,8 @@ export default [
         contentwin: 'Le code de Maurice est réparé, tu passes lead dev, gégé !',
         contentloose: 'C\'est fou ce que t\'es nul purée',
         timer: 26,
-        comment: '',
+        description: 'Vendredi, 17h30...Tu t\'apprêtes à partir en weekend quand soudain. Tak Tak. Tu reçois un message de ton boss sur Schlag. Parait que le client exige la mise en prod que Maurice a laissé tout cassé pour 18h. Et t\'es le dernier au bureau. Tu sais ce qu\'on dit sur les mises en prod du vendredi...',
+        pic: games,
       },
       {
         id: 2,
@@ -108,7 +109,8 @@ export default [
         contentwin: 'Incroyable mais vrai ! Ton git reverse a fonctionné !',
         contentloose: 'C\'est dingue la honte que tu te tapes',
         timer: 19,
-        comment: '',
+        description: '',
+        pic: games,
       },
 
     ],

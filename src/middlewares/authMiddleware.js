@@ -9,7 +9,7 @@ import { toggleDisplayPopupLogin } from 'src/actions/buttonLog';
 import { displayErrormessage, SUBMIT_COMMENT } from 'src/actions/popup';
 
 const authMiddleware = (store) => (next) => (action) => {
-  console.log('on a intercepté une action dans le middleware: ', action);
+  console.log('on a intercepté une action dans le AUTHmiddleware: ', action);
 
   switch (action.type) {
     case SUBMIT_LOGIN: {
