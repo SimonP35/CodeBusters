@@ -1,17 +1,21 @@
 @use 'src/styles/vars';
 
 .bot-container {
- 
+  width: 300px;
+  height:500px;
+  position:absolute;
+  top:20%;
+  right:5%;
+  display:inline-block;
+  background-color: red;
+  padding:auto;
+
   .bot-pic {
-    width: 200px;
-    height:600px;
-    position:fixed;
-    // top:20%;
-    // right:5%;
+    width: 100%;
+    height:100%;
+    // box-sizing: border-box;
+
   }    
-
-}
-
 
   .bot-message {
   background-color: white;
@@ -20,9 +24,13 @@
   height:100px;
   text-align: left;
   padding:2px;
+  position:absolute;
+  top:40%;
+  left:48%;
 
     .bot-text{
     color:black;
 
     }
   }
+}
