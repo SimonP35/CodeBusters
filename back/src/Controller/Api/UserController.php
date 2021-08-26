@@ -6,6 +6,7 @@ use App\Entity\User;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Security;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -20,6 +21,11 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
  */
 class UserController extends AbstractController
 {
+    public function __construct(Security $security)
+    {
+        $this->security = $security;
+    }
+
     /**
      * Endpoint permettant au Front d'enregistrer un utilisateur
      * 
@@ -56,7 +62,7 @@ class UserController extends AbstractController
         // On retourne l'objet $user en JSON
         return $this->json(
             // Le user que l'on retourne en Json directement au front
-            ["message" => "Utilisateur créé", $user],
+            ["message" => "Utilisateur créé", "user" => $user],
             //Le status code
             Response::HTTP_CREATED,
             [],
@@ -68,10 +74,12 @@ class UserController extends AbstractController
     /**
      * Endpoint permettant au Front d'afficher un utilisateur spécifique (page profil)
      * 
-     * @Route("/read/{id<\d+>}", name="api_user_read", methods={"GET"})
+     * @Route("/read", name="api_user_read", methods={"GET"})
      */
-    public function read(User $user): Response
+    public function read(): Response
     {
+        $user = $this->security->getUser();
+    
         // On retourne l'objet $user en JSON
         return $this->json(['user' => $user], Response::HTTP_OK, [], ['groups' => 'user_page']);
     }
@@ -79,10 +87,12 @@ class UserController extends AbstractController
     /**
      * Endpoint permettant au Front d'éditer un utilisateur spécifique sur la page Profil
      * 
-     * @Route("/update/{id<\d+>}", name="api_user_update", methods={"PUT", "PATCH"})
+     * @Route("/update", name="api_user_update", methods={"PUT", "PATCH"})
      */
-    public function update(Request $request, User $user = null, UserPasswordHasherInterface $userPasswordHasher, SerializerInterface $serializer, EntityManagerInterface $entityManager, ValidatorInterface $validator): Response
+    public function update(Request $request, UserPasswordHasherInterface $userPasswordHasher, SerializerInterface $serializer, EntityManagerInterface $entityManager, ValidatorInterface $validator): Response
     {
+        $user = $this->security->getUser();
+
         // On vérifie que le user existe bien
         if (null === $user) {
             return new JsonResponse(
@@ -118,16 +128,18 @@ class UserController extends AbstractController
         $entityManager->flush();
 
         // On retourne en JsonResponse vu qu'il n'y a pas d'objet
-        return $this->json(["message" => "Utilisateur modifié", $user], Response::HTTP_OK);
+        return $this->json(["message" => "Utilisateur modifié", "user" => $user], Response::HTTP_OK, [], ['groups' => 'user_page']);
     }
 
     /**
      * Endpoint permettant au Front de supprimer un utilisateur spécifique sur la page Profil
      * 
-     * @Route("/delete/{id<\d+>}", name="api_user_delete", methods="DELETE")
+     * @Route("/delete", name="api_user_delete", methods="DELETE")
      */
-    public function delete(User $user = null, EntityManagerInterface $em)
+    public function delete(EntityManagerInterface $em)
     {
+        $user = $this->security->getUser();
+
         // On vérifie que le user existe bien
         if (null === $user) {
             return new JsonResponse(
