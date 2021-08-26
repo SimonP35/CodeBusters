@@ -4,10 +4,9 @@ namespace App\Controller\Api;
 
 use DateTime;
 use App\Entity\Game;
-use App\Entity\Item;
 use App\Repository\GameRepository;
-use Symfony\Component\Yaml\Yaml;
 use App\Repository\UserRepository;
+use App\Service\GameInit;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,7 +14,6 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Serializer\SerializerInterface;
 
 /**
  * @Route("/api/game")
@@ -27,44 +25,11 @@ class GameController extends AbstractController
      * 
      * @Route("/create", name="api_game_create", methods={"POST"})
      */
-    public function create(Request $request, EntityManagerInterface $em, ValidatorInterface $vi, UserRepository $ur, SerializerInterface $serializer): Response
+    public function create(Request $request, EntityManagerInterface $em, ValidatorInterface $vi, GameInit $gameInit): Response
     {
-        // $items = Yaml::parseFile('init/items.yaml');
-        $items = Yaml::parseFile('../config/init/items.yaml');
-
-        // On récupère le contenu de la requête (du JSON)
-        $jsonContent = $request->getContent();
-
-        // On désérialise le JSON vers une entité User
-        $game = $serializer->deserialize($jsonContent, Game::class, 'json');
-
-        dd($game);
-        // $user = json_decode($jsonContent, true);
-        // $user = $ur->find($user);
-
-        // $game = new Game();
-
-        $game
-        ->setStatus(1)
-        // ->setUser($user)
-        ->setScenario(1);
-
-        // On créé les items spécifiques à chaque partie
-        foreach($items as $key => $item) {
-
-            // On créé un objet Item
-            $newItem = new Item();
-
-            // On set son statut et son nom
-            $newItem
-            ->setStatus($item['status'])
-            ->setName($key);
-
-            // On persist, on flush
-            $em->persist($newItem);
-            $game->addItem($newItem);
-
-        }
+        // On appelle le service GameInit 
+        $game = $gameInit->initGame($request);
+        $items = $gameInit->parseYaml();
 
         // On valide l'entité avec le service Validator
         $errors = $vi->validate($game);

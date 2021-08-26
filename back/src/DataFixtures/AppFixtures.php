@@ -7,24 +7,25 @@ use App\Entity\Game;
 use App\Entity\Item;
 use App\Entity\User;
 use App\Entity\Comment;
-use Symfony\Component\Yaml\Yaml;
 use Doctrine\Persistence\ObjectManager;
 use App\DataFixtures\Provider\DataProvider;
+use App\Service\GameInit;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class AppFixtures extends Fixture
 {
-    public function __construct(UserPasswordHasherInterface $passwordHasher)
+    private GameInit $gameInit;
+
+    public function __construct(UserPasswordHasherInterface $passwordHasher, GameInit $gameInit)
     {
         $this->passwordHasher = $passwordHasher;
+        $this->gameInit = $gameInit;
     }
 
     public function load(ObjectManager $manager)
     {
         $faker = Factory::create('fr_FR');
-
-        $items = Yaml::parseFile('./config/init/items.yaml');
 
         // Notre fournisseur de données, ajouté à Faker
         $faker->addProvider(new DataProvider());
@@ -79,25 +80,7 @@ class AppFixtures extends Fixture
         // 15 Games en cours
         for ($i = 1; $i <= 15; $i++ ) {
 
-            $game = new Game();
-
-            $game
-            ->setStatus(1)
-            ->setUser($usersList[array_rand($usersList)])
-            ->setScenario(1);
-            // On créé les items spécifiques à chaque partie
-            foreach($items as $key => $item) {
-
-                $newItem = new Item();
-
-                $newItem
-                ->setStatus($item['status'])
-                ->setName($key);
-
-                $manager->persist($newItem);
-                $game->addItem($newItem);
-
-            }
+            $game = $this->gameInit->initGame($usersList[array_rand($usersList)]);
 
             $manager->persist($game);
         }
