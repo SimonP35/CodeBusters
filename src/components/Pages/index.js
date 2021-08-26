@@ -8,7 +8,7 @@ import LegalNoticeContact from 'src/components/LegalNoticeContact';
 import Profil from 'src/containers/Profil';
 import Popup from 'src/containers/Popup';
 import NotFound from 'src/components/NotFound';
-import Game from 'src/components/Game';
+import Game from 'src/containers/Game';
 
 import './pages.scss';
 

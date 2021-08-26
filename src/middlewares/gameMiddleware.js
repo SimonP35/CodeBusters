@@ -1,17 +1,19 @@
 import axios from 'axios';
 
-import { startGame } from 'src/actions/game';
+import { START_GAME } from 'src/actions/game';
 
 const gameMiddleware = (store) => (next) => (action) => {
-  console.log('on a intercepté une action dans le GAMEmiddleware: ', action);
-
   switch (action.type) {
-    case startGame: {
-      const { gamePlay} = store.getState().game;
-      axios.post('http://3.238.70.10/api/game/create', { gamePlay: gamePlay })
+    case START_GAME: {
+      const { id } = store.getState().auth;
+      axios.post('http://3.238.70.10/api/game/create', { id: id },
+        {
+          headers: {
+            Authorization: `Bearer ${store.getState().auth.token}`,
+          },
+        })
         .then((response) => {
-        // Lorsqu'on reçoit la réponse qui charge la board, on renvoie sur page board et on lance la requête sur le timer
-          console.log('on a reçu le board');
+          console.log(response);
         })
         .catch((error) => {
           console.log(error);
@@ -25,3 +27,4 @@ const gameMiddleware = (store) => (next) => (action) => {
   // on passe l'action au suivant (middleware suivant ou reducer)
 
 export default gameMiddleware;
+
