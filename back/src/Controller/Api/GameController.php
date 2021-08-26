@@ -28,7 +28,7 @@ class GameController extends AbstractController
      */
     public function create(Request $request, EntityManagerInterface $em, ValidatorInterface $vi, UserRepository $ur): Response
     {
-        $items = Yaml::parseFile('./config/init/items.yaml');
+        $items = Yaml::parseFile('../config/init/items.yaml');
 
         $jsonContent = $request->getContent();
 
