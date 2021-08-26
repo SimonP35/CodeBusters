@@ -4,13 +4,14 @@ namespace App\Controller\Api;
 
 use DateTime;
 use App\Entity\Game;
+use App\Service\GameInit;
 use App\Repository\GameRepository;
 use App\Repository\UserRepository;
-use App\Service\GameInit;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -25,11 +26,14 @@ class GameController extends AbstractController
      * 
      * @Route("/create", name="api_game_create", methods={"POST"})
      */
-    public function create(Request $request, EntityManagerInterface $em, ValidatorInterface $vi, GameInit $gameInit): Response
+    public function create(Request $request, EntityManagerInterface $em, ValidatorInterface $vi, GameInit $gameInit, KernelInterface $ki): Response
     {
         // On appelle le service GameInit 
         $game = $gameInit->initGame($request);
         $items = $gameInit->parseYaml();
+        $background = $ki->getProjectDir() .'/public/images/background.jpeg';
+
+        dd($background);
 
         // On valide l'entité avec le service Validator
         $errors = $vi->validate($game);
@@ -45,7 +49,7 @@ class GameController extends AbstractController
         $em->flush();
 
         // On retourne l'objet $game en JSON avec les objets ($items) de cette même partie 
-        return $this->json(['items' => $items, 'game' => $game], Response::HTTP_CREATED, [], ['groups' => 'new_game']);
+        return $this->json(['background' => $background, 'items' => $items, 'game' => $game], Response::HTTP_CREATED, [], ['groups' => 'new_game']);
     }
 
     /**
