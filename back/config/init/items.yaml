@@ -1,10 +1,37 @@
+# Objets énigmes
+
 books:
   x: 22px
   y: 99px
-  picture1: "img/book.png"
+  picture1: "img/open_book.png"
   status: 0
   type: clickable
   description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
     Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
 
+labyrinth:
+  x: 22px
+  y: 99px
+  picture1: "img/big_labyrinth.png"
+  status: 0
+  type: clickable
+  description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
+    Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
 
+kaamelott:
+  x: 22px
+  y: 99px
+  picture1: "img/big_kaamelott.png"
+  status: 0
+  type: clickable
+  description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
+    Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+
+carlin:
+  x: 22px
+  y: 99px
+  picture1: "img/big_carlin.png"
+  status: 0
+  type: clickable
+  description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
+    Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
