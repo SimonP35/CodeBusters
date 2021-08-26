@@ -46,7 +46,7 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255)
      * 
      * Minimum 8 charactères, une majuscule, un chiffre et un caractère spécial.
-     * @Assert\Regex("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&-\/])[A-Za-z\d@$!%*#?&-\/]{8,}$/")
+     * @Assert\Regex("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&-\/])[A-Za-z\d@$!%*#?&-\/]{8,}$/", message="Minimum 8 charactères, une majuscule, un chiffre et un caractère spécial.")
      * @Assert\NotCompromisedPassword
      * @Assert\NotBlank
      */

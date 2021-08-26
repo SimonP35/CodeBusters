@@ -31,7 +31,7 @@ class UserController extends AbstractController
      * 
      * @Route("/register", name="api_user_register", methods={"POST"})
      */
-    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, SerializerInterface $serializer, EntityManagerInterface $entityManager, ValidatorInterface $validator): Response
+    public function register(Request $request, SerializerInterface $serializer, EntityManagerInterface $entityManager, ValidatorInterface $validator): Response
     {
         // On récupère le contenu de la requête (du JSON)
         $jsonContent = $request->getContent();
@@ -39,10 +39,6 @@ class UserController extends AbstractController
         // On désérialise le JSON vers une entité User
         $user = $serializer->deserialize($jsonContent, User::class, 'json');
 
-        // On hash le mot de passe
-        $hashedPassword = $userPasswordHasher->hashPassword($user, $user->getPassword());
-        // On le remet dans $user->password
-        $user->setPassword($hashedPassword);
         // On définit le rôle du user
         $user->setRoles(['ROLE_USER']);
 
@@ -89,7 +85,7 @@ class UserController extends AbstractController
      * 
      * @Route("/update", name="api_user_update", methods={"PUT", "PATCH"})
      */
-    public function update(Request $request, UserPasswordHasherInterface $userPasswordHasher, SerializerInterface $serializer, EntityManagerInterface $entityManager, ValidatorInterface $validator): Response
+    public function update(Request $request, SerializerInterface $serializer, EntityManagerInterface $entityManager, ValidatorInterface $validator): Response
     {
         $user = $this->security->getUser();
 
@@ -106,14 +102,6 @@ class UserController extends AbstractController
 
         // On désérialise le JSON vers une entité User déjà existante
         $user = $serializer->deserialize($jsonContent, User::class, 'json', [AbstractNormalizer::OBJECT_TO_POPULATE => $user]);
-
-        // Hashage du mot de passe que si on a renseigné le champ mot de passe
-        if (!empty($user->getPassword())) {
-            // C'est là qu'on encode le mot de passe du User (qui se trouve dans $user)
-            $hashedPassword = $userPasswordHasher->hashPassword($user, $user->getPassword());
-            // On réassigne le mot passe encodé dans le User
-            $user->setPassword($hashedPassword);
-        }
 
         // On valide l'entité avec le service Validator
         $errors = $validator->validate($user);
