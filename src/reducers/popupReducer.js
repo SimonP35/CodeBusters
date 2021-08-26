@@ -1,5 +1,11 @@
-import { TOGGLE_DISPLAY_POPUP_SIGNIN, TOGGLE_DISPLAY_POPUP_LOGIN, TOGGLE_DISPLAY_POPUP_COMMENT } from 'src/actions/buttonLog';
-import { DISPLAY_ERRORMESSAGE, CLOSED_ERRORMESSAGE } from 'src/actions/popup';
+import { TOGGLE_DISPLAY_POPUP_SIGNIN, TOGGLE_DISPLAY_POPUP_LOGIN } from 'src/actions/buttonLog';
+import {
+  DISPLAY_ERRORMESSAGE,
+  CLOSED_ERRORMESSAGE,
+  TOGGLE_DISPLAY_POPUP_COMMENT,
+  SUBMIT_COMMENT,
+} from 'src/actions/popup';
+import { CHANGE_FIELD, CLEAR_INPUT } from 'src/actions/auth';
 
 const initialState = {
   displayLogin: false,
@@ -7,6 +13,8 @@ const initialState = {
   displayComment: false,
   displayErrorMessage: false,
   errorContent: '',
+  comment: '',
+  rating: '',
 };
 
 const popupReducer = (state = initialState, action = {}) => {
@@ -36,6 +44,22 @@ const popupReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         displayErrorMessage: false,
+      };
+    case CHANGE_FIELD:
+      return {
+        ...state,
+        [action.name]: action.newValue,
+      };
+    case SUBMIT_COMMENT:
+      return {
+        ...state,
+        comment: '',
+        rating: '',
+      };
+    case CLEAR_INPUT:
+      return {
+        ...state,
+        comment: '',
       };
     default:
       return state;

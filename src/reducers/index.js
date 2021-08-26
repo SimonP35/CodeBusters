@@ -3,6 +3,7 @@ import { combineReducers } from 'redux';
 // on importe tous les reducers
 
 import authReducer from './authReducer';
+import gameReducer from './gameReducer';
 import popupReducer from './popupReducer';
 
 // le reducer principal, qui regroupe les autres
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   // va gérer les données dans ce tiroir
   auth: authReducer,
   popup: popupReducer,
+  game: gameReducer,
 });
 
 export default rootReducer;
