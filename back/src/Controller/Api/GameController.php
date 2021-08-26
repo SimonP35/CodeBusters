@@ -26,10 +26,10 @@ class GameController extends AbstractController
      * 
      * @Route("/create", name="api_game_create", methods={"POST"})
      */
-    public function create(Request $request, EntityManagerInterface $em, ValidatorInterface $vi, GameInit $gameInit, KernelInterface $ki): Response
+    public function create(EntityManagerInterface $em, ValidatorInterface $vi, GameInit $gameInit, KernelInterface $ki): Response
     {
         // On appelle le service GameInit 
-        $game = $gameInit->initGame($request);
+        $game = $gameInit->initGame();
         $items = $gameInit->parseYaml();
         $background = 'http://3.238.70.10/images/background.png';
 
