@@ -46,7 +46,7 @@ security:
             logout:
                 path: app_logout
                 # where to redirect after logout
-                target: app_login            
+                target: app_login          
         main:
             lazy: true
             provider: app_user_provider
@@ -66,6 +66,7 @@ security:
         - { path: ^/api/user/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api,       roles: IS_AUTHENTICATED_FULLY }
         - { path: ^/back/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/back/logout, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/back,      roles: ROLE_ADMIN }
 
         # - { path: ^/, roles: IS_AUTHENTICATED_FULLY }
