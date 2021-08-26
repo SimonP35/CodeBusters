@@ -15,6 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Serializer\SerializerInterface;
 
 /**
  * @Route("/api/game")
@@ -26,20 +27,25 @@ class GameController extends AbstractController
      * 
      * @Route("/create", name="api_game_create", methods={"POST"})
      */
-    public function create(Request $request, EntityManagerInterface $em, ValidatorInterface $vi, UserRepository $ur): Response
+    public function create(Request $request, EntityManagerInterface $em, ValidatorInterface $vi, UserRepository $ur, SerializerInterface $serializer): Response
     {
         $items = Yaml::parseFile('init/items.yaml');
 
+        // On récupère le contenu de la requête (du JSON)
         $jsonContent = $request->getContent();
 
-        $user = json_decode($jsonContent, true);
-        $user = $ur->find($user);
+        // On désérialise le JSON vers une entité User
+        $game = $serializer->deserialize($jsonContent, Game::class, 'json');
 
-        $game = new Game();
+        dd($game);
+        // $user = json_decode($jsonContent, true);
+        // $user = $ur->find($user);
+
+        // $game = new Game();
 
         $game
         ->setStatus(1)
-        ->setUser($user)
+        // ->setUser($user)
         ->setScenario(1);
 
         // On créé les items spécifiques à chaque partie
