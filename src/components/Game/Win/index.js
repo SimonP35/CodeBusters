@@ -18,7 +18,7 @@ const Win = ({ toggleDisplayComment }) => (
     </div>
     <button
       type="button"
-      onClick={() => toggleDisplayComment}
+      onClick={() => toggleDisplayComment()}
       className="win-button"
       id="comment"
     >Laisser un commentaire

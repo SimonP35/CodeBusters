@@ -9,7 +9,7 @@ import Board from './Board';
 
 import './game.scss';
 
-const Game = ({ startGame }) => (
+const Game = ({ startGame, toggleDisplayComment }) => (
   // Ici on switch sur les différentes routes de la game
   // On passe d'abord par l'intro ensuite par le plateau
   // et pour finir une page win ou loose
@@ -21,16 +21,17 @@ const Game = ({ startGame }) => (
       <Board />
     </Route>
     <Route path="/game/win">
-      <Win />
+      <Win toggleDisplayComment={toggleDisplayComment} />
     </Route>
     <Route path="/game/loose">
-      <Loose />
+      <Loose toggleDisplayComment={toggleDisplayComment} />
     </Route>
   </Switch>
 );
 
 Game.propTypes = {
   startGame: PropTypes.func.isRequired,
+  toggleDisplayComment: PropTypes.func.isRequired,
 };
 
 export default Game;

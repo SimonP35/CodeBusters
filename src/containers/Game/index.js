@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Game from 'src/components/Game';
 
 import { startGame } from 'src/actions/game';
-import { toggleDisplayPopupComment, submitComment } from 'src/actions/popup';
+import { toggleDisplayPopupComment } from 'src/actions/popup';
 
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
@@ -22,9 +22,6 @@ const mapDispatchToProps = (dispatch) => ({
   },
   toggleDisplayComment: () => {
     dispatch(toggleDisplayPopupComment());
-  },
-  submitComment: () => {
-    dispatch(submitComment());
   },
 });
 
