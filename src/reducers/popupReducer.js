@@ -12,7 +12,6 @@ const initialState = {
   displaySignin: false,
   displayComment: false,
   displayErrorMessage: false,
-  CHANGE_FIELD,
   errorContent: '',
   comment: '',
   rating: '',

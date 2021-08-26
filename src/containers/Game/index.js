@@ -2,11 +2,15 @@ import { connect } from 'react-redux';
 
 // on importe le composant de présentation
 import Game from 'src/components/Game';
+
 import { startGame } from 'src/actions/game';
+import { toggleDisplayPopupComment } from 'src/actions/popup';
+
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
 const mapStateToProps = (state) => ({
   isLogged: state.auth.isLogged,
+  displayComment: state.popup.displayComment,
 });
 
 // === mapDispatchToProps
@@ -15,6 +19,9 @@ const mapDispatchToProps = (dispatch) => ({
   // nom de la prop à remplir: fonction qui dispatch l'action
   startGame: () => {
     dispatch(startGame());
+  },
+  toggleDisplayComment: () => {
+    dispatch(toggleDisplayPopupComment());
   },
 });
 
