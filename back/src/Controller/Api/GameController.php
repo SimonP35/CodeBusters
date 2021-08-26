@@ -31,9 +31,7 @@ class GameController extends AbstractController
         // On appelle le service GameInit 
         $game = $gameInit->initGame($request);
         $items = $gameInit->parseYaml();
-        $background = $ki->getProjectDir() .'/public/images/background.jpeg';
-
-        dd($background);
+        $background = $ki->getProjectDir() .'/public/images/background.png';
 
         // On valide l'entité avec le service Validator
         $errors = $vi->validate($game);
