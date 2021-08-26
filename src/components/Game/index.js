@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 
-import Win from 'src/containers/Win';
-import Loose from 'src/containers/Loose';
-import Intro from 'src/containers/Intro';
+import Win from './Win';
+import Loose from './Loose';
+import Intro from './Intro';
 
 import Board from './Board';
 import './game.scss';
