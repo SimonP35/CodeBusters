@@ -1,0 +1,28 @@
+@use 'src/styles/vars';
+
+.bot-container {
+ 
+  .bot-pic {
+    width: 200px;
+    height:600px;
+    position:fixed;
+    // top:20%;
+    // right:5%;
+  }    
+
+}
+
+
+  .bot-message {
+  background-color: white;
+  display: inline-block;
+  width:150px;
+  height:100px;
+  text-align: left;
+  padding:2px;
+
+    .bot-text{
+    color:black;
+
+    }
+  }
