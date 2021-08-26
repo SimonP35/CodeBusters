@@ -65,7 +65,9 @@ security:
         - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api/user/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api,       roles: IS_AUTHENTICATED_FULLY }
-        - { path: ^/back,       roles: ROLE_ADMIN }
+        - { path: ^/back,      roles: ROLE_ADMIN }
+        - { path: ^/back/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+
         # - { path: ^/, roles: IS_AUTHENTICATED_FULLY }
 
     # https://symfony.com/doc/current/security.html#hierarchical-roles
