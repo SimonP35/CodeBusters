@@ -3,10 +3,13 @@ import { useHistory } from 'react-router-dom';
 import Header from 'src/components/Header';
 import PropTypes from 'prop-types';
 import Footer from 'src/components/Footer';
+
+import classNames from 'classnames';
+
 import utils from 'src/utils';
 import './scenarios.scss';
 
-const scenarios = utils[0].fourMostPopularScenarios;
+const scenarios = utils[3].scenarios;
 
 const Scenarios = ({ isLogged, displayErrorMessage }) => {
   const history = useHistory();
@@ -28,29 +31,36 @@ const Scenarios = ({ isLogged, displayErrorMessage }) => {
   return (
     <>
       <Header />
-      <main className="scenarios-main">
-        <p className="scenarios-describe">
-          t is a long established fact that a rea
-          er will be distracted by the readable content o
-          f a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less nor
-          mal distribution of letters, as opposed to using 'Co
-          ntent here, content here', making it look like readab
-          le English. Many desktop publishing packages and web pag
-          e editors now use Lorem Ipsum as their default model tex
-          t, and a search for 'lorem ipsum' will uncover many web s
-          ites still in their infancy. Various versions have evolve
-          d over the years, sometimes by accident, sometimes on purp
-          ose (injected humour and the like).
-        </p>
-        <div className="scenarios-container">
-          {scenarios.map((scenario) => (
-            <div className="scenarios-map" key={scenario.id} onClick={() => (startGameCondition())}>
-              <img className="scenarios-image" src={scenario.image} alt="illustred" />
-              <h2 className="scenarios-title">{scenario.story}</h2>
-              <section className="scenarios-comment">{scenario.comment}</section>
-            </div>
-          ))}
+      <main className="scenarios-container">
+        <div className="scenarios-list">
+          {scenarios.map((scenario) => {
+            // renvoi true si la valeur est vrai ce qui permet, à l'aide de className,
+            // de conditionner la l'utilisation de la classe qui donne la couleur jaune à l'étoile.
+            const one = scenario.rate >= 1;
+            const two = scenario.rate >= 2;
+            const three = scenario.rate >= 3;
+            const four = scenario.rate >= 4;
+            const five = scenario.rate === 5;
+            return (
+              <div className="scenarios-scenario" key={scenario.id} onClick={() => (startGameCondition())}>
+                <h2 className="scenarios-title">{scenario.nom}</h2>
+                <img className="scenarios-image" src={scenario.pic} alt="scenario" />
+                <p className="scenarios-text">{scenario.description}</p>
+                <h3 className="scenarios-subtitle">L'avis des joueurs : </h3>
+
+                <section className="scenarios-comment">" {scenario.comment} "</section>
+                <div className="scenarios-rate">
+                  <ul>
+                    <li className={classNames({ '--gold': one })}>&#9733;</li>
+                    <li className={classNames({ '--gold': two })}>&#9733;</li>
+                    <li className={classNames({ '--gold': three })}>&#9733;</li>
+                    <li className={classNames({ '--gold': four })}>&#9733;</li>
+                    <li className={classNames({ '--gold': five })}>&#9733;</li>
+                  </ul>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </main>
       <Footer />
