@@ -20,6 +20,7 @@ const authMiddleware = (store) => (next) => (action) => {
           // console.log(response.data.user);
           // Lorsqu'on reçoit la réponse, on enregistre le pseudo et l'email
           store.dispatch(saveUserData(
+            response.data.user.id,
             response.data.user.nickname,
             response.data.user.email,
             response.data.token,
