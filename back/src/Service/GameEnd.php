@@ -1,0 +1,56 @@
+<?php
+
+namespace App\Service;
+
+use DateTime;
+use Doctrine\ORM\EntityManagerInterface;
+
+class GameEnd
+{
+    private EntityManagerInterface $em;
+   
+    public function __construct(EntityManagerInterface $em)
+    {
+        $this->em = $em;
+    }
+
+    public function endGame($game)
+    {
+        // On set le status de la game sur 0 (terminée)
+        $game
+        ->setStatus(1);
+
+        // On appelle la méthode qui calcule le score et on le set
+        $this->setScore($game);
+
+        // On appelle la méthode qui permet la suppression d'items
+        $this->removeItems($game);
+
+        // On retourne la game
+        return $game;
+    }
+
+    public function setScore($game)
+    {
+        // On set la fin de la partie
+        $game->setEndedAt(new DateTime());
+
+        // Calcul du score (Différence entre date de création et de mise à jour)
+        $start = $game->getCreatedAt();
+        $end = $game->getEndedAt();
+        $score = $end->getTimestamp() - $start->getTimestamp();
+
+        // On set le score en seconde
+        $game
+        ->setScore($score);  
+    }
+
+    public function removeItems($game)
+    {
+        // On supprimes les items spécifiques à chaque partie
+        foreach($game->getItems() as $key => $item) {
+
+            $this->em->remove($item);
+        }
+    }
+}

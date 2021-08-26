@@ -39,7 +39,7 @@ class AppFixtures extends Fixture
         $user
         ->setEmail('user@user.com')
         // user via "bin/console security:hash-password"
-        ->setPassword('$2y$13$zc9R3kF0dAbLkaTmM0/K/.Z5OR7t1FKSmkmHMQadksxvHjdN8W1JC')
+        ->setPassword('user')
         ->setRoles(['ROLE_USER'])
         ->setNickname('user');
 
@@ -47,7 +47,7 @@ class AppFixtures extends Fixture
         $admin
         ->setEmail('admin@admin.com')
         // admin via "bin/console security:hash-password"
-        ->setPassword('$2y$13$DgyJQTjS6PDQaUROWQdzN.fAS8C9g97/q0VJ/U0Q7MGUpoRH0.13a')
+        ->setPassword('admin')
         ->setRoles(['ROLE_ADMIN'])
         ->setNickname('admin');
 
@@ -80,7 +80,7 @@ class AppFixtures extends Fixture
         // 15 Games en cours
         for ($i = 1; $i <= 15; $i++ ) {
 
-            $game = $this->gameInit->initGame($usersList[array_rand($usersList)]);
+            $game = $this->gameInit->setGame($usersList[array_rand($usersList)]);
 
             $manager->persist($game);
         }
