@@ -14,12 +14,21 @@ class GameEnd
         $this->em = $em;
     }
 
-    public function endGame($game)
+    public function endGame($game, $user = null)
     {
         // On set le status de la game sur 0 (terminée)
         $game
-        ->setStatus(1);
+        ->setStatus(0);
 
+        // Si on a un user (On appelle le service depuis les fixtures)
+        if ($user !== null) {
+            // On le set
+            $game
+            ->setUser($user);  
+            // On retourne la game (Calcul d'un fake score dans les fixtures)
+            return $game;
+        }
+    
         // On appelle la méthode qui calcule le score et on le set
         $this->setScore($game);
 

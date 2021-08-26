@@ -24,12 +24,13 @@ class GameRepository extends ServiceEntityRepository
         $em = $this->getEntityManager();
 
         $query = $em->createQuery(
-            "SELECT u.nickname, g.score, g.ended_at 
+            "SELECT u.nickname, g.score, g.ended_at
             FROM App\Entity\Game g
             INNER JOIN App\Entity\User u
-            WHERE g.score > 0
+            WHERE g.score IS NOT NULL
             AND u.id = g.user
-            ORDER BY g.score DESC"
+            ORDER BY g.score ASC 
+            "
         );
     
         return $query->getResult();
@@ -41,7 +42,7 @@ class GameRepository extends ServiceEntityRepository
     // INNER JOIN `user`
     // ON `user`.`id` = `game`.`user_id`
     // WHERE `game`.`score` > 0
-    // ORDER BY `game`.`score` DESC
-    
+    // ORDER BY `game`.`score` ASC
+    // LIMIT 10    
 
 }

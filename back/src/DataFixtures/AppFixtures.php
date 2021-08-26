@@ -9,6 +9,7 @@ use App\Entity\User;
 use App\Entity\Comment;
 use Doctrine\Persistence\ObjectManager;
 use App\DataFixtures\Provider\DataProvider;
+use App\Service\GameEnd;
 use App\Service\GameInit;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
@@ -16,11 +17,13 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 class AppFixtures extends Fixture
 {
     private GameInit $gameInit;
+    private GameEnd $gameEnd;
 
-    public function __construct(UserPasswordHasherInterface $passwordHasher, GameInit $gameInit)
+    public function __construct(UserPasswordHasherInterface $passwordHasher, GameInit $gameInit, GameEnd $gameEnd)
     {
         $this->passwordHasher = $passwordHasher;
         $this->gameInit = $gameInit;
+        $this->gameEnd = $gameEnd;
     }
 
     public function load(ObjectManager $manager)
@@ -92,12 +95,13 @@ class AppFixtures extends Fixture
 
             $game = new Game();
 
+            // On appelle le service EndGame pour créer une partie terminée
+            $game = $this->gameEnd->endGame($game, $usersList[array_rand($usersList)]);
+
             $game
-            ->setStatus(0)
-            ->setUser($usersList[array_rand($usersList)])
             ->setScore(mt_rand(0, 1800))
-            ->setEndedAt($faker->dateTimeBetween('-10 years', 'now'))
-            ->setScenario(1);
+            ->setScenario(1)
+            ->setEndedAt($faker->dateTimeBetween('-10 years', 'now'));
 
             $gamesList[] = $game;
 
