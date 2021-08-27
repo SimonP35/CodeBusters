@@ -12,8 +12,7 @@ import utils from 'src/utils';
 
 import './home.scss';
 
-const scenarios = utils[0].fourMostPopularScenarios;
-// console.log(scenarios);
+const scenarios = utils[3].scenarios;
 
 const Home = ({ isLogged, displayErrorMessage }) => {
   const history = useHistory();
@@ -52,7 +51,8 @@ const Home = ({ isLogged, displayErrorMessage }) => {
             const five = scenario.rate === 5;
             return (
               <div className="popular-scenarios-scenario" key={scenario.id} onClick={() => (startGameCondition())}>
-                <img className="popular-scenarios-scenario-image" src={scenario.image} alt="scenario-img" />
+                <img className="popular-scenarios-scenario-image" src={scenario.pic} alt="scenario-img" />
+                <h3 className="popular-scenarios-subtitle">{scenario.nom}</h3>
                 <p className="popular-scenarios-scenario-text">{scenario.description}</p>
                 <div className="popular-scenarios-scenario-rate">
                   <ul>
