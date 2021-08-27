@@ -2,6 +2,7 @@ import games from 'src/assets/images/games.png';
 import sudo from 'src/assets/images/sudo.png';
 import vendredi from 'src/assets/images/vendredi.png';
 import mathmax from 'src/assets/images/mathmax.png';
+import smith from 'src/assets/images/smith.png';
 import ano from 'src/assets/images/ano.svg';
 import git from 'src/assets/images/github.svg';
 import linkedin from 'src/assets/images/linkedin.svg';
@@ -139,6 +140,18 @@ export default [
         comment: 'je savais pas ce que c\était typescript mais ca a l\'air trop balese en fait',
         rate: '4',
       },
+      {
+        id: 4,
+        nom: 'L\'instance de trop',
+        src: 'https://www.youtube.com/watch?v=1AnG04qnLqI',
+        contentwin: 'Le roi de l\'abstract en PHP !',
+        contentloose: 'On va pas se mentir, va falloir réviser les classes...',
+        timer: 30,
+        description: 'Crack.Boum.Abstract. Les classes en PHP, c\'est comme Amour, Gloire et Beauté. Y a moyent de se taper tout le monde, mais quand ça pète derrière, faut pas s\'étonner',
+        pic: smith,
+        comment: 'c\'est quoi ce truc de dingue encore ? Ils sont vraiment loin les gars qui ont écrit le scénar !',
+        rate: '5',
+      },
 
     ],
   },
@@ -148,28 +161,28 @@ export default [
 
       {
         id: 1,
-        content: 'coucou',
+        content: 'BIG BOSS : Bon le stagiaire, je compte sur toi pour montrer que t\'es à la hauteur, surtout si t\'as prévu de venir mendier un CDI derrière',
 
       },
       {
         id: 2,
-        content: 'il reste 25mn',
+        content: 'BIG BOSS : Alors ça avance ? Même mon chien en hypothermie coderait plus vite',
       },
       {
         id: 3,
-        content: 'il reste 20mn',
+        content: 'BIG BOSS : Pourquoi le site est toujours pas déployé ? Les stagiaires vous savez vraiment rien faire tout seuls',
       },
       {
         id: 4,
-        content: 'il reste 15mn',
+        content: 'BIG BOSS : Bon t\'as prévu de déployer aujourd\'hui ? Fallait que je te précise le vendredi de quel mois peut-être?',
       },
       {
         id: 5,
-        content: 'il reste 10mn',
+        content: 'BIG BOSS : Cette fois y\'en a marre, je te préviens si je suis obligé de revenir au bureau, t\'es viré ! ',
       },
       {
         id: 6,
-        content: 'il reste 5mn',
+        content: 'BIG BOSS : Espèce d\'incapable, t\'es fini dans le métier, je vais te pourrir',
       },
     ],
   },
