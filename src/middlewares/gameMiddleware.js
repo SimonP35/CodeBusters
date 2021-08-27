@@ -6,7 +6,7 @@ const gameMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case START_GAME: {
       const { id } = store.getState().auth;
-      axios.post('http://3.238.70.10/api/game/create', { id: id },
+      axios.post('http://3.238.70.10/api/game/create', { user: id },
         {
           headers: {
             Authorization: `Bearer ${store.getState().auth.token}`,

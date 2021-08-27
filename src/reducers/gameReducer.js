@@ -2,7 +2,6 @@ import { START_GAME } from 'src/actions/game';
 
 const initialState = {
   gamePlay: false,
-
 };
 
 const gameReducer = (state = initialState, action = {}) => {

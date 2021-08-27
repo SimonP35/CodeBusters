@@ -33,7 +33,7 @@ const authMiddleware = (store) => (next) => (action) => {
     }
     case SUBMIT_SIGNIN: {
       const { nickname, email, password } = store.getState().auth;
-      axios.post('http://3.238.70.10/api/comment/read/40', { nickname: nickname, email: email, password: password })
+      axios.post('http://3.238.70.10/api/user/register', { nickname: nickname, email: email, password: password })
         .then(() => {
           // console.log(response);
           // si la création se passe bien
