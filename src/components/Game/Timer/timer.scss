@@ -1,2 +1,27 @@
 @use 'src/styles/vars';
 
+.timer-container {
+  background-color:rgb(247, 241, 241);
+  width: 100px;
+  height:100px;
+  border-radius: 50%;
+  position:absolute;
+  top:1%;
+  right:1%;
+  display:inline-block;
+  padding:auto;
+  z-index: 0;
+  border: 5px solid black;
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+
+.timer-display {
+  font-weight: bold;
+  text-align: center;
+  color:rgb(10, 2, 2);
+  text-align: center;
+  margin:auto;
+}
+
+}

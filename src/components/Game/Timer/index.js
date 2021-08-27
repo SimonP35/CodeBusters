@@ -1,16 +1,38 @@
 import React from 'react';
+// import PropTypes from 'prop-types';
+
+import { useTimer } from 'react-timer-hook';
 
 import './timer.scss';
 
-// Installer react timer hook
+// Install react timer hook : yarn add react-timer-hook
 
-// Ce timer se lance via le composant board lorsque ce dernier est appelé via le bouton "démarrer la partie"
+function MyTimer({ expiryTimestamp }) {
+  const {
+    seconds,
+    minutes,
 
-const Timer = () => (
+  } = useTimer({ expiryTimestamp });
 
-  <div className="timer-container">
-    <div className="timer-display" />
-  </div>
-);
+  return (
+    <div className="timer-container">
+      <div className="timer-display">
+        <span>{minutes}</span>:<span>{seconds}</span>
+      </div>
+    </div>
+  );
+}
 
-export default Timer;
+export default function Timer() {
+  const time = new Date();
+  time.setSeconds(time.getSeconds() + 1800); // 30 minutes
+  return (
+    <div>
+      <MyTimer expiryTimestamp={time} />
+    </div>
+  );
+}
+
+// Timer.propTypes = {
+//   expiryTimestamp: PropTypes.number.isRequired,
+// };
