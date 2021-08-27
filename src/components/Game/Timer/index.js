@@ -8,10 +8,11 @@ import './timer.scss';
 // Install react timer hook : yarn add react-timer-hook
 
 function MyTimer({ expiryTimestamp }) {
+// console.log(expiryTimestamp);
+
   const {
     seconds,
     minutes,
-
   } = useTimer({ expiryTimestamp });
 
   return (
@@ -25,7 +26,7 @@ function MyTimer({ expiryTimestamp }) {
 
 export default function Timer() {
   const time = new Date();
-  time.setSeconds(time.getSeconds() + 1800); // 30 minutes
+  time.setSeconds(time.getSeconds() + 1800); // 1800 = 30 minutes
   return (
     <div>
       <MyTimer expiryTimestamp={time} />
