@@ -11,7 +11,7 @@ books:
   name: books
   x: 22px
   y: 99px
-  picture1: "images/open_book.png"
+  picture1: "http://3.238.70.10/images/book.png"
   status: 0
   type: clickable
   description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
@@ -23,7 +23,7 @@ labyrinth:
   name: labyrinth
   x: 22px
   y: 99px
-  picture1: "images/big_labyrinth.png"
+  picture1: "http://3.238.70.10/images/labyrinth.png"
   status: 0
   type: clickable
   description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
@@ -35,7 +35,7 @@ kaamelott:
   name: kaamelott
   x: 22px
   y: 99px
-  picture1: "images/big_kaamelott.png"
+  picture1: "http://3.238.70.10/images/kaamelott.png"
   status: 0
   type: clickable
   description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
@@ -47,7 +47,7 @@ carlin:
   name: carlin
   x: 22px
   y: 99px
-  picture1: "images/big_carlin.png"
+  picture1: "http://3.238.70.10/images/carlin.svg"
   status: 0
   type: clickable
   description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
@@ -59,7 +59,7 @@ code:
   name: code
   x: 22px
   y: 99px
-  picture1: "images/big_code.png"
+  picture1: "http://3.238.70.10/images/code.png"
   status: 0
   type: clickable
   description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
@@ -71,7 +71,7 @@ drawer:
   name: drawer
   x: 22px
   y: 99px
-  picture1: "images/big_drawer.png"
+  picture1: "http://3.238.70.10/images/drawer.png"
   status: 0
   type: clickable
   description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
@@ -85,7 +85,6 @@ button:
   name: button
   x: 22px
   y: 99px
-  # picture1: "images/big_drawer.png"
   status: 0
   type: inputable
   answer: /xxx/xxx/xxx/xxx/xxx/yyy.pem
@@ -96,7 +95,7 @@ memo_rebus:
   name: memo_rebus
   x: 22px
   y: 99px
-  picture1: "images/big_memo_rebus.png"
+  picture1: "http://3.238.70.10/images/memo_rebus.png"
   status: 0
   type: clickable
   description1: Charade indiquant le déroulement pour trouver le chemin absolu (5 mots + 1 nom.pem). Parfois l'énigme est sur le mémo, parfois le mémo indique ou est l'énigme.
@@ -105,7 +104,7 @@ memo:
   name: memo
   x: 22px
   y: 99px
-  picture1: "images/memo.png"
+  picture1: "http://3.238.70.10/images/memo.png"
   status: 0
   type: clickable
   description1: Des conneries humouristiques sur la vide des dev' !
