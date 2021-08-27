@@ -1,7 +1,7 @@
 @use 'src/styles/vars';
 
 .bot-pic {
-  width: 250px;
+  width: 200px;
   height:350px;
   position:absolute;
   top:55%;
@@ -19,12 +19,19 @@
   padding:2px;
   position:absolute;
   top:65%;
-  right:3%;
+  right:1.5%;
   z-index: 3;
 
     .bot-text{
     color:black;
-
+    padding:2px;
+    margin-top:2px;
+    background-color: rgb(212, 237, 247);
+    border-radius: 10%;
     }
+     .bot-text-sender {
+      font-weight: bold;
+    }
+
   }
 

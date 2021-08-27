@@ -13,20 +13,13 @@ import './bot.scss';
 const message = utils[4].messages[0];
 
 const Bot = () => (
-// {
-// const [messageId, setMessageId] = useState(0);
-//   useEffect(() => {
-//     let counter = count;
-//     const timeout = setTimeout(() => {
-//       setMessageId(1);
-//     }, 3000);
-//   },[]);
-//   return (
+
   <>
     <div className="bot-container" key={message.id}>
       <img className="bot-pic" src={bot} alt="bot" />
       <div className="bot-message">
-        <p className="bot-text">J'essaie de m'afficher sur le téléphone {message.content}</p>
+        <p className="bot-text-sender">BIG BOSS : </p>
+        <p className="bot-text">{message.content}</p>
       </div>
     </div>
   </>

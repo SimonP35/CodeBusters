@@ -6725,6 +6725,11 @@ react-test-renderer@^16.0.0-0:
     react-is "^16.8.6"
     scheduler "^0.19.1"
 
+react-timer-hook@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/react-timer-hook/-/react-timer-hook-3.0.4.tgz#13089b62cc81c6dd0d2bd904cd54add668089c4b"
+  integrity sha512-3Ifg00REsB7871rkpiLZEVTsagaOVvcBKF33Qu9eqJ3tWjYxej3hr2Fo8tep9KP0eXBfE5k60C/M+Tv4/I/ZzA==
+
 react@16.14.0:
   version "16.14.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
