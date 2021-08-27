@@ -43,7 +43,7 @@ export default [
 
   },
   {
-    fivePeople: [
+    teamList: [
       {
         id: 1,
         image: [ano, git, twitter, linkedin],
@@ -157,6 +157,5 @@ export default [
         content: 'il reste 5mn',
       },
     ],
-
-  }
+  },
 ];

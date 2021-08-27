@@ -45,7 +45,7 @@ const ButtonLog = ({
     isLogged
     && (
       <>
-        <h3 className="log-text">Bonjour ! {nickname}</h3>
+        <h3 className="log-text">Bonjour {nickname}</h3>
         <button
           type="button"
           onClick={() => {
