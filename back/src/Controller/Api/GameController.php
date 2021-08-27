@@ -32,7 +32,7 @@ class GameController extends AbstractController
         $items = $gameInit->parseYaml();
 
         // On transmet l'image background de la scène du plateau
-        $background = 'http://3.238.70.10/images/background.png';
+        $background = 'http://3.238.70.10/images/maquette.svg';
 
         // On valide l'entité avec le service Validator
         $errors = $vi->validate($game);
