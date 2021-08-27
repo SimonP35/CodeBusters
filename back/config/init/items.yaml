@@ -8,6 +8,7 @@
 ## Mémo : Contenant un rebus pour le remplissage de l'input final (Bouton mise en prod ou on rentre le chemin/path) 
 
 books:
+  name: books
   x: 22px
   y: 99px
   picture1: "images/open_book.png"
@@ -164,3 +165,4 @@ warhammer:
   status: 0
   type: clickable
   description1: "Une de mes passions c'est d'en acheter plein et de les mettre dans un tiroir sans les peindre ><"
+
