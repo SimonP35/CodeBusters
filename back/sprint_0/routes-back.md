@@ -10,7 +10,7 @@
 | /api/user/read           | api_user_read      | Api\User     | POST            | register() | seulement le token                    |
 | /api/user/update         | api_user_update    | Api\User     | POST            | register() | le token & les input remplis par user |
 | /api/user/delete         | api_user_delete    | Api\User     | POST            | register() | seulement le token                    |
-| /api/game/create         | api_game_create    | Api\Game     | POST            | create()   | "user": {id du user}                  |
+| /api/game/create         | api_game_create    | Api\Game     | POST            | create()   |                                       |
 | /api/game/update/{id}    | api_game_update    | Api\Game     | PUT/PATCH       | update()   |                                       |
 | /api/game/score          | api_game_score     | Api\Game     | PUT/PATCH       | update()   |                                       |
 | /api/comment/            | api_comment_list   | Api\Comment  | GET             | list()     |                                       |
