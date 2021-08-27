@@ -1,20 +1,15 @@
 @use 'src/styles/vars';
 
-.bot-container {
-  width: 300px;
-  height:500px;
+.bot-pic {
+  width: 250px;
+  height:350px;
   position:absolute;
-  top:20%;
-  right:5%;
+  top:55%;
+  right:0%;
   display:inline-block;
-  background-color: red;
   padding:auto;
-
-  .bot-pic {
-    width: 100%;
-    height:100%;
-  }    
-
+  z-index: -1;
+}
   .bot-message {
   background-color: white;
   display: inline-block;
@@ -23,12 +18,13 @@
   text-align: left;
   padding:2px;
   position:absolute;
-  top:40%;
-  left:48%;
+  top:60%;
+  right:3%;
+  z-index: 3;
 
     .bot-text{
     color:black;
 
     }
   }
-}
+
