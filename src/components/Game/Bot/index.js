@@ -5,7 +5,7 @@ import utils from 'src/utils';
 
 import './bot.scss';
 
-// Le bot est une image avec une div à l'intérieur qui affiche avec un set time out - des messages - avec une transition css qui va bien
+// Le bot est une image avec une div à l'intérieur qui affiche des messages - avec une transition css qui va bien
 
 // USEEFFECT - SET INTERVAL à mettre en place sur le map d'un tableau d'objets "messages" toutes les 5mn
 // Je cherche à incrémenter l'id de l'objet à afficher toutes les x secondes
