@@ -19,6 +19,7 @@ books:
 ## Indice mémo : RTFM ===> Le livre est une doc indigeste qu'il faut lire pour voir un mot sauter aux yeux (intrus)
 
 labyrinth:
+  name: labyrinth
   x: 22px
   y: 99px
   picture1: "images/big_labyrinth.png"
@@ -30,6 +31,7 @@ labyrinth:
 ## Le bon chemin est celui qui comporte autant de mots/objets que le nombre de merveilles du monde ===> Résultat : Mot à la sortie du bon chemin
 
 kaamelott:
+  name: kaamelott
   x: 22px
   y: 99px
   picture1: "images/big_kaamelott.png"
@@ -41,6 +43,7 @@ kaamelott:
 ## Description à l'image qui indique ce qu'il faut chercher d'après l'info du mémo ===> Résultat : Nom d'un personnage manquant ou région
 
 carlin:
+  name: carlin
   x: 22px
   y: 99px
   picture1: "images/big_carlin.png"
@@ -52,6 +55,7 @@ carlin:
 ## Signature sur photo ou collier/médaille écrit à la mano Enigme ===> sur le mémo qui induit à cliquer sur tous les animaux ===> Résultat : Nom du carlin
 
 code:
+  name: code
   x: 22px
   y: 99px
   picture1: "images/big_code.png"
@@ -63,6 +67,7 @@ code:
 ## Indice mémo : Mon 5ème cause des bugs (mot ou pas, indice ou pas), enigme code complexe avec un mots qui ressort et qui casse tout Résultat : Mot qui fait bugguer
 
 drawer:
+  name: drawer
   x: 22px
   y: 99px
   picture1: "images/big_drawer.png"
@@ -76,6 +81,7 @@ drawer:
 ## Objet enigme finale (champ input)
 
 button:
+  name: button
   x: 22px
   y: 99px
   # picture1: "images/big_drawer.png"
@@ -86,6 +92,7 @@ button:
 ## Objets Infos
 
 memo_rebus:
+  name: memo_rebus
   x: 22px
   y: 99px
   picture1: "images/big_memo_rebus.png"
@@ -94,6 +101,7 @@ memo_rebus:
   description1: Charade indiquant le déroulement pour trouver le chemin absolu (5 mots + 1 nom.pem). Parfois l'énigme est sur le mémo, parfois le mémo indique ou est l'énigme.
 
 memo:
+  name: memo
   x: 22px
   y: 99px
   picture1: "images/memo.png"
@@ -102,6 +110,7 @@ memo:
   description1: Des conneries humouristiques sur la vide des dev' !
 
 duck:
+  name: duck
   x: 22px
   y: 99px
   status: 0
@@ -109,6 +118,7 @@ duck:
   description1: La méthode du canard en plastique (Paul le canard............)
 
 rabbit:
+  name: rabbit
   x: 22px
   y: 99px
   status: 0
@@ -116,6 +126,7 @@ rabbit:
   description1: Roger le lapin (+ Bla bla roger rabbit)
 
 cat:
+  name: cat
   x: 22px
   y: 99px
   status: 0
@@ -123,6 +134,7 @@ cat:
   description1: Descriptif chat japonais
 
 mouse:
+  name: mouse
   x: 22px
   y: 99px
   status: 0
@@ -130,6 +142,7 @@ mouse:
   description1: Blague "Il est chelou ce chat non ???"
 
 cup:
+  name: cup
   x: 22px
   y: 99px
   status: 0
@@ -137,6 +150,7 @@ cup:
   description1: Trophé du non-buggeur (de l'oeil du tigre du débugguage)
 
 controller:
+  name: controller
   x: 22px
   y: 99px
   status: 0
@@ -144,9 +158,9 @@ controller:
   description1: "Y'a un projet à mettre en prod c'est pas l'heure de jouer !"
   
 warhammer:
+  name: warhammer
   x: 22px
   y: 99px
   status: 0
   type: clickable
   description1: "Une de mes passions c'est d'en acheter plein et de les mettre dans un tiroir sans les peindre ><"
-
