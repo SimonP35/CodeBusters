@@ -62,7 +62,6 @@ class Game
 
     /**  
      * @ORM\OneToMany(targetEntity=Item::class, mappedBy="game", orphanRemoval=true)
-     * @Groups({"new_game"})
      */
     private $items;
 
