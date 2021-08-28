@@ -2,11 +2,18 @@ import { connect } from 'react-redux';
 
 // on importe le composant de présentation
 import Game from 'src/components/Game';
-import { startGame } from 'src/actions/game';
+import { startGame, toggleDisplayPicture, setCurrentImg } from 'src/actions/game';
+
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
 const mapStateToProps = (state) => ({
   isLogged: state.auth.isLogged,
+  status: state.game.status,
+  items: state.game.items,
+  loadingGame: state.game.loadingGame,
+  background: state.game.background,
+  displayPicture: state.game.displayPicture,
+  currentImg: state.game.currentImg,
 });
 
 // === mapDispatchToProps
@@ -15,6 +22,14 @@ const mapDispatchToProps = (dispatch) => ({
   // nom de la prop à remplir: fonction qui dispatch l'action
   startGame: () => {
     dispatch(startGame());
+  },
+
+  toggleDisplayPicture: () => {
+    dispatch(toggleDisplayPicture());
+  },
+
+  setCurrentImg: (newImg) => {
+    dispatch(setCurrentImg(newImg));
   },
 });
 

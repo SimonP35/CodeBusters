@@ -1,23 +1,30 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 
 import './intro.scss';
 
-const Intro = ({ startGame }) => (
-  <>
-    <h2 className="intro-title">Ici bientôt l'intro du scénario</h2>
-    <button
-      type="button"
-      onClick={() => {
-        startGame();
-      }}
-    >Lancez la partie
-    </button>
-  </>
-);
+const Intro = () => {
+  const history = useHistory();
+  // fonction permettant de rediriger l'utilisateur sur la page plateau.
+  const redirection = () => {
+    const url = '/game/board';
+    history.push(url);
+  };
 
-Intro.propTypes = {
-  startGame: PropTypes.func.isRequired,
+  return (
+    <>
+      <h2 className="intro-title">Ici bientôt l'intro du scénario</h2>
+      <button
+        type="button"
+        onClick={() => {
+          // startGame();
+          redirection();
+        }}
+      >Lancez la partie
+      </button>
+      {/* {!loadingGame && }; */}
+    </>
+  );
 };
 
 export default Intro;

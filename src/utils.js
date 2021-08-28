@@ -113,4 +113,54 @@ export default [
 
     ],
   },
+  {
+    items: {
+      books: {
+        id: 1,
+        description1: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi! Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?",
+        name: "books",
+        picture1: "http://3.238.70.10/images/book.png",
+        pictureId: 11,
+        statusName: 'booksStatus',
+        status: 0,
+        type: "clickable",
+        x: "22px",
+        y: "99px",
+      },
+
+      button: {
+        id: 2,
+        answer: "/xxx/xxx/xxx/xxx/xxx/yyy.pem",
+        name: "button",
+        statusName: 'buttonStatus',
+        status: 0,
+        type: "inputable",
+        x: "152px",
+        y: "99px",
+      },
+
+      carlin: {
+        id: 3,
+        description1: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi! Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?",
+        name: "carlin",
+        picture1: "http://3.238.70.10/images/carlin.png",
+        pictureId: 13,
+        statusName: 'carlinStatus',
+        status: 0,
+        type: "clickable",
+        x: "22px",
+        y: "259px",
+      },
+
+      cat: {
+        id: 4,
+        description1: "Descriptif chat japonais",
+        name: "cat",
+        status: 0,
+        type: "clickable",
+        x: "452px",
+        y: "399px",
+      },
+    },
+  },
 ];

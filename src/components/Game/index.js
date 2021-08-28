@@ -9,7 +9,15 @@ import Intro from './Intro';
 import Board from './Board';
 import './game.scss';
 
-const Game = ({ startGame }) => (
+const Game = ({
+  startGame,
+  items,
+  background,
+  displayPicture,
+  toggleDisplayPicture,
+  setCurrentImg,
+  currentImg,
+}) => (
   // Ici on switch sur les différentes routes de la game
   // On passe d'abord par l'intro ensuite par le plateau
   // et pour finir une page win ou loose
@@ -18,7 +26,15 @@ const Game = ({ startGame }) => (
       <Intro startGame={startGame} />
     </Route>
     <Route path="/game/board">
-      <Board />
+      <Board
+        items={items}
+        startGame={startGame}
+        background={background}
+        displayPicture={displayPicture}
+        toggleDisplayPicture={toggleDisplayPicture}
+        setCurrentImg={setCurrentImg}
+        currentImg={currentImg}
+      />
     </Route>
     <Route path="/game/win">
       <Win />
@@ -31,6 +47,12 @@ const Game = ({ startGame }) => (
 
 Game.propTypes = {
   startGame: PropTypes.func.isRequired,
+  items: PropTypes.object.isRequired,
+  background: PropTypes.string.isRequired,
+  displayPicture: PropTypes.bool.isRequired,
+  toggleDisplayPicture: PropTypes.func.isRequired,
+  currentImg: PropTypes.string.isRequired,
+  setCurrentImg: PropTypes.func.isRequired,
 };
 
 export default Game;

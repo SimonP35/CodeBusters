@@ -1,3 +1,25 @@
 .board-title {
   color: white;
 }
+
+.board-background {
+  height: 100%;
+  width: 100%;
+  z-index: -50;
+}
+
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(15, 15, 15, 0.39);
+  .image{
+    width: 500px;
+    height: 500px;
+  }
+}
