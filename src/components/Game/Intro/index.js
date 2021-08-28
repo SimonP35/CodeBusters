@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import Waiting from '../Waiting';
 
 import utils from 'src/utils';
 
@@ -18,6 +19,7 @@ const Intro = () => {
       <h2 className="intro-title">{scenario.nom}</h2>
       <img className="intro-pic" src={scenario.pic} alt="scenario" />
       <p className="intro-text">{scenario.description} </p>
+      <Waiting />
       <button
         type="button"
         // Onclick déclenche une requête API pour lancer board et le timer
@@ -30,4 +32,3 @@ const Intro = () => {
   );
 };
 export default Intro;
-

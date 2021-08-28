@@ -4,34 +4,36 @@
 .nav-container {
 
   // background-color: red;
-  border-bottom:0.5px solid white;
+  border-bottom: 0.5px solid white;
   padding: 2px;
   width: 700px;
   height: 50px;
-  display:inline-flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 
 
-.nav-link {
+  .nav-link {
 
-  margin:5px;
-  padding:5px;
-  text-align: center;
-  text-transform: uppercase;
-  color:vars.$color-nav-link;
-  justify-content: space-evenly;
-  &:hover {
-    color:vars.$color-nav-link-hover;
-    transition: vars.$transition-slow;
-    transform: scale(1.1);
-    cursor:pointer;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: vars.$color-nav-link;
+    justify-content: space-evenly;
+
+    &-active {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      color: vars.$color-nav-link-hover;
+      transition: vars.$transition-slow;
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
   }
-  .nav-link-active {
-    text-decoration: underline;
-    font-weight: bolder;
-  }
-}
 
 }

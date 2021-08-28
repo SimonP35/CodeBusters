@@ -79,8 +79,8 @@ export default [
       {
         id: 5,
         image: [ano, git, twitter, linkedin],
-        name: 'Valentin Van Weydevelt - developpeur Javascript (react)',
-        describe: 'Git master',
+        name: 'Valentin Van Weydevelt',
+        describe: 'Git master - developpeur Javascript (react)',
         contact: ['https://github.com/ValtentinVW', 'https://twitter.com/valentinvw', 'https://www.linkedin.com/in/valentin-van-weydevelt-3146b7208/'],
       },
     ],
