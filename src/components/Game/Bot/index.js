@@ -32,10 +32,10 @@ function useInterval(callback, delay) {
 
 const Bot = () => {
   const [idCount, setidCount] = useState(1);
-// UseInterval increments id every 5mn starting at 1 in useState :
+  // UseInterval increments id every 5mn starting at 1 in useState :
   useInterval(() => {
     setidCount(idCount + 1);
-  }, 30000); // = 5mn
+  }, 300000); // = 5mn
   // Array Find display the object matching id incremented :
   const displayMessage = displayMessages.find((message) => message.id === idCount);
   return (

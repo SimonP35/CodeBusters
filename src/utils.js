@@ -147,7 +147,7 @@ export default [
         contentwin: 'Le roi de l\'abstract en PHP !',
         contentloose: 'On va pas se mentir, va falloir réviser les classes...',
         timer: 30,
-        description: 'Crack.Boum.Abstract. Les classes en PHP, c\'est comme Amour, Gloire et Beauté. Y a moyent de se taper tout le monde, mais quand ça pète derrière, faut pas s\'étonner',
+        description: 'Crack.Boum.Abstract. Les classes en PHP, c\'est comme Amour, Gloire et Beauté. Y a moyen de se taper tout le monde, mais quand ça pète derrière, faut pas s\'étonner',
         pic: smith,
         comment: 'c\'est quoi ce truc de dingue encore ? Ils sont vraiment loin les gars qui ont écrit le scénar !',
         rate: '5',
@@ -182,6 +182,10 @@ export default [
       {
         id: 6,
         content: 'Espèce d\'incapable, t\'es fini dans le métier, je vais te pourrir !!!',
+      },
+      {
+        id: 7,
+        content: 'Franchement c\'est pathétique, t\'as pas honte de dire que t\'es dev toi ?',
       },
     ],
   },
