@@ -161,20 +161,19 @@ export default [
 
       {
         id: 1,
-        content: 'Bon le stagiaire, je compte sur toi pour montrer que t\'es à la hauteur, surtout si t\'as prévu de venir mendier un CDI derrière',
-
+        content: 'Bon le stagiaire, je compte sur toi pour montrer que t\'es à la hauteur, surtout si t\'as prévu de venir mendier un CDI derrière !',
       },
       {
         id: 2,
-        content: 'Alors ça avance ? Même mon chien en hypothermie coderait plus vite',
+        content: 'Alors ça avance ? Même mon chien en hypothermie coderait plus vite !',
       },
       {
         id: 3,
-        content: 'Pourquoi le site est toujours pas déployé ? Les stagiaires vous savez vraiment rien faire tout seuls',
+        content: 'Pourquoi le site est toujours pas déployé ? Les stagiaires vous savez vraiment rien faire tout seuls !!',
       },
       {
         id: 4,
-        content: 'Bon t\'as prévu de déployer aujourd\'hui ? Fallait que je te précise le vendredi de quel mois peut-être?',
+        content: 'Bon t\'as prévu de déployer aujourd\'hui ? Fallait que je te précise le vendredi de quel mois peut-être ??',
       },
       {
         id: 5,
@@ -182,7 +181,7 @@ export default [
       },
       {
         id: 6,
-        content: 'Espèce d\'incapable, t\'es fini dans le métier, je vais te pourrir',
+        content: 'Espèce d\'incapable, t\'es fini dans le métier, je vais te pourrir !!!',
       },
     ],
   },
