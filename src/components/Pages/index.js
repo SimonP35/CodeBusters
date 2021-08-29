@@ -30,7 +30,7 @@ const Pages = () => (
       <Route path="/profil">
         <Profil />
       </Route>
-      <Route path="/game">
+      <Route path="/game/:slug">
         <Game />
       </Route>
       <Route>

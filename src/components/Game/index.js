@@ -5,8 +5,10 @@ import { Switch, Route } from 'react-router-dom';
 import Win from 'src/containers/Win';
 import Loose from 'src/containers/Loose';
 
+import utils from 'src/utils';
 import Intro from './Intro';
 import Board from './Board';
+
 import './game.scss';
 
 const Game = ({
@@ -22,7 +24,7 @@ const Game = ({
   // On passe d'abord par l'intro ensuite par le plateau
   // et pour finir une page win ou loose
   <Switch>
-    <Route path="/game" exact>
+    <Route path="/game/:slug" exact>
       <Intro startGame={startGame} />
     </Route>
     <Route path="/game/board">
