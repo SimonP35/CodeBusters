@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-import { START_GAME } from 'src/actions/game';
+import { START_GAME, saveDataGame, setLoadingGame } from 'src/actions/game';
 
 const gameMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
@@ -14,9 +13,18 @@ const gameMiddleware = (store) => (next) => (action) => {
         })
         .then((response) => {
           console.log(response);
+          store.dispatch(saveDataGame(
+            response.data.game.status,
+            response.data.items,
+            response.data.background,
+          ));
+          store.dispatch(setLoadingGame());
         })
         .catch((error) => {
           console.log(error);
+        })
+        .then(() => {
+          store.dispatch(setLoadingGame());
         });
       break;
     }

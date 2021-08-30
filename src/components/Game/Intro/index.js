@@ -1,33 +1,36 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-
+import { useHistory, useParams } from 'react-router-dom';
 import utils from 'src/utils';
-
 import './intro.scss';
 
-const scenario = utils[3].scenarios[0];
+const scenarios = utils[0].fourMostPopularScenarios;
 
 const Intro = () => {
-  const dispatch = useDispatch();
+  const { slug } = useParams();
+  const result = scenarios.find((item) => item.slug === slug);
+
+  const history = useHistory();
+  // fonction permettant de rediriger l'utilisateur sur la page plateau.
+  const redirectionToBoard = () => {
+    const url = `/game/${slug}/board`;
+    history.push(url);
+  };
   return (
-
-  // Ici on fait une request à l'API pour récupérer de la game :
-  // son titre, son descriptif, son image, ...
-
-    <div className="intro-container">
-      <h2 className="intro-title">{scenario.nom}</h2>
-      <img className="intro-pic" src={scenario.pic} alt="scenario" />
-      <p className="intro-text">{scenario.description} </p>
+    <>
+      <h2 className="intro-title">Introduction</h2>
+      <p className="intro-description">{result.description}</p>
       <button
         type="button"
-        // Onclick déclenche une requête API pour lancer board et le timer
-        onClick={() => dispatch({ type: 'START_GAME' })}
-        className="intro-button"
-        id="intro"
-      >Lancer la partie
+        onClick={() => {
+          // startGame();
+          redirectionToBoard();
+        }}
+      >Lancez la partie
       </button>
-    </div>
+      {/* {!loadingGame && }; */}
+    </>
   );
 };
+
 export default Intro;
 

@@ -1,12 +1,14 @@
 import {
   SAVE_USER_DATA,
-  CHANGE_FIELD,
   CLICK_ON_LOGOUT,
   SUBMIT_LOGIN,
   SUBMIT_SIGNIN,
-  CLEAR_INPUT,
 
 } from 'src/actions/auth';
+import {
+  CHANGE_FIELD,
+  CLEAR_INPUT,
+} from 'src/actions/popup';
 
 const initialState = {
   nickname: '',

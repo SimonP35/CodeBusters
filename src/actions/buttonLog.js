@@ -12,4 +12,3 @@ export const toggleDisplayPopupSignin = () => ({
 export const toggleDisplayPopupLogin = () => ({
   type: TOGGLE_DISPLAY_POPUP_LOGIN,
 });
-

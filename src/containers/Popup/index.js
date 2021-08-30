@@ -5,12 +5,17 @@ import Popup from 'src/components/Popup';
 
 import { toggleDisplayPopupSignin, toggleDisplayPopupLogin } from 'src/actions/buttonLog';
 import {
-  changeField,
   submitLogin,
   handleLogOut,
   submitSignin,
 } from 'src/actions/auth';
-import { closedErrormessage, toggleDisplayPopupComment, submitComment } from 'src/actions/popup';
+import {
+  changeField,
+  closedErrormessage,
+  toggleDisplayPopupComment,
+  submitComment,
+} from 'src/actions/popup';
+import { toggleDisplayInput, submitAnswer } from 'src/actions/game';
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
 const mapStateToProps = (state) => ({
@@ -24,6 +29,8 @@ const mapStateToProps = (state) => ({
   email: state.auth.email,
   password: state.auth.password,
   nickname: state.auth.nickname,
+  displayInput: state.game.displayInput,
+  inputGameValue: state.popup.inputGameValue,
 });
 
 // === mapDispatchToProps
@@ -55,6 +62,12 @@ const mapDispatchToProps = (dispatch) => ({
   },
   closedErrormessage: () => {
     dispatch(closedErrormessage());
+  },
+  toggleDisplayInput: () => {
+    dispatch(toggleDisplayInput());
+  },
+  submitAnswer: () => {
+    dispatch(submitAnswer());
   },
 });
 
