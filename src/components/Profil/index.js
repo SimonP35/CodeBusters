@@ -18,6 +18,7 @@ const Profil = ({ email, nickname }) => (
           <li className="profil-list-item">Pseudo: {nickname}</li>
           <li className="profil-list-item">Email: {email}</li>
         </ul>
+        <a className="profil-button" href="#">Mettre mes informations à jour</a>
         <a className="profil-button" href="#">Changer votre mot de passe</a>
       </div>
     </main>
