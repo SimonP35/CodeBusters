@@ -7,10 +7,12 @@
 
 ## Mémo : Contenant un rebus pour le remplissage de l'input final (Bouton mise en prod ou on rentre le chemin/path) 
 
-books:
-  name: books
-  x: 22px
-  y: 99px
+book:
+  name: book
+  left: 37.3em #(left)
+  top: 28.9em #(top)
+  width: 7.4em
+  height: 6em
   picture1: "http://3.238.70.10/images/book.png"
   status: 0
   type: clickable
@@ -21,8 +23,10 @@ books:
 
 labyrinth:
   name: labyrinth
-  x: 22px
-  y: 99px
+  left: 98.6em #(left)
+  top: 7.5em #(top)
+  width: 16em
+  height: 21.8em
   picture1: "http://3.238.70.10/images/labyrinth.png"
   status: 0
   type: clickable
@@ -33,8 +37,10 @@ labyrinth:
 
 kaamelott:
   name: kaamelott
-  x: 22px
-  y: 99px
+  left: 4.8em #(left)
+  top: 5.8em #(top)
+  width: 36.3em
+  height: 19.2em
   picture1: "http://3.238.70.10/images/kaamelott.png"
   status: 0
   type: clickable
@@ -45,8 +51,10 @@ kaamelott:
 
 carlin:
   name: carlin
-  x: 22px
-  y: 99px
+  left: 42.5em #(left)
+  top: 16.5 #(top)
+  width: 9em
+  height: 8em
   picture1: "http://3.238.70.10/images/carlin.svg"
   status: 0
   type: clickable
@@ -57,8 +65,10 @@ carlin:
 
 code:
   name: code
-  x: 22px
-  y: 99px
+  left: 54.5em #(left)
+  top: 35.6em #(top)
+  width: 2.5em
+  height: 2.5em
   picture1: "http://3.238.70.10/images/code.png"
   status: 0
   type: clickable
@@ -67,10 +77,13 @@ code:
 
 ## Indice mémo : Mon 5ème cause des bugs (mot ou pas, indice ou pas), enigme code complexe avec un mots qui ressort et qui casse tout Résultat : Mot qui fait bugguer
 
-drawer:
-  name: drawer
-  x: 22px
-  y: 99px
+drawer_r:
+  name: drawer_r
+  left: 80.65em #(left)
+  top: 59.6em #(top)
+  width: 1.3em
+  height: 1.3em
+  border-radius: 50%
   picture1: "http://3.238.70.10/images/drawer.png"
   status: 0
   type: clickable
@@ -83,8 +96,12 @@ drawer:
 
 button:
   name: button
-  x: 22px
-  y: 99px
+  left: 105.4em #(left)
+  top: 61.21em #(top)
+  width: 1.8em
+  height: 1.8em
+  border-radius: 50%
+  picture1: "http://3.238.70.10/images/button.png"
   status: 0
   type: inputable
   answer: /xxx/xxx/xxx/xxx/xxx/yyy.pem
@@ -93,8 +110,10 @@ button:
 
 memo_rebus:
   name: memo_rebus
-  x: 22px
-  y: 99px
+  left: 61.5em #(left)
+  top: 12.8em #(top)
+  width: 7em
+  height: 6.4em
   picture1: "http://3.238.70.10/images/memo_rebus.png"
   status: 0
   type: clickable
@@ -102,8 +121,10 @@ memo_rebus:
 
 memo:
   name: memo
-  x: 22px
-  y: 99px
+  left: 72em #(left)
+  top: 11.6em #(top)
+  width: 6.8em
+  height: 6.5em
   picture1: "http://3.238.70.10/images/memo.png"
   status: 0
   type: clickable
@@ -111,57 +132,157 @@ memo:
 
 duck:
   name: duck
-  x: 22px
-  y: 99px
+  left: 82.3em #(left)
+  top: 55em #(top)
+  width: 3em
+  height: 4em
+  border-radius: 50%
   status: 0
   type: clickable
   description1: La méthode du canard en plastique (Paul le canard............)
 
-rabbit:
-  name: rabbit
-  x: 22px
-  y: 99px
-  status: 0
-  type: clickable
-  description1: Roger le lapin (+ Bla bla roger rabbit)
-
-cat:
-  name: cat
-  x: 22px
-  y: 99px
-  status: 0
-  type: clickable
-  description1: Descriptif chat japonais
-
 mouse:
   name: mouse
-  x: 22px
-  y: 99px
+  left: 77.5em #(left)
+  top: 64em #(top)
+  width: 2em
+  height: 2em
   status: 0
   type: clickable
   description1: Blague "Il est chelou ce chat non ???"
 
+cat:
+  name: cat
+  left: 46.6em #(left)
+  top: 27.2em #(top)
+  width: 4em
+  height: 7.7em
+  status: 0
+  type: clickable
+  description1: Descriptif chat japonais
+
+rabbit:
+  name: rabbit
+  left: 45em #(left)
+  top: 52em #(top)
+  width: 3em 
+  height: 5em
+  status: 0
+  type: clickable
+  description1: Roger le lapin (+ Bla bla roger rabbit)
+
 cup:
   name: cup
-  x: 22px
-  y: 99px
+  left: 33.2em #(left)
+  top: 32.9em #(top)
+  width: 3em
+  height: 2em
   status: 0
   type: clickable
   description1: Trophé du non-buggeur (de l'oeil du tigre du débugguage)
 
 controller:
   name: controller
-  x: 22px
-  y: 99px
+  left: 15.1em #(left)
+  top: 55em #(top)
+  width: 3.5em
+  height: 1.4em
   status: 0
   type: clickable
   description1: "Y'a un projet à mettre en prod c'est pas l'heure de jouer !"
   
 warhammer:
   name: warhammer
-  x: 22px
-  y: 99px
+  left: 33.2em #(left)
+  top: 58.5em #(top)
+  width: 6.6em
+  height: 8em
   status: 0
   type: clickable
   description1: "Une de mes passions c'est d'en acheter plein et de les mettre dans un tiroir sans les peindre ><"
 
+car:
+  name: car
+  left: 22.5em #(left)
+  top: 32.2em #(top)
+  width: 9.4em
+  height: 1.9em
+  status: 0
+  type: clickable
+  description1: Blague RVLF
+
+ie:
+  name: ie
+  left: 54.5em #(left)
+  top: 43.6em #(top)
+  width: 2.5em
+  height: 2.5em
+  picture1: "http://3.238.70.10/images/code.png"
+  status: 0
+  type: clickable
+  description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
+    Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+
+matrix:
+  name: matrix
+  left: 84.6em #(left)
+  top: 18.3em #(top)
+  width: 12.8em
+  height: 18.3em
+  picture1: "http://3.238.70.10/images/code.png"
+  status: 0
+  type: clickable
+  description1: Blague/clin d'oeil sur le nom de notre promo
+
+coffee:
+  name: coffee
+  left: 52.7em #(left)
+  top: 55.4em #(top)
+  width: 2.6em 
+  height: 2em
+  status: 0
+  type: clickable
+  description1: Il est jamais vraiment ce café ?
+
+paper:
+  name: paper
+  left: 66em #(left)
+  top: 63em #(top)
+  width: 6.8em 
+  height: 3.2em
+  status: 0
+  type: clickable
+  description1: Il est jamais vraiment ce café ?
+
+drawer_l:
+  name: drawer_l
+  left: 46.74em #(left)
+  top: 59.6em #(top)
+  width: 1.3em
+  height: 1.3em
+  border-radius: 50%
+  picture1: "http://3.238.70.10/images/drawer.png"
+  status: 0
+  type: clickable
+  description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
+    Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+
+banana:
+  name: banana
+  left: 57.8em #(left)
+  top: 62.8em #(top)
+  width: 1.5em 
+  height: 3em
+  status: 0
+  type: clickable
+  description1: Ref Mario Kart ?
+
+exit:
+  name: exit
+  left: 94.25em #(left)
+  top: 53.25em #(top)
+  width: 9.1em 
+  height: 3.3em
+  status: 0
+  type: clickable
+  description1: Le week-end c'est par la !
