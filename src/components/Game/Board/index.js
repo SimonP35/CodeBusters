@@ -60,8 +60,8 @@ const Board = ({
                     position: absolute;
                     top: ${item.y};
                     left: ${item.x};
-                    width: 100px;
-                    height: 100px;
+                    width: ${item.width};
+                    height: ${item.height};
                   }
               `}
               </style>

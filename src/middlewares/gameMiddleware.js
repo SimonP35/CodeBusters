@@ -1,9 +1,11 @@
 import axios from 'axios';
 import { START_GAME, saveDataGame, setLoadingGame } from 'src/actions/game';
+import { setLoading } from 'src/actions/loading';
 
 const gameMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case START_GAME: {
+      store.dispatch(setLoading());
       const { id } = store.getState().auth;
       axios.post('http://3.238.70.10/api/game/create', { user: id },
         {
@@ -19,6 +21,7 @@ const gameMiddleware = (store) => (next) => (action) => {
             response.data.background,
           ));
           store.dispatch(setLoadingGame());
+          store.dispatch(setLoading());
         })
         .catch((error) => {
           console.log(error);

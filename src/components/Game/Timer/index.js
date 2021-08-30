@@ -18,7 +18,7 @@ function MyTimer({ expiryTimestamp }) {
   return (
     <div className="timer-container">
       <div className="timer-display">
-        <span>{minutes}</span>:<span>{seconds}</span>
+        <span>{minutes}</span>:<span>{seconds < 10 ? `0${seconds}` : seconds}</span>
       </div>
     </div>
   );

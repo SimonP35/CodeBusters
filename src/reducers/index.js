@@ -5,6 +5,7 @@ import { combineReducers } from 'redux';
 import authReducer from './authReducer';
 import gameReducer from './gameReducer';
 import popupReducer from './popupReducer';
+import loadingReducer from './loadingReducer';
 
 // le reducer principal, qui regroupe les autres
 // combineReducers prend en argument un objet qui indique un nom pour
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   auth: authReducer,
   popup: popupReducer,
   game: gameReducer,
+  loader: loadingReducer,
 });
 
 export default rootReducer;
