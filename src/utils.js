@@ -69,7 +69,7 @@ export default [
       {
         id: 3,
         image: [ano, git, twitter, linkedin],
-        name: 'Sasha Huynh Van-Hardebolle',
+        name: 'Sacha Huynh Van-Hardebolle',
         describe: 'Lead Dev Back - developpeur PHP (symfony)',
         contact: ['https://github.com/Sacha-HH', 'https://twitter.com/HuynhSacha', 'https://www.linkedin.com/in/sacha-huynh-van-hardebolle-9840b591/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAABNp8jQBuqeAxL7ascW8ed-QTxeV0nOnu0U'],
       },
