@@ -9,8 +9,8 @@
 
 book:
   name: book
-  left: 37.3em #(left)
-  top: 28.9em #(top)
+  x: 37.3em #(x)
+  y: 28.9em #(y)
   width: 7.4em
   height: 6em
   picture1: "http://3.238.70.10/images/book.png"
@@ -23,8 +23,8 @@ book:
 
 labyrinth:
   name: labyrinth
-  left: 98.6em #(left)
-  top: 7.5em #(top)
+  x: 98.6em #(x)
+  y: 7.5em #(y)
   width: 16em
   height: 21.8em
   picture1: "http://3.238.70.10/images/labyrinth.png"
@@ -37,8 +37,8 @@ labyrinth:
 
 kaamelott:
   name: kaamelott
-  left: 4.8em #(left)
-  top: 5.8em #(top)
+  x: 4.8em #(x)
+  y: 5.8em #(y)
   width: 36.3em
   height: 19.2em
   picture1: "http://3.238.70.10/images/kaamelott.png"
@@ -51,8 +51,8 @@ kaamelott:
 
 carlin:
   name: carlin
-  left: 42.5em #(left)
-  top: 16.5em #(top)
+  x: 42.5em #(x)
+  y: 16.5em #(y)
   width: 9em
   height: 8em
   picture1: "http://3.238.70.10/images/carlin.svg"
@@ -65,8 +65,8 @@ carlin:
 
 code:
   name: code
-  left: 54.5em #(left)
-  top: 35.6em #(top)
+  x: 54.5em #(x)
+  y: 35.6em #(y)
   width: 2.5em
   height: 2.5em
   picture1: "http://3.238.70.10/images/code.png"
@@ -79,8 +79,8 @@ code:
 
 drawer_r:
   name: drawer_r
-  left: 80.65em #(left)
-  top: 59.6em #(top)
+  x: 80.65em #(x)
+  y: 59.6em #(y)
   width: 1.3em
   height: 1.3em
   border-radius: 50%
@@ -96,8 +96,8 @@ drawer_r:
 
 button:
   name: button
-  left: 105.4em #(left)
-  top: 61.21em #(top)
+  x: 105.4em #(x)
+  y: 61.21em #(y)
   width: 1.8em
   height: 1.8em
   border-radius: 50%
@@ -110,8 +110,8 @@ button:
 
 memo_rebus:
   name: memo_rebus
-  left: 61.5em #(left)
-  top: 12.8em #(top)
+  x: 61.5em #(x)
+  y: 12.8em #(y)
   width: 7em
   height: 6.4em
   picture1: "http://3.238.70.10/images/memo_rebus.png"
@@ -121,8 +121,8 @@ memo_rebus:
 
 memo:
   name: memo
-  left: 72em #(left)
-  top: 11.6em #(top)
+  x: 72em #(x)
+  y: 11.6em #(y)
   width: 6.8em
   height: 6.5em
   picture1: "http://3.238.70.10/images/memo.png"
@@ -132,8 +132,8 @@ memo:
 
 duck:
   name: duck
-  left: 82.3em #(left)
-  top: 55em #(top)
+  x: 82.3em #(x)
+  y: 55em #(y)
   width: 3em
   height: 4em
   border-radius: 50%
@@ -143,8 +143,8 @@ duck:
 
 mouse:
   name: mouse
-  left: 77.5em #(left)
-  top: 64em #(top)
+  x: 77.5em #(x)
+  y: 64em #(y)
   width: 2em
   height: 2em
   status: 0
@@ -153,8 +153,8 @@ mouse:
 
 cat:
   name: cat
-  left: 46.6em #(left)
-  top: 27.2em #(top)
+  x: 46.6em #(x)
+  y: 27.2em #(y)
   width: 4em
   height: 7.7em
   status: 0
@@ -163,8 +163,8 @@ cat:
 
 rabbit:
   name: rabbit
-  left: 45em #(left)
-  top: 52em #(top)
+  x: 45em #(x)
+  y: 52em #(y)
   width: 3em 
   height: 5em
   status: 0
@@ -173,8 +173,8 @@ rabbit:
 
 cup:
   name: cup
-  left: 33.2em #(left)
-  top: 32.9em #(top)
+  x: 33.2em #(x)
+  y: 32.9em #(y)
   width: 3em
   height: 2em
   status: 0
@@ -183,8 +183,8 @@ cup:
 
 controller:
   name: controller
-  left: 15.1em #(left)
-  top: 55em #(top)
+  x: 15.1em #(x)
+  y: 55em #(y)
   width: 3.5em
   height: 1.4em
   status: 0
@@ -193,8 +193,8 @@ controller:
   
 warhammer:
   name: warhammer
-  left: 33.2em #(left)
-  top: 58.5em #(top)
+  x: 33.2em #(x)
+  y: 58.5em #(y)
   width: 6.6em
   height: 8em
   status: 0
@@ -203,8 +203,8 @@ warhammer:
 
 car:
   name: car
-  left: 22.5em #(left)
-  top: 32.2em #(top)
+  x: 22.5em #(x)
+  y: 32.2em #(y)
   width: 9.4em
   height: 1.9em
   status: 0
@@ -213,8 +213,8 @@ car:
 
 ie:
   name: ie
-  left: 54.5em #(left)
-  top: 43.6em #(top)
+  x: 54.5em #(x)
+  y: 43.6em #(y)
   width: 2.5em
   height: 2.5em
   picture1: "http://3.238.70.10/images/code.png"
@@ -225,8 +225,8 @@ ie:
 
 matrix:
   name: matrix
-  left: 84.6em #(left)
-  top: 18.3em #(top)
+  x: 84.6em #(x)
+  y: 18.3em #(y)
   width: 12.8em
   height: 18.3em
   picture1: "http://3.238.70.10/images/code.png"
@@ -236,8 +236,8 @@ matrix:
 
 coffee:
   name: coffee
-  left: 52.7em #(left)
-  top: 55.4em #(top)
+  x: 52.7em #(x)
+  y: 55.4em #(y)
   width: 2.6em 
   height: 2em
   status: 0
@@ -246,8 +246,8 @@ coffee:
 
 paper:
   name: paper
-  left: 66em #(left)
-  top: 63em #(top)
+  x: 66em #(x)
+  y: 63em #(y)
   width: 6.8em 
   height: 3.2em
   status: 0
@@ -256,8 +256,8 @@ paper:
 
 drawer_l:
   name: drawer_l
-  left: 46.74em #(left)
-  top: 59.6em #(top)
+  x: 46.74em #(x)
+  y: 59.6em #(y)
   width: 1.3em
   height: 1.3em
   border-radius: 50%
@@ -269,8 +269,8 @@ drawer_l:
 
 banana:
   name: banana
-  left: 57.8em #(left)
-  top: 62.8em #(top)
+  x: 57.8em #(x)
+  y: 62.8em #(y)
   width: 1.5em 
   height: 3em
   status: 0
@@ -279,8 +279,8 @@ banana:
 
 exit:
   name: exit
-  left: 94.25em #(left)
-  top: 53.25em #(top)
+  x: 94.25em #(x)
+  y: 53.25em #(y)
   width: 9.1em 
   height: 3.3em
   status: 0
