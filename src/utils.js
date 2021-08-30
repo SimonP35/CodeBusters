@@ -119,6 +119,7 @@ export default [
         pic: vendredi,
         comment: 'Jeu très cool, j\'ai adoré ! ',
         rate: '3',
+        slug: 'vendredi-maudit',
       },
       {
         id: 2,
@@ -131,6 +132,7 @@ export default [
         pic: sudo,
         comment: 'C\'est possible de finir ce truc? Horrible j\'ai tenté 13 fois d\'affilée',
         rate: '5',
+        slug: 'tonton-maurice',
       },
       {
         id: 3,

@@ -16,7 +16,7 @@ const Win = () => {
       <p className="win-text">{scenario.contentwin} </p>
       <h3 className="win-subtitle">Tu as mis en prod en un temps de record de : {scenario.timer} minutes</h3>
       <div className="win-video-responsive"> {scenario.video} Ici data vidéo dans balise iframes responsive et autoplay
-      {/* <iframe width="560" height="315" src="{scenario.src}" frameborder="0" autoplay/> */}
+        {/* <iframe width="560" height="315" src="{scenario.src}" frameborder="0" autoplay/> */}
       </div>
       <button
         type="button"

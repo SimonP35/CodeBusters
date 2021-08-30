@@ -35,4 +35,3 @@ const gameMiddleware = (store) => (next) => (action) => {
   // on passe l'action au suivant (middleware suivant ou reducer)
 
 export default gameMiddleware;
-

@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import { useTimer } from 'react-timer-hook';
 
@@ -24,16 +24,19 @@ function MyTimer({ expiryTimestamp }) {
   );
 }
 
-export default function Timer() {
+const Timer = () => {
   const time = new Date();
+  // console.log(time);
   time.setSeconds(time.getSeconds() + 1800); // 1800 = 30 minutes
   return (
     <div>
       <MyTimer expiryTimestamp={time} />
     </div>
   );
-}
+};
 
-// Timer.propTypes = {
-//   expiryTimestamp: PropTypes.number.isRequired,
-// };
+MyTimer.propTypes = {
+  expiryTimestamp: PropTypes.instanceOf(Date).isRequired,
+};
+
+export default Timer;

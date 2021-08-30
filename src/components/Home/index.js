@@ -5,14 +5,13 @@ import classNames from 'classnames';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-import Game from 'src/components/Game';
 // import Loader from 'src/components/Loader';
 import banniere from 'src/assets/images/banniere.png';
 import utils from 'src/utils';
 
 import './home.scss';
 
-const scenarios = utils[3].scenarios;
+const { scenarios } = utils[3];
 
 const Home = ({ isLogged, displayErrorMessage }) => (
   <>

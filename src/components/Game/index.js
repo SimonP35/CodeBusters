@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 
-import Win from 'src/containers/Win';
-import Loose from 'src/containers/Loose';
 import NotFound from 'src/components/NotFound';
 import Intro from './Intro';
 import Board from './Board';
+import Win from './Win';
+import Loose from './Loose';
 
 import './game.scss';
 
@@ -58,11 +58,6 @@ const Game = ({
     </Route>
     <Route path="/game/:slug/loose">
       <Loose />
-    <Route path="/game/win">
-      <Win toggleDisplayComment={toggleDisplayComment} />
-    </Route>
-    <Route path="/game/loose">
-      <Loose toggleDisplayComment={toggleDisplayComment} />
     </Route>
   </Switch>
 );
@@ -83,7 +78,6 @@ Game.propTypes = {
   setWin: PropTypes.func.isRequired,
   win: PropTypes.bool.isRequired,
   changeField: PropTypes.func.isRequired,
-  toggleDisplayComment: PropTypes.func.isRequired,
 };
 
 export default Game;

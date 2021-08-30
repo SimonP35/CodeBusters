@@ -5,7 +5,6 @@ import { combineReducers } from 'redux';
 import authReducer from './authReducer';
 import gameReducer from './gameReducer';
 import popupReducer from './popupReducer';
-import gameReducer from './gameReducer';
 
 // le reducer principal, qui regroupe les autres
 // combineReducers prend en argument un objet qui indique un nom pour
