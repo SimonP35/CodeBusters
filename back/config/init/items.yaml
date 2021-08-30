@@ -9,10 +9,10 @@
 
 book:
   name: book
-  x: 37.3em #(x)
-  y: 28.9em #(y)
-  width: 7.4em
-  height: 6em
+  x: 37.3rem #(x)
+  y: 28.9rem #(y)
+  width: 7.4rem
+  height: 6rem
   picture1: "http://3.238.70.10/images/book.png"
   status: 0
   type: clickable
@@ -23,10 +23,10 @@ book:
 
 labyrinth:
   name: labyrinth
-  x: 98.6em #(x)
-  y: 7.5em #(y)
-  width: 16em
-  height: 21.8em
+  x: 98.6rem #(x)
+  y: 7.5rem #(y)
+  width: 16rem
+  height: 21.8rem
   picture1: "http://3.238.70.10/images/labyrinth.png"
   status: 0
   type: clickable
@@ -37,10 +37,10 @@ labyrinth:
 
 kaamelott:
   name: kaamelott
-  x: 4.8em #(x)
-  y: 5.8em #(y)
-  width: 36.3em
-  height: 19.2em
+  x: 4.8rem #(x)
+  y: 5.8rem #(y)
+  width: 36.3rem
+  height: 19.2rem
   picture1: "http://3.238.70.10/images/kaamelott.png"
   status: 0
   type: clickable
@@ -51,10 +51,10 @@ kaamelott:
 
 carlin:
   name: carlin
-  x: 42.5em #(x)
-  y: 16.5em #(y)
-  width: 9em
-  height: 8em
+  x: 42.5rem #(x)
+  y: 16.5rem #(y)
+  width: 9rem
+  height: 8rem
   picture1: "http://3.238.70.10/images/carlin.svg"
   status: 0
   type: clickable
@@ -65,10 +65,10 @@ carlin:
 
 code:
   name: code
-  x: 54.5em #(x)
-  y: 35.6em #(y)
-  width: 2.5em
-  height: 2.5em
+  x: 54.5rem #(x)
+  y: 35.6rem #(y)
+  width: 2.5rem
+  height: 2.5rem
   picture1: "http://3.238.70.10/images/code.png"
   status: 0
   type: clickable
@@ -79,10 +79,10 @@ code:
 
 drawer_r:
   name: drawer_r
-  x: 80.65em #(x)
-  y: 59.6em #(y)
-  width: 1.3em
-  height: 1.3em
+  x: 80.65rem #(x)
+  y: 59.6rem #(y)
+  width: 1.3rem
+  height: 1.3rem
   border-radius: 50%
   picture1: "http://3.238.70.10/images/drawer.png"
   status: 0
@@ -96,10 +96,10 @@ drawer_r:
 
 button:
   name: button
-  x: 105.4em #(x)
-  y: 61.21em #(y)
-  width: 1.8em
-  height: 1.8em
+  x: 105.4rem #(x)
+  y: 61.21rem #(y)
+  width: 1.8rem
+  height: 1.8rem
   border-radius: 50%
   picture1: "http://3.238.70.10/images/button.png"
   status: 0
@@ -110,10 +110,10 @@ button:
 
 memo_rebus:
   name: memo_rebus
-  x: 61.5em #(x)
-  y: 12.8em #(y)
-  width: 7em
-  height: 6.4em
+  x: 61.5rem #(x)
+  y: 12.8rem #(y)
+  width: 7rem
+  height: 6.4rem
   picture1: "http://3.238.70.10/images/memo_rebus.png"
   status: 0
   type: clickable
@@ -121,10 +121,10 @@ memo_rebus:
 
 memo:
   name: memo
-  x: 72em #(x)
-  y: 11.6em #(y)
-  width: 6.8em
-  height: 6.5em
+  x: 72rem #(x)
+  y: 11.6rem #(y)
+  width: 6.8rem
+  height: 6.5rem
   picture1: "http://3.238.70.10/images/memo.png"
   status: 0
   type: clickable
@@ -132,10 +132,10 @@ memo:
 
 duck:
   name: duck
-  x: 82.3em #(x)
-  y: 55em #(y)
-  width: 3em
-  height: 4em
+  x: 82.3rem #(x)
+  y: 55rem #(y)
+  width: 3rem
+  height: 4rem
   border-radius: 50%
   status: 0
   type: clickable
@@ -143,80 +143,80 @@ duck:
 
 mouse:
   name: mouse
-  x: 77.5em #(x)
-  y: 64em #(y)
-  width: 2em
-  height: 2em
+  x: 77.5rem #(x)
+  y: 64rem #(y)
+  width: 2rem
+  height: 2rem
   status: 0
   type: clickable
   description1: Blague "Il est chelou ce chat non ???"
 
 cat:
   name: cat
-  x: 46.6em #(x)
-  y: 27.2em #(y)
-  width: 4em
-  height: 7.7em
+  x: 46.6rem #(x)
+  y: 27.2rem #(y)
+  width: 4rem
+  height: 7.7rem
   status: 0
   type: clickable
   description1: Descriptif chat japonais
 
 rabbit:
   name: rabbit
-  x: 45em #(x)
-  y: 52em #(y)
-  width: 3em 
-  height: 5em
+  x: 45rem #(x)
+  y: 52rem #(y)
+  width: 3rem 
+  height: 5rem
   status: 0
   type: clickable
   description1: Roger le lapin (+ Bla bla roger rabbit)
 
 cup:
   name: cup
-  x: 33.2em #(x)
-  y: 32.9em #(y)
-  width: 3em
-  height: 2em
+  x: 33.2rem #(x)
+  y: 32.9rem #(y)
+  width: 3rem
+  height: 2rem
   status: 0
   type: clickable
   description1: Trophé du non-buggeur (de l'oeil du tigre du débugguage)
 
 controller:
   name: controller
-  x: 15.1em #(x)
-  y: 55em #(y)
-  width: 3.5em
-  height: 1.4em
+  x: 15.1rem #(x)
+  y: 55rem #(y)
+  width: 3.5rem
+  height: 1.4rem
   status: 0
   type: clickable
   description1: "Y'a un projet à mettre en prod c'est pas l'heure de jouer !"
   
 warhammer:
   name: warhammer
-  x: 33.2em #(x)
-  y: 58.5em #(y)
-  width: 6.6em
-  height: 8em
+  x: 33.2rem #(x)
+  y: 58.5rem #(y)
+  width: 6.6rem
+  height: 8rem
   status: 0
   type: clickable
   description1: "Une de mes passions c'est d'en acheter plein et de les mettre dans un tiroir sans les peindre ><"
 
 car:
   name: car
-  x: 22.5em #(x)
-  y: 32.2em #(y)
-  width: 9.4em
-  height: 1.9em
+  x: 22.5rem #(x)
+  y: 32.2rem #(y)
+  width: 9.4rem
+  height: 1.9rem
   status: 0
   type: clickable
   description1: Blague RVLF
 
 ie:
   name: ie
-  x: 54.5em #(x)
-  y: 43.6em #(y)
-  width: 2.5em
-  height: 2.5em
+  x: 54.5rem #(x)
+  y: 43.6rem #(y)
+  width: 2.5rem
+  height: 2.5rem
   picture1: "http://3.238.70.10/images/code.png"
   status: 0
   type: clickable
@@ -225,10 +225,10 @@ ie:
 
 matrix:
   name: matrix
-  x: 84.6em #(x)
-  y: 18.3em #(y)
-  width: 12.8em
-  height: 18.3em
+  x: 84.6rem #(x)
+  y: 18.3rem #(y)
+  width: 12.8rem
+  height: 18.3rem
   picture1: "http://3.238.70.10/images/code.png"
   status: 0
   type: clickable
@@ -236,30 +236,30 @@ matrix:
 
 coffee:
   name: coffee
-  x: 52.7em #(x)
-  y: 55.4em #(y)
-  width: 2.6em 
-  height: 2em
+  x: 52.7rem #(x)
+  y: 55.4rem #(y)
+  width: 2.6rem 
+  height: 2rem
   status: 0
   type: clickable
   description1: Il est jamais vraiment ce café ?
 
 paper:
   name: paper
-  x: 66em #(x)
-  y: 63em #(y)
-  width: 6.8em 
-  height: 3.2em
+  x: 66rem #(x)
+  y: 63rem #(y)
+  width: 6.8rem 
+  height: 3.2rem
   status: 0
   type: clickable
   description1: Il est jamais vraiment ce café ?
 
 drawer_l:
   name: drawer_l
-  x: 46.74em #(x)
-  y: 59.6em #(y)
-  width: 1.3em
-  height: 1.3em
+  x: 46.74rem #(x)
+  y: 59.6rem #(y)
+  width: 1.3rem
+  height: 1.3rem
   border-radius: 50%
   picture1: "http://3.238.70.10/images/drawer.png"
   status: 0
@@ -269,20 +269,20 @@ drawer_l:
 
 banana:
   name: banana
-  x: 57.8em #(x)
-  y: 62.8em #(y)
-  width: 1.5em 
-  height: 3em
+  x: 57.8rem #(x)
+  y: 62.8rem #(y)
+  width: 1.5rem 
+  height: 3rem
   status: 0
   type: clickable
   description1: Ref Mario Kart ?
 
 exit:
   name: exit
-  x: 94.25em #(x)
-  y: 53.25em #(y)
-  width: 9.1em 
-  height: 3.3em
+  x: 94.25rem #(x)
+  y: 53.25rem #(y)
+  width: 9.1rem 
+  height: 3.3rem
   status: 0
   type: clickable
   description1: Le week-end c'est par la !
