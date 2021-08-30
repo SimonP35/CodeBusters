@@ -3,6 +3,7 @@ import {
   CLICK_ON_LOGOUT,
   SUBMIT_LOGIN,
   SUBMIT_SIGNIN,
+  SUBMIT_USER_UPDATE,
 
 } from 'src/actions/auth';
 import {
@@ -57,6 +58,13 @@ function authReducer(state = initialState, action = {}) {
         email: '',
         password: '',
         nickname: '',
+      };
+    case SUBMIT_USER_UPDATE:
+      return {
+        ...state,
+        nickname: action.nickname,
+        email: action.email,
+        password: '',
       };
     case CLEAR_INPUT:
       return {

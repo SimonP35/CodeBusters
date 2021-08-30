@@ -8,6 +8,7 @@ import {
   submitLogin,
   handleLogOut,
   submitSignin,
+  submitUserUpdate,
 } from 'src/actions/auth';
 import {
   changeField,
@@ -25,6 +26,7 @@ const mapStateToProps = (state) => ({
   displayErrorMessage: state.popup.displayErrorMessage,
   comment: state.popup.comment,
   rating: state.popup.rating,
+  isLogged: state.auth.isLogged,
   errorContent: state.popup.errorContent,
   email: state.auth.email,
   password: state.auth.password,
@@ -68,6 +70,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   submitAnswer: () => {
     dispatch(submitAnswer());
+  },
+  submitUserUpdate: () => {
+    dispatch(submitUserUpdate());
   },
 });
 

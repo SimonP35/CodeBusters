@@ -11,13 +11,21 @@ const Signin = ({
   password,
   nickname,
   submitSignin,
+  submitUserUpdate,
+  isLogged,
 }) => {
+// if islogged = false submitSignin / sinon submitUserUpdate via authmiddleware
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    // if islogged = false / sinon submitUserData via authmiddleware
     submitSignin();
     toggleDisplaySignin();
   };
+  const handleUpdate = (evt) => {
+    evt.preventDefault();
+    submitUserUpdate();
+    toggleDisplaySignin();
+  };
+
   return (
     <div className="signin-background">
       <div className="signin-container">
@@ -29,12 +37,15 @@ const Signin = ({
           }}
         >       x
         </button>
+        {
+        !isLogged
+        && (
         <form className="signin-form" onSubmit={handleSubmit}>
-          Mes informations personnelles
+          M'inscrire
           <Field
             name="nickname"
             type="nickname"
-            placeholder={`nom ${nickname}`}
+            placeholder="nom"
             manageChange={changeField}
             value={nickname}
             className="signin-field"
@@ -42,7 +53,7 @@ const Signin = ({
           <Field
             type="email"
             name="email"
-            placeholder={`email ${email}`}
+            placeholder="email"
             manageChange={changeField}
             value={email}
             className="signin-field"
@@ -60,6 +71,43 @@ const Signin = ({
             OK
           </button>
         </form>
+        )
+        }
+        {
+    isLogged
+    && (
+    <form className="signin-form" onSubmit={handleUpdate}>
+      Mettre mon profil à jour
+      <Field
+        name="nickname"
+        type="nickname"
+        placeholder={nickname}
+        manageChange={changeField}
+        value={nickname}
+        className="signin-field"
+      />
+      <Field
+        type="email"
+        name="email"
+        placeholder={email}
+        manageChange={changeField}
+        value={email}
+        className="signin-field"
+      />
+      <Field
+        name="password"
+        type="password"
+        placeholder="Mot de passe"
+        manageChange={changeField}
+        value={password}
+        className="signin-field"
+      />
+      <button className="signin-button" type="submit">
+        OK
+      </button>
+    </form>
+    )
+    }
       </div>
     </div>
   );
@@ -73,6 +121,8 @@ Signin.propTypes = {
   nickname: PropTypes.string.isRequired,
   changeField: PropTypes.func.isRequired,
   submitSignin: PropTypes.func.isRequired,
+  submitUserUpdate: PropTypes.func.isRequired,
+  isLogged: PropTypes.bool.isRequired,
 
 };
 

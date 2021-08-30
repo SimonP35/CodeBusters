@@ -3,6 +3,7 @@ import {
   SUBMIT_LOGIN,
   saveUserData,
   SUBMIT_SIGNIN,
+  SUBMIT_USER_UPDATE,
 } from 'src/actions/auth';
 import { toggleDisplayPopupLogin } from 'src/actions/buttonLog';
 import { displayErrormessage, SUBMIT_COMMENT, clearInput } from 'src/actions/popup';
@@ -46,13 +47,29 @@ const authMiddleware = (store) => (next) => (action) => {
         });
       break;
     }
+    case SUBMIT_USER_UPDATE: {
+      const { nickname, email, password } = store.getState().auth;
+      axios.post('http://3.238.70.10/api/user/update', { nickname: nickname, email: email, password: password })
+        .then(() => {
+          // console.log(response);
+          // si la création se passe bien
+          // on nettoie les champs
+          store.dispatch(clearInput());
+        })
+        .catch((error) => {
+          // console.log(error);
+          // console.log(error.response);
+          // store.dispatch(displayErrormessage(error.response.data.errors.detail));
+        });
+      break;
+    }
     case SUBMIT_COMMENT: {
       const { comment, rating } = store.getState().popup;
       axios.post('http://3.238.70.10/api/comment/create', { content: comment, rating: rating })
       // Lorsqu'on reçoit la réponse, on enregistre le commentaire
       // de l'utilisateur (à lier au scénario)
         .then((response) => {
-          console.log(response);
+          // console.log(response);
           // si la création se passe bien on nettoie le champs
           store.dispatch(clearInput());
         })

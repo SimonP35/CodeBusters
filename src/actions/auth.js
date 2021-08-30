@@ -3,6 +3,7 @@ export const SUBMIT_LOGIN = 'SUBMIT_LOGIN';
 export const SAVE_USER_DATA = 'SAVE_USER_DATA';
 export const CLICK_ON_LOGOUT = 'CLICK_ON_LOGOUT';
 export const SUBMIT_SIGNIN = 'SUBMIT_SIGNIN';
+export const SUBMIT_USER_UPDATE = 'SUBMIT_USER_UPDATE';
 
 // === action creators
 
@@ -24,4 +25,7 @@ export const submitSignin = () => ({
 
 export const submitLogin = () => ({
   type: SUBMIT_LOGIN,
+});
+export const submitUserUpdate = () => ({
+  type: SUBMIT_USER_UPDATE,
 });
