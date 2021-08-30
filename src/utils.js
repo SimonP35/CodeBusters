@@ -83,8 +83,8 @@ export default [
       {
         id: 5,
         image: [ano, git, twitter, linkedin],
-        name: 'Valentin Van Weydevelt - developpeur Javascript (react)',
-        describe: 'Git master',
+        name: 'Valentin Van Weydevelt',
+        describe: 'Git master - developpeur Javascript (react)',
         contact: ['https://github.com/ValtentinVW', 'https://twitter.com/valentinvw', 'https://www.linkedin.com/in/valentin-van-weydevelt-3146b7208/'],
       },
     ],
@@ -151,7 +151,7 @@ export default [
         contentwin: 'Le roi de l\'abstract en PHP !',
         contentloose: 'On va pas se mentir, va falloir réviser les classes...',
         timer: 30,
-        description: 'Crack.Boum.Abstract. Les classes en PHP, c\'est comme Amour, Gloire et Beauté. Y a moyent de se taper tout le monde, mais quand ça pète derrière, faut pas s\'étonner',
+        description: 'Crack.Boum.Abstract. Les classes en PHP, c\'est comme Amour, Gloire et Beauté. Y a moyen de se taper tout le monde, mais quand ça pète derrière, faut pas s\'étonner',
         pic: smith,
         comment: 'c\'est quoi ce truc de dingue encore ? Ils sont vraiment loin les gars qui ont écrit le scénar !',
         rate: '5',
@@ -165,20 +165,19 @@ export default [
 
       {
         id: 1,
-        content: 'Bon le stagiaire, je compte sur toi pour montrer que t\'es à la hauteur, surtout si t\'as prévu de venir mendier un CDI derrière',
-
+        content: 'Bon le stagiaire, je compte sur toi pour montrer que t\'es à la hauteur, surtout si t\'as prévu de venir mendier un CDI derrière !',
       },
       {
         id: 2,
-        content: 'Alors ça avance ? Même mon chien en hypothermie coderait plus vite',
+        content: 'Alors ça avance ? Même mon chien en hypothermie coderait plus vite !',
       },
       {
         id: 3,
-        content: 'Pourquoi le site est toujours pas déployé ? Les stagiaires vous savez vraiment rien faire tout seuls',
+        content: 'Pourquoi le site est toujours pas déployé ? Les stagiaires vous savez vraiment rien faire tout seuls !!',
       },
       {
         id: 4,
-        content: 'Bon t\'as prévu de déployer aujourd\'hui ? Fallait que je te précise le vendredi de quel mois peut-être?',
+        content: 'Bon t\'as prévu de déployer aujourd\'hui ? Fallait que je te précise le vendredi de quel mois peut-être ??',
       },
       {
         id: 5,
@@ -186,7 +185,11 @@ export default [
       },
       {
         id: 6,
-        content: 'Espèce d\'incapable, t\'es fini dans le métier, je vais te pourrir',
+        content: 'Espèce d\'incapable, t\'es fini dans le métier, je vais te pourrir !!!',
+      },
+      {
+        id: 7,
+        content: 'Franchement c\'est pathétique, t\'as pas honte de dire que t\'es dev toi ?',
       },
     ],
   },

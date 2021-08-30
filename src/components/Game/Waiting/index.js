@@ -8,8 +8,8 @@ import './waiting.scss';
 const Waiting = () => (
   <>
     <div className="waiting-container">
-      <h3 className="waiting-title">WAITING ROOM</h3>
-      <p className="waiting-text">La partie va bientôt démarrer...</p>
+      {/* <h3 className="waiting-title">WAITING ROOM</h3>
+      <p className="waiting-text">La partie va bientôt démarrer...</p> */}
       <div className="layer bottom">
         <div className="cube nw" />
         <div className="cube w" />

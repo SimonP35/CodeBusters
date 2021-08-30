@@ -1,28 +1,52 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import bot from 'src/assets/images/bot.png';
 import utils from 'src/utils';
 
 import './bot.scss';
 
-// Le bot est une image avec une div à l'intérieur qui affiche des messages - avec une transition css qui va bien
+// Custom hook for setInterval :
+// SOURCE INFO :  https://overreacted.io/making-setinterval-declarative-with-react-hooks/
 
-// USEEFFECT - SET INTERVAL à mettre en place sur le map d'un tableau d'objets "messages" toutes les 5mn
-// Je cherche à incrémenter l'id de l'objet à afficher toutes les x secondes
+const displayMessages = utils[4].messages;
 
-const message = utils[4].messages[0];
+function useInterval(callback, delay) {
+  const savedCallback = useRef();
 
-const Bot = () => (
+  // Remember the latest callback :
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
 
-  <>
-    <div className="bot-container" key={message.id}>
+  // Set up the interval :
+  useEffect(() => {
+    function tick() {
+      savedCallback.current();
+    }
+    if (delay !== null) {
+      const id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }
+  }, [delay]);
+}
+
+const Bot = () => {
+  const [idCount, setidCount] = useState(1);
+  // UseInterval increments id every 5mn starting at 1 in useState :
+  useInterval(() => {
+    setidCount(idCount + 1);
+  }, 300000); // = 5mn
+  // Array Find display the object matching id incremented :
+  const displayMessage = displayMessages.find((message) => message.id === idCount);
+  return (
+    <div className="bot-container">
       <img className="bot-pic" src={bot} alt="bot" />
       <div className="bot-message">
         <p className="bot-text-sender">BIG BOSS : </p>
-        <p className="bot-text">{message.content}</p>
+        <p className="bot-text" key={displayMessage.id}> {displayMessage.content}</p>
       </div>
     </div>
-  </>
-);
+  );
+};
 
 export default Bot;
