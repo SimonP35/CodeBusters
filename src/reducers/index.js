@@ -3,6 +3,7 @@ import { combineReducers } from 'redux';
 // on importe tous les reducers
 
 import authReducer from './authReducer';
+import gameReducer from './gameReducer';
 import popupReducer from './popupReducer';
 import gameReducer from './gameReducer';
 

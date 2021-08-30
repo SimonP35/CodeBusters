@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 
 // on importe le composant de présentation
 import Game from 'src/components/Game';
+
 import {
   startGame,
   toggleDisplayPicture,
@@ -11,6 +12,7 @@ import {
   setWin,
   submitAnswer,
 } from 'src/actions/game';
+
 import { changeField } from 'src/actions/popup';
 
 // === mapStateToProps
@@ -63,6 +65,10 @@ const mapDispatchToProps = (dispatch) => ({
 
   changeField: (newValue, identifier) => {
     dispatch(changeField(newValue, identifier));
+  },
+  
+  toggleDisplayComment: () => {
+    dispatch(toggleDisplayPopupComment());
   },
 });
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useHistory, useParams } from 'react-router-dom';
-
 import utils from 'src/utils';
 import './intro.scss';
 
@@ -16,7 +15,6 @@ const Intro = () => {
     const url = `/game/${slug}/board`;
     history.push(url);
   };
-
   return (
     <>
       <h2 className="intro-title">Introduction</h2>
@@ -35,3 +33,4 @@ const Intro = () => {
 };
 
 export default Intro;
+

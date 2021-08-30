@@ -4,8 +4,10 @@ import { Redirect, useParams } from 'react-router-dom';
 
 // import utils from 'src/utils';
 // import background from 'src/assets/images/10V2.png';
-import './board.scss';
+import Bot from '../Bot';
+import Timer from '../Timer';
 import InputGame from '../InputGame';
+import './board.scss';
 
 // const { items } = utils[4];
 
@@ -37,6 +39,8 @@ const Board = ({
   const { slug } = useParams();
   return (
     <>
+      <Bot />
+      <Timer />
       <img className="board-background" src={background} alt="" />
       {changeInArray(items).map((item) => (
         <div key={item.name}>

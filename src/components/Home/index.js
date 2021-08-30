@@ -5,14 +5,14 @@ import classNames from 'classnames';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
+import Game from 'src/components/Game';
 // import Loader from 'src/components/Loader';
 import banniere from 'src/assets/images/banniere.png';
 import utils from 'src/utils';
 
 import './home.scss';
 
-const scenarios = utils[0].fourMostPopularScenarios;
-// console.log(scenarios);
+const scenarios = utils[3].scenarios;
 
 const Home = ({ isLogged, displayErrorMessage }) => (
   <>
@@ -30,7 +30,6 @@ const Home = ({ isLogged, displayErrorMessage }) => (
           const three = scenario.rate >= 3;
           const four = scenario.rate >= 4;
           const five = scenario.rate === 5;
-
           const { slug } = scenario;
           return (
             <div key={scenario.id}>

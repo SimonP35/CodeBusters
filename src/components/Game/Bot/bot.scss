@@ -1,0 +1,37 @@
+@use 'src/styles/vars';
+
+.bot-pic {
+  width: 200px;
+  height:350px;
+  position:absolute;
+  top:40%;
+  right:0%;
+  display:inline-block;
+  padding:auto;
+  z-index: 0;
+}
+  .bot-message {
+  background-color: white;
+  display: inline-block;
+  width:150px;
+  height:100px;
+  text-align: left;
+  padding:2px;
+  position:absolute;
+  top:50%;
+  right:1.5%;
+  z-index: 3;
+
+    .bot-text{
+    color:black;
+    padding:2px;
+    margin-top:2px;
+    background-color: rgb(212, 237, 247);
+    border-radius: 10%;
+    }
+     .bot-text-sender {
+      font-weight: bold;
+    }
+
+  }
+
