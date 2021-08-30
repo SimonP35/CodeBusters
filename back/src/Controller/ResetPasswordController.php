@@ -110,19 +110,13 @@ class ResetPasswordController extends AbstractController
             // A password reset token should be used only once, remove it.
             $this->resetPasswordHelper->removeResetRequest($token);
 
-            // // Encode the plain password, and set it.
-            // $encodedPassword = $passwordEncoder->encodePassword(
-            //     $user,
-            //     $form->get('plainPassword')->getData()
-            // );
-
             $user->setPassword($form->get('plainPassword')->getData());
             $this->getDoctrine()->getManager()->flush();
 
             // The session is cleaned up after the password has been changed.
             $this->cleanSessionAfterReset();
 
-            return $this->redirectToRoute('app_login');
+            return $this->redirectToRoute('http://3.238.70.10/');
         }
 
         return $this->render('reset_password/reset.html.twig', [
