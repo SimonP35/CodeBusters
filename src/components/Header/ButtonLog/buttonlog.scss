@@ -3,7 +3,6 @@
 
 .log-container {
 
-// background-color:vars.$color-popup-background;
 color: vars.$color-popup-text;
 display:flex;
 align-items: center;
@@ -14,7 +13,6 @@ position:absolute;
 top:5%;
 right:5%;
 border:none;
-// box-shadow:2px 2px 8px 2px vars.$color-popup-shadow;
 font-family: 'Quicksand', sans-serif;
 
 
@@ -25,6 +23,9 @@ color: vars.$color-button-text;
 border:none;
 text-transform: uppercase;
 font-family: 'Quicksand', sans-serif;
+font-weight: bolder;
+font-size:12px;
+
 
 &:hover {
   color:vars.$color-nav-link-hover;
@@ -35,8 +36,8 @@ font-family: 'Quicksand', sans-serif;
   .log-text {
     color: vars.$color-button-text;
     text-transform: uppercase;
-    font-size:15px;
     font-family: 'Quicksand', sans-serif;
-
+    font-weight: bolder;
+    font-size:12px;
   }
 }

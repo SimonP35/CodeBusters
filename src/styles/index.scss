@@ -161,7 +161,7 @@
 
 body {
   display:flex;
-  background: linear-gradient(to right, #020949, #0a06c9);
+  background: vars.$color-background;
   margin:0;
   max-width: 100;
   font-family: 'Quicksand', sans-serif;

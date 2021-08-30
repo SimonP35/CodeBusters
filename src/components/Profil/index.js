@@ -29,7 +29,8 @@ const Profil = ({ email, nickname, toggleDisplaySignin }) => (
           id="signin-update"
         >Mettre mes informations à jour
         </button>
-        <a className="profil-link-password" href="#">Changer votre mot de passe</a>
+        {/* Au clic sur le lien on ouvre une fenêtre avec le lien pour changer son mdp */}
+        <a className="profil-link-password" href="#">Changer mon mot de passe</a>
       </div>
     </main>
     <Footer />

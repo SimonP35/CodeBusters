@@ -29,7 +29,7 @@ const Login = ({
           x
         </button>
         <form className="login-form" onSubmit={handleSubmit}>
-          Se connecter
+          Me connecter
           <Field
             name="email"
             type="email"
@@ -38,7 +38,7 @@ const Login = ({
             value={email}
             className="login-field"
           />
-          <a className="login-password-info" href="#" target="_blank">Mot de passe oublié ?</a>
+          <a className="login-password-info" href="http://3.238.70.10/reset-password" target="_blank">Mot de passe oublié ?</a>
           <Field
             name="password"
             type="password"
