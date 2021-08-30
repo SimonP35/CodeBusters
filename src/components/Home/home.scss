@@ -42,12 +42,12 @@
      .popular-scenarios-scenario-image {
        width: 150px;
        height: 150px;
-       border:5px solid vars.$color-title-last;
+       border:5px solid black;
 
      }
      .popular-scenarios-scenario-text {
-       background-color: vars.$color-title-last;
-       color:white;
+      //  background-color: vars.$color-title-last;
+       color:black;
        border:none;
        padding:5px;
        padding-top:10px;

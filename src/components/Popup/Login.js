@@ -29,7 +29,7 @@ const Login = ({
           x
         </button>
         <form className="login-form" onSubmit={handleSubmit}>
-          Formulaire de connexion
+          Se connecter
           <Field
             name="email"
             type="email"
@@ -48,7 +48,7 @@ const Login = ({
             className="login-field"
           />
           <button className="login-button" type="submit">
-            Se connecter
+            OK
           </button>
         </form>
       </div>

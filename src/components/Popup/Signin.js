@@ -29,11 +29,11 @@ const Signin = ({
         >       x
         </button>
         <form className="signin-form" onSubmit={handleSubmit}>
-          Formulaire d'inscription
+          Mes informations personnelles
           <Field
             name="nickname"
             type="nickname"
-            placeholder={`nom :${nickname}`}
+            placeholder={`nom ${nickname}`}
             manageChange={changeField}
             value={nickname}
             className="signin-field"
@@ -41,7 +41,7 @@ const Signin = ({
           <Field
             type="email"
             name="email"
-            placeholder={`email :${email}`}
+            placeholder={`email ${email}`}
             manageChange={changeField}
             value={email}
             className="signin-field"
@@ -56,7 +56,7 @@ const Signin = ({
           />
           <p className="signin-password-info">* Le mot de passe doit contenir 1 majuscule, 1 chiffre et 1 caractère spécial.</p>
           <button className="signin-button" type="submit">
-            S'inscrire
+            OK
           </button>
         </form>
       </div>
