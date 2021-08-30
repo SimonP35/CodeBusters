@@ -4,15 +4,15 @@ import {
   CLOSED_ERRORMESSAGE,
   TOGGLE_DISPLAY_POPUP_COMMENT,
   SUBMIT_COMMENT,
+  CHANGE_FIELD,
+  CLEAR_INPUT,
 } from 'src/actions/popup';
-import { CHANGE_FIELD, CLEAR_INPUT } from 'src/actions/auth';
 
 const initialState = {
   displayLogin: false,
   displaySignin: false,
   displayComment: false,
   displayErrorMessage: false,
-  CHANGE_FIELD,
   errorContent: '',
   comment: '',
   rating: '',

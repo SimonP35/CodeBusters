@@ -8,6 +8,14 @@ export const TOGGLE_DISPLAY_PICTURE = 'TOGGLE_DISPLAY_PICTURE';
 
 export const SET_CURRENT_IMG = 'SET_CURRENT_IMG';
 
+export const TOGGLE_DISPLAY_INPUT = 'TOGGLE_DISPLAY_INPUT';
+
+export const SUBMIT_ANSWER = 'SUBMIT_ANSWER';
+
+export const SET_ANSWER = 'SET_ANSWER';
+
+export const SET_WIN = 'SET_WIN';
+
 export const startGame = () => ({
   type: START_GAME,
 });
@@ -27,4 +35,20 @@ export const toggleDisplayPicture = () => ({
 export const setCurrentImg = (newImg) => ({
   type: SET_CURRENT_IMG,
   newImg: newImg,
+});
+export const toggleDisplayInput = () => ({
+  type: TOGGLE_DISPLAY_INPUT,
+});
+
+export const submitAnswer = () => ({
+  type: SUBMIT_ANSWER,
+});
+
+export const setAnswer = (newAnswer) => ({
+  type: SET_ANSWER,
+  newAnswer: newAnswer,
+});
+
+export const setWin = () => ({
+  type: SET_WIN,
 });

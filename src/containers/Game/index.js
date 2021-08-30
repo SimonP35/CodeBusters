@@ -2,7 +2,16 @@ import { connect } from 'react-redux';
 
 // on importe le composant de présentation
 import Game from 'src/components/Game';
-import { startGame, toggleDisplayPicture, setCurrentImg } from 'src/actions/game';
+import {
+  startGame,
+  toggleDisplayPicture,
+  setCurrentImg,
+  toggleDisplayInput,
+  setAnswer,
+  setWin,
+  submitAnswer,
+} from 'src/actions/game';
+import { changeField } from 'src/actions/popup';
 
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
@@ -14,6 +23,10 @@ const mapStateToProps = (state) => ({
   background: state.game.background,
   displayPicture: state.game.displayPicture,
   currentImg: state.game.currentImg,
+  displayInput: state.game.displayInput,
+  answer: state.game.answer,
+  inputGameValue: state.game.inputGameValue,
+  win: state.game.win,
 });
 
 // === mapDispatchToProps
@@ -30,6 +43,26 @@ const mapDispatchToProps = (dispatch) => ({
 
   setCurrentImg: (newImg) => {
     dispatch(setCurrentImg(newImg));
+  },
+
+  toggleDisplayInput: () => {
+    dispatch(toggleDisplayInput());
+  },
+
+  setAnswer: (newAnswer) => {
+    dispatch(setAnswer(newAnswer));
+  },
+
+  setWin: () => {
+    dispatch(setWin());
+  },
+
+  submitAnswer: () => {
+    dispatch(submitAnswer());
+  },
+
+  changeField: (newValue, identifier) => {
+    dispatch(changeField(newValue, identifier));
   },
 });
 

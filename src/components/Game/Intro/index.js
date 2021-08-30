@@ -12,8 +12,8 @@ const Intro = () => {
 
   const history = useHistory();
   // fonction permettant de rediriger l'utilisateur sur la page plateau.
-  const redirection = () => {
-    const url = '/game/board';
+  const redirectionToBoard = () => {
+    const url = `/game/${slug}/board`;
     history.push(url);
   };
 
@@ -25,7 +25,7 @@ const Intro = () => {
         type="button"
         onClick={() => {
           // startGame();
-          redirection();
+          redirectionToBoard();
         }}
       >Lancez la partie
       </button>

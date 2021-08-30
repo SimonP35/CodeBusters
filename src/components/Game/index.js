@@ -4,8 +4,8 @@ import { Switch, Route } from 'react-router-dom';
 
 import Win from 'src/containers/Win';
 import Loose from 'src/containers/Loose';
+import NotFound from 'src/components/NotFound';
 
-import utils from 'src/utils';
 import Intro from './Intro';
 import Board from './Board';
 
@@ -19,6 +19,14 @@ const Game = ({
   toggleDisplayPicture,
   setCurrentImg,
   currentImg,
+  toggleDisplayInput,
+  displayInput,
+  answer,
+  setAnswer,
+  inputGameValue,
+  setWin,
+  win,
+  changeField,
 }) => (
   // Ici on switch sur les différentes routes de la game
   // On passe d'abord par l'intro ensuite par le plateau
@@ -27,7 +35,7 @@ const Game = ({
     <Route path="/game/:slug" exact>
       <Intro startGame={startGame} />
     </Route>
-    <Route path="/game/board">
+    <Route path="/game/:slug/board">
       <Board
         items={items}
         startGame={startGame}
@@ -36,12 +44,20 @@ const Game = ({
         toggleDisplayPicture={toggleDisplayPicture}
         setCurrentImg={setCurrentImg}
         currentImg={currentImg}
+        toggleDisplayInput={toggleDisplayInput}
+        displayInput={displayInput}
+        answer={answer}
+        setAnswer={setAnswer}
+        inputGameValue={inputGameValue}
+        setWin={setWin}
+        win={win}
+        changeField={changeField}
       />
     </Route>
-    <Route path="/game/win">
-      <Win />
+    <Route path="/game/:slug/win">
+      {win ? <Win /> : <NotFound />}
     </Route>
-    <Route path="/game/loose">
+    <Route path="/game/:slug/loose">
       <Loose />
     </Route>
   </Switch>
@@ -55,6 +71,14 @@ Game.propTypes = {
   toggleDisplayPicture: PropTypes.func.isRequired,
   currentImg: PropTypes.string.isRequired,
   setCurrentImg: PropTypes.func.isRequired,
+  toggleDisplayInput: PropTypes.func.isRequired,
+  displayInput: PropTypes.bool.isRequired,
+  answer: PropTypes.string.isRequired,
+  setAnswer: PropTypes.func.isRequired,
+  inputGameValue: PropTypes.string.isRequired,
+  setWin: PropTypes.func.isRequired,
+  win: PropTypes.bool.isRequired,
+  changeField: PropTypes.func.isRequired,
 };
 
 export default Game;
