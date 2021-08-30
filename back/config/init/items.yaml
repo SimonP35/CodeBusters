@@ -9,10 +9,10 @@
 
 book:
   name: book
-  x: 37.3rem #(x)
+  x: 37rem #(x)
   y: 28.9rem #(y)
   width: 7.4rem
-  height: 6rem
+  height: 5.8rem
   picture1: "http://3.238.70.10/images/book.png"
   status: 0
   type: clickable
@@ -23,10 +23,10 @@ book:
 
 labyrinth:
   name: labyrinth
-  x: 98.6rem #(x)
+  x: 98rem #(x)
   y: 7.5rem #(y)
   width: 16rem
-  height: 21.8rem
+  height: 21.6rem
   picture1: "http://3.238.70.10/images/labyrinth.png"
   status: 0
   type: clickable
@@ -37,10 +37,10 @@ labyrinth:
 
 kaamelott:
   name: kaamelott
-  x: 4.8rem #(x)
+  x: 4.75rem #(x)
   y: 5.8rem #(y)
-  width: 36.3rem
-  height: 19.2rem
+  width: 36rem
+  height: 19rem
   picture1: "http://3.238.70.10/images/kaamelott.png"
   status: 0
   type: clickable
@@ -51,7 +51,7 @@ kaamelott:
 
 carlin:
   name: carlin
-  x: 42.5rem #(x)
+  x: 42.1rem #(x)
   y: 16.5rem #(y)
   width: 9rem
   height: 8rem
@@ -65,8 +65,8 @@ carlin:
 
 code:
   name: code
-  x: 54.5rem #(x)
-  y: 35.6rem #(y)
+  x: 54rem #(x)
+  y: 35.4rem #(y)
   width: 2.5rem
   height: 2.5rem
   picture1: "http://3.238.70.10/images/code.png"
@@ -79,8 +79,8 @@ code:
 
 drawer_r:
   name: drawer_r
-  x: 80.65rem #(x)
-  y: 59.6rem #(y)
+  x: 80.04rem #(x)
+  y: 59.2rem #(y)
   width: 1.3rem
   height: 1.3rem
   border-radius: 50%
@@ -96,8 +96,8 @@ drawer_r:
 
 button:
   name: button
-  x: 105.4rem #(x)
-  y: 61.21rem #(y)
+  x: 104.55rem #(x)
+  y: 60.75rem #(y)
   width: 1.8rem
   height: 1.8rem
   border-radius: 50%
@@ -110,7 +110,7 @@ button:
 
 memo_rebus:
   name: memo_rebus
-  x: 61.5rem #(x)
+  x: 61rem #(x)
   y: 12.8rem #(y)
   width: 7rem
   height: 6.4rem
@@ -121,7 +121,7 @@ memo_rebus:
 
 memo:
   name: memo
-  x: 72rem #(x)
+  x: 71.5rem #(x)
   y: 11.6rem #(y)
   width: 6.8rem
   height: 6.5rem
@@ -132,8 +132,8 @@ memo:
 
 duck:
   name: duck
-  x: 82.3rem #(x)
-  y: 55rem #(y)
+  x: 81.6rem #(x)
+  y: 54.6rem #(y)
   width: 3rem
   height: 4rem
   border-radius: 50%
@@ -143,8 +143,8 @@ duck:
 
 mouse:
   name: mouse
-  x: 77.5rem #(x)
-  y: 64rem #(y)
+  x: 77rem #(x)
+  y: 63.3rem #(y)
   width: 2rem
   height: 2rem
   status: 0
@@ -153,8 +153,8 @@ mouse:
 
 cat:
   name: cat
-  x: 46.6rem #(x)
-  y: 27.2rem #(y)
+  x: 46.1rem #(x)
+  y: 27rem #(y)
   width: 4rem
   height: 7.7rem
   status: 0
@@ -163,8 +163,8 @@ cat:
 
 rabbit:
   name: rabbit
-  x: 45rem #(x)
-  y: 52rem #(y)
+  x: 44.8rem #(x)
+  y: 51.5rem #(y)
   width: 3rem 
   height: 5rem
   status: 0
@@ -173,18 +173,18 @@ rabbit:
 
 cup:
   name: cup
-  x: 33.2rem #(x)
-  y: 32.9rem #(y)
-  width: 3rem
-  height: 2rem
+  x: 33rem #(x)
+  y: 32.6rem #(y)
+  width: 2.8rem
+  height: 2.1rem
   status: 0
   type: clickable
   description1: Trophé du non-buggeur (de l'oeil du tigre du débugguage)
 
 controller:
   name: controller
-  x: 15.1rem #(x)
-  y: 55rem #(y)
+  x: 14.9rem #(x)
+  y: 54.5rem #(y)
   width: 3.5rem
   height: 1.4rem
   status: 0
@@ -193,18 +193,18 @@ controller:
   
 warhammer:
   name: warhammer
-  x: 33.2rem #(x)
+  x: 32.95rem #(x)
   y: 58.5rem #(y)
   width: 6.6rem
-  height: 8rem
+  height: 7.5rem
   status: 0
   type: clickable
   description1: "Une de mes passions c'est d'en acheter plein et de les mettre dans un tiroir sans les peindre ><"
 
 car:
   name: car
-  x: 22.5rem #(x)
-  y: 32.2rem #(y)
+  x: 22.2rem #(x)
+  y: 32rem #(y)
   width: 9.4rem
   height: 1.9rem
   status: 0
@@ -213,8 +213,8 @@ car:
 
 ie:
   name: ie
-  x: 54.5rem #(x)
-  y: 43.6rem #(y)
+  x: 54rem #(x)
+  y: 43.1rem #(y)
   width: 2.5rem
   height: 2.5rem
   picture1: "http://3.238.70.10/images/code.png"
@@ -225,8 +225,8 @@ ie:
 
 matrix:
   name: matrix
-  x: 84.6rem #(x)
-  y: 18.3rem #(y)
+  x: 83.9rem #(x)
+  y: 18.16rem #(y)
   width: 12.8rem
   height: 18.3rem
   picture1: "http://3.238.70.10/images/code.png"
@@ -236,28 +236,28 @@ matrix:
 
 coffee:
   name: coffee
-  x: 52.7rem #(x)
-  y: 55.4rem #(y)
+  x: 52.3rem #(x)
+  y: 54.9rem #(y)
   width: 2.6rem 
   height: 2rem
   status: 0
   type: clickable
-  description1: Il est jamais vraiment ce café ?
+  description1: Il est jamais froid ce café ?
 
 paper:
   name: paper
-  x: 66rem #(x)
-  y: 63rem #(y)
+  x: 65.5rem #(x)
+  y: 62.5rem #(y)
   width: 6.8rem 
   height: 3.2rem
   status: 0
   type: clickable
-  description1: Il est jamais vraiment ce café ?
+  description1: Une envie pressante ?
 
 drawer_l:
   name: drawer_l
-  x: 46.74rem #(x)
-  y: 59.6rem #(y)
+  x: 46.35rem #(x)
+  y: 59.2rem #(y)
   width: 1.3rem
   height: 1.3rem
   border-radius: 50%
@@ -269,8 +269,8 @@ drawer_l:
 
 banana:
   name: banana
-  x: 57.8rem #(x)
-  y: 62.8rem #(y)
+  x: 57.3rem #(x)
+  y: 62.4rem #(y)
   width: 1.5rem 
   height: 3rem
   status: 0
@@ -279,8 +279,8 @@ banana:
 
 exit:
   name: exit
-  x: 94.25rem #(x)
-  y: 53.25rem #(y)
+  x: 93.5rem #(x)
+  y: 52.85rem #(y)
   width: 9.1rem 
   height: 3.3rem
   status: 0
