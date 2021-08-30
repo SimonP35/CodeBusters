@@ -7,7 +7,7 @@ import games from 'src/assets/images/games.png';
 
 import './profil.scss';
 
-const Profil = ({ email, nickname }) => (
+const Profil = ({ email, nickname, toggleDisplaySignin }) => (
   <>
     <Header />
     <main className="profil-main">
@@ -18,8 +18,17 @@ const Profil = ({ email, nickname }) => (
           <li className="profil-list-item">Pseudo: {nickname}</li>
           <li className="profil-list-item">Email: {email}</li>
         </ul>
-        <a className="profil-button" href="#">Mettre mes informations à jour</a>
-        <a className="profil-button" href="#">Changer votre mot de passe</a>
+        {/* Au clic sur un bouton on affiche un popup signin form */}
+        <button
+          type="button"
+          onClick={() => {
+            toggleDisplaySignin();
+          }}
+          className="profil-button"
+          id="signin-update"
+        >Mettre mes informations à jour
+        </button>
+        <a className="profil-link-password" href="#">Changer votre mot de passe</a>
       </div>
     </main>
     <Footer />
@@ -29,6 +38,7 @@ const Profil = ({ email, nickname }) => (
 Profil.propTypes = {
   email: PropTypes.string.isRequired,
   nickname: PropTypes.string.isRequired,
+  toggleDisplaySignin: PropTypes.func.isRequired,
 };
 
 export default Profil;

@@ -118,7 +118,7 @@ export default [
         description: 'Vendredi, 17h30...Tu t\'apprêtes à partir en weekend quand soudain. Tak Tak. Tu reçois un message de ton boss sur Schlag. Parait que le client exige la mise en prod du code que Maurice a laissé tout cassé pour 18h. Et t\'es le dernier au bureau. Tu sais ce qu\'on dit sur les mises en prod du vendredi...',
         pic: vendredi,
         comment: 'Jeu très cool, j\'ai adoré ! ',
-        rate: '3',
+        rate: '4',
         slug: 'vendredi-maudit',
       },
       {
@@ -145,6 +145,8 @@ export default [
         pic: mathmax,
         comment: 'je savais pas ce que c\était typescript mais ca a l\'air trop balese en fait',
         rate: '4',
+        slug: '',
+
       },
       {
         id: 4,
@@ -157,6 +159,8 @@ export default [
         pic: smith,
         comment: 'c\'est quoi ce truc de dingue encore ? Ils sont vraiment loin les gars qui ont écrit le scénar !',
         rate: '5',
+        slug: '',
+
       },
 
     ],

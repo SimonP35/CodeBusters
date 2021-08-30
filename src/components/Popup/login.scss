@@ -22,7 +22,7 @@
     color: white;
     padding: 5px;
     width: 300px;
-    height: 150px;
+    height: 200px;
     border-radius: 10%;
     border-bottom: 10px solid vars.$color-title-three;
     border-right: 10px solid vars.$color-title-three;
@@ -60,6 +60,13 @@
         color: black;
         margin-bottom: 5px;
         margin-top: 10px;
+      }
+
+      .login-password-info {
+        font-size: 12px;
+        font-style: italic;
+        padding-top:2px;
+        padding-bottom:2px;
       }
 
       .login-button {

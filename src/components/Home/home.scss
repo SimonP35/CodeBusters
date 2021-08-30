@@ -5,7 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 900px;
+  width: 1200px;
+  height: 800px;
   margin:1em auto;
   background-color: vars.$color-popup-background;
   box-sizing: border-box;
@@ -24,8 +25,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-   
-    // background-color: yellow;
     margin:5px;
     padding-top:10px;
     padding-bottom:10px;
@@ -33,7 +32,7 @@
     
     .popular-scenarios-scenario {
       width: 250px;
-      height: 250px;
+      height: 450px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -43,6 +42,7 @@
      .popular-scenarios-scenario-image {
        width: 150px;
        height: 150px;
+       border:5px solid vars.$color-title-last;
 
      }
      .popular-scenarios-scenario-text {
@@ -55,7 +55,7 @@
        margin:2px;
        box-sizing: border-box;
        width: 200px;
-       height: 150px;
+       height: 250px;
 
      }
      .popular-scenarios-scenario-rate ul{
@@ -71,16 +71,18 @@
      &:hover {
        transform: scale(1.2);
      }
-    }
-  }
-
-  .popular-scenarios-subtitle {
+    }  
+    
+    .popular-scenarios-subtitle {
     font-family: "Meta";
     font-variation-settings: "wght" 900, "ital" 1;
     color:red;
-    padding-bottom:10px;
+    padding-bottom:2px;
     margin:2px;
   }
+  }
+
+
 }
 
 

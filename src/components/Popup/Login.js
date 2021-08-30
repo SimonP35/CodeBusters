@@ -33,15 +33,16 @@ const Login = ({
           <Field
             name="email"
             type="email"
-            placeholder="Adresse Email"
+            placeholder="Adresse email"
             manageChange={changeField}
             value={email}
             className="login-field"
           />
+          <a className="login-password-info" href="#" target="_blank">Mot de passe oublié ?</a>
           <Field
             name="password"
             type="password"
-            placeholder="mot de passe"
+            placeholder="Mot de passe"
             manageChange={changeField}
             value={password}
             className="login-field"

@@ -38,6 +38,7 @@ const Home = ({ isLogged, displayErrorMessage }) => (
                 <Link to={`/game/${slug}`}>
                   <div className="popular-scenarios-scenario" key={scenario.id}>
                     <img className="popular-scenarios-scenario-image" src={scenario.pic} alt="scenario-img" />
+                    <h3 className="popular-scenarios-subtitle">{scenario.nom}</h3>
                     <p className="popular-scenarios-scenario-text">{scenario.description}</p>
                     <div className="popular-scenarios-scenario-rate">
                       <ul>

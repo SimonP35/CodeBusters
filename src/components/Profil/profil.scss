@@ -65,24 +65,20 @@
   }
 
   .profil-button {
-    background-color: red;
-    color:white;
-    display:inline-block;
     text-transform:uppercase;
-    font-weight: bold;
     border:none;
     width:150px;
-    height:50px;
+    height:70px;
     position:absolute;
-    left:42%;
-    right:auto;
-    top:45%;
-    bottom:auto;
     border-radius:10px;
     font-family: "Meta";
     font-size: 15px;
     padding-top:10px;
+  }
 
+  .profil-link-password {
+    color:white;
+    background-color: red;
   }
 
   .profil-pic {

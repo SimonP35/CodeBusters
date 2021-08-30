@@ -33,7 +33,7 @@ const Signin = ({
           <Field
             name="nickname"
             type="nickname"
-            placeholder="Nom"
+            placeholder={`nom :${nickname}`}
             manageChange={changeField}
             value={nickname}
             className="signin-field"
@@ -41,7 +41,7 @@ const Signin = ({
           <Field
             type="email"
             name="email"
-            placeholder="Adresse Email"
+            placeholder={`email :${email}`}
             manageChange={changeField}
             value={email}
             className="signin-field"
