@@ -29,25 +29,26 @@ const Login = ({
           x
         </button>
         <form className="login-form" onSubmit={handleSubmit}>
-          Formulaire de connexion
+          Me connecter
           <Field
             name="email"
             type="email"
-            placeholder="Adresse Email"
+            placeholder="Adresse email"
             manageChange={changeField}
             value={email}
             className="login-field"
           />
+          <a className="login-password-info" href="http://3.238.70.10/reset-password" target="_blank" rel="noreferrer">Mot de passe oublié ?</a>
           <Field
             name="password"
             type="password"
-            placeholder="mot de passe"
+            placeholder="Mot de passe"
             manageChange={changeField}
             value={password}
             className="login-field"
           />
           <button className="login-button" type="submit">
-            Se connecter
+            OK
           </button>
         </form>
       </div>

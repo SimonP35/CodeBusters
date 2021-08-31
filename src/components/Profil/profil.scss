@@ -22,9 +22,9 @@
 }
 
 .profil-container {
-
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
   background-color: vars.$color-popup-background;
   box-sizing: border-box;
@@ -34,16 +34,17 @@
    right:auto;
    bottom:auto;
    width: 700px;
-   height: 600px;
+   height: 400px;
    padding:10px;
    margin:2px;
-   border-bottom: 20px solid vars.$color-title-last ;
-   border-right: 10px solid vars.$color-title-last ;  
+   border-bottom: 20px solid vars.$color-title-three ;
+   border-right: 10px solid vars.$color-title-two ;  
   
 
   .profil-title {
     font-family: "Meta";
     font-size: 2rem;
+    text-transform: uppercase;
     text-align: center;
     color: vars.$color-title-first;
     font-variation-settings: "wght" 900, "ital" 1;
@@ -53,45 +54,57 @@
    .profil-list {
       font-family: "Meta";
       font-variation-settings: "wght" 900, "ital" 1;
-      color:red;
       padding-bottom:10px;
       margin:2px;
-    }
-  .profil-list-item {
+      text-align: left;
+
+       &-item {
     font-family:'Quicksand', sans-serif; 
+    color:red;
     padding-left:50px;
     padding-right:50px;
     margin:2px;
   }
 
+      &-info {
+        font-family:'Quicksand', sans-serif; 
+        color:black;
+        padding-left:50px;
+        padding-right:50px;
+        margin:2px;
+        font-weight: lighter;
+      }
+    }
+
   .profil-button {
-    background-color: red;
-    color:white;
-    display:inline-block;
     text-transform:uppercase;
-    font-weight: bold;
     border:none;
-    width:150px;
-    height:50px;
-    position:absolute;
-    left:42%;
-    right:auto;
-    top:45%;
-    bottom:auto;
-    border-radius:10px;
+    width:190px;
+    height:70px;
     font-family: "Meta";
     font-size: 15px;
-    padding-top:10px;
+    padding:12px;
+    margin:10px;
+    background-color:vars.$color-background;
+    color:white;
+    &:hover {
+      text-decoration: underline;
+    }
 
   }
 
-  .profil-pic {
+  .profil-link-password {
+    color:white;
+    background-color: vars.$color-background;
+    width:190px;
+    height:50px;
+    font-family: "Meta";
+    text-transform:uppercase;
+    padding:10px;
+    margin:10px;
+    font-size: 15px;
+    border:none;
 
-    max-width: 200px;
-    max-height: 200px;
-    position:absolute;
-    display: inline;
-    float:left;
   }
 
 }

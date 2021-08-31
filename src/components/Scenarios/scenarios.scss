@@ -14,19 +14,19 @@
   justify-content: center;
   align-items: center;
   width: 900px;
+  height: 900px;
   margin: 1em auto;
   background-color: vars.$color-popup-background;
   box-sizing: border-box;
-  border-bottom: 20px solid vars.$color-title-last;
-  border-right: 10px solid vars.$color-title-last;
+  border-bottom: 20px solid vars.$color-title-four;
+  border-right: 10px solid vars.$color-title-five;
 
   .scenarios-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 5px;
+    margin-top: 5px;
     padding-top: 10px;
-    padding-bottom: 10px;
 
     .scenarios-scenario {
       width: 400px;
@@ -98,7 +98,7 @@
       }
 
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.02);
       }
     }
   }

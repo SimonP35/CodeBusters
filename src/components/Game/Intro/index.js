@@ -3,7 +3,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import utils from 'src/utils';
 import './intro.scss';
 
-const scenarios = utils[0].fourMostPopularScenarios;
+const [scenarios] = utils[3].scenarios;
 
 const Intro = () => {
   const { slug } = useParams();
@@ -16,11 +16,13 @@ const Intro = () => {
     history.push(url);
   };
   return (
-    <>
-      <h2 className="intro-title">Introduction</h2>
+    <div className="intro-container">
+      <h2 className="intro-title">{result.nom}</h2>
+      <img src={result.pic} alt="scenario" />
       <p className="intro-description">{result.description}</p>
       <button
         type="button"
+        className="intro-button"
         onClick={() => {
           // startGame();
           redirectionToBoard();
@@ -28,7 +30,7 @@ const Intro = () => {
       >Lancez la partie
       </button>
       {/* {!loadingGame && }; */}
-    </>
+    </div>
   );
 };
 

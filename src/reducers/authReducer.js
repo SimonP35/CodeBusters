@@ -1,8 +1,11 @@
 import {
   SAVE_USER_DATA,
+  SAVE_USER_UPDATE,
   CLICK_ON_LOGOUT,
   SUBMIT_LOGIN,
   SUBMIT_SIGNIN,
+  SUBMIT_USER_UPDATE,
+  GET_USER_SCORES,
 
 } from 'src/actions/auth';
 import {
@@ -17,6 +20,7 @@ const initialState = {
   isLogged: false,
   token: '',
   id: '',
+  scores: [],
 };
 
 function authReducer(state = initialState, action = {}) {
@@ -43,6 +47,7 @@ function authReducer(state = initialState, action = {}) {
         email: '',
         password: '',
         nickname: '',
+        id: '',
         token: '',
       };
     case SUBMIT_LOGIN:
@@ -58,12 +63,30 @@ function authReducer(state = initialState, action = {}) {
         password: '',
         nickname: '',
       };
+    case SUBMIT_USER_UPDATE:
+      return {
+        ...state,
+        email: '',
+        password: '',
+        nickname: '',
+      };
+    case SAVE_USER_UPDATE:
+      return {
+        ...state,
+        nickname: action.nickname,
+        email: action.email,
+      };
     case CLEAR_INPUT:
       return {
         ...state,
         email: '',
         password: '',
         nickname: '',
+      };
+    case GET_USER_SCORES:
+      return {
+        ...state,
+        scores: action.scores,
       };
     default:
       return state;

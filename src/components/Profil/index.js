@@ -3,22 +3,37 @@ import PropTypes from 'prop-types';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 
-import games from 'src/assets/images/games.png';
-
 import './profil.scss';
 
-const Profil = ({ email, nickname }) => (
+const Profil = ({ nickname, email, scores, toggleDisplaySignin }) => (
   <>
     <Header />
     <main className="profil-main">
       <div className="profil-container">
-        <h2 className="profil-title">Votre profil</h2>
-        <img className="profil-pic" src={games} alt="banniere-img" />
+        <h2 className="profil-title">Mon profil</h2>
         <ul className="profil-list">
-          <li className="profil-list-item">Pseudo: {nickname}</li>
-          <li className="profil-list-item">Email: {email}</li>
+          <li className="profil-list-item">Pseudo :</li>
+          <li className="profil-list-info">{nickname}</li>
+          <li className="profil-list-item">Email :</li>
+          <li className="profil-list-info">{email}</li>
         </ul>
-        <a className="profil-button" href="#">Changer votre mot de passe</a>
+        <ul className="profil-list">
+          <li className="profil-list-item">Mes scores :</li>
+          {/* Map sur les scores enregistrés en base qui sont dans user.scores[] */}
+          <li className="profil-list-info">Mon meilleur temps est de X mn sur le scénario X</li>
+        </ul>
+        {/* Au clic sur un bouton on affiche un popup signin form */}
+        <button
+          type="button"
+          onClick={() => {
+            toggleDisplaySignin();
+          }}
+          className="profil-button"
+          id="signin-update"
+        >Mettre mes informations à jour
+        </button>
+        {/* Au clic sur le lien on ouvre une fenêtre avec le lien pour changer son mdp */}
+        <a className="profil-link-password" href="http://3.238.70.10/reset-password" target="_blank" rel="noreferrer">Changer mon mot de passe</a>
       </div>
     </main>
     <Footer />
@@ -28,6 +43,8 @@ const Profil = ({ email, nickname }) => (
 Profil.propTypes = {
   email: PropTypes.string.isRequired,
   nickname: PropTypes.string.isRequired,
+  toggleDisplaySignin: PropTypes.func.isRequired,
+  scores: PropTypes.array.isRequired,
 };
 
 export default Profil;

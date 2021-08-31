@@ -2,15 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 .footer-container {
-  display:inline-flex;
+  display:flex;
   width: 500px;
   height: 100px;
-  box-sizing: border-box;
   align-items: flex-end;
   justify-content: center;
   position: absolute;
   left:38%;
-  right:0;
   top:100%;
   bottom:auto;
   font-family: 'Quicksand', sans-serif;
