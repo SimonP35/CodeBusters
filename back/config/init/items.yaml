@@ -9,86 +9,86 @@
 
 book:
   name: book
-  x: 37rem #(x)
-  y: 28.9rem #(y)
-  width: 7.4rem
-  height: 5.8rem
+  x: 31.1% #(x)
+  y: 43% #(y)
+  width: 6.2%
+  height: 8.6%
   picture1: "http://3.238.70.10/images/book.png"
   status: 0
   type: clickable
-  description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
-    Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
+    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
 
 ## Indice mémo : RTFM ===> Le livre est une doc indigeste qu'il faut lire pour voir un mot sauter aux yeux (intrus)
 
 labyrinth:
   name: labyrinth
-  x: 98rem #(x)
-  y: 7.5rem #(y)
-  width: 16rem
-  height: 21.6rem
+  x: 82.3% #(x)
+  y: 11.2% #(y)
+  width: 13.3%
+  height: 32.1%
   picture1: "http://3.238.70.10/images/labyrinth.png"
   status: 0
   type: clickable
-  description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
-    Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
+    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
 
 ## Le bon chemin est celui qui comporte autant de mots/objets que le nombre de merveilles du monde ===> Résultat : Mot à la sortie du bon chemin
 
 kaamelott:
   name: kaamelott
-  x: 4.75rem #(x)
-  y: 5.8rem #(y)
-  width: 36rem
-  height: 19rem
+  x: 4% #(x)
+  y: 8.6% #(y)
+  width: 30.2%
+  height: 28.2%
   picture1: "http://3.238.70.10/images/kaamelott.png"
   status: 0
   type: clickable
-  description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
-    Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
+    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
 
 ## Description à l'image qui indique ce qu'il faut chercher d'après l'info du mémo ===> Résultat : Nom d'un personnage manquant ou région
 
 carlin:
   name: carlin
-  x: 42.1rem #(x)
-  y: 16.5rem #(y)
-  width: 9rem
-  height: 8rem
+  x: 35.35% #(x)
+  y: 24.5% #(y)
+  width: 7.6%
+  height: 12%
   picture1: "http://3.238.70.10/images/carlin.svg"
   status: 0
   type: clickable
-  description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
-    Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
+    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
 
 ## Signature sur photo ou collier/médaille écrit à la mano Enigme ===> sur le mémo qui induit à cliquer sur tous les animaux ===> Résultat : Nom du carlin
 
 code:
   name: code
-  x: 54rem #(x)
-  y: 35.4rem #(y)
-  width: 2.5rem
-  height: 2.5rem
+  x: 45.45% #(x)
+  y: 52.7% #(y)
+  width: 2%
+  height: 3.6%
   picture1: "http://3.238.70.10/images/code.png"
   status: 0
   type: clickable
-  description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
-    Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
+    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
 
 ## Indice mémo : Mon 5ème cause des bugs (mot ou pas, indice ou pas), enigme code complexe avec un mots qui ressort et qui casse tout Résultat : Mot qui fait bugguer
 
 drawer_r:
   name: drawer_r
-  x: 80.04rem #(x)
-  y: 59.2rem #(y)
-  width: 1.3rem
-  height: 1.3rem
+  x: 67.2% #(x)
+  y: 88.08% #(y)
+  width: 1.1%
+  height: 2%
   border-radius: 50%
   picture1: "http://3.238.70.10/images/drawer.png"
   status: 0
   type: clickable
-  description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
-    Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
+    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
 
 ## Indice mémo : Mon 6ème est la clé .pem, enigme "ou est charlie" dans le tiroir en méga-bordel, la clé à son nom marqué dessus // Résultat : Nom de la clé
 
@@ -96,10 +96,10 @@ drawer_r:
 
 button:
   name: button
-  x: 104.55rem #(x)
-  y: 60.75rem #(y)
-  width: 1.8rem
-  height: 1.8rem
+  x: 87.8% #(x)
+  y: 90.45% #(y)
+  width: 1.55%
+  height: 2.7%
   border-radius: 50%
   picture1: "http://3.238.70.10/images/button.png"
   status: 0
@@ -110,10 +110,10 @@ button:
 
 memo_rebus:
   name: memo_rebus
-  x: 61rem #(x)
-  y: 12.8rem #(y)
-  width: 7rem
-  height: 6.4rem
+  x: 51.3% #(x)
+  y: 19% #(y)
+  width: 5.85%
+  height: 9.6%
   picture1: "http://3.238.70.10/images/memo_rebus.png"
   status: 0
   type: clickable
@@ -121,10 +121,10 @@ memo_rebus:
 
 memo:
   name: memo
-  x: 71.5rem #(x)
-  y: 11.6rem #(y)
-  width: 6.8rem
-  height: 6.5rem
+  x: 60.1% #(x)
+  y: 17.2% #(y)
+  width: 5.8%
+  height: 10%
   picture1: "http://3.238.70.10/images/memo.png"
   status: 0
   type: clickable
@@ -132,10 +132,10 @@ memo:
 
 duck:
   name: duck
-  x: 81.6rem #(x)
-  y: 54.6rem #(y)
-  width: 3rem
-  height: 4rem
+  x: 81.6% #(x)
+  y: 54.6% #(y)
+  width: 3%
+  height: 4%
   border-radius: 50%
   status: 0
   type: nopicture
@@ -143,92 +143,92 @@ duck:
 
 mouse:
   name: mouse
-  x: 77rem #(x)
-  y: 63.3rem #(y)
-  width: 2rem
-  height: 2rem
+  x: 77% #(x)
+  y: 63.3% #(y)
+  width: 2%
+  height: 2%
   status: 0
   type: nopicture
   description1: Blague "Il est chelou ce chat non ???"
 
 cat:
   name: cat
-  x: 46.1rem #(x)
-  y: 27rem #(y)
-  width: 4rem
-  height: 7.7rem
+  x: 46.1% #(x)
+  y: 27% #(y)
+  width: 4%
+  height: 7.7%
   status: 0
   type: nopicture
   description1: Descriptif chat japonais
 
 rabbit:
   name: rabbit
-  x: 44.8rem #(x)
-  y: 51.5rem #(y)
-  width: 3rem 
-  height: 5rem
+  x: 44.8% #(x)
+  y: 51.5% #(y)
+  width: 3% 
+  height: 5%
   status: 0
   type: nopicture
   description1: Roger le lapin (+ Bla bla roger rabbit)
 
 cup:
   name: cup
-  x: 33rem #(x)
-  y: 32.6rem #(y)
-  width: 2.8rem
-  height: 2.1rem
+  x: 33% #(x)
+  y: 32.6% #(y)
+  width: 2.8%
+  height: 2.1%
   status: 0
   type: nopicture
   description1: Trophé du non-buggeur (de l'oeil du tigre du débugguage)
 
 controller:
   name: controller
-  x: 14.9rem #(x)
-  y: 54.5rem #(y)
-  width: 3.5rem
-  height: 1.4rem
+  x: 14.9% #(x)
+  y: 54.5% #(y)
+  width: 3.5%
+  height: 1.4%
   status: 0
   type: nopicture
   description1: "Y'a un projet à mettre en prod c'est pas l'heure de jouer !"
   
 warhammer:
   name: warhammer
-  x: 32.95rem #(x)
-  y: 58.5rem #(y)
-  width: 6.6rem
-  height: 7.5rem
+  x: 32.95% #(x)
+  y: 58.5% #(y)
+  width: 6.6%
+  height: 7.5%
   status: 0
   type: nopicture
   description1: "Une de mes passions c'est d'en acheter plein et de les mettre dans un tiroir sans les peindre ><"
 
 car:
   name: car
-  x: 22.2rem #(x)
-  y: 32rem #(y)
-  width: 9.4rem
-  height: 1.9rem
+  x: 22.2% #(x)
+  y: 32% #(y)
+  width: 9.4%
+  height: 1.9%
   status: 0
   type: nopicture
   description1: Blague RVLF
 
 ie:
   name: ie
-  x: 54rem #(x)
-  y: 43.1rem #(y)
-  width: 2.5rem
-  height: 2.5rem
+  x: 54% #(x)
+  y: 43.1% #(y)
+  width: 2.5%
+  height: 2.5%
   picture1: "http://3.238.70.10/images/code.png"
   status: 0
   type: nopicture
-  description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
-    Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
+    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
 
 matrix:
   name: matrix
-  x: 83.9rem #(x)
-  y: 18.16rem #(y)
-  width: 12.8rem
-  height: 18.3rem
+  x: 83.9% #(x)
+  y: 18.16% #(y)
+  width: 12.8%
+  height: 18.3%
   picture1: "http://3.238.70.10/images/code.png"
   status: 0
   type: nopicture
@@ -236,53 +236,53 @@ matrix:
 
 coffee:
   name: coffee
-  x: 52.3rem #(x)
-  y: 54.9rem #(y)
-  width: 2.6rem 
-  height: 2rem
+  x: 52.3% #(x)
+  y: 54.9% #(y)
+  width: 2.6% 
+  height: 2%
   status: 0
   type: nopicture
   description1: Il est jamais froid ce café ?
 
 paper:
   name: paper
-  x: 65.5rem #(x)
-  y: 62.5rem #(y)
-  width: 6.8rem 
-  height: 3.2rem
+  x: 65.5% #(x)
+  y: 62.5% #(y)
+  width: 6.8% 
+  height: 3.2%
   status: 0
   type: nopicture
   description1: Une envie pressante ?
 
 drawer_l:
   name: drawer_l
-  x: 46.35rem #(x)
-  y: 59.2rem #(y)
-  width: 1.3rem
-  height: 1.3rem
+  x: 39% #(x)
+  y: 88.1% #(y)
+  width: 1.05%
+  height: 2%
   border-radius: 50%
   picture1: "http://3.238.70.10/images/drawer.png"
   status: 0
   type: clickable
-  description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
-    Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
+    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
 
 banana:
   name: banana
-  x: 57.3rem #(x)
-  y: 62.4rem #(y)
-  width: 1.5rem 
-  height: 3rem
+  x: 57.3% #(x)
+  y: 62.4% #(y)
+  width: 1.5% 
+  height: 3%
   status: 0
   type: nopicture
   description1: Ref Mario Kart ?
 
 exit:
   name: exit
-  x: 93.5rem #(x)
-  y: 52.85rem #(y)
-  width: 9.1rem 
-  height: 3.3rem
+  x: 93.5% #(x)
+  y: 52.85% #(y)
+  width: 9.1% 
+  height: 3.3%
   status: 0
   type: nopicture
   description1: Le week-end c'est par la !
