@@ -6,7 +6,7 @@ import {
   SUBMIT_SIGNIN,
   SUBMIT_USER_UPDATE,
   GET_USER_SCORES,
-  displayUserScores,
+  saveUserScores,
 } from 'src/actions/auth';
 import { toggleDisplayPopupLogin } from 'src/actions/buttonLog';
 import { displayErrormessage, SUBMIT_COMMENT, clearInput } from 'src/actions/popup';
@@ -99,8 +99,8 @@ const authMiddleware = (store) => (next) => (action) => {
       // Lorsqu'on reçoit la réponse, on envoie le tableau de scores
         .then((response) => {
           console.log(response);
-          store.dispatch(displayUserScores(
-            response.data.user.scores,
+          store.dispatch(saveUserScores(
+            response.data.user.games,
           ));
         })
         .catch((error) => {

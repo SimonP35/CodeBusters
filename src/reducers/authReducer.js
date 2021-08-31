@@ -5,7 +5,7 @@ import {
   SUBMIT_LOGIN,
   SUBMIT_SIGNIN,
   SUBMIT_USER_UPDATE,
-  GET_USER_SCORES,
+  SAVE_USER_SCORES,
 
 } from 'src/actions/auth';
 import {
@@ -83,7 +83,7 @@ function authReducer(state = initialState, action = {}) {
         password: '',
         nickname: '',
       };
-    case GET_USER_SCORES:
+    case SAVE_USER_SCORES:
       return {
         ...state,
         scores: action.scores,
