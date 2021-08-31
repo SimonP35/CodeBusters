@@ -9,6 +9,7 @@ import Profil from 'src/containers/Profil';
 import Popup from 'src/containers/Popup';
 import NotFound from 'src/components/NotFound';
 import Game from 'src/containers/Game';
+import Loader from 'src/containers/Loader';
 
 import './pages.scss';
 
@@ -38,6 +39,7 @@ const Pages = () => (
       </Route>
     </Switch>
     <Popup />
+    <Loader />
 
   </>
 );

@@ -11,7 +11,7 @@
 
 .image-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   width: 100vw;
   height: 100vh;
@@ -19,7 +19,28 @@
   top: 0;
   background-color: rgba(15, 15, 15, 0.39);
   .image{
-    width: 500px;
-    height: 500px;
+    width: 1200px;
+    height: 675px;
+  }
+  .description {
+    font-size: 1.5em;
+    color: white;
+  }
+ 
+}
+.description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(15, 15, 15, 0.39);
+  .description-nopicture {
+    font-size: 1.5em;
+    align-self: center;
+    color: white;
   }
 }

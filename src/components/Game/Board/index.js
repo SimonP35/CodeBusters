@@ -32,6 +32,10 @@ const Board = ({
   setWin,
   win,
   changeField,
+  toggleDisplayDescription,
+  currentDescription,
+  setCurrentDescription,
+  displayDescription,
 }) => {
   useEffect(() => {
     startGame();
@@ -53,6 +57,7 @@ const Board = ({
               onClick={() => {
                 setCurrentImg(item.picture1);
                 toggleDisplayPicture();
+                setCurrentDescription(item.description1);
               }}
             >
               <style jsx>{`
@@ -60,8 +65,10 @@ const Board = ({
                     position: absolute;
                     top: ${item.y};
                     left: ${item.x};
-                    width: 100px;
-                    height: 100px;
+                    width: ${item.width};
+                    height: ${item.height};
+                    background: red;
+                    border-radius: ${item.borderradius}
                   }
               `}
               </style>
@@ -84,14 +91,42 @@ const Board = ({
                   position: absolute;
                   top: ${item.y};
                   left: ${item.x};
-                  width: 100px;
-                  height: 100px;
+                  width: ${item.width};
+                  height: ${item.height};
+                  background: red;
+                  border-radius: ${item.borderradius}
                 }
             `}
             </style>
           </div>
           )
         }
+          {
+            item.type === 'nopicture'
+            && (
+            <div
+              key={item.name}
+              className="board-item"
+              onClick={() => {
+                setCurrentDescription(item.description1);
+                toggleDisplayDescription();
+              }}
+            >
+              <style jsx>{`
+                  .board-item{
+                    position: absolute;
+                    top: ${item.y};
+                    left: ${item.x};
+                    width: ${item.width};
+                    height: ${item.height};
+                    background: red;
+                    border-radius: ${item.borderradius}
+                  }
+              `}
+              </style>
+            </div>
+            )
+          }
         </div>
       ))}
       {
@@ -110,6 +145,7 @@ const Board = ({
           src={currentImg}
           alt=""
         />
+        <p className="description">{currentDescription}</p>
       </div>
     )
     }
@@ -125,8 +161,25 @@ const Board = ({
         )
       }
       {
+        displayDescription && (
+          <div className="description-container">
+            <button
+              type="button"
+              onClick={() => {
+                toggleDisplayDescription();
+              }}
+            >
+              x
+            </button>
+            <p className="description-nopicture">{currentDescription}</p>
+          </div>
+        )
+      }
+      {
       win && !displayInput && (
-        <Redirect to={`/game/${slug}/win`} />
+        <>
+          <Redirect to={`/game/${slug}/win`} />
+        </>
       )
       }
     </>

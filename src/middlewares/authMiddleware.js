@@ -10,10 +10,12 @@ import {
 } from 'src/actions/auth';
 import { toggleDisplayPopupLogin } from 'src/actions/buttonLog';
 import { displayErrormessage, SUBMIT_COMMENT, clearInput } from 'src/actions/popup';
+import { setLoading } from 'src/actions/loading';
 
 const authMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case SUBMIT_LOGIN: {
+      store.dispatch(setLoading());
       const { email, password } = store.getState().auth;
       axios.post('http://3.238.70.10/api/login', { username: email, password: password })
         .then((response) => {
@@ -26,6 +28,7 @@ const authMiddleware = (store) => (next) => (action) => {
             response.data.user.email,
             response.data.token,
           ));
+          store.dispatch(setLoading());
         })
         .catch((error) => {
           // console.log(error);
@@ -33,6 +36,7 @@ const authMiddleware = (store) => (next) => (action) => {
       break;
     }
     case SUBMIT_SIGNIN: {
+      store.dispatch(setLoading());
       const { nickname, email, password } = store.getState().auth;
       axios.post('http://3.238.70.10/api/user/register', { nickname: nickname, email: email, password: password })
         .then(() => {
@@ -42,6 +46,7 @@ const authMiddleware = (store) => (next) => (action) => {
           store.dispatch(toggleDisplayPopupLogin());
           // on nettoie les champs
           store.dispatch(clearInput());
+          store.dispatch(setLoading());
         })
         .catch((error) => {
           // console.log(error);
@@ -73,6 +78,7 @@ const authMiddleware = (store) => (next) => (action) => {
       break;
     }
     case SUBMIT_COMMENT: {
+      store.dispatch(setLoading());
       const { comment, rating } = store.getState().popup;
       axios.post('http://3.238.70.10/api/comment/create', { content: comment, rating: rating })
       // Lorsqu'on reçoit la réponse, on enregistre le commentaire
@@ -81,6 +87,7 @@ const authMiddleware = (store) => (next) => (action) => {
           // console.log(response);
           // si la création se passe bien on nettoie le champs
           store.dispatch(clearInput());
+          store.dispatch(setLoading());
         })
         .catch((error) => {
           // console.log(error.response);
