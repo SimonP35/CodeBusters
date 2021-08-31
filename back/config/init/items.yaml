@@ -13,6 +13,7 @@ book:
   y: 43% #(y)
   width: 6.2%
   height: 8.6%
+  borderradius: 0%
   picture1: "http://3.238.70.10/images/book.png"
   status: 0
   type: clickable
@@ -27,6 +28,7 @@ labyrinth:
   y: 11.2% #(y)
   width: 13.3%
   height: 32.1%
+  borderradius: 0%
   picture1: "http://3.238.70.10/images/labyrinth.png"
   status: 0
   type: clickable
@@ -41,6 +43,7 @@ kaamelott:
   y: 8.6% #(y)
   width: 30.2%
   height: 28.2%
+  borderradius: 0%
   picture1: "http://3.238.70.10/images/kaamelott.png"
   status: 0
   type: clickable
@@ -55,6 +58,7 @@ carlin:
   y: 24.5% #(y)
   width: 7.6%
   height: 12%
+  borderradius: 0%
   picture1: "http://3.238.70.10/images/carlin.svg"
   status: 0
   type: clickable
@@ -69,6 +73,7 @@ code:
   y: 52.7% #(y)
   width: 2%
   height: 3.6%
+  borderradius: 0%
   picture1: "http://3.238.70.10/images/code.png"
   status: 0
   type: clickable
@@ -83,7 +88,7 @@ drawer_r:
   y: 88.08% #(y)
   width: 1.1%
   height: 2%
-  border-radius: 50%
+  borderradius: 50%
   picture1: "http://3.238.70.10/images/drawer.png"
   status: 0
   type: clickable
@@ -100,7 +105,7 @@ button:
   y: 90.45% #(y)
   width: 1.55%
   height: 2.7%
-  border-radius: 50%
+  borderradius: 50%
   picture1: "http://3.238.70.10/images/button.png"
   status: 0
   type: inputable
@@ -114,6 +119,7 @@ memo_rebus:
   y: 19% #(y)
   width: 5.85%
   height: 9.6%
+  borderradius: 0%
   picture1: "http://3.238.70.10/images/memo_rebus.png"
   status: 0
   type: clickable
@@ -125,6 +131,7 @@ memo:
   y: 17.2% #(y)
   width: 5.8%
   height: 10%
+  borderradius: 0%
   picture1: "http://3.238.70.10/images/memo.png"
   status: 0
   type: clickable
@@ -136,7 +143,7 @@ duck:
   y: 54.6% #(y)
   width: 3%
   height: 4%
-  border-radius: 50%
+  borderradius: 50%
   status: 0
   type: nopicture
   description1: La méthode du canard en plastique (Paul le canard............)
@@ -147,6 +154,7 @@ mouse:
   y: 63.3% #(y)
   width: 2%
   height: 2%
+  borderradius: 0%
   status: 0
   type: nopicture
   description1: Blague "Il est chelou ce chat non ???"
@@ -157,6 +165,7 @@ cat:
   y: 27% #(y)
   width: 4%
   height: 7.7%
+  borderradius: 0%
   status: 0
   type: nopicture
   description1: Descriptif chat japonais
@@ -167,6 +176,7 @@ rabbit:
   y: 51.5% #(y)
   width: 3% 
   height: 5%
+  borderradius: 0%
   status: 0
   type: nopicture
   description1: Roger le lapin (+ Bla bla roger rabbit)
@@ -177,6 +187,7 @@ cup:
   y: 32.6% #(y)
   width: 2.8%
   height: 2.1%
+  borderradius: 0%
   status: 0
   type: nopicture
   description1: Trophé du non-buggeur (de l'oeil du tigre du débugguage)
@@ -187,6 +198,7 @@ controller:
   y: 54.5% #(y)
   width: 3.5%
   height: 1.4%
+  borderradius: 0%
   status: 0
   type: nopicture
   description1: "Y'a un projet à mettre en prod c'est pas l'heure de jouer !"
@@ -197,6 +209,7 @@ warhammer:
   y: 58.5% #(y)
   width: 6.6%
   height: 7.5%
+  borderradius: 0%
   status: 0
   type: nopicture
   description1: "Une de mes passions c'est d'en acheter plein et de les mettre dans un tiroir sans les peindre ><"
@@ -207,6 +220,7 @@ car:
   y: 32% #(y)
   width: 9.4%
   height: 1.9%
+  borderradius: 0%
   status: 0
   type: nopicture
   description1: Blague RVLF
@@ -217,6 +231,7 @@ ie:
   y: 43.1% #(y)
   width: 2.5%
   height: 2.5%
+  borderradius: 0%
   picture1: "http://3.238.70.10/images/code.png"
   status: 0
   type: nopicture
@@ -229,6 +244,7 @@ matrix:
   y: 18.16% #(y)
   width: 12.8%
   height: 18.3%
+  borderradius: 0%
   picture1: "http://3.238.70.10/images/code.png"
   status: 0
   type: nopicture
@@ -240,6 +256,7 @@ coffee:
   y: 54.9% #(y)
   width: 2.6% 
   height: 2%
+  borderradius: 0%
   status: 0
   type: nopicture
   description1: Il est jamais froid ce café ?
@@ -250,6 +267,7 @@ paper:
   y: 62.5% #(y)
   width: 6.8% 
   height: 3.2%
+  borderradius: 0%
   status: 0
   type: nopicture
   description1: Une envie pressante ?
@@ -260,7 +278,7 @@ drawer_l:
   y: 88.1% #(y)
   width: 1.05%
   height: 2%
-  border-radius: 50%
+  borderradius: 50%
   picture1: "http://3.238.70.10/images/drawer.png"
   status: 0
   type: clickable
@@ -273,6 +291,7 @@ banana:
   y: 62.4% #(y)
   width: 1.5% 
   height: 3%
+  borderradius: 0%
   status: 0
   type: nopicture
   description1: Ref Mario Kart ?
@@ -283,6 +302,7 @@ exit:
   y: 52.85% #(y)
   width: 9.1% 
   height: 3.3%
+  borderradius: 0%
   status: 0
   type: nopicture
   description1: Le week-end c'est par la !
