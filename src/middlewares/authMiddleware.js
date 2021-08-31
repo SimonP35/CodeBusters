@@ -48,18 +48,24 @@ const authMiddleware = (store) => (next) => (action) => {
       break;
     }
     case SUBMIT_USER_UPDATE: {
-      const { nickname, email, password } = store.getState().auth;
-      axios.post('http://3.238.70.10/api/user/update', { nickname: nickname, email: email, password: password })
-        .then(() => {
-          // console.log(response);
-          // si la création se passe bien
-          // on nettoie les champs
-          store.dispatch(clearInput());
+      const {nickname, email} = store.getState().auth;
+      // Avec post on a une 405, put une 401 bizarre?
+      axios.patch('http://3.238.70.10/api/user/update', { nickname: nickname, email: email },
+        {
+          headers: {
+            Authorization: `Bearer ${store.getState().auth.token}`,
+          },
+        })
+        .then((response) => {
+          console.log(response);
+          // Lorsqu'on reçoit la réponse, on enregistre le pseudo et l'email
+          store.dispatch(saveUserData(
+            response.data.user.nickname,
+            response.data.user.email,
+          ));
         })
         .catch((error) => {
           // console.log(error);
-          // console.log(error.response);
-          // store.dispatch(displayErrormessage(error.response.data.errors.detail));
         });
       break;
     }

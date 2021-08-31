@@ -5,7 +5,7 @@ import Footer from 'src/components/Footer';
 
 import './profil.scss';
 
-const Profil = ({ email, nickname, toggleDisplaySignin }) => (
+const Profil = ({ nickname, email, toggleDisplaySignin }) => (
   <>
     <Header />
     <main className="profil-main">

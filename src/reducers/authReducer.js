@@ -62,9 +62,9 @@ function authReducer(state = initialState, action = {}) {
     case SUBMIT_USER_UPDATE:
       return {
         ...state,
-        nickname: action.nickname,
-        email: action.email,
+        email: '',
         password: '',
+        nickname: '',
       };
     case CLEAR_INPUT:
       return {
