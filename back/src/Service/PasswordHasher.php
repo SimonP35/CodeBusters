@@ -3,7 +3,6 @@
 namespace App\Service;
 
 use App\Entity\User;
-use Symfony\Component\Security\Core\Security;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class PasswordHasher

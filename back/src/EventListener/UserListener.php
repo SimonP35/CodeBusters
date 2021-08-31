@@ -26,9 +26,9 @@ class UserListener
         }
     }
 
-    public function preUpdate(User $user): void
-    {
-            $password = $user->getPassword();
-            $user->setPassword($this->passwordHasher->hasher($user, $password)); 
-    }
+    // public function preUpdate(User $user): void
+    // {
+    //         $password = $user->getPassword();
+    //         $user->setPassword($this->passwordHasher->hasher($user, $password)); 
+    // }
 }
