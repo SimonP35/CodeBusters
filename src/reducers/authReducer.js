@@ -6,7 +6,7 @@ import {
   SUBMIT_SIGNIN,
   SUBMIT_USER_UPDATE,
   SAVE_USER_SCORES,
-
+  GET_USER_SCORES,
 } from 'src/actions/auth';
 import {
   CHANGE_FIELD,
@@ -84,6 +84,11 @@ function authReducer(state = initialState, action = {}) {
         nickname: '',
       };
     case SAVE_USER_SCORES:
+      return {
+        ...state,
+        scores: action.scores,
+      };
+    case GET_USER_SCORES:
       return {
         ...state,
         scores: action.scores,

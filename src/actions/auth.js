@@ -22,8 +22,9 @@ export const saveUserUpdate = (nickname, email) => ({
   nickname: nickname,
   email: email,
 });
-export const saveUserScores = () => ({
+export const saveUserScores = (scores) => ({
   type: SAVE_USER_SCORES,
+  scores: scores,
 });
 
 export const handleLogOut = () => ({

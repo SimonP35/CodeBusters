@@ -4,6 +4,8 @@ import { toggleDisplayPopupSignin } from 'src/actions/buttonLog';
 // on importe le composant de présentation
 import Profil from 'src/components/Profil';
 
+import { getUserScores } from '../../actions/auth';
+
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
 const mapStateToProps = (state) => ({
@@ -18,6 +20,9 @@ const mapDispatchToProps = (dispatch) => ({
   // nom de la prop à remplir: fonction qui dispatch l'action
   toggleDisplaySignin: () => {
     dispatch(toggleDisplayPopupSignin());
+  },
+  getUserScores: (scores) => {
+    dispatch(getUserScores(scores));
   },
 });
 

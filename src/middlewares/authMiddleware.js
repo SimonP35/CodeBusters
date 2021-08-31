@@ -89,8 +89,7 @@ const authMiddleware = (store) => (next) => (action) => {
       break;
     }
     case GET_USER_SCORES: {
-      const { scores } = store.getState().auth;
-      axios.get('http://3.238.70.10/api/user/read', { games: scores },
+      axios.get('http://3.238.70.10/api/user/read',
         {
           headers: {
             Authorization: `Bearer ${store.getState().auth.token}`,
@@ -98,10 +97,8 @@ const authMiddleware = (store) => (next) => (action) => {
         })
       // Lorsqu'on reçoit la réponse, on envoie le tableau de scores
         .then((response) => {
-          console.log(response);
-          store.dispatch(saveUserScores(
-            response.data.user.games,
-          ));
+          // console.log(response.data.user.games);
+          store.dispatch(saveUserScores(response.data.user.games));
         })
         .catch((error) => {
           // console.log(error.response);
