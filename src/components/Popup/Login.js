@@ -38,7 +38,6 @@ const Login = ({
             value={email}
             className="login-field"
           />
-          <a className="login-password-info" href="http://3.238.70.10/reset-password" target="_blank" rel="noreferrer">Mot de passe oublié ?</a>
           <Field
             name="password"
             type="password"
@@ -50,6 +49,7 @@ const Login = ({
           <button className="login-button" type="submit">
             OK
           </button>
+          <a className="login-password-info" href="http://3.238.70.10/reset-password" target="_blank" rel="noreferrer">Mot de passe oublié ?</a>
         </form>
       </div>
     </div>

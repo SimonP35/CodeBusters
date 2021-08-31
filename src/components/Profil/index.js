@@ -5,7 +5,12 @@ import Footer from 'src/components/Footer';
 
 import './profil.scss';
 
-const Profil = ({ nickname, email, scores, toggleDisplaySignin }) => (
+const Profil = ({
+  nickname,
+  email,
+  scores,
+  toggleDisplaySignin,
+}) => (
   <>
     <Header />
     <main className="profil-main">
@@ -17,11 +22,13 @@ const Profil = ({ nickname, email, scores, toggleDisplaySignin }) => (
           <li className="profil-list-item">Email :</li>
           <li className="profil-list-info">{email}</li>
         </ul>
-        <ul className="profil-list">
-          <li className="profil-list-item">Mes scores :</li>
-          {/* Map sur les scores enregistrés en base qui sont dans user.scores[] */}
-          <li className="profil-list-info">Mon meilleur temps est de X mn sur le scénario X</li>
-        </ul>
+        {/* Map sur les scores enregistrés en base qui sont dans user.scores[] */}
+        {scores.map((score) => (
+          <ul className="profil-list">
+            <li className="profil-list-item">Mes scores :</li>
+            <li className="profil-list-info">Mon meilleur temps est de {score.score} mn sur le scénario {score.scenario}</li>
+          </ul>
+        ))}
         {/* Au clic sur un bouton on affiche un popup signin form */}
         <button
           type="button"

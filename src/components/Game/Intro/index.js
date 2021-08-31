@@ -3,7 +3,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import utils from 'src/utils';
 import './intro.scss';
 
-const [scenarios] = utils[3].scenarios;
+const { scenarios } = utils[3];
 
 const Intro = () => {
   const { slug } = useParams();

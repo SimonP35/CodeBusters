@@ -90,24 +90,21 @@ const authMiddleware = (store) => (next) => (action) => {
     }
     case GET_USER_SCORES: {
       const { scores } = store.getState().auth;
-      axios.get('http://3.238.70.10/api/user/read', {games: scores},
+      axios.get('http://3.238.70.10/api/user/read', { games: scores },
         {
           headers: {
             Authorization: `Bearer ${store.getState().auth.token}`,
           },
         })
-      // Lorsqu'on reçoit la réponse, on enregistre le commentaire
-      // de l'utilisateur (à lier au scénario)
+      // Lorsqu'on reçoit la réponse, on envoie le tableau de scores
         .then((response) => {
           console.log(response);
-          // si la création se passe bien on nettoie le champs
           store.dispatch(displayUserScores(
             response.data.user.scores,
           ));
         })
         .catch((error) => {
           // console.log(error.response);
-          // store.dispatch(displayErrormessage(error.response.data.errors.detail));
         });
       break;
     }
