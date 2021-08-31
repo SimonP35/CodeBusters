@@ -58,7 +58,7 @@ const Game = ({
       {win ? <Win endGame={endGame} /> : <NotFound />}
     </Route>
     <Route path="/game/:slug/loose">
-      <Loose />
+      <Loose endGame={endGame} />
     </Route>
   </Switch>
 );

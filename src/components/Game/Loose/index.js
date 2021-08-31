@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-
+import PropTypes from 'prop-types';
 import utils from 'src/utils';
 
 import './loose.scss';
 
 const scenario = utils[3].scenarios[0];
 
-const Loose = () => {
+const Loose = ({ endGame }) => {
+  useEffect(() => {
+    endGame();
+  }, []);
   const dispatch = useDispatch();
   return (
     <div className="loose-container">
@@ -27,6 +30,10 @@ const Loose = () => {
       </button>
     </div>
   );
+};
+
+Loose.propTypes = {
+  endGame: PropTypes.func.isRequired,
 };
 
 export default Loose;
