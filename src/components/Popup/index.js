@@ -29,6 +29,7 @@ const Popup = ({
   submitUserUpdate,
   submitComment,
   errorContent,
+  handleLogOut,
 }) => (
   <>
     {displayLogin && (
@@ -50,6 +51,7 @@ const Popup = ({
       isLogged={isLogged}
       submitSignin={submitSignin}
       submitUserUpdate={submitUserUpdate}
+      handleLogOut={handleLogOut}
     />
     )}
 
@@ -92,6 +94,7 @@ Popup.propTypes = {
   submitSignin: PropTypes.func.isRequired,
   submitUserUpdate: PropTypes.func.isRequired,
   submitComment: PropTypes.func.isRequired,
+  handleLogOut: PropTypes.func.isRequired,
   errorContent: PropTypes.string.isRequired,
 };
 

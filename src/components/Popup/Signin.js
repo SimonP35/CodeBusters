@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Field from './Field';
 import './signin.scss';
+import { handleLogOut } from '../../actions/auth';
 
 const Signin = ({
   toggleDisplaySignin,
@@ -23,7 +24,10 @@ const Signin = ({
   const handleUpdate = (evt) => {
     evt.preventDefault();
     submitUserUpdate();
+    handleLogOut();
+    console.log("logout ok");
     toggleDisplaySignin();
+    console.log("toggle ok");
   };
 
   return (
@@ -92,14 +96,6 @@ const Signin = ({
         placeholder={email}
         manageChange={changeField}
         value={email}
-        className="signin-field"
-      />
-      <Field
-        name="password"
-        type="password"
-        placeholder="Mot de passe"
-        manageChange={changeField}
-        value={password}
         className="signin-field"
       />
       <button className="signin-button" type="submit">

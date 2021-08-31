@@ -9,6 +9,7 @@ import Profil from 'src/components/Profil';
 const mapStateToProps = (state) => ({
   email: state.auth.email,
   nickname: state.auth.nickname,
+  scores: state.auth.scores,
 });
 
 // === mapDispatchToProps

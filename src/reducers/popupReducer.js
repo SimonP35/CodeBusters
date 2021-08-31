@@ -16,6 +16,8 @@ const initialState = {
   errorContent: '',
   comment: '',
   rating: '',
+  email: '',
+  nickname: '',
 };
 
 const popupReducer = (state = initialState, action = {}) => {

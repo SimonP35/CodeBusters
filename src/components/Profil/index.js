@@ -5,7 +5,7 @@ import Footer from 'src/components/Footer';
 
 import './profil.scss';
 
-const Profil = ({ nickname, email, toggleDisplaySignin }) => (
+const Profil = ({ nickname, email, scores, toggleDisplaySignin }) => (
   <>
     <Header />
     <main className="profil-main">
@@ -16,8 +16,11 @@ const Profil = ({ nickname, email, toggleDisplaySignin }) => (
           <li className="profil-list-info">{nickname}</li>
           <li className="profil-list-item">Email :</li>
           <li className="profil-list-info">{email}</li>
+        </ul>
+        <ul className="profil-list">
           <li className="profil-list-item">Mes scores :</li>
-          <li className="profil-list-info">Mon meilleur temps est de x mn sur xx</li>
+          {/* Map sur les scores enregistrés en base qui sont dans user.scores[] */}
+          <li className="profil-list-info">Mon meilleur temps est de X mn sur le scénario X</li>
         </ul>
         {/* Au clic sur un bouton on affiche un popup signin form */}
         <button
@@ -30,7 +33,7 @@ const Profil = ({ nickname, email, toggleDisplaySignin }) => (
         >Mettre mes informations à jour
         </button>
         {/* Au clic sur le lien on ouvre une fenêtre avec le lien pour changer son mdp */}
-        <a className="profil-link-password" href="#">Changer mon mot de passe</a>
+        <a className="profil-link-password" href="http://3.238.70.10/reset-password" target="_blank" rel="noreferrer">Changer mon mot de passe</a>
       </div>
     </main>
     <Footer />
@@ -41,6 +44,7 @@ Profil.propTypes = {
   email: PropTypes.string.isRequired,
   nickname: PropTypes.string.isRequired,
   toggleDisplaySignin: PropTypes.func.isRequired,
+  scores: PropTypes.array.isRequired,
 };
 
 export default Profil;
