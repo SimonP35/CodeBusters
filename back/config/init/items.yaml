@@ -138,7 +138,7 @@ duck:
   height: 4rem
   border-radius: 50%
   status: 0
-  type: clickable
+  type: nopicture
   description1: La méthode du canard en plastique (Paul le canard............)
 
 mouse:
@@ -148,7 +148,7 @@ mouse:
   width: 2rem
   height: 2rem
   status: 0
-  type: clickable
+  type: nopicture
   description1: Blague "Il est chelou ce chat non ???"
 
 cat:
@@ -158,7 +158,7 @@ cat:
   width: 4rem
   height: 7.7rem
   status: 0
-  type: clickable
+  type: nopicture
   description1: Descriptif chat japonais
 
 rabbit:
@@ -168,7 +168,7 @@ rabbit:
   width: 3rem 
   height: 5rem
   status: 0
-  type: clickable
+  type: nopicture
   description1: Roger le lapin (+ Bla bla roger rabbit)
 
 cup:
@@ -178,7 +178,7 @@ cup:
   width: 2.8rem
   height: 2.1rem
   status: 0
-  type: clickable
+  type: nopicture
   description1: Trophé du non-buggeur (de l'oeil du tigre du débugguage)
 
 controller:
@@ -188,7 +188,7 @@ controller:
   width: 3.5rem
   height: 1.4rem
   status: 0
-  type: clickable
+  type: nopicture
   description1: "Y'a un projet à mettre en prod c'est pas l'heure de jouer !"
   
 warhammer:
@@ -198,7 +198,7 @@ warhammer:
   width: 6.6rem
   height: 7.5rem
   status: 0
-  type: clickable
+  type: nopicture
   description1: "Une de mes passions c'est d'en acheter plein et de les mettre dans un tiroir sans les peindre ><"
 
 car:
@@ -208,7 +208,7 @@ car:
   width: 9.4rem
   height: 1.9rem
   status: 0
-  type: clickable
+  type: nopicture
   description1: Blague RVLF
 
 ie:
@@ -219,7 +219,7 @@ ie:
   height: 2.5rem
   picture1: "http://3.238.70.10/images/code.png"
   status: 0
-  type: clickable
+  type: nopicture
   description1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
     Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
 
@@ -231,7 +231,7 @@ matrix:
   height: 18.3rem
   picture1: "http://3.238.70.10/images/code.png"
   status: 0
-  type: clickable
+  type: nopicture
   description1: Blague/clin d'oeil sur le nom de notre promo
 
 coffee:
@@ -241,7 +241,7 @@ coffee:
   width: 2.6rem 
   height: 2rem
   status: 0
-  type: clickable
+  type: nopicture
   description1: Il est jamais froid ce café ?
 
 paper:
@@ -251,7 +251,7 @@ paper:
   width: 6.8rem 
   height: 3.2rem
   status: 0
-  type: clickable
+  type: nopicture
   description1: Une envie pressante ?
 
 drawer_l:
@@ -274,7 +274,7 @@ banana:
   width: 1.5rem 
   height: 3rem
   status: 0
-  type: clickable
+  type: nopicture
   description1: Ref Mario Kart ?
 
 exit:
@@ -284,5 +284,5 @@ exit:
   width: 9.1rem 
   height: 3.3rem
   status: 0
-  type: clickable
+  type: nopicture
   description1: Le week-end c'est par la !
