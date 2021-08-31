@@ -13,7 +13,10 @@ import './home.scss';
 
 const { scenarios } = utils[3];
 
-const Home = ({ isLogged, displayErrorMessage }) => (
+const Home = ({
+  isLogged,
+  displayErrorMessage,
+}) => (
   <>
     <Header />
     <main className="home-main">
@@ -33,7 +36,7 @@ const Home = ({ isLogged, displayErrorMessage }) => (
           return (
             <div key={scenario.id}>
               {
-                isLogged
+                isLogged && scenario.status === 1
                 && (
                 <Link to={`/game/${slug}`}>
                   <div className="popular-scenarios-scenario" key={scenario.id}>
@@ -54,7 +57,7 @@ const Home = ({ isLogged, displayErrorMessage }) => (
                 )
               }
               {
-                !isLogged
+                !isLogged && scenario.status === 1
                 && (
                 <div
                   className="popular-scenarios-scenario"
@@ -76,6 +79,34 @@ const Home = ({ isLogged, displayErrorMessage }) => (
                     </ul>
                   </div>
                 </div>
+                )
+              }
+              {
+               scenario.status === 0
+                && (
+                  <>
+                    <div className="unavailable" />
+                    <div
+                      className="popular-scenarios-scenario"
+                      key={scenario.id}
+                      onClick={() => {
+                        displayErrorMessage('Désolé mais ce scénario est actuellement indisponible');
+                      }}
+                    >
+                      <img className="popular-scenarios-scenario-image" src={scenario.pic} alt="scenario-img" />
+                      <h3 className="popular-scenarios-subtitle">{scenario.nom}</h3>
+                      <p className="popular-scenarios-scenario-text">{scenario.description}</p>
+                      <div className="popular-scenarios-scenario-rate">
+                        <ul>
+                          <li className={classNames({ '--gold': one })}>&#9733;</li>
+                          <li className={classNames({ '--gold': two })}>&#9733;</li>
+                          <li className={classNames({ '--gold': three })}>&#9733;</li>
+                          <li className={classNames({ '--gold': four })}>&#9733;</li>
+                          <li className={classNames({ '--gold': five })}>&#9733;</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </>
                 )
               }
             </div>

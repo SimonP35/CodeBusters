@@ -84,6 +84,7 @@ const Board = ({
             onClick={() => {
               toggleDisplayInput();
               setAnswer(item.answer);
+              setCurrentDescription(item.description1);
             }}
           >
             <style jsx>{`
@@ -155,6 +156,8 @@ const Board = ({
             toggleDisplayInput={toggleDisplayInput}
             answer={answer}
             setWin={setWin}
+            displayDescription={displayDescription}
+            toggleDisplayDescription={toggleDisplayDescription}
           />
         )
       }

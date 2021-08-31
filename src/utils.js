@@ -120,6 +120,7 @@ export default [
         comment: 'Jeu très cool, j\'ai adoré ! ',
         rate: 4,
         slug: 'vendredi-maudit',
+        status: 1,
       },
       {
         id: 2,
@@ -133,6 +134,7 @@ export default [
         comment: 'C\'est possible de finir ce truc? Horrible j\'ai tenté 13 fois d\'affilée',
         rate: 5,
         slug: 'tonton-maurice',
+        status: 0,
       },
       {
         id: 3,
@@ -146,6 +148,7 @@ export default [
         comment: 'je savais pas ce que c\était typescript mais ca a l\'air trop balese en fait',
         rate: 4,
         slug: '',
+        status: 0,
 
       },
       {
@@ -160,6 +163,7 @@ export default [
         comment: 'c\'est quoi ce truc de dingue encore ? Ils sont vraiment loin les gars qui ont écrit le scénar !',
         rate: 5,
         slug: '',
+        status: 0,
 
       },
 
