@@ -3,7 +3,7 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-<div class="container col-4">
+<div class="container col-4 justify-content-center">
 <form class="mt-5" method="post">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -35,15 +35,19 @@
             </label>
         </div>
     #}
-
-    <button class="btn btn-lg btn-primary mt-4" type="submit">
-        Connexion
-    </button>
-</form>
-<form action="{{ path('app_forgot_password_request') }}">
-    <button class="mt-3 btn btn-lg btn-danger" type="submit">
-        Vous avez oublié votre mot de passe ?
-    </button>
-</form>
+    <div class="col-8 container ">
+        <div class="row text-center mb-3">
+                    <button class="btn btn-lg btn-primary mt-4" type="submit">
+                        Connexion
+                    </button>
+                </form>
+                {# <form action="{{ path('app_forgot_password_request') }}">
+                    <button class="mt-3 btn btn-lg btn-danger" type="submit">
+                        Vous avez oublié votre mot de passe ?
+                    </button>
+                </form> #}
+                <a class="mt-3" href="http://localhost:8000/reset-password">Mot de passe oublié ?</a>
+        </div>
+    </div>
 </div>
 {% endblock %}
