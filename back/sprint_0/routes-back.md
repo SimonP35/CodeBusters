@@ -1,6 +1,6 @@
 # Liste des routes
 
-## Back
+## API
 
 
 | Routes                   | Nom de la route    | Controller   | Methodes (HTTP) | Méthode    | JSON envoyé par le FRONT                                                   |
@@ -18,3 +18,21 @@
 | /api/comment/read/{id}   | api_comment_read   | Api\Comment  | GET             | read()     | seulement le token ( et appeler l'id du commentaire dans l'endpoint)       |
 | /api/comment/update/{id} | api_comment_update | Api\Comment  | PUT/PATCH       | update()   | seulement le token ( et appeler l'id du commentaire dans l'endpoint)       |
 | /api/comment/delete/{id} | api_comment_delete | Api\Comment  | DELETE          | delete()   | seulement le token ( et appeler l'id du commentaire dans l'endpoint)       |
+
+## BACK
+
+| Routes                    | Nom de la route     | Controller    | Methodes (HTTP) | Méthode  |
+|---------------------------|---------------------|---------------|-----------------|----------|
+| /back/login               | app_login           | Back\Security | POST            | login()  |
+| /back/user/list           | back_user_list      | Back\User     | GET             | list()   |
+| /back/user/create         | back_user_create    | Back\User     | POST            | create() |
+| /back/user/read/{id}      | back_user_read      | Back\User     | GET             | read()   |
+| /back/user/update/{id}    | back_user_update    | Back\User     | PUT/PATCH       | update() |
+| /back/user/delete/{id}    | back_user_delete    | Back\User     | DELETE          | delete() |
+| /back/game/score          | back_game_score     | Back\Game     | GET             | score()  |
+| /back/game/               | back_game_list      | Back\Game     | GET             | list()   |
+| /back/comment/            | back_comment_list   | Back\Comment  | GET             | list()   |
+| /back/comment/create      | back_comment_create | Back\Comment  | POST            | create() |
+| /back/comment/read/{id}   | back_comment_read   | Back\Comment  | GET             | read()   |
+| /back/comment/update/{id} | back_comment_update | Back\Comment  | PUT/PATCH       | update() |
+| /back/comment/delete/{id} | back_comment_delete | Back\Comment  | DELETE          | delete() |
