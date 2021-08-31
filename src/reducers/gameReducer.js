@@ -6,6 +6,8 @@ import {
   TOGGLE_DISPLAY_INPUT,
   SET_ANSWER,
   SET_WIN,
+  TOGGLE_DISPLAY_DESCRIPTION,
+  SET_CURRENT_DESCRIPTION,
 } from 'src/actions/game';
 import { CHANGE_FIELD } from 'src/actions/popup';
 
@@ -22,6 +24,8 @@ const initialState = {
   loose: false,
   inputGameValue: '',
   id: '',
+  displayDescription: false,
+  currentDescription: '',
 };
 
 function gameReducer(state = initialState, action = {}) {
@@ -68,6 +72,16 @@ function gameReducer(state = initialState, action = {}) {
       return {
         ...state,
         [action.name]: action.newValue,
+      };
+    case TOGGLE_DISPLAY_DESCRIPTION:
+      return {
+        ...state,
+        displayDescription: !state.displayDescription,
+      };
+    case SET_CURRENT_DESCRIPTION:
+      return {
+        ...state,
+        currentDescription: action.newDescription,
       };
     default:
       return state;

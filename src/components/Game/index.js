@@ -27,6 +27,10 @@ const Game = ({
   win,
   changeField,
   endGame,
+  toggleDisplayDescription,
+  currentDescription,
+  setCurrentDescription,
+  displayDescription,
 }) => (
   // Ici on switch sur les différentes routes de la game
   // On passe d'abord par l'intro ensuite par le plateau
@@ -52,6 +56,10 @@ const Game = ({
         setWin={setWin}
         win={win}
         changeField={changeField}
+        toggleDisplayDescription={toggleDisplayDescription}
+        currentDescription={currentDescription}
+        setCurrentDescription={setCurrentDescription}
+        displayDescription={displayDescription}
       />
     </Route>
     <Route path="/game/:slug/win">

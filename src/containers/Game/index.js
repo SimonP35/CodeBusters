@@ -12,6 +12,8 @@ import {
   setWin,
   submitAnswer,
   endGame,
+  toggleDisplayDescription,
+  setCurrentDescription,
 } from 'src/actions/game';
 
 import { changeField, toggleDisplayPopupComment } from 'src/actions/popup';
@@ -30,6 +32,8 @@ const mapStateToProps = (state) => ({
   answer: state.game.answer,
   inputGameValue: state.game.inputGameValue,
   win: state.game.win,
+  displayDescription: state.game.displayDescription,
+  currentDescription: state.game.currentDescription,
 });
 
 // === mapDispatchToProps
@@ -72,8 +76,16 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(toggleDisplayPopupComment());
   },
 
+  toggleDisplayDescription: () => {
+    dispatch(toggleDisplayDescription());
+  },
+
   endGame: () => {
     dispatch(endGame());
+  },
+
+  setCurrentDescription: (newDescription) => {
+    dispatch(setCurrentDescription(newDescription));
   },
 });
 
