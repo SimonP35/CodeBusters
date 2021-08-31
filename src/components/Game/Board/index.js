@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Redirect, useParams } from 'react-router-dom';
+import { Redirect, useParams, Link } from 'react-router-dom';
 
 // import utils from 'src/utils';
 // import background from 'src/assets/images/10V2.png';
@@ -46,6 +46,7 @@ const Board = ({
       <Bot />
       <Timer />
       <img className="board-background" src={background} alt="" />
+      <Link className="board-home-link" to="/">&#8962;</Link>
       {changeInArray(items).map((item) => (
         <div key={item.name}>
           {
@@ -199,5 +200,9 @@ Board.propTypes = {
   setWin: PropTypes.func.isRequired,
   win: PropTypes.bool.isRequired,
   changeField: PropTypes.func.isRequired,
+  toggleDisplayDescription: PropTypes.func.isRequired,
+  currentDescription: PropTypes.string.isRequired,
+  setCurrentDescription: PropTypes.func.isRequired,
+  displayDescription: PropTypes.bool.isRequired,
 };
 export default Board;

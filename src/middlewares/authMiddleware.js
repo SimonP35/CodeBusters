@@ -30,7 +30,7 @@ const authMiddleware = (store) => (next) => (action) => {
           ));
           store.dispatch(setLoading());
         })
-        .catch((error) => {
+        .catch(() => {
           // console.log(error);
         });
       break;
@@ -72,7 +72,7 @@ const authMiddleware = (store) => (next) => (action) => {
             response.data.user.email,
           ));
         })
-        .catch((error) => {
+        .catch(() => {
           // console.log(error);
         });
       break;
@@ -83,13 +83,13 @@ const authMiddleware = (store) => (next) => (action) => {
       axios.post('http://3.238.70.10/api/comment/create', { content: comment, rating: rating })
       // Lorsqu'on reçoit la réponse, on enregistre le commentaire
       // de l'utilisateur (à lier au scénario)
-        .then((response) => {
+        .then(() => {
           // console.log(response);
           // si la création se passe bien on nettoie le champs
           store.dispatch(clearInput());
           store.dispatch(setLoading());
         })
-        .catch((error) => {
+        .catch(() => {
           // console.log(error.response);
           // store.dispatch(displayErrormessage(error.response.data.errors.detail));
         });
@@ -97,7 +97,7 @@ const authMiddleware = (store) => (next) => (action) => {
     }
     case GET_USER_SCORES: {
       const { scores } = store.getState().auth;
-      axios.get('http://3.238.70.10/api/user/read', {games: scores},
+      axios.get('http://3.238.70.10/api/user/read', { games: scores },
         {
           headers: {
             Authorization: `Bearer ${store.getState().auth.token}`,
@@ -112,7 +112,7 @@ const authMiddleware = (store) => (next) => (action) => {
             response.data.user.scores,
           ));
         })
-        .catch((error) => {
+        .catch(() => {
           // console.log(error.response);
           // store.dispatch(displayErrormessage(error.response.data.errors.detail));
         });

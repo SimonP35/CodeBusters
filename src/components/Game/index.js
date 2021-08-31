@@ -88,6 +88,10 @@ Game.propTypes = {
   win: PropTypes.bool.isRequired,
   changeField: PropTypes.func.isRequired,
   endGame: PropTypes.func.isRequired,
+  toggleDisplayDescription: PropTypes.func.isRequired,
+  currentDescription: PropTypes.string.isRequired,
+  setCurrentDescription: PropTypes.func.isRequired,
+  displayDescription: PropTypes.bool.isRequired,
 };
 
 export default Game;

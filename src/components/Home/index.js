@@ -11,7 +11,7 @@ import utils from 'src/utils';
 
 import './home.scss';
 
-const scenarios = utils[3].scenarios;
+const { scenarios } = utils[3];
 
 const Home = ({ isLogged, displayErrorMessage }) => (
   <>
