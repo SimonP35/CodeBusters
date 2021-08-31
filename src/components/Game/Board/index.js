@@ -126,7 +126,9 @@ const Board = ({
       }
       {
       win && !displayInput && (
-        <Redirect to={`/game/${slug}/win`} />
+        <>
+          <Redirect to={`/game/${slug}/win`} />
+        </>
       )
       }
     </>

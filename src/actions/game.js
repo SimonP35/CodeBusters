@@ -16,14 +16,17 @@ export const SET_ANSWER = 'SET_ANSWER';
 
 export const SET_WIN = 'SET_WIN';
 
+export const END_GAME = 'END_GAME';
+
 export const startGame = () => ({
   type: START_GAME,
 });
-export const saveDataGame = (status, items, background) => ({
+export const saveDataGame = (status, items, background, id) => ({
   type: SAVE_DATA_GAME,
   status: status,
   items: items,
   background: background,
+  id: id,
 });
 
 export const setLoadingGame = () => ({
@@ -51,4 +54,8 @@ export const setAnswer = (newAnswer) => ({
 
 export const setWin = () => ({
   type: SET_WIN,
+});
+
+export const endGame = () => ({
+  type: END_GAME,
 });

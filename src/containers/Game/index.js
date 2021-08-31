@@ -11,9 +11,10 @@ import {
   setAnswer,
   setWin,
   submitAnswer,
+  endGame,
 } from 'src/actions/game';
 
-import { changeField } from 'src/actions/popup';
+import { changeField, toggleDisplayPopupComment } from 'src/actions/popup';
 
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
@@ -66,9 +67,13 @@ const mapDispatchToProps = (dispatch) => ({
   changeField: (newValue, identifier) => {
     dispatch(changeField(newValue, identifier));
   },
-  
+
   toggleDisplayComment: () => {
     dispatch(toggleDisplayPopupComment());
+  },
+
+  endGame: () => {
+    dispatch(endGame());
   },
 });
 

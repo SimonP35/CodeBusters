@@ -42,7 +42,7 @@ const InputGame = ({
 
 InputGame.propTypes = {
   changeField: PropTypes.func.isRequired,
-  inputGameValue: PropTypes.func.isRequired,
+  inputGameValue: PropTypes.string.isRequired,
   toggleDisplayInput: PropTypes.func.isRequired,
   answer: PropTypes.string.isRequired,
   setWin: PropTypes.func.isRequired,

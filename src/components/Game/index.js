@@ -26,6 +26,7 @@ const Game = ({
   setWin,
   win,
   changeField,
+  endGame,
 }) => (
   // Ici on switch sur les différentes routes de la game
   // On passe d'abord par l'intro ensuite par le plateau
@@ -54,7 +55,7 @@ const Game = ({
       />
     </Route>
     <Route path="/game/:slug/win">
-      {win ? <Win /> : <NotFound />}
+      {win ? <Win endGame={endGame} /> : <NotFound />}
     </Route>
     <Route path="/game/:slug/loose">
       <Loose />
@@ -78,6 +79,7 @@ Game.propTypes = {
   setWin: PropTypes.func.isRequired,
   win: PropTypes.bool.isRequired,
   changeField: PropTypes.func.isRequired,
+  endGame: PropTypes.func.isRequired,
 };
 
 export default Game;

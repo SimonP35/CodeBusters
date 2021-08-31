@@ -21,6 +21,7 @@ const initialState = {
   win: false,
   loose: false,
   inputGameValue: '',
+  id: '',
 };
 
 function gameReducer(state = initialState, action = {}) {
@@ -31,6 +32,7 @@ function gameReducer(state = initialState, action = {}) {
         status: action.status,
         items: action.items,
         background: action.background,
+        id: action.id,
       };
     case SET_LOADING_GAME:
       return {

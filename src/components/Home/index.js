@@ -37,7 +37,7 @@ const Home = ({ isLogged, displayErrorMessage }) => (
                 && (
                 <Link to={`/game/${slug}`}>
                   <div className="popular-scenarios-scenario" key={scenario.id}>
-                    <img className="popular-scenarios-scenario-image" src={scenario.image} alt="scenario-img" />
+                    <img className="popular-scenarios-scenario-image" src={scenario.pic} alt="scenario-img" />
                     <p className="popular-scenarios-scenario-text">{scenario.description}</p>
                     <div className="popular-scenarios-scenario-rate">
                       <ul>
@@ -62,7 +62,7 @@ const Home = ({ isLogged, displayErrorMessage }) => (
                     displayErrorMessage('Connectez-vous pour lancer le scénario');
                   }}
                 >
-                  <img className="popular-scenarios-scenario-image" src={scenario.image} alt="scenario-img" />
+                  <img className="popular-scenarios-scenario-image" src={scenario.pic} alt="scenario-img" />
                   <p className="popular-scenarios-scenario-text">{scenario.description}</p>
                   <div className="popular-scenarios-scenario-rate">
                     <ul>

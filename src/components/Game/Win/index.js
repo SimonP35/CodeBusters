@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-
+import PropTypes from 'prop-types';
 import utils from 'src/utils';
 
 import './win.scss';
 
 const scenario = utils[3].scenarios[0];
 
-const Win = () => {
+const Win = ({ endGame }) => {
   const dispatch = useDispatch();
+  useEffect(() => {
+    endGame();
+  }, []);
   return (
     <div className="win-container">
       <h2 className="win-title">BIEN JOUÉ !</h2>
@@ -20,7 +23,7 @@ const Win = () => {
       </div>
       <button
         type="button"
-        onClick={() => dispatch({ type: 'START_GAME' })}
+        onClick={() => dispatch({ type: 'TOGGLE_DISPLAY_POPUP_COMMENT' })}
         className="win-button"
         id="comment"
       >Laisser un commentaire
@@ -29,6 +32,9 @@ const Win = () => {
   );
 };
 
+Win.propTypes = {
+  endGame: PropTypes.func.isRequired,
+};
 export default Win;
 
 // Voir le tool React Youtube pour intégrer vidéos facilement
