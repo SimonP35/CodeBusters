@@ -67,7 +67,6 @@ const Board = ({
                     left: ${item.x};
                     width: ${item.width};
                     height: ${item.height};
-                    background: red;
                     border-radius: ${item.borderradius}
                   }
               `}
@@ -93,7 +92,6 @@ const Board = ({
                   left: ${item.x};
                   width: ${item.width};
                   height: ${item.height};
-                  background: red;
                   border-radius: ${item.borderradius}
                 }
             `}
@@ -119,7 +117,6 @@ const Board = ({
                     left: ${item.x};
                     width: ${item.width};
                     height: ${item.height};
-                    background: red;
                     border-radius: ${item.borderradius}
                   }
               `}
