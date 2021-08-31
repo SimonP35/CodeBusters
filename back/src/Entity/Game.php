@@ -26,13 +26,12 @@ class Game
 
     /**
      * @ORM\Column(type="smallint")
-     * @Groups({"new_game", "game_end"})
      */
     private $status;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     * @Groups({"new_game", "game_end", "user_page"})
+     * @Groups({"game_end", "user_page"})
      * @Assert\Positive
      */
     private $score;

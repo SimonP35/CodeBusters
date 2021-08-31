@@ -59,17 +59,13 @@ security:
         
     # Liste des access_control pour définir les routes accessibles selon les roles
     access_control:
-        # - { path: ^/profil, roles: ROLE_USER }
-        # - { path: ^/api/game, roles: ROLE_USER }
-        # - { path: ^/back, roles: ROLE_ADMIN }
         - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api/user/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        # - { path: ^/api/game/score, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api,       roles: IS_AUTHENTICATED_FULLY }
         - { path: ^/back/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/back/logout, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/back,      roles: ROLE_ADMIN }
-
-        # - { path: ^/, roles: IS_AUTHENTICATED_FULLY }
 
     # https://symfony.com/doc/current/security.html#hierarchical-roles
     # Hiérarchie des rôles pour les futures versions (e.g Création de scénario avec un accès partiels au BO pour l'éventuel futur ROLE_MANAGER)
