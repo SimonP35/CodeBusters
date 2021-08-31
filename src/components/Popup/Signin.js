@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Field from './Field';
 import './signin.scss';
+import { handleLogOut } from '../../actions/auth';
 
 const Signin = ({
   toggleDisplaySignin,
@@ -11,12 +12,24 @@ const Signin = ({
   password,
   nickname,
   submitSignin,
+  submitUserUpdate,
+  isLogged,
 }) => {
+// if islogged = false submitSignin / sinon submitUserUpdate via authmiddleware
   const handleSubmit = (evt) => {
     evt.preventDefault();
     submitSignin();
     toggleDisplaySignin();
   };
+  const handleUpdate = (evt) => {
+    evt.preventDefault();
+    submitUserUpdate();
+    handleLogOut();
+    console.log("logout ok");
+    toggleDisplaySignin();
+    console.log("toggle ok");
+  };
+
   return (
     <div className="signin-background">
       <div className="signin-container">
@@ -28,12 +41,15 @@ const Signin = ({
           }}
         >       x
         </button>
+        {
+        !isLogged
+        && (
         <form className="signin-form" onSubmit={handleSubmit}>
-          Formulaire d'inscription
+          M'inscrire
           <Field
             name="nickname"
             type="nickname"
-            placeholder="Nom"
+            placeholder="nom"
             manageChange={changeField}
             value={nickname}
             className="signin-field"
@@ -41,7 +57,7 @@ const Signin = ({
           <Field
             type="email"
             name="email"
-            placeholder="Adresse Email"
+            placeholder="email"
             manageChange={changeField}
             value={email}
             className="signin-field"
@@ -54,10 +70,40 @@ const Signin = ({
             value={password}
             className="signin-field"
           />
+          <p className="signin-password-info">* Le mot de passe doit contenir 1 majuscule, 1 chiffre et 1 caractère spécial.</p>
           <button className="signin-button" type="submit">
-            S'inscrire
+            OK
           </button>
         </form>
+        )
+        }
+        {
+    isLogged
+    && (
+    <form className="signin-form" onSubmit={handleUpdate}>
+      Mettre mon profil à jour
+      <Field
+        name="nickname"
+        type="nickname"
+        placeholder={nickname}
+        manageChange={changeField}
+        value={nickname}
+        className="signin-field"
+      />
+      <Field
+        type="email"
+        name="email"
+        placeholder={email}
+        manageChange={changeField}
+        value={email}
+        className="signin-field"
+      />
+      <button className="signin-button" type="submit">
+        OK
+      </button>
+    </form>
+    )
+    }
       </div>
     </div>
   );
@@ -71,6 +117,8 @@ Signin.propTypes = {
   nickname: PropTypes.string.isRequired,
   changeField: PropTypes.func.isRequired,
   submitSignin: PropTypes.func.isRequired,
+  submitUserUpdate: PropTypes.func.isRequired,
+  isLogged: PropTypes.bool.isRequired,
 
 };
 
