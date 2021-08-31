@@ -115,8 +115,8 @@ class UserController extends AbstractController
         // On flush
         $entityManager->flush();
 
-        // On retourne en JsonResponse vu qu'il n'y a pas d'objet
-        return $this->json(["message" => "Utilisateur modifié", "user" => $user], Response::HTTP_OK, [], ['groups' => 'user_page']);
+        // On retourne une JsonResponse (Aucun objet à transmettre)
+        return new JsonResponse(["message" => "Utilisateur modifié"], Response::HTTP_OK);
     }
 
     /**
