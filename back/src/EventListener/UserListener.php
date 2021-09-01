@@ -5,6 +5,7 @@ namespace App\EventListener;
 use App\Entity\User;
 use App\Service\PasswordHasher;
 use Doctrine\ORM\Event\LifecycleEventArgs;
+use Doctrine\ORM\Event\PreUpdateEventArgs;
 
 class UserListener
 {
@@ -25,7 +26,7 @@ class UserListener
         }
     }
 
-    public function preUpdate(User $user, LifecycleEventArgs $eventArgs): void
+    public function preUpdate(User $user, PreUpdateEventArgs $eventArgs): void
     {
         if ($eventArgs->hasChangedField('password')) {
             $password = $eventArgs->getNewValue('password');
