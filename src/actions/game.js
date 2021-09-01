@@ -16,6 +16,8 @@ export const SET_ANSWER = 'SET_ANSWER';
 
 export const SET_WIN = 'SET_WIN';
 
+export const SET_LOOSE = 'SET_LOOSE';
+
 export const END_GAME = 'END_GAME';
 
 export const TOGGLE_DISPLAY_DESCRIPTION = 'TOGGLE_DISPLAY_DESCRIPTION';
@@ -62,6 +64,9 @@ export const setAnswer = (newAnswer) => ({
 
 export const setWin = () => ({
   type: SET_WIN,
+});
+export const setLoose = () => ({
+  type: SET_LOOSE,
 });
 
 export const endGame = () => ({

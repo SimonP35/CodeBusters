@@ -10,6 +10,7 @@ import {
   toggleDisplayInput,
   setAnswer,
   setWin,
+  setLoose,
   submitAnswer,
   endGame,
   toggleDisplayDescription,
@@ -34,6 +35,7 @@ const mapStateToProps = (state) => ({
   answer: state.game.answer,
   inputGameValue: state.game.inputGameValue,
   win: state.game.win,
+  loose: state.game.loose,
   displayDescription: state.game.displayDescription,
   currentDescription: state.game.currentDescription,
   seconds: state.game.seconds,
@@ -66,6 +68,10 @@ const mapDispatchToProps = (dispatch) => ({
 
   setWin: () => {
     dispatch(setWin());
+  },
+
+  setLoose: () => {
+    dispatch(setLoose());
   },
 
   submitAnswer: () => {

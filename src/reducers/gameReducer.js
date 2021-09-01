@@ -6,6 +6,7 @@ import {
   TOGGLE_DISPLAY_INPUT,
   SET_ANSWER,
   SET_WIN,
+  SET_LOOSE,
   TOGGLE_DISPLAY_DESCRIPTION,
   SET_CURRENT_DESCRIPTION,
   SET_SECONDS,
@@ -71,6 +72,11 @@ function gameReducer(state = initialState, action = {}) {
       return {
         ...state,
         win: true,
+      };
+    case SET_LOOSE:
+      return {
+        ...state,
+        loose: true,
       };
     case CHANGE_FIELD:
       return {

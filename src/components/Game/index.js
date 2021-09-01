@@ -24,7 +24,9 @@ const Game = ({
   setAnswer,
   inputGameValue,
   setWin,
+  setLoose,
   win,
+  loose,
   changeField,
   endGame,
   toggleDisplayDescription,
@@ -68,13 +70,15 @@ const Game = ({
         minutes={minutes}
         setMinutes={setMinutes}
         setSeconds={setSeconds}
+        setLoose={setLoose}
+        loose={loose}
       />
     </Route>
     <Route path="/game/:slug/win">
       {win ? <Win endGame={endGame} /> : <NotFound />}
     </Route>
     <Route path="/game/:slug/loose">
-      <Loose endGame={endGame} />
+      {minutes === 0 && seconds === 0 ? <Loose endGame={endGame} /> : <NotFound />}
     </Route>
   </Switch>
 );
