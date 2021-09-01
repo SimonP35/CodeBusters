@@ -9,7 +9,7 @@ security:
             algorithm: auto
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        # used to reload user from session & other features (e.g. switch_user)
+        # used to reload user from session & other features
         app_user_provider:
             # Nos users sont de type Entité Doctrine
             entity:
@@ -17,28 +17,65 @@ security:
                 class: App\Entity\User
                 # La propriété "de connexion/d'affichage"
                 property: email
+        jwt:
+            entity:
+                class: App\Entity\User
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-        main:
-            lazy: true
+        # Configurations relatives à la sécurité du JWT
+        login:
+            pattern: ^/api/login
+            stateless: true
             provider: app_user_provider
+            json_login:
+                check_path: /api/login
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+        api:
+            provider: jwt
+            pattern: ^/api
+            stateless: true
+            guard:
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
+        back:
+            lazy: true
             custom_authenticator: App\Security\LoginFormAuthenticator
             logout:
                 path: app_logout
                 # where to redirect after logout
-                target: api_login
+                target: app_login          
+        main:
+            lazy: true
+            provider: app_user_provider
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
 
             # https://symfony.com/doc/current/security/impersonating_user.html
             # switch_user: true
-
-    # Easy way to control access for large sections of your site
-    # Note: Only the *first* access control that matches will be used
+        
+    # Liste des access_control pour définir les routes accessibles selon les roles
     access_control:
-        - { path: ^/profil, roles: ROLE_USER }
-        # - { path: ^/api/game, roles: ROLE_USER }
-        - { path: ^/back, roles: ROLE_ADMIN }
+        - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api/user/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        # - { path: ^/api/game/score, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api,       roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/back/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/back/logout, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/back,      roles: ROLE_ADMIN }
+
+    # https://symfony.com/doc/current/security.html#hierarchical-roles
+    # Hiérarchie des rôles pour les futures versions (e.g Création de scénario avec un accès partiels au BO pour l'éventuel futur ROLE_MANAGER)
+    role_hierarchy:
+        # ROLE_ADMIN hérite de ROLE_USER
+        ROLE_ADMIN: ROLE_USER
+
+        # Futures versions
+
+        # ROLE_ADMIN: ROLE_MANAGER
+        # ROLE_MANAGER: ROLE_USER
+        # Si on souhaite que les MANAGER et ADMIN se comportent comme un USER sur le front
+        

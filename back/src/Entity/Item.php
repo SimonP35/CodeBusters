@@ -16,13 +16,12 @@ class Item
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups({"new_game"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="smallint")
-     * @Groups({"new_game"})
+     * @Groups({"item"})
      * @Assert\NotBlank
      * @Assert\Type("int") 
      * @Assert\Length(max = 1)
@@ -32,7 +31,6 @@ class Item
 
     /**
      * @ORM\Column(type="string", length=64)
-     * @Groups({"new_game"})
      */
     private $name;
 

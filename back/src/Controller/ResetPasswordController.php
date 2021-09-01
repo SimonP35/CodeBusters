@@ -13,7 +13,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use SymfonyCasts\Bundle\ResetPassword\Controller\ResetPasswordControllerTrait;
 use SymfonyCasts\Bundle\ResetPassword\Exception\ResetPasswordExceptionInterface;
 use SymfonyCasts\Bundle\ResetPassword\ResetPasswordHelperInterface;
@@ -77,7 +76,7 @@ class ResetPasswordController extends AbstractController
      *
      * @Route("/reset/{token}", name="app_reset_password")
      */
-    public function reset(Request $request, UserPasswordEncoderInterface $passwordEncoder, string $token = null): Response
+    public function reset(Request $request, string $token = null): Response
     {
         if ($token) {
             // We store the token in session and remove it from the URL, to avoid the URL being
@@ -111,19 +110,14 @@ class ResetPasswordController extends AbstractController
             // A password reset token should be used only once, remove it.
             $this->resetPasswordHelper->removeResetRequest($token);
 
-            // Encode the plain password, and set it.
-            $encodedPassword = $passwordEncoder->encodePassword(
-                $user,
-                $form->get('plainPassword')->getData()
-            );
-
-            $user->setPassword($encodedPassword);
+            $user->setPassword($form->get('plainPassword')->getData());
             $this->getDoctrine()->getManager()->flush();
 
             // The session is cleaned up after the password has been changed.
             $this->cleanSessionAfterReset();
 
-            return $this->redirectToRoute('api_login');
+            return $this->redirectToRoute('http://3.238.70.10/');
+            // return $this->redirectToRoute('app_login');
         }
 
         return $this->render('reset_password/reset.html.twig', [

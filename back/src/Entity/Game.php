@@ -26,19 +26,19 @@ class Game
 
     /**
      * @ORM\Column(type="smallint")
-     * @Groups({"new_game", "game_end"})
      */
     private $status;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     * @Groups({"new_game", "game_end"})
+     * @Groups({"game_end", "user_page"})
      * @Assert\Positive
      */
     private $score;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Groups("user_page")
      */
     private $created_at;
 
@@ -61,12 +61,12 @@ class Game
 
     /**  
      * @ORM\OneToMany(targetEntity=Item::class, mappedBy="game", orphanRemoval=true)
-     * @Groups({"new_game"})
      */
     private $items;
 
     /**
      * @ORM\Column(type="smallint")
+     * @Groups("user_page")
      */
     private $scenario;
 

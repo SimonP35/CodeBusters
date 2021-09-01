@@ -21,4 +21,14 @@ class GameController extends AbstractController
             'games' => $gr->findOrderByScore(),
         ]);
     }
+
+    /**
+     * @Route("/", name="back_game_list", methods={"GET"})
+     */
+    public function list(GameRepository $gr): Response
+    {
+        return $this->render('back/game/list.html.twig', [
+            'games' => $gr->findAll(),
+        ]);
+    }
 }

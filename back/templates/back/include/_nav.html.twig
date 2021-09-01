@@ -1,3 +1,4 @@
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
 <nav class="dark navbar-dark bg-light container-fluid py-3">
 	<div class="row">
 		<div class="col-6">
@@ -11,21 +12,21 @@
 				<li class="nav-item">
 					<a class="nav-link text-muted {% block Score %}{% endblock %}" href="{{ path('back_score_list') }}">High Scores</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link text-muted {% block Game %}{% endblock %}" href="{{ path('back_game_list') }}">Games</a>
+				</li>
 			</ul>
 		</div>
 		<div class="col-6 d-flex flex-row-reverse">
 			<ul class="nav nav-pills">
-				<li class="nav-item">
-					{% if is_granted('IS_AUTHENTICATED_FULLY') %}
-					<li class="nav-item">
-						<p class="me-5">Email : {{ app.user.email }} // {% for role in app.user.roles %} Role : {{ role }}{% endfor %}</p>
-					</li>
+				<li class="nav-item me-5">
+					<a class="nav-link text-muted">Email : {{ app.user.email }} // {% for role in app.user.roles %} Role : {{ role }}{% endfor %}</a>
+				</li>
+				<li>
 					<a class="btn btn-danger" href="{{ path('app_logout') }}">Deconnexion</a>
-					{% else %}	
-					<a class="btn btn-success" href="{{ path('api_login') }}">Connexion</a>
-					{% endif %}
 				</li>	
 			</ul>
 		</div>
 	</div>
 </nav>
+{% endif %}

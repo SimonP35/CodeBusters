@@ -1,0 +1,303 @@
+# Objets énigmes
+
+# TODO : Description des items
+# TODO : Définition des mots à trouver + nom clé 
+# TODO : Coordonnées X et Y
+# TODO : Chemin réel des images
+
+## Mémo : Contenant un rebus pour le remplissage de l'input final (Bouton mise en prod ou on rentre le chemin/path) 
+
+book:
+  name: book
+  x: 31.1% #(x)
+  y: 43% #(y)
+  width: 6.2%
+  height: 8.6%
+  borderradius: 0%
+  picture1: "http://3.238.70.10/images/book.png"
+  status: 0
+  type: clickable
+  description1:
+
+## Indice mémo : RTFM ===> Le livre est une doc indigeste qu'il faut lire pour voir un mot sauter aux yeux (intrus)
+
+labyrinth:
+  name: labyrinth
+  x: 82.3% #(x)
+  y: 11.2% #(y)
+  width: 13.3%
+  height: 32.1%
+  borderradius: 0%
+  picture1: "http://3.238.70.10/images/labyrinth.png"
+  status: 0
+  type: clickable
+  description1:
+
+## Le bon chemin est celui qui comporte autant de mots/objets que le nombre de merveilles du monde ===> Résultat : Mot à la sortie du bon chemin
+
+kaamelott:
+  name: kaamelott
+  x: 4% #(x)
+  y: 8.6% #(y)
+  width: 30.2%
+  height: 28.2%
+  borderradius: 0%
+  picture1: "http://3.238.70.10/images/kaamelott.png"
+  status: 0
+  type: clickable
+  description1: "Le gras, c'est la vie !"
+
+## Description à l'image qui indique ce qu'il faut chercher d'après l'info du mémo ===> Résultat : Nom d'un personnage manquant ou région
+
+carlin:
+  name: carlin
+  x: 35.35% #(x)
+  y: 24.5% #(y)
+  width: 7.6%
+  height: 12%
+  borderradius: 0%
+  picture1: "http://3.238.70.10/images/carlin.svg"
+  status: 0
+  type: clickable
+  description1:
+
+## Signature sur photo ou collier/médaille écrit à la mano Enigme ===> sur le mémo qui induit à cliquer sur tous les animaux ===> Résultat : Nom du carlin
+
+code:
+  name: code
+  x: 45.45% #(x)
+  y: 52.7% #(y)
+  width: 2%
+  height: 3.6%
+  borderradius: 0%
+  picture1: "http://3.238.70.10/images/code.png"
+  status: 0
+  type: clickable
+  description1:
+
+## Indice mémo : Mon 5ème cause des bugs (mot ou pas, indice ou pas), enigme code complexe avec un mots qui ressort et qui casse tout Résultat : Mot qui fait bugguer
+
+drawer_r:
+  name: drawer_r
+  x: 67.2% #(x)
+  y: 88.08% #(y)
+  width: 1.1%
+  height: 2%
+  borderradius: 50%
+  picture1: "http://3.238.70.10/images/drawer.png"
+  status: 0
+  type: clickable
+  description1:
+
+## Indice mémo : Mon 6ème est la clé .pem, enigme "ou est charlie" dans le tiroir en méga-bordel, la clé à son nom marqué dessus // Résultat : Nom de la clé
+
+## Objet enigme finale (champ input)
+
+button:
+  name: button
+  x: 87.8% #(x)
+  y: 90.45% #(y)
+  width: 1.55%
+  height: 2.7%
+  borderradius: 50%
+  picture1: "http://3.238.70.10/images/button.png"
+  status: 0
+  type: inputable
+  description1: "Ca sent la mise en prod lundi..."
+  answer: /underscore/coupedefeu/Karadoc/carlin/length/Trinity.pem
+
+## Objets Infos
+
+memo_rebus:
+  name: memo_rebus
+  x: 51.3% #(x)
+  y: 19% #(y)
+  width: 5.85%
+  height: 9.6%
+  borderradius: 0%
+  picture1: "http://3.238.70.10/images/memo_rebus.png"
+  status: 0
+  type: clickable
+  description1:
+
+memo:
+  name: memo
+  x: 60.1% #(x)
+  y: 17.2% #(y)
+  width: 5.8%
+  height: 10%
+  borderradius: 0%
+  picture1: "http://3.238.70.10/images/memo.png"
+  status: 0
+  type: clickable
+  description1:
+
+duck:
+  name: duck
+  x: 68.6% #(x)
+  y: 81.6% #(y)
+  width: 2.3%
+  height: 6%
+  borderradius: 50%
+  status: 0
+  type: nopicture
+  description1: "Souvent, dans ma vie de dev', quand j'ai des problèmes, je discute avec Paul le canard. C'est vraiment un pote ! Je lui explique ce que je veux faire, je reformule, on parle de bugs et de mes problèmes pendant des heures...et même si il ne me répond jamais...il m'écoute et me debug chaque fois ! Un amour de canard mon p'tit Polo en plastique !"
+
+mouse:
+  name: mouse
+  x: 64.4% #(x)
+  y: 94% #(y)
+  width: 2.7%
+  height: 3.5%
+  borderradius: 0%
+  status: 0
+  type: nopicture
+  description1: "Il est vraiment spécial ce chat sur l'étagère..."
+
+cat:
+  name: cat
+  x: 38.5% #(x)
+  y: 40% #(y)
+  width: 4.2%
+  height: 11.7%
+  borderradius: 0%
+  status: 0
+  type: nopicture
+  description1: Descriptif chat japonais
+
+rabbit:
+  name: rabbit
+  x: 37.6% #(x)
+  y: 76.5% #(y)
+  width: 2.8% 
+  height: 8%
+  borderradius: 0%
+  status: 0
+  type: nopicture
+  description1: Roger le lapin (+ Bla bla roger rabbit)
+
+cup:
+  name: cup
+  x: 27.8% #(x)
+  y: 48.6% #(y)
+  width: 2.3%
+  height: 2.8%
+  borderradius: 0%
+  status: 0
+  type: nopicture
+  description1: Trophé du non-buggeur (de l'oeil du tigre du débugguage)
+
+controller:
+  name: controller
+  x: 12.5% #(x)
+  y: 81% #(y)
+  width: 3.1%
+  height: 3%
+  borderradius: 0%
+  status: 0
+  type: nopicture
+  description1: "Y'a un projet à mettre en prod c'est pas l'heure de jouer !"
+  
+warhammer:
+  name: warhammer
+  x: 27.7% #(x)
+  y: 86.5% #(y)
+  width: 5.6%
+  height: 12.5%
+  borderradius: 0%
+  status: 0
+  type: nopicture
+  description1: "Une de mes passions c'est d'en acheter plein et de les mettre dans un tiroir sans les peindre ><"
+
+car:
+  name: car
+  x: 18.6% #(x)
+  y: 47.8% #(y)
+  width: 8%
+  height: 2.9%
+  borderradius: 0%
+  status: 0
+  type: nopicture
+  description1: Blague RVLF
+
+ie:
+  name: ie
+  x: 45.45% #(x)
+  y: 64.5% #(y)
+  width: 2%
+  height: 3.6%
+  borderradius: 0%
+  picture1: "http://3.238.70.10/images/code.png"
+  status: 0
+  type: nopicture
+  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
+    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+
+matrix:
+  name: matrix
+  x: 70.4% #(x)
+  y: 26.9% #(y)
+  width: 10.85%
+  height: 27.5%
+  borderradius: 0%
+  picture1: "http://3.238.70.10/images/code.png"
+  status: 0
+  type: nopicture
+  description1: Blague/clin d'oeil sur le nom de notre promo
+
+coffee:
+  name: coffee
+  x: 43.8% #(x)
+  y: 81.8% #(y)
+  width: 2.45% 
+  height: 4%
+  borderradius: 0%
+  status: 0
+  type: nopicture
+  description1: Il est jamais froid ce café ?
+
+paper:
+  name: paper
+  x: 54.9% #(x)
+  y: 94% #(y)
+  width: 6% 
+  height: 4%
+  borderradius: 0%
+  status: 0
+  type: nopicture
+  description1: Une envie pressante ?
+
+drawer_l:
+  name: drawer_l
+  x: 39% #(x)
+  y: 88.1% #(y)
+  width: 1.05%
+  height: 2%
+  borderradius: 50%
+  picture1: "http://3.238.70.10/images/drawer.png"
+  status: 0
+  type: clickable
+  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
+    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+
+banana:
+  name: banana
+  x: 48% #(x)
+  y: 92.4% #(y)
+  width: 1.5% 
+  height: 5.5%
+  borderradius: 0%
+  status: 0
+  type: nopicture
+  description1: Ref Mario Kart ?
+
+exit:
+  name: exit
+  x: 78.5% #(x)
+  y: 78.7% #(y)
+  width: 7.75% 
+  height: 4.9%
+  borderradius: 0%
+  status: 0
+  type: nopicture
+  description1: Le week-end c'est par la !

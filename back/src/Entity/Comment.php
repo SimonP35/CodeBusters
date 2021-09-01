@@ -24,14 +24,14 @@ class Comment
 
     /**
      * @ORM\Column(type="text", nullable=true)
-     * @Groups({"new_comment"})
+     * @Groups({"new_comment", "user_page"})
      * @Assert\Length(max = 300)
      */
     private $content;
 
     /**
      * @ORM\Column(type="smallint")
-     * @Groups({"new_comment"})
+     * @Groups({"new_comment", "user_page"})
      * @Assert\NotBlank
      * @Assert\Type("int") 
      * @Assert\Length(max = 1)
@@ -41,6 +41,7 @@ class Comment
 
     /**
      * @ORM\Column(type="datetime")
+     * @Groups("user_page")
      */
     private $created_at;
 

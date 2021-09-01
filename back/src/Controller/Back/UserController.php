@@ -5,12 +5,12 @@ namespace App\Controller\Back;
 use App\Entity\User;
 use App\Form\UserType;
 use App\Repository\UserRepository;
+use App\Service\PasswordHasher;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 /**
  * @Route("/back/user")
@@ -30,16 +30,13 @@ class UserController extends AbstractController
     /**
      * @Route("/create", name="back_user_create", methods={"GET","POST"})
      */
-    public function create(Request $request, UserPasswordHasherInterface $passwordHasher): Response
+    public function create(Request $request): Response
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-
-            $hashedPassword = $passwordHasher->hashPassword($user, $user->getPassword());
-            $user->setPassword($hashedPassword);
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
@@ -75,7 +72,7 @@ class UserController extends AbstractController
     /**
      * @Route("/update/{id<\d+>}", name="back_user_update", methods={"GET","POST"})
      */
-    public function update(Request $request, User $user = null): Response
+    public function update(Request $request, User $user = null, PasswordHasher $passwordHasher): Response
     {
         // On vérifie que le USER existe bien
         if (null === $user) {
@@ -89,6 +86,14 @@ class UserController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            // Si le mot de passe du form n'est pas vide
+            // On le change
+            if ($form->get('password')->getData() != '') {
+                $hashedPassword = $passwordHasher->hasher($user, $form->get('password')->getData());
+                $user->setPassword($hashedPassword);
+            }
+            
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('back_user_list', [], Response::HTTP_SEE_OTHER);

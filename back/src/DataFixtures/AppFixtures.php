@@ -7,24 +7,28 @@ use App\Entity\Game;
 use App\Entity\Item;
 use App\Entity\User;
 use App\Entity\Comment;
-use Symfony\Component\Yaml\Yaml;
 use Doctrine\Persistence\ObjectManager;
 use App\DataFixtures\Provider\DataProvider;
+use App\Service\GameEnd;
+use App\Service\GameInit;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class AppFixtures extends Fixture
 {
-    public function __construct(UserPasswordHasherInterface $passwordHasher)
+    private GameInit $gameInit;
+    private GameEnd $gameEnd;
+
+    public function __construct(UserPasswordHasherInterface $passwordHasher, GameInit $gameInit, GameEnd $gameEnd)
     {
         $this->passwordHasher = $passwordHasher;
+        $this->gameInit = $gameInit;
+        $this->gameEnd = $gameEnd;
     }
 
     public function load(ObjectManager $manager)
     {
         $faker = Factory::create('fr_FR');
-
-        $items = Yaml::parseFile('./public/init/items.yaml');
 
         // Notre fournisseur de données, ajouté à Faker
         $faker->addProvider(new DataProvider());
@@ -38,7 +42,7 @@ class AppFixtures extends Fixture
         $user
         ->setEmail('user@user.com')
         // user via "bin/console security:hash-password"
-        ->setPassword('$2y$13$zc9R3kF0dAbLkaTmM0/K/.Z5OR7t1FKSmkmHMQadksxvHjdN8W1JC')
+        ->setPassword('user')
         ->setRoles(['ROLE_USER'])
         ->setNickname('user');
 
@@ -46,7 +50,7 @@ class AppFixtures extends Fixture
         $admin
         ->setEmail('admin@admin.com')
         // admin via "bin/console security:hash-password"
-        ->setPassword('$2y$13$DgyJQTjS6PDQaUROWQdzN.fAS8C9g97/q0VJ/U0Q7MGUpoRH0.13a')
+        ->setPassword('admin')
         ->setRoles(['ROLE_ADMIN'])
         ->setNickname('admin');
 
@@ -79,25 +83,7 @@ class AppFixtures extends Fixture
         // 15 Games en cours
         for ($i = 1; $i <= 15; $i++ ) {
 
-            $game = new Game();
-
-            $game
-            ->setStatus(1)
-            ->setUser($usersList[array_rand($usersList)])
-            ->setScenario(1);
-            // On créé les items spécifiques à chaque partie
-            foreach($items as $key => $item) {
-
-                $newItem = new Item();
-
-                $newItem
-                ->setStatus($item['status'])
-                ->setName($key);
-
-                $manager->persist($newItem);
-                $game->addItem($newItem);
-
-            }
+            $game = $this->gameInit->setGame($usersList[array_rand($usersList)]);
 
             $manager->persist($game);
         }
@@ -109,12 +95,13 @@ class AppFixtures extends Fixture
 
             $game = new Game();
 
+            // On appelle le service EndGame pour créer une partie terminée
+            $game = $this->gameEnd->endGame($game, $usersList[array_rand($usersList)]);
+
             $game
-            ->setStatus(0)
-            ->setUser($usersList[array_rand($usersList)])
             ->setScore(mt_rand(0, 1800))
-            ->setEndedAt($faker->dateTimeBetween('-10 years', 'now'))
-            ->setScenario(1);
+            ->setScenario(1)
+            ->setEndedAt($faker->dateTimeBetween('-10 years', 'now'));
 
             $gamesList[] = $game;
 

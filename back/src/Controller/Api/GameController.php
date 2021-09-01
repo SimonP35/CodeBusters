@@ -2,18 +2,14 @@
 
 namespace App\Controller\Api;
 
-use DateTime;
 use App\Entity\Game;
-use App\Entity\Item;
+use App\Service\GameInit;
 use App\Repository\GameRepository;
-use Symfony\Component\Yaml\Yaml;
-use App\Repository\UserRepository;
+use App\Service\GameEnd;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -23,44 +19,27 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class GameController extends AbstractController
 {
     /**
-     * @Route("/create", name="api_game_create", methods="POST")
+     * Endpoint permettant au Front de créer une partie
+     * 
+     * @Route("/create", name="api_game_create", methods={"POST"})
      */
-    public function create(Request $request, EntityManagerInterface $em, ValidatorInterface $vi, UserRepository $ur): Response
+    public function create(EntityManagerInterface $em, ValidatorInterface $vi, GameInit $gameInit): Response
     {
-        $items = Yaml::parseFile('init/items.yaml');
+        // On appelle le service GameInit 
+        $game = $gameInit->setGame();
 
-        $jsonContent = $request->getContent();
+        // On parse le fichier .yaml contenant les informations sur les objets
+        $items = $gameInit->parseYaml();
 
-        $user = json_decode($jsonContent, true);
-        $user = $ur->find($user);
-
-        $game = new Game();
-
-        $game
-        ->setStatus(1)
-        ->setUser($user)
-        ->setScenario(1);
-
-        // On créé les items spécifiques à chaque partie
-        foreach($items as $key => $item) {
-
-            $newItem = new Item();
-
-            $newItem
-            ->setStatus($item['status'])
-            ->setName($key);
-
-            $em->persist($newItem);
-            $game->addItem($newItem);
-
-        }
+        // On transmet l'image background de la scène du plateau
+        $background = 'http://3.238.70.10/images/background.png';
 
         // On valide l'entité avec le service Validator
         $errors = $vi->validate($game);
 
         // Si la validation rencontre des erreurs
-        // ($errors se comporte comme un tableau et contient un élément par erreur)
         if (count($errors) > 0) {
+            // On renvoie les différentes erreurs sous forme de tableau
             return $this->json(['errors' => $errors], Response::HTTP_UNPROCESSABLE_ENTITY);
         }
 
@@ -68,13 +47,16 @@ class GameController extends AbstractController
         $em->persist($game);
         $em->flush();
 
-        return $this->json(['items' => $items, 'game' => $game], Response::HTTP_CREATED, [], ['groups' => 'new_game']);
+        // On retourne l'objet $game en JSON avec les objets ($items) de cette même partie et le $background (plateau de jeux)
+        return $this->json(['background' => $background, 'items' => $items, 'game' => $game], Response::HTTP_CREATED, [], ['groups' => 'new_game']);
     }
 
     /**
+     * Endpoint permettant au Front de mettre fin à une partie en cours
+     * 
      * @Route("/update/{id<\d+>}", name="api_game_update", methods={"PUT","PATCH"})
      */
-    public function update(Game $game = null, EntityManagerInterface $em, ValidatorInterface $vi): Response
+    public function update(Game $game = null, EntityManagerInterface $em, ValidatorInterface $vi, GameEnd $gameEnd): Response
     {
         // Vérification si la game existe bien
         if (null === $game) {
@@ -82,44 +64,35 @@ class GameController extends AbstractController
                 ["message" => "Cette partie n'existe pas"],
                 Response::HTTP_NOT_FOUND
             );
-        }
-        
-        $game->setEndedAt(new DateTime());
-
-        $start = $game->getCreatedAt();
-        $end = $game->getEndedAt();
-        
-        $score = $end->getTimestamp() - $start->getTimestamp();
-
-        $game
-        ->setStatus(0)
-        ->setScore($score);
-
-        foreach($game->getItems() as $item) {
-
-            $em->remove($item);
-        }
+        }        
+    
+        // On appelle le service EndGame pour terminer la partie
+        $game = $gameEnd->endGame($game);
 
         // On valide l'entité avec le service Validator
         $errors = $vi->validate($game);
 
         // Si la validation rencontre des erreurs
-        // ($errors se comporte comme un tableau et contient un élément par erreur)
         if (count($errors) > 0) {
+            // On renvoie les différentes erreurs sous forme de tableau
             return $this->json(['errors' => $errors], Response::HTTP_UNPROCESSABLE_ENTITY);
         }
 
         // On flush
         $em->flush();
 
-        return $this->json(['game' => $game], Response::HTTP_OK, [], ['groups' => 'game_end']);
+        // On retourne l'objet $game en JSON
+        return $this->json(["message" => "Partie terminée ! Bravo champion !", 'game' => $game], Response::HTTP_OK, [], ['groups' => 'game_end']);
     }
 
     /**
+     * Endpoint permettant au Front d'afficher le tableau des High Scores
+     * 
      * @Route("/score", name="api_game_score", methods={"GET"})
      */
     public function score(GameRepository $gr): Response
     {
+        // On renvoie les scores relatifs aux différents parties jouées trié par ordre DESC
         return $this->json(['games' => $gr->findOrderByScore()], Response::HTTP_OK);
     }
 

@@ -11,7 +11,6 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -24,20 +23,20 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
  * fields={"nickname"},
  * message="Le pseudo que vous avez indiqué est déjà utilisé ! Désolé :/")
  */
-class User implements UserInterface, PasswordAuthenticatedUserInterface
+class User implements UserInterface
 {
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups({"create_user", "game_end","new_comment", "read_user", "user"})
+     * @Groups({"create_user", "new_comment", "read_user"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Email()
-     * @Groups({"create_user", "user"})
+     * @Groups({"create_user", "user_page"})
      * @Assert\NotBlank
      * @Assert\Email
      */
@@ -45,10 +44,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("create_user")
      * 
      * Minimum 8 charactères, une majuscule, un chiffre et un caractère spécial.
-     * @Assert\Regex("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&-\/])[A-Za-z\d@$!%*#?&-\/]{8,}$/")
+     * @Assert\Regex("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&-\/])[A-Za-z\d@$!%*#?&-\/]{8,}$/", message="Minimum 8 charactères, une majuscule, un chiffre et un caractère spécial.")
      * @Assert\NotCompromisedPassword
      * @Assert\NotBlank
      */
@@ -56,7 +54,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"create_user", "game_end", "new_game","new_comment", "user"})
+     * @Groups({"create_user", "game_end", "new_game","new_comment", "user_page"})
      * @Assert\NotBlank
      */
     private $nickname;
@@ -68,7 +66,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * @ORM\Column(type="datetime")
-     * @Groups("create_user")
+     * @Groups({"create_user", "user_page"})
      */
     private $created_at;
 
@@ -79,11 +77,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * @ORM\OneToMany(targetEntity=Game::class, mappedBy="user", orphanRemoval=true)
+     * @Groups("user_page")
      */
     private $games;
 
     /**
      * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="user", orphanRemoval=true)
+     * @Groups("user_page")
      */
     private $comments;
 
@@ -287,4 +287,5 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
+
 }
