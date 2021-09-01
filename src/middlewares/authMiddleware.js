@@ -30,8 +30,10 @@ const authMiddleware = (store) => (next) => (action) => {
           ));
           store.dispatch(setLoading());
         })
-        .catch(() => {
-          // console.log(error);
+        .catch((error) => {
+          console.log(error.response);
+          store.dispatch(displayErrormessage(error.response.data.message));
+          store.dispatch(setLoading());
         });
       break;
     }
