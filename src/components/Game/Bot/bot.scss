@@ -1,11 +1,11 @@
 @use 'src/styles/vars';
 
 .bot-pic {
-  width: 200px;
-  height:350px;
-  position:absolute;
-  top:45%;
-  right:0%;
+  width: 8.8%;
+  height:31%;
+  position:fixed;
+  top:68%;
+  right:-0.4%;
   display:inline-block;
   padding:auto;
   z-index: 0;
@@ -14,13 +14,13 @@
   .bot-message {
   background-color: white;
   display: inline-block;
-  width:150px;
-  height:100px;
+  width:7.4%;
+  height:21%;
   text-align: left;
   padding:2px;
-  position:absolute;
-  top:50%;
-  right:1.5%;
+  position:fixed;
+  top:72%;
+  right:0.29%;
   z-index: 3;
 
     .bot-text{
@@ -32,6 +32,7 @@
     }
      .bot-text-sender {
       font-weight: bold;
+      margin-bottom:15px;
     }
 
   }

@@ -27,6 +27,7 @@
     border-bottom: 10px solid vars.$color-title-three;
     border-right: 10px solid vars.$color-title-three;
 
+
     .login-closed {
       transition: all 0.5s ease;
       position: absolute;
@@ -40,21 +41,20 @@
       -webkit-box-shadow: -4px -2px 6px 0px rgba(0, 0, 0, 0.1);
       -moz-box-shadow: -4px -2px 6px 0px rgba(0, 0, 0, 0.1);
       box-shadow: -3px 1px 6px 0px rgba(0, 0, 0, 0.1);
-
       // &:hover {
       //     transform: rotate(45deg);
       //     font-size: 1em;
       //     border: none;
       //     border-radius: 1em;
       //   }
-
     }
 
     .login-form {
       margin-top: 15px;
       margin-bottom: 10px;
       color: black;
-
+    display:flex;
+    flex-direction: column;
       .login-field {
         border: none;
         color: black;
