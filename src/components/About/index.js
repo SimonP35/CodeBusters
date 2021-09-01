@@ -14,11 +14,12 @@ const About = () => (
     <div className="about-container">
       <h2 className="about-title">Le projet</h2>
       <section className="about-text">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries,
-        but also the leap into electronic typesetting, remaining essentially unchanged.
+        CodeBusters est un jeu point and click sur navigateur,
+        celui-ci sert de projet à présenter lors de la fin de formation de développeur web au
+        sein de l’école O’clock,
+        de prochains ajouts de contenu (scénarios) sont prévus pour plus tard. Toute l’équipe est
+        heureuse de vous faire
+        partager cette création et espère vous faire passer un bon moment sur notre jeu.
       </section>
       <h2 className="about-title">L'équipe</h2>
       <section className="about-section">
