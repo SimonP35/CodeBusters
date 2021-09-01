@@ -20,7 +20,7 @@ class PasswordHasher
      * @param string $password
      * @return string le password hashé
      */
-    public function hasher(User $user,string $password): string
+    public function hasher(User $user, string $password): string
     {
         return $this->hasherPassword->hashPassword($user, $password);
     }
