@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import Field from './Field';
 import './signin.scss';
-import { handleLogOut } from '../../actions/auth';
 
 const Signin = ({
   toggleDisplaySignin,
@@ -24,10 +23,6 @@ const Signin = ({
   const handleUpdate = (evt) => {
     evt.preventDefault();
     submitUserUpdate();
-    handleLogOut();
-    console.log("logout ok");
-    toggleDisplaySignin();
-    console.log("toggle ok");
   };
 
   return (
@@ -74,7 +69,6 @@ const Signin = ({
           <button className="signin-button" type="submit">
             OK
           </button>
-          
         </form>
         )
         }

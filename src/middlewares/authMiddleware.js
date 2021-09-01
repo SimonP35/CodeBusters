@@ -2,13 +2,13 @@ import axios from 'axios';
 import {
   SUBMIT_LOGIN,
   saveUserData,
-  saveUserUpdate,
   SUBMIT_SIGNIN,
   SUBMIT_USER_UPDATE,
   GET_USER_SCORES,
   saveUserScores,
+  handleLogOut,
 } from 'src/actions/auth';
-import { toggleDisplayPopupLogin } from 'src/actions/buttonLog';
+import { toggleDisplayPopupLogin, toggleDisplayPopupSignin } from 'src/actions/buttonLog';
 import { displayErrormessage, SUBMIT_COMMENT, clearInput } from 'src/actions/popup';
 import { setLoading } from 'src/actions/loading';
 
@@ -70,15 +70,14 @@ const authMiddleware = (store) => (next) => (action) => {
           },
         })
         .then((response) => {
-          // console.log(response);
+          console.log(response);
           // Lorsqu'on reçoit la réponse, on enregistre le pseudo et l'email
-          store.dispatch(saveUserUpdate(
-            response.data.user.nickname,
-            response.data.user.email,
-          ));
+          store.dispatch(toggleDisplayPopupSignin());
+          store.dispatch(handleLogOut());
         })
-        .catch(() => {
-          // console.log(error);
+        .catch((error) => {
+          console.log(error);
+          store.dispatch(displayErrormessage('une erreur s\'est produite, veuillez réessayer'));
         });
       break;
     }

@@ -12,6 +12,7 @@ const mapStateToProps = (state) => ({
   email: state.auth.email,
   nickname: state.auth.nickname,
   scores: state.auth.scores,
+  isLogged: state.auth.isLogged,
 });
 
 // === mapDispatchToProps
