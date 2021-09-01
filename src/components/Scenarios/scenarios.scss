@@ -30,6 +30,7 @@
 
     .scenarios-scenario {
       width: 400px;
+      height:390px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -102,4 +103,11 @@
       }
     }
   }
+  .unavailable{
+    width: 400px;
+    height: 390px;
+    margin-top:3px;
+    background-color: rgba(0, 0, 0, 0.644);
+    position: absolute;
+   } 
 }

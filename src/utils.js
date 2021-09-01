@@ -114,7 +114,7 @@ export default [
         contentwin: 'Le code de Maurice est réparé, tu passes lead dev, gégé !',
         contentloose: 'C\'est fou ce que t\'es nul purée',
         timer: 30,
-        description: 'Vendredi, 17h30...Tu t\'apprêtes à partir en weekend quand soudain. Tak Tak. Tu reçois un message de ton boss sur Schlag. Parait que le client exige la mise en prod du code que Maurice a laissé tout cassé pour 18h. Et t\'es le dernier au bureau. Tu sais ce qu\'on dit sur les mises en prod du vendredi...',
+        description: 'Vendredi, 17h30...Tu t\'apprêtes à partir quand tu reçois un message de ton boss sur Schlag. Le client exige la mise en prod du code que Maurice a laissé tout cassé pour 18h. Tu sais ce qu\'on dit sur les mises en prod du vendredi...',
         pic: vendredi,
         comment: 'Jeu très cool, j\'ai adoré ! ',
         rate: 4,
@@ -132,7 +132,7 @@ export default [
         pic: sudo,
         comment: 'C\'est possible de finir ce truc? Horrible j\'ai tenté 13 fois d\'affilée',
         rate: 5,
-        slug: 'tonton-maurice',
+        slug: 'git-reverse',
         status: 0,
       },
       {
@@ -144,9 +144,9 @@ export default [
         timer: 30,
         description: 'Plus violent que Predator, plus cruel qu\'Alien, plus destructeur que Godzilla: le combat ultime entre Javascript le Givré et Typescript le Titan. Un seul des deux survivra.',
         pic: mathmax,
-        comment: 'je savais pas ce que c\était typescript mais ca a l\'air trop balese en fait',
+        comment: 'je savais pas ce que c\'était typescript mais ca a l\'air trop balese en fait',
         rate: 4,
-        slug: '',
+        slug: 'math-max',
         status: 0,
 
       },
@@ -161,7 +161,7 @@ export default [
         pic: smith,
         comment: 'c\'est quoi ce truc de dingue encore ? Ils sont vraiment loin les gars qui ont écrit le scénar !',
         rate: 5,
-        slug: '',
+        slug: 'instance-de-trop',
         status: 0,
 
       },
