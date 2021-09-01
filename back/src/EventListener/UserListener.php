@@ -22,7 +22,7 @@ class UserListener
         if (true === property_exists($user, 'password') && $user instanceof User) 
         {
             $password = $user->getPassword();
-            $user->setPassword($this->passwordHasher->hasher($user, $password));
+            $user->setPassword($this->passwordHasher->hasher($password));
         }
     }
 
