@@ -29,10 +29,12 @@ const authMiddleware = (store) => (next) => (action) => {
             response.data.token,
           ));
           store.dispatch(setLoading());
+          store.dispatch(clearInput());
         })
         .catch((error) => {
-          console.log(error.response);
+          // console.log(error.response);
           store.dispatch(displayErrormessage(error.response.data.message));
+          store.dispatch(clearInput());
           store.dispatch(setLoading());
         });
       break;
@@ -54,6 +56,8 @@ const authMiddleware = (store) => (next) => (action) => {
           // console.log(error);
           // console.log(error.response);
           store.dispatch(displayErrormessage(error.response.data.errors.detail));
+          store.dispatch(clearInput());
+          store.dispatch(setLoading());
         });
       break;
     }
