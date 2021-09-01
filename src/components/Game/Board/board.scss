@@ -1,0 +1,53 @@
+.board-title {
+  color: white;
+}
+
+.board-background {
+  height: 100%;
+  width: 100%;
+  z-index: -50;
+}
+
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(15, 15, 15, 0.39);
+  .image{
+    width: 1200px;
+    height: 675px;
+  }
+  .description {
+    font-size: 1.5em;
+    color: white;
+  }
+ 
+}
+.description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(15, 15, 15, 0.39);
+  .description-nopicture {
+    font-size: 1.5em;
+    align-self: center;
+    color: white;
+  }
+}
+
+.board-home-link {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  font-size: 2em;
+}

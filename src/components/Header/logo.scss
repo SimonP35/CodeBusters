@@ -3,11 +3,16 @@
 .logo-container {
 
   display: inline-block;
-  position:fixed;
-  left:0%;
-  top:0%;
-  width: 100px;
-  height: 100px;
+  position:absolute;
+  left:1%;
+  top:1%;
+
+  .logo-logo {
+  max-width: 4em;
+  max-height: 4em;
+  cursor:pointer;
+
+  }
 
   
 }

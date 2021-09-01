@@ -1,18 +1,21 @@
 
 // MAIN PROJET COLORS
 
-$color-background:#1d0e98;
+$color-background: #050125;
 
 $color-text-main:white;
 $color-text-title:white;
 $color-text-content:white;
 
 $color-nav-link:yellow;
-$color-nav-link-hover:orange;
+$color-nav-link-hover:white;
 
-$color-popup-background:#EB1E07;
-$color-popup-text:#EB1E07;
+$color-popup-background:rgb(247, 230, 230);
+$color-popup-text:yellow;
 $color-popup-shadow:black;
+
+$color-button-background:#07032b;
+$color-button-text:yellow;
 
 // TITLE COLORS
 
@@ -24,4 +27,14 @@ $color-title-four:#3ce408;
 $color-title-five:#0aeee3;
 $color-title-last:#060169;
 
-//  PROJET FONT SIZES
+// TRANSITIONS
+
+$transition-fast: 0.2s;
+$transition-slow: 1s;
+
+// MIXIN TEMPLAGE PAGE
+
+// MIXIN TEMPLATE POPUP
+
+// FOND ESPACE
+

@@ -1,0 +1,43 @@
+@use 'src/styles/vars';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+.log-container {
+
+color: vars.$color-popup-text;
+display:flex;
+align-items: center;
+justify-content: space-around;
+width:250px;
+height:100px;
+position:absolute;
+top:5%;
+right:5%;
+border:none;
+font-family: 'Quicksand', sans-serif;
+
+
+  .log-button {
+
+background-color:#11ffee00 ;
+color: vars.$color-button-text;
+border:none;
+text-transform: uppercase;
+font-family: 'Quicksand', sans-serif;
+font-weight: bolder;
+font-size:12px;
+
+
+&:hover {
+  color:vars.$color-nav-link-hover;
+  cursor:pointer;
+}
+  }
+
+  .log-text {
+    color: vars.$color-button-text;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    font-size:12px;
+  }
+}

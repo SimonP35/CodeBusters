@@ -1,0 +1,34 @@
+@use 'src/styles/vars';
+
+.popup-container {
+
+background-color:vars.$color-popup-background;
+color: vars.$color-popup-text;
+display:flex;
+align-items: center;
+justify-content: space-around;
+width:200px;
+height:100px;
+position:absolute;
+top:5%;
+right:5%;
+border:none;
+// border-radius: 2%;
+// box-shadow:2px 2px 8px 2px vars.$color-popup-shadow;
+font-family: 'Barlow', sans-serif;
+
+
+  .popup-button {
+
+background-color: vars.$color-button-background;
+color: vars.$color-button-text;
+border:none;
+text-transform: uppercase;
+&:hover {
+  color:vars.$color-nav-link-hover;
+  cursor:pointer;
+
+}
+
+  }
+}

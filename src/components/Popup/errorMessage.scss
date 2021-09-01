@@ -1,0 +1,45 @@
+@use 'src/styles/vars';
+
+.errormessage-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(15, 15, 15, 0.39);
+
+  .errormessage-container {
+    background-color: vars.$color-popup-background;
+    color: white;
+    padding: 5px;
+    width: 300px;
+    height: 200px;
+    border-radius: 10%;
+    border-bottom: 10px solid vars.$color-title-three;
+    border-right: 10px solid vars.$color-title-three;
+
+    .errormessage-closed {
+      transition: all 0.5s ease;
+      position: absolute;
+      background-color: vars.$color-background;
+      padding: 1.5px 7px;
+      left: 50%;
+      margin-top: -15px;
+      border-radius: 50%;
+      border: 2px solid vars.$color-popup-background;
+      color: vars.$color-popup-background;
+      -webkit-box-shadow: -4px -2px 6px 0px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: -4px -2px 6px 0px rgba(0, 0, 0, 0.1);
+      box-shadow: -3px 1px 6px 0px rgba(0, 0, 0, 0.1);
+
+
+    }
+    .errormessage-content {
+      color: black;
+      margin-bottom: 5px;
+      margin-top: 10px;
+    }
+  }
+}
