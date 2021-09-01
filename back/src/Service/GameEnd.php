@@ -49,6 +49,11 @@ class GameEnd
         $end = $game->getEndedAt();
         $score = $end->getTimestamp() - $start->getTimestamp();
 
+        if ($score === 1800) {
+            $game
+            ->setScore("Looser");      
+        }
+
         // On set le score en seconde
         $game
         ->setScore($score);  
