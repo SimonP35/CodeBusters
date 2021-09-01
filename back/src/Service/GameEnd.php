@@ -51,7 +51,7 @@ class GameEnd
 
         if ($score === 1800) {
             $game
-            ->setScore("Looser");      
+            ->setScore(0);      
         }
 
         // On set le score en seconde
