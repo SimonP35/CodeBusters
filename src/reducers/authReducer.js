@@ -1,6 +1,5 @@
 import {
   SAVE_USER_DATA,
-  SAVE_USER_UPDATE,
   CLICK_ON_LOGOUT,
   SUBMIT_LOGIN,
   SUBMIT_SIGNIN,
@@ -69,12 +68,6 @@ function authReducer(state = initialState, action = {}) {
         email: '',
         password: '',
         nickname: '',
-      };
-    case SAVE_USER_UPDATE:
-      return {
-        ...state,
-        nickname: action.nickname,
-        email: action.email,
       };
     case CLEAR_INPUT:
       return {
