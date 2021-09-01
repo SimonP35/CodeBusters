@@ -14,6 +14,8 @@ import {
   endGame,
   toggleDisplayDescription,
   setCurrentDescription,
+  setSeconds,
+  setMinutes,
 } from 'src/actions/game';
 
 import { changeField, toggleDisplayPopupComment } from 'src/actions/popup';
@@ -34,6 +36,8 @@ const mapStateToProps = (state) => ({
   win: state.game.win,
   displayDescription: state.game.displayDescription,
   currentDescription: state.game.currentDescription,
+  seconds: state.game.seconds,
+  minutes: state.game.minutes,
 });
 
 // === mapDispatchToProps
@@ -86,6 +90,14 @@ const mapDispatchToProps = (dispatch) => ({
 
   setCurrentDescription: (newDescription) => {
     dispatch(setCurrentDescription(newDescription));
+  },
+
+  setSeconds: (value) => {
+    dispatch(setSeconds(value));
+  },
+
+  setMinutes: (value) => {
+    dispatch(setMinutes(value));
   },
 });
 
