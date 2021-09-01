@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
@@ -11,6 +12,7 @@ const Profil = ({
   scores,
   toggleDisplaySignin,
   getUserScores,
+  isLogged,
 }) => {
   useEffect(() => {
     getUserScores();
@@ -50,6 +52,7 @@ const Profil = ({
         </div>
       </main>
       <Footer />
+      {!isLogged && (<Redirect to="/" />)}
     </>
   );
 };
@@ -60,6 +63,7 @@ Profil.propTypes = {
   toggleDisplaySignin: PropTypes.func.isRequired,
   getUserScores: PropTypes.func.isRequired,
   scores: PropTypes.array.isRequired,
+  isLogged: PropTypes.bool.isRequired,
 };
 
 export default Profil;
