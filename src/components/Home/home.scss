@@ -78,8 +78,12 @@
     margin:2px;
   }
   }
-
-
+ .unavailable{
+  width: 250px;
+  height: 450px;
+  background-color: rgba(0, 0, 0, 0.644);
+  position: absolute;
+ }
 }
 
 
