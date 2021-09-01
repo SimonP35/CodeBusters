@@ -3,7 +3,6 @@
 
 .footer-container {
  display: block;
-  align-items: baseline;
   position: relative;
    left:33%;
    top:100%;
@@ -16,7 +15,6 @@
   font-family: 'Quicksand', sans-serif;
 
   .footer-link {
-    order:2;
   color:yellow;
   &:hover {
     color:vars.$color-nav-link-hover;
@@ -27,7 +25,6 @@
   }
   
   .footer-date {
-    order: 1;
     color:yellow;
   }
 
