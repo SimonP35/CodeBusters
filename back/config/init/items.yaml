@@ -17,8 +17,7 @@ book:
   picture1: "http://3.238.70.10/images/book.png"
   status: 0
   type: clickable
-  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
-    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+  description1:
 
 ## Indice mémo : RTFM ===> Le livre est une doc indigeste qu'il faut lire pour voir un mot sauter aux yeux (intrus)
 
@@ -32,8 +31,7 @@ labyrinth:
   picture1: "http://3.238.70.10/images/labyrinth.png"
   status: 0
   type: clickable
-  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
-    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+  description1:
 
 ## Le bon chemin est celui qui comporte autant de mots/objets que le nombre de merveilles du monde ===> Résultat : Mot à la sortie du bon chemin
 
@@ -47,8 +45,7 @@ kaamelott:
   picture1: "http://3.238.70.10/images/kaamelott.png"
   status: 0
   type: clickable
-  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
-    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+  description1: "Le gras, c'est la vie !"
 
 ## Description à l'image qui indique ce qu'il faut chercher d'après l'info du mémo ===> Résultat : Nom d'un personnage manquant ou région
 
@@ -62,8 +59,7 @@ carlin:
   picture1: "http://3.238.70.10/images/carlin.svg"
   status: 0
   type: clickable
-  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
-    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+  description1:
 
 ## Signature sur photo ou collier/médaille écrit à la mano Enigme ===> sur le mémo qui induit à cliquer sur tous les animaux ===> Résultat : Nom du carlin
 
@@ -77,8 +73,7 @@ code:
   picture1: "http://3.238.70.10/images/code.png"
   status: 0
   type: clickable
-  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
-    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+  description1:
 
 ## Indice mémo : Mon 5ème cause des bugs (mot ou pas, indice ou pas), enigme code complexe avec un mots qui ressort et qui casse tout Résultat : Mot qui fait bugguer
 
@@ -92,8 +87,7 @@ drawer_r:
   picture1: "http://3.238.70.10/images/drawer.png"
   status: 0
   type: clickable
-  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
-    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+  description1:
 
 ## Indice mémo : Mon 6ème est la clé .pem, enigme "ou est charlie" dans le tiroir en méga-bordel, la clé à son nom marqué dessus // Résultat : Nom de la clé
 
@@ -109,7 +103,8 @@ button:
   picture1: "http://3.238.70.10/images/button.png"
   status: 0
   type: inputable
-  answer: /xxx/xxx/xxx/xxx/xxx/yyy.pem
+  description1: "Ca sent la mise en prod lundi..."
+  answer: /underscore/coupedefeu/Karadoc/carlin/length/Trinity.pem
 
 ## Objets Infos
 
@@ -123,7 +118,7 @@ memo_rebus:
   picture1: "http://3.238.70.10/images/memo_rebus.png"
   status: 0
   type: clickable
-  description1: Charade indiquant le déroulement pour trouver le chemin absolu (5 mots + 1 nom.pem). Parfois l'énigme est sur le mémo, parfois le mémo indique ou est l'énigme.
+  description1:
 
 memo:
   name: memo
@@ -135,7 +130,7 @@ memo:
   picture1: "http://3.238.70.10/images/memo.png"
   status: 0
   type: clickable
-  description1: Des conneries humouristiques sur la vide des dev' !
+  description1:
 
 duck:
   name: duck
@@ -146,7 +141,7 @@ duck:
   borderradius: 50%
   status: 0
   type: nopicture
-  description1: La méthode du canard en plastique (Paul le canard............)
+  description1: "Souvent, dans ma vie de dev', quand j'ai des problèmes, je discute avec Paul le canard. C'est vraiment un pote ! Je lui explique ce que je veux faire, je reformule, on parle de bugs et de mes problèmes pendant des heures...et même si il ne me répond jamais...il m'écoute et me debug chaque fois ! Un amour de canard mon p'tit Polo en plastique !"
 
 mouse:
   name: mouse
@@ -157,7 +152,7 @@ mouse:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: Blague "Il est chelou ce chat non ???"
+  description1: "Il est vraiment spécial ce chat sur l'étagère..."
 
 cat:
   name: cat

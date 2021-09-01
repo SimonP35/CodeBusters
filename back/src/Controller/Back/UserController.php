@@ -5,6 +5,7 @@ namespace App\Controller\Back;
 use App\Entity\User;
 use App\Form\UserType;
 use App\Repository\UserRepository;
+use App\Service\PasswordHasher;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -71,7 +72,7 @@ class UserController extends AbstractController
     /**
      * @Route("/update/{id<\d+>}", name="back_user_update", methods={"GET","POST"})
      */
-    public function update(Request $request, User $user = null): Response
+    public function update(Request $request, User $user = null, PasswordHasher $passwordHasher): Response
     {
         // On vérifie que le USER existe bien
         if (null === $user) {
@@ -85,6 +86,8 @@ class UserController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $passwordHasher->hasher($user, $form->get('password')->getData());
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('back_user_list', [], Response::HTTP_SEE_OTHER);
