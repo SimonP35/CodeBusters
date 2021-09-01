@@ -1,4 +1,3 @@
-import games from 'src/assets/images/games.png';
 import sudo from 'src/assets/images/sudo.png';
 import vendredi from 'src/assets/images/vendredi.png';
 import mathmax from 'src/assets/images/mathmax.png';
@@ -13,7 +12,7 @@ export default [
     fourMostPopularScenarios: [
       {
         id: 1,
-        image: games,
+        image: ano,
         story: 'une histoire',
         comment: 'un commentaire',
         description: 'Viens incarner le stagiaire qui devra assurer la mise en prod !',
@@ -22,7 +21,7 @@ export default [
       },
       {
         id: 2,
-        image: games,
+        image: ano,
         story: 'deux histoire',
         comment: 'deux commentaire',
         description: 'Viens donc te gâcher le week-end à débugger le code dégueulasse de tonton Maurice !',
@@ -31,7 +30,7 @@ export default [
       },
       {
         id: 3,
-        image: games,
+        image: ano,
         story: 'trois histoire',
         comment: 'trois commentaire',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -40,7 +39,7 @@ export default [
       },
       {
         id: 4,
-        image: games,
+        image: ano,
         story: 'quatre histoire',
         comment: 'quatre commentaire',
         description: ' Vivamus at nunc hendrerit, imperdiet tellus sit amet, imperdiet tellus. ',

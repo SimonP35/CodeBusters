@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from 'src/assets/images/logocb.svg';
+import logo from 'src/assets/images/logov6.png';
 
 import './logo.scss';
 
