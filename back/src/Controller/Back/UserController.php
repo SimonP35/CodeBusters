@@ -87,7 +87,7 @@ class UserController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $passwordHasher->hasher($user, $form->get('password')->getData());
+            $passwordHasher->hasher($user, $user->getPassword());
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('back_user_list', [], Response::HTTP_SEE_OTHER);
