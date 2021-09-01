@@ -6,7 +6,7 @@ import {
   SUBMIT_SIGNIN,
   SUBMIT_USER_UPDATE,
   GET_USER_SCORES,
-  displayUserScores,
+  saveUserScores,
 } from 'src/actions/auth';
 import { toggleDisplayPopupLogin } from 'src/actions/buttonLog';
 import { displayErrormessage, SUBMIT_COMMENT, clearInput } from 'src/actions/popup';
@@ -96,25 +96,19 @@ const authMiddleware = (store) => (next) => (action) => {
       break;
     }
     case GET_USER_SCORES: {
-      const { scores } = store.getState().auth;
-      axios.get('http://3.238.70.10/api/user/read', { games: scores },
+      axios.get('http://3.238.70.10/api/user/read',
         {
           headers: {
             Authorization: `Bearer ${store.getState().auth.token}`,
           },
         })
-      // Lorsqu'on reçoit la réponse, on enregistre le commentaire
-      // de l'utilisateur (à lier au scénario)
+      // Lorsqu'on reçoit la réponse, on envoie le tableau de scores
         .then((response) => {
-          console.log(response);
-          // si la création se passe bien on nettoie le champs
-          store.dispatch(displayUserScores(
-            response.data.user.scores,
-          ));
+          // console.log(response.data.user.games);
+          store.dispatch(saveUserScores(response.data.user.games));
         })
         .catch(() => {
           // console.log(error.response);
-          // store.dispatch(displayErrormessage(error.response.data.errors.detail));
         });
       break;
     }
