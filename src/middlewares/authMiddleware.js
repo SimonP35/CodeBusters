@@ -29,7 +29,6 @@ const authMiddleware = (store) => (next) => (action) => {
             response.data.token,
           ));
           store.dispatch(setLoading());
-          store.dispatch(clearInput());
         })
         .catch((error) => {
           // console.log(error.response);
