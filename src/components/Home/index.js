@@ -85,13 +85,15 @@ const Home = ({
                scenario.status === 0
                 && (
                   <>
-                    <div className="unavailable" />
                     <div
-                      className="popular-scenarios-scenario"
-                      key={scenario.id}
+                      className="unavailable"
                       onClick={() => {
                         displayErrorMessage('Désolé mais ce scénario est actuellement indisponible');
                       }}
+                    />
+                    <div
+                      className="popular-scenarios-scenario"
+                      key={scenario.id}
                     >
                       <img className="popular-scenarios-scenario-image" src={scenario.pic} alt="scenario-img" />
                       <h3 className="popular-scenarios-subtitle">{scenario.nom}</h3>

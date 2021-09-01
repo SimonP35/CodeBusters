@@ -49,13 +49,15 @@ const Scenarios = ({ isLogged, displayErrorMessage }) => {
                 scenario.status === 0
                 && (
                 <>
-                  <div className="unavailable" />
                   <div
-                    className="scenarios-scenario"
-                    key={scenario.id}
+                    className="unavailable"
                     onClick={() => {
                       displayErrorMessage('Désolé mais ce scénario est actuellement indisponible');
                     }}
+                  />
+                  <div
+                    className="scenarios-scenario"
+                    key={scenario.id}
                   >
                     <h2 className="scenarios-title">{scenario.nom}</h2>
                     <img className="scenarios-image" src={scenario.pic} alt="scenario" />
