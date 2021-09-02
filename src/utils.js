@@ -1,4 +1,3 @@
-import games from 'src/assets/images/games.png';
 import sudo from 'src/assets/images/sudo.png';
 import vendredi from 'src/assets/images/vendredi.png';
 import mathmax from 'src/assets/images/mathmax.png';
@@ -7,13 +6,15 @@ import ano from 'src/assets/images/ano.svg';
 import git from 'src/assets/images/github.svg';
 import linkedin from 'src/assets/images/linkedin.svg';
 import twitter from 'src/assets/images/twitter.svg';
+import loose from 'src/assets/images/loose.png';
+
 
 export default [
   {
     fourMostPopularScenarios: [
       {
         id: 1,
-        image: games,
+        image: ano,
         story: 'une histoire',
         comment: 'un commentaire',
         description: 'Viens incarner le stagiaire qui devra assurer la mise en prod !',
@@ -22,7 +23,7 @@ export default [
       },
       {
         id: 2,
-        image: games,
+        image: ano,
         story: 'deux histoire',
         comment: 'deux commentaire',
         description: 'Viens donc te gâcher le week-end à débugger le code dégueulasse de tonton Maurice !',
@@ -31,7 +32,7 @@ export default [
       },
       {
         id: 3,
-        image: games,
+        image: ano,
         story: 'trois histoire',
         comment: 'trois commentaire',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -40,7 +41,7 @@ export default [
       },
       {
         id: 4,
-        image: games,
+        image: ano,
         story: 'quatre histoire',
         comment: 'quatre commentaire',
         description: ' Vivamus at nunc hendrerit, imperdiet tellus sit amet, imperdiet tellus. ',
@@ -111,11 +112,12 @@ export default [
       {
         id: 1,
         nom: 'vendredi maudit',
-        src: 'https://www.youtube.com/watch?v=1AnG04qnLqI',
-        contentwin: 'Le code de Maurice est réparé, tu passes lead dev, gégé !',
-        contentloose: 'C\'est fou ce que t\'es nul purée',
+        src: '1AnG04qnLqI',
+        contentwin: 'Le code de Maurice est réparé, tu passes lead dev, Maurice est condamné à faire de l\'inté pour l\'éternité',
+        contentloose: 'C\'est fou ce que t\'es mauvais purée, tu le vis comment ?',
+        img: loose,
         timer: 30,
-        description: 'Vendredi, 17h30...Tu t\'apprêtes à partir en weekend quand soudain. Tak Tak. Tu reçois un message de ton boss sur Schlag. Parait que le client exige la mise en prod du code que Maurice a laissé tout cassé pour 18h. Et t\'es le dernier au bureau. Tu sais ce qu\'on dit sur les mises en prod du vendredi...',
+        description: 'Vendredi, 17h30...Tu t\'apprêtes à partir quand tu reçois un message de ton boss sur Schlag. Le client exige la mise en prod du code que Maurice a laissé tout cassé pour 18h. Tu sais ce qu\'on dit sur les mises en prod du vendredi...',
         pic: vendredi,
         comment: 'Jeu très cool, j\'ai adoré ! ',
         rate: 4,
@@ -128,12 +130,13 @@ export default [
         src: 'https://www.youtube.com/watch?v=1AnG04qnLqI',
         contentwin: 'Incroyable mais vrai ! Ton git reverse a fonctionné !',
         contentloose: 'C\'est dingue la honte que tu te tapes',
+        img: loose,
         timer: 30,
         description: 'Bienvenue dans l\'enfer de git : vous pensez être le plus fort avec vos git add-git commit ? Attendez de découvrir les pires commandes jamais inventées...',
         pic: sudo,
         comment: 'C\'est possible de finir ce truc? Horrible j\'ai tenté 13 fois d\'affilée',
         rate: 5,
-        slug: 'tonton-maurice',
+        slug: 'git-reverse',
         status: 0,
       },
       {
@@ -142,12 +145,13 @@ export default [
         src: 'https://www.youtube.com/watch?v=1AnG04qnLqI',
         contentwin: 'TypeScript sacré vainqueur !',
         contentloose: 'Comment on peut foirer autant un escpae game ?',
+        img: loose,
         timer: 30,
         description: 'Plus violent que Predator, plus cruel qu\'Alien, plus destructeur que Godzilla: le combat ultime entre Javascript le Givré et Typescript le Titan. Un seul des deux survivra.',
         pic: mathmax,
-        comment: 'je savais pas ce que c\était typescript mais ca a l\'air trop balese en fait',
+        comment: 'je savais pas ce que c\'était typescript mais ca a l\'air trop balese en fait',
         rate: 4,
-        slug: '',
+        slug: 'math-max',
         status: 0,
 
       },
@@ -157,12 +161,13 @@ export default [
         src: 'https://www.youtube.com/watch?v=1AnG04qnLqI',
         contentwin: 'Le roi de l\'abstract en PHP !',
         contentloose: 'On va pas se mentir, va falloir réviser les classes...',
+        img: loose,
         timer: 30,
         description: 'Crack.Boum.Abstract. Les classes en PHP, c\'est comme Amour, Gloire et Beauté. Y a moyen de se taper tout le monde, mais quand ça pète derrière, faut pas s\'étonner',
         pic: smith,
         comment: 'c\'est quoi ce truc de dingue encore ? Ils sont vraiment loin les gars qui ont écrit le scénar !',
         rate: 5,
-        slug: '',
+        slug: 'instance-de-trop',
         status: 0,
 
       },

@@ -50,6 +50,7 @@ const Board = ({
       <Bot />
       <Timer setSeconds={setSeconds} setMinutes={setMinutes} />
       <img className="board-background" src={background} alt="" />
+      {/* ON TE VOIT PETIT COQUIN ! */}
       <Link className="board-home-link" to="/">&#8962;</Link>
       {changeInArray(items).map((item) => (
         <div key={item.name}>

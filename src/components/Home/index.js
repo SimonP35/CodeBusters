@@ -5,7 +5,6 @@ import classNames from 'classnames';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-// import Loader from 'src/components/Loader';
 import banniere from 'src/assets/images/banniere.png';
 import utils from 'src/utils';
 
@@ -85,13 +84,15 @@ const Home = ({
                scenario.status === 0
                 && (
                   <>
-                    <div className="unavailable" />
                     <div
-                      className="popular-scenarios-scenario"
-                      key={scenario.id}
+                      className="unavailable"
                       onClick={() => {
                         displayErrorMessage('Désolé mais ce scénario est actuellement indisponible');
                       }}
+                    />
+                    <div
+                      className="popular-scenarios-scenario"
+                      key={scenario.id}
                     >
                       <img className="popular-scenarios-scenario-image" src={scenario.pic} alt="scenario-img" />
                       <h3 className="popular-scenarios-subtitle">{scenario.nom}</h3>
@@ -114,7 +115,6 @@ const Home = ({
         })}
       </div>
     </main>
-    {/* <Loader /> */}
     <Footer />
   </>
 );

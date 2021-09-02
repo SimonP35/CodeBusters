@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import Header from 'src/components/Header';
 import PropTypes from 'prop-types';
 import Footer from 'src/components/Footer';
@@ -41,23 +41,97 @@ const Scenarios = ({ isLogged, displayErrorMessage }) => {
             const three = scenario.rate >= 3;
             const four = scenario.rate >= 4;
             const five = scenario.rate === 5;
-            return (
-              <div className="scenarios-scenario" key={scenario.id} onClick={() => (startGameCondition())}>
-                <h2 className="scenarios-title">{scenario.nom}</h2>
-                <img className="scenarios-image" src={scenario.pic} alt="scenario" />
-                <p className="scenarios-text">{scenario.description}</p>
-                <h3 className="scenarios-subtitle">L'avis des joueurs : </h3>
+            const { slug } = scenario;
 
-                <section className="scenarios-comment">" {scenario.comment} "</section>
-                <div className="scenarios-rate">
-                  <ul>
-                    <li className={classNames({ '--gold': one })}>&#9733;</li>
-                    <li className={classNames({ '--gold': two })}>&#9733;</li>
-                    <li className={classNames({ '--gold': three })}>&#9733;</li>
-                    <li className={classNames({ '--gold': four })}>&#9733;</li>
-                    <li className={classNames({ '--gold': five })}>&#9733;</li>
-                  </ul>
-                </div>
+            return (
+              <div key={scenario.id}>
+                {
+                scenario.status === 0
+                && (
+                <>
+                  <div
+                    className="unavailable"
+                    onClick={() => {
+                      displayErrorMessage('Désolé mais ce scénario est actuellement indisponible');
+                    }}
+                  />
+                  <div
+                    className="scenarios-scenario"
+                    key={scenario.id}
+                  >
+                    <h2 className="scenarios-title">{scenario.nom}</h2>
+                    <img className="scenarios-image" src={scenario.pic} alt="scenario" />
+                    <p className="scenarios-text">{scenario.description}</p>
+                    <h3 className="scenarios-subtitle">L'avis des joueurs : </h3>
+
+                    <section className="scenarios-comment">" {scenario.comment} "</section>
+                    <div className="scenarios-rate">
+                      <ul>
+                        <li className={classNames({ '--gold': one })}>&#9733;</li>
+                        <li className={classNames({ '--gold': two })}>&#9733;</li>
+                        <li className={classNames({ '--gold': three })}>&#9733;</li>
+                        <li className={classNames({ '--gold': four })}>&#9733;</li>
+                        <li className={classNames({ '--gold': five })}>&#9733;</li>
+                      </ul>
+                    </div>
+                  </div>
+                </>
+                )
+                }
+                {
+                isLogged && scenario.status === 1
+                && (
+                <Link to={`/game/${slug}`}>
+                  <div className="scenarios-scenario" key={scenario.id} onClick={() => (startGameCondition())}>
+                    <h2 className="scenarios-title">{scenario.nom}</h2>
+                    <img className="scenarios-image" src={scenario.pic} alt="scenario" />
+                    <p className="scenarios-text">{scenario.description}</p>
+                    <h3 className="scenarios-subtitle">L'avis des joueurs : </h3>
+
+                    <section className="scenarios-comment">" {scenario.comment} "</section>
+                    <div className="scenarios-rate">
+                      <ul>
+                        <li className={classNames({ '--gold': one })}>&#9733;</li>
+                        <li className={classNames({ '--gold': two })}>&#9733;</li>
+                        <li className={classNames({ '--gold': three })}>&#9733;</li>
+                        <li className={classNames({ '--gold': four })}>&#9733;</li>
+                        <li className={classNames({ '--gold': five })}>&#9733;</li>
+                      </ul>
+                    </div>
+                  </div>
+                </Link>
+                )
+                }
+                {
+                !isLogged && scenario.status === 1
+                && (
+                <>
+                  <div
+                    className="scenarios-scenario"
+                    key={scenario.id}
+                    onClick={() => {
+                      displayErrorMessage('Connectez-vous pour lancer le scénario');
+                    }}
+                  >
+                    <h2 className="scenarios-title">{scenario.nom}</h2>
+                    <img className="scenarios-image" src={scenario.pic} alt="scenario" />
+                    <p className="scenarios-text">{scenario.description}</p>
+                    <h3 className="scenarios-subtitle">L'avis des joueurs : </h3>
+
+                    <section className="scenarios-comment">" {scenario.comment} "</section>
+                    <div className="scenarios-rate">
+                      <ul>
+                        <li className={classNames({ '--gold': one })}>&#9733;</li>
+                        <li className={classNames({ '--gold': two })}>&#9733;</li>
+                        <li className={classNames({ '--gold': three })}>&#9733;</li>
+                        <li className={classNames({ '--gold': four })}>&#9733;</li>
+                        <li className={classNames({ '--gold': five })}>&#9733;</li>
+                      </ul>
+                    </div>
+                  </div>
+                </>
+                )
+                }
               </div>
             );
           })}
