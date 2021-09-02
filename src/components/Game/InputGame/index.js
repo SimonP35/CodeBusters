@@ -35,7 +35,7 @@ const InputGame = ({
             value={inputGameValue}
             className="InputGame-field"
           />
-          <button className="inputGame-button" type="submit">
+          <button className="inputgame-button" type="submit">
             Ok
           </button>
         </form>

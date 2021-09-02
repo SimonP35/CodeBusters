@@ -24,7 +24,15 @@
   }
   .description {
     font-size: 1.5em;
-    color: white;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    width: 600px;
+    height:200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
  
 }
@@ -40,8 +48,15 @@
   background-color: rgba(15, 15, 15, 0.39);
   .description-nopicture {
     font-size: 1.5em;
-    align-self: center;
-    color: white;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    width: 600px;
+    height:200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
