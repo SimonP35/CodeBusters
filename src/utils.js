@@ -6,6 +6,8 @@ import ano from 'src/assets/images/ano.svg';
 import git from 'src/assets/images/github.svg';
 import linkedin from 'src/assets/images/linkedin.svg';
 import twitter from 'src/assets/images/twitter.svg';
+import loose from 'src/assets/images/loose.png';
+
 
 export default [
   {
@@ -110,9 +112,10 @@ export default [
       {
         id: 1,
         nom: 'vendredi maudit',
-        src: 'https://www.youtube.com/watch?v=1AnG04qnLqI',
-        contentwin: 'Le code de Maurice est réparé, tu passes lead dev, gégé !',
-        contentloose: 'C\'est fou ce que t\'es nul purée',
+        src: '1AnG04qnLqI',
+        contentwin: 'Le code de Maurice est réparé, tu passes lead dev, Maurice est condamné à faire de l\'inté pour l\'éternité',
+        contentloose: 'C\'est fou ce que t\'es mauvais purée, tu le vis comment ?',
+        img: loose,
         timer: 30,
         description: 'Vendredi, 17h30...Tu t\'apprêtes à partir quand tu reçois un message de ton boss sur Schlag. Le client exige la mise en prod du code que Maurice a laissé tout cassé pour 18h. Tu sais ce qu\'on dit sur les mises en prod du vendredi...',
         pic: vendredi,
@@ -127,6 +130,7 @@ export default [
         src: 'https://www.youtube.com/watch?v=1AnG04qnLqI',
         contentwin: 'Incroyable mais vrai ! Ton git reverse a fonctionné !',
         contentloose: 'C\'est dingue la honte que tu te tapes',
+        img: loose,
         timer: 30,
         description: 'Bienvenue dans l\'enfer de git : vous pensez être le plus fort avec vos git add-git commit ? Attendez de découvrir les pires commandes jamais inventées...',
         pic: sudo,
@@ -141,6 +145,7 @@ export default [
         src: 'https://www.youtube.com/watch?v=1AnG04qnLqI',
         contentwin: 'TypeScript sacré vainqueur !',
         contentloose: 'Comment on peut foirer autant un escpae game ?',
+        img: loose,
         timer: 30,
         description: 'Plus violent que Predator, plus cruel qu\'Alien, plus destructeur que Godzilla: le combat ultime entre Javascript le Givré et Typescript le Titan. Un seul des deux survivra.',
         pic: mathmax,
@@ -156,6 +161,7 @@ export default [
         src: 'https://www.youtube.com/watch?v=1AnG04qnLqI',
         contentwin: 'Le roi de l\'abstract en PHP !',
         contentloose: 'On va pas se mentir, va falloir réviser les classes...',
+        img: loose,
         timer: 30,
         description: 'Crack.Boum.Abstract. Les classes en PHP, c\'est comme Amour, Gloire et Beauté. Y a moyen de se taper tout le monde, mais quand ça pète derrière, faut pas s\'étonner',
         pic: smith,

@@ -15,11 +15,13 @@ const Loose = ({ endGame }) => {
   return (
     <div className="loose-container">
       <h2 className="loose-title">NUL ! </h2>
-      <h3 className="loose-subtitle"> Médaille d'or toutes catégories de loose sur le coup</h3>
+      <h3 className="loose-subtitle"> Médaille d'or toutes catégories de loose...</h3>
       <p className="loose-text">{scenario.contentloose} </p>
       <h3 className="loose-subtitle">Tu n'as su finir dans le temps imparti </h3>
-      <div className="loose-video-responsive">Ici data vidéo dans balise iframes responsive et autoplay
-        {/* <iframe width="560" height="315" src="{scenario.src}" frameborder="0" autoplay/> */}
+      <div className="loose-video-responsive">
+        <a href="https://www.commitstrip.com/fr/2018/11/06/experience-is-a-candle/image.gif">
+          <img src="{scenario.img}" alt="loose" />
+        </a>
       </div>
       <button
         type="button"
@@ -37,5 +39,3 @@ Loose.propTypes = {
 };
 
 export default Loose;
-
-// Voir le tool React Youtube pour intégrer vidéos facilement
