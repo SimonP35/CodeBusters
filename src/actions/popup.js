@@ -25,6 +25,8 @@ export const changeField = (newValue, identifier) => ({
   name: identifier,
 });
 
-export const clearInput = () => ({
+export const clearInput = (name, newValue) => ({
   type: CLEAR_INPUT,
+  name: name,
+  newValue: newValue,
 });

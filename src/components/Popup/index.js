@@ -88,7 +88,7 @@ Popup.propTypes = {
   password: PropTypes.string.isRequired,
   nickname: PropTypes.string.isRequired,
   comment: PropTypes.string.isRequired,
-  rating: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
   isLogged: PropTypes.bool.isRequired,
   submitLogin: PropTypes.func.isRequired,
   submitSignin: PropTypes.func.isRequired,

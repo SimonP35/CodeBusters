@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactStars from 'react-rating-stars-component';
 
 import Field from './Field';
 import './comment.scss';
@@ -37,13 +38,19 @@ const Comment = ({
             value={comment}
             name="comment"
           />
-          <Field
+          {/* <Field
             className="comment-textarea"
-            type="texte"
+            type="number"
             placeholder="Mon vote"
             manageChange={changeField}
             value={rating}
             name="rating"
+          /> */}
+          <ReactStars
+            value={rating}
+            onChange={(newValue) => {
+              changeField(newValue, 'rating');
+            }}
           />
           <button className="comment-button" type="submit">ENVOYER</button>
         </form>
@@ -55,7 +62,7 @@ const Comment = ({
 Comment.propTypes = {
   toggleDisplayComment: PropTypes.func.isRequired,
   comment: PropTypes.string.isRequired,
-  rating: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
   changeField: PropTypes.func.isRequired,
   submitComment: PropTypes.func.isRequired,
 };
