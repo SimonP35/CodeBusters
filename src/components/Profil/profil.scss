@@ -28,15 +28,15 @@
   justify-content: flex-start;
   background-color: vars.$color-popup-background;
   box-sizing: border-box;
-  position:absolute;
+  position:relative;
    left:33%;
-   top:28%;
+   top:100%;
    right:auto;
    bottom:auto;
-   width: 700px;
-   height: 500px;
-   padding:10px;
-   margin:2px;
+   width: 35%;
+   height: 35%;
+   padding:4%;
+   margin:2%;
    border-bottom: 20px solid vars.$color-title-three ;
    border-right: 10px solid vars.$color-title-two ;  
   

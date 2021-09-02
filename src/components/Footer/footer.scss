@@ -2,12 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 .footer-container {
-  width: 100%;
-  height: 100px;
-  align-items: flex-end;
-  position: absolute;
-  top:100%;
-  bottom:0;
+ display: block;
+  position: relative;
+   left:33%;
+   top:100%;
+   right:auto;
+   bottom:100%;
+   width: 35%;
+   height: 35%;
+   padding:10px;
+   margin:2px;
   font-family: 'Quicksand', sans-serif;
 
   .footer-link {
@@ -21,7 +25,6 @@
   }
   
   .footer-date {
-    padding-right:10px;
     color:yellow;
   }
 }
