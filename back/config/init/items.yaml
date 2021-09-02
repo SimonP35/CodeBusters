@@ -21,7 +21,7 @@ labyrinth:
   width: 13.3%
   height: 32.1%
   borderradius: 0%
-  picture1: "http://3.238.70.10/images/labyrinth.png"
+  picture1: "http://3.238.70.10/images/lab.png"
   status: 0
   type: clickable
   description1: "C'est la coupe de feu !"
