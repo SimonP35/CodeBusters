@@ -21,9 +21,9 @@ class GameEnd
         // Si la partie est déjà terminée 
         // Todo : Affiner la réponse renvoyée au Front
 
-        if ($game->getStatut() === 0) {
-            return new JsonResponse(["message" => "Cette partie est déjà terminée !"], Response::HTTP_NOT_FOUND);
-        }
+        // if ($game->getStatut() === 0) {
+        //     return new JsonResponse(["message" => "Cette partie est déjà terminée !"], Response::HTTP_NOT_FOUND);
+        // }
 
         // On set le status de la game sur 0 (terminée)
         $game
