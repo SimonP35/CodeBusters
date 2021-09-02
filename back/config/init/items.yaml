@@ -47,7 +47,7 @@ carlin:
   width: 7.6%
   height: 12%
   borderradius: 0%
-  picture1: "http://3.238.70.10/images/carlin.svg"
+  picture1: "http://3.238.70.10/images/carlin.png"
   status: 0
   type: clickable
   description1: 
@@ -161,7 +161,7 @@ rabbit:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: "Top ! Lapin blanc anthropomorphe, j'exerce en tant que toon la profession d'acteur pour Maroon Cartoons à Hollywood dans les années 1940. Je bégaye souvent, je suis anxieux, gaffeur et je porte une salopette rouge et un nœud papillon. Anti-héros dans des courts métrages d'animation dont le sujet est une femme qui suvreille Baby Herman. Je suis ? Je suis ?"
+  description1: "Top ! Lapin blanc anthropomorphe, j'exerce en tant que toon la profession d'acteur pour Maroon Cartoons à Hollywood dans les années 1940. Je bégaye souvent, je suis anxieux, gaffeur et je porte une salopette rouge et un nœud papillon. Anti-héros dans des courts métrages d'animation dont le sujet est une femme qui surveille Baby Herman. Je suis ? Je suis ?"
 
 cup:
   name: cup
