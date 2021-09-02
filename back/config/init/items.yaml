@@ -1,12 +1,5 @@
 # Objets énigmes
 
-# TODO : Description des items
-# TODO : Définition des mots à trouver + nom clé 
-# TODO : Coordonnées X et Y
-# TODO : Chemin réel des images
-
-## Mémo : Contenant un rebus pour le remplissage de l'input final (Bouton mise en prod ou on rentre le chemin/path) 
-
 book:
   name: book
   x: 31.1% #(x)
@@ -19,7 +12,7 @@ book:
   type: clickable
   description1:
 
-## Indice mémo : RTFM ===> Le livre est une doc indigeste qu'il faut lire pour voir un mot sauter aux yeux (intrus)
+## Description à ajouter en fonction des retours des beta testeurs
 
 labyrinth:
   name: labyrinth
@@ -31,9 +24,7 @@ labyrinth:
   picture1: "http://3.238.70.10/images/labyrinth.png"
   status: 0
   type: clickable
-  description1:
-
-## Le bon chemin est celui qui comporte autant de mots/objets que le nombre de merveilles du monde ===> Résultat : Mot à la sortie du bon chemin
+  description1: "C'est la coupe de feu !"
 
 kaamelott:
   name: kaamelott
@@ -47,7 +38,7 @@ kaamelott:
   type: clickable
   description1: "Le gras, c'est la vie !"
 
-## Description à l'image qui indique ce qu'il faut chercher d'après l'info du mémo ===> Résultat : Nom d'un personnage manquant ou région
+## Description à ajouter/modifier en fonction des retours des beta testeurs
 
 carlin:
   name: carlin
@@ -61,7 +52,7 @@ carlin:
   type: clickable
   description1: 
 
-## Signature sur photo ou collier/médaille écrit à la mano Enigme ===> sur le mémo qui induit à cliquer sur tous les animaux ===> Résultat : Nom du carlin
+# TODO : Trouver l'énigme du Carlin + photo + description (Franck MIB)
 
 code:
   name: code
@@ -75,7 +66,7 @@ code:
   type: clickable
   description1:
 
-## Indice mémo : Mon 5ème cause des bugs (mot ou pas, indice ou pas), enigme code complexe avec un mots qui ressort et qui casse tout Résultat : Mot qui fait bugguer
+## Description à ajouter/modifier en fonction des retours des beta testeurs
 
 drawer_r:
   name: drawer_r
@@ -87,11 +78,7 @@ drawer_r:
   picture1: "http://3.238.70.10/images/drawer_r.png"
   status: 0
   type: clickable
-  description1:
-
-## Indice mémo : Mon 6ème est la clé .pem, enigme "ou est charlie" dans le tiroir en méga-bordel, la clé à son nom marqué dessus // Résultat : Nom de la clé
-
-## Objet enigme finale (champ input)
+  description1: "Faut vraiment que je range ce tiroir..."
 
 button:
   name: button
@@ -104,9 +91,7 @@ button:
   status: 0
   type: inputable
   description1: "Ca sent la mise en prod lundi..."
-  answer: /underscore/diggory/karadoc/carlin/length/trinity.pem
-
-## Objets Infos
+  answer: /underscore/diggory/karadoc/franck/length/trinity.pem
 
 memo_rebus:
   name: memo_rebus
@@ -118,7 +103,7 @@ memo_rebus:
   picture1: "http://3.238.70.10/images/memo_rebus.png"
   status: 0
   type: clickable
-  description1:
+  description1: 
 
 memo:
   name: memo
@@ -152,7 +137,7 @@ mouse:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: "Il est vraiment spécial ce chat sur l'étagère..."
+  description1: "Jerry : Il est vraiment chelou ce chat sur l'étagère..."
 
 cat:
   name: cat
@@ -163,7 +148,7 @@ cat:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: "Un maneki-neko (招き猫, maneki neko?, aussi appelé chat porte-bonheur) est une statue traditionnelle japonaise en céramique ou en porcelaine, représentant un chat assis et levant la (ou les) patte(s) au niveau de l'oreille, et que l'on trouve fréquemment sur les devantures des magasins, près des caisses dans les centres commerciaux, dans les salons de pachinko, etc.
+  description1: "Un maneki-neko (招き猫, maneki neko?, aussi appelé chat porte-bonheur ou Tom pour les intimes) est une statue traditionnelle japonaise en céramique ou en porcelaine, représentant un chat assis et levant la (ou les) patte(s) au niveau de l'oreille, et que l'on trouve fréquemment sur les devantures des magasins, près des caisses dans les centres commerciaux, dans les salons de pachinko, etc.
    Maneki (招き?) vient du verbe maneku (招く?) qui en japonais signifie « inviter » (dans le sens de faire venir) ou « saluer », et neko (猫?) désigne le « chat ». Il s'agit donc littéralement du « chat qui invite ». La tradition veut qu'on mette un de ces chats levant la patte dans les magasins pour attirer la fortune (pécuniaire). La patte gauche est censée attirer les clients, la patte droite l'argent. Il existe ainsi des chats levant les deux pattes et plus rarement les quatre pattes. On trouve souvent des maneki-neko dans les foyers, notamment sous forme de tirelires, de porte-clefs ou d'autres objets.
    Toutefois, le joyeux maneki-neko est parfois associé ou confondu avec le bakeneko ou nekomata, un type de yōkai maléfique et sournois."
 
@@ -176,7 +161,7 @@ rabbit:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: Roger le lapin (+ Bla bla roger rabbit)
+  description1: "Top ! Lapin blanc anthropomorphe, j'exerce en tant que toon la profession d'acteur pour Maroon Cartoons à Hollywood dans les années 1940. Je bégaye souvent, je suis anxieux, gaffeur et je porte une salopette rouge et un nœud papillon. Anti-héros dans des courts métrages d'animation dont le sujet est une femme qui suvreille Baby Herman. Je suis ? Je suis ?"
 
 cup:
   name: cup
@@ -187,7 +172,7 @@ cup:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: Trophé du non-buggeur (de l'oeil du tigre du débugguage)
+  description1: "Trophée du Rappeur-Codeur 2021 : Nettement trop chaud on paye pas d’mine, mais dans c’rap game on est admin"
 
 controller:
   name: controller
@@ -209,7 +194,7 @@ warhammer:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: "Une de mes passions c'est d'acheter plein de WarHammers, de les mettre dans un tiroir et de ne jamais les les peindre ><"
+  description1: "Une de mes passions c'est d'acheter plein de WarHammers, de les mettre dans un tiroir et de ne jamais les peindre ><"
 
 car:
   name: car
@@ -220,7 +205,7 @@ car:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: Blague RVLF
+  description1: "Faut voir grand dans la vie, quitte à voyager à travers le temps au volant d’une voiture, autant en choisir une qui ait d'la gueule !"
 
 ie:
   name: ie
@@ -232,8 +217,7 @@ ie:
   picture1: "http://3.238.70.10/images/code.png"
   status: 0
   type: nopicture
-  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
-    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+  description1: "Tu as 30 min pour finir le jeu ça parait risqué d'essayer de faire démarrer Internet Explorer..."
 
 matrix:
   name: matrix
@@ -245,7 +229,7 @@ matrix:
   picture1: "http://3.238.70.10/images/code.png"
   status: 0
   type: nopicture
-  description1: Blague/clin d'oeil sur le nom de notre promo
+  description1: "La légende raconte que le nom de ce personnage est inspiré de la meilleure promo de tous les temps de l'école O'Clock."
 
 coffee:
   name: coffee
@@ -267,7 +251,7 @@ paper:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: "Une envie pressante ?"
+  description1: "Une envie pressante ? La mise en prod te stresse ?"
 
 drawer_l:
   name: drawer_l
@@ -279,7 +263,7 @@ drawer_l:
   picture1: "http://3.238.70.10/images/drawer_l.png"
   status: 0
   type: clickable
-  description1:
+  description1: "J'aurai pas du l'ouvir..."
 
 banana:
   name: banana
@@ -290,7 +274,7 @@ banana:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: Ref Mario Kart ?
+  description1: "BANNNAAAANNNNAAAAAAAHHH !!"
 
 exit:
   name: exit
