@@ -16,11 +16,17 @@ export const SET_ANSWER = 'SET_ANSWER';
 
 export const SET_WIN = 'SET_WIN';
 
+export const SET_LOOSE = 'SET_LOOSE';
+
 export const END_GAME = 'END_GAME';
 
 export const TOGGLE_DISPLAY_DESCRIPTION = 'TOGGLE_DISPLAY_DESCRIPTION';
 
 export const SET_CURRENT_DESCRIPTION = 'SET_CURRENT_DESCRIPTION';
+
+export const SET_SECONDS = 'SET_SECONDS';
+
+export const SET_MINUTES = 'SET_MINUTES';
 
 export const startGame = () => ({
   type: START_GAME,
@@ -59,6 +65,9 @@ export const setAnswer = (newAnswer) => ({
 export const setWin = () => ({
   type: SET_WIN,
 });
+export const setLoose = () => ({
+  type: SET_LOOSE,
+});
 
 export const endGame = () => ({
   type: END_GAME,
@@ -71,4 +80,14 @@ export const toggleDisplayDescription = () => ({
 export const setCurrentDescription = (newDescription) => ({
   type: SET_CURRENT_DESCRIPTION,
   newDescription: newDescription,
+});
+
+export const setSeconds = (value) => ({
+  type: SET_SECONDS,
+  value: value,
+});
+
+export const setMinutes = (value) => ({
+  type: SET_MINUTES,
+  value: value,
 });

@@ -9,7 +9,11 @@ import {
   handleLogOut,
 } from 'src/actions/auth';
 import { toggleDisplayPopupLogin, toggleDisplayPopupSignin } from 'src/actions/buttonLog';
-import { displayErrormessage, SUBMIT_COMMENT, clearInput } from 'src/actions/popup';
+import {
+  displayErrormessage,
+  SUBMIT_COMMENT,
+  clearInput,
+} from 'src/actions/popup';
 import { setLoading } from 'src/actions/loading';
 
 const authMiddleware = (store) => (next) => (action) => {
@@ -48,14 +52,18 @@ const authMiddleware = (store) => (next) => (action) => {
           // alors on affiche automatiquement le formulaire de connexion
           store.dispatch(toggleDisplayPopupLogin());
           // on nettoie les champs
-          store.dispatch(clearInput());
+          store.dispatch(clearInput('email', ''));
+          store.dispatch(clearInput('nickname', ''));
+          store.dispatch(clearInput('password', ''));
           store.dispatch(setLoading());
         })
         .catch((error) => {
           // console.log(error);
           // console.log(error.response);
           store.dispatch(displayErrormessage(error.response.data.errors.detail));
-          store.dispatch(clearInput());
+          store.dispatch(clearInput('email', ''));
+          store.dispatch(clearInput('nickname', ''));
+          store.dispatch(clearInput('password', ''));
           store.dispatch(setLoading());
         });
       break;
@@ -84,14 +92,21 @@ const authMiddleware = (store) => (next) => (action) => {
     case SUBMIT_COMMENT: {
       store.dispatch(setLoading());
       const { comment, rating } = store.getState().popup;
-      axios.post('http://3.238.70.10/api/comment/create', { content: comment, rating: rating })
+      const { id } = store.getState().game;
+      axios.post('http://3.238.70.10/api/comment/create', { content: comment, rating: rating, game: id },
+        {
+          headers: {
+            Authorization: `Bearer ${store.getState().auth.token}`,
+          },
+        })
       // Lorsqu'on reçoit la réponse, on enregistre le commentaire
       // de l'utilisateur (à lier au scénario)
-        .then(() => {
-          // console.log(response);
+        .then((response) => {
+          console.log(response);
           // si la création se passe bien on nettoie le champs
-          store.dispatch(clearInput());
           store.dispatch(setLoading());
+          store.dispatch(clearInput('comment', ''));
+          store.dispatch(clearInput('rating', 0));
         })
         .catch(() => {
           // console.log(error.response);
@@ -108,7 +123,7 @@ const authMiddleware = (store) => (next) => (action) => {
         })
       // Lorsqu'on reçoit la réponse, on envoie le tableau de scores
         .then((response) => {
-          // console.log(response.data.user.games);
+          console.log(response);
           store.dispatch(saveUserScores(response.data.user.games));
         })
         .catch(() => {

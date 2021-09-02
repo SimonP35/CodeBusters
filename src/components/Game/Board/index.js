@@ -36,6 +36,10 @@ const Board = ({
   currentDescription,
   setCurrentDescription,
   displayDescription,
+  setMinutes,
+  setSeconds,
+  seconds,
+  minutes,
 }) => {
   useEffect(() => {
     startGame();
@@ -44,7 +48,7 @@ const Board = ({
   return (
     <>
       <Bot />
-      <Timer />
+      <Timer setSeconds={setSeconds} setMinutes={setMinutes} />
       <img className="board-background" src={background} alt="" />
       <Link className="board-home-link" to="/">&#8962;</Link>
       {changeInArray(items).map((item) => (
@@ -183,6 +187,13 @@ const Board = ({
         </>
       )
       }
+      {
+        seconds === 0 && minutes === 0 && (
+          <>
+            <Redirect to={`/game/${slug}/loose`} />
+          </>
+        )
+      }
     </>
   );
 };
@@ -207,5 +218,9 @@ Board.propTypes = {
   currentDescription: PropTypes.string.isRequired,
   setCurrentDescription: PropTypes.func.isRequired,
   displayDescription: PropTypes.bool.isRequired,
+  setMinutes: PropTypes.func.isRequired,
+  setSeconds: PropTypes.func.isRequired,
+  seconds: PropTypes.number.isRequired,
+  minutes: PropTypes.number.isRequired,
 };
 export default Board;

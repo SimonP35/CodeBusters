@@ -10,10 +10,13 @@ import {
   toggleDisplayInput,
   setAnswer,
   setWin,
+  setLoose,
   submitAnswer,
   endGame,
   toggleDisplayDescription,
   setCurrentDescription,
+  setSeconds,
+  setMinutes,
 } from 'src/actions/game';
 
 import { changeField, toggleDisplayPopupComment } from 'src/actions/popup';
@@ -32,8 +35,11 @@ const mapStateToProps = (state) => ({
   answer: state.game.answer,
   inputGameValue: state.game.inputGameValue,
   win: state.game.win,
+  loose: state.game.loose,
   displayDescription: state.game.displayDescription,
   currentDescription: state.game.currentDescription,
+  seconds: state.game.seconds,
+  minutes: state.game.minutes,
 });
 
 // === mapDispatchToProps
@@ -64,6 +70,10 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(setWin());
   },
 
+  setLoose: () => {
+    dispatch(setLoose());
+  },
+
   submitAnswer: () => {
     dispatch(submitAnswer());
   },
@@ -86,6 +96,14 @@ const mapDispatchToProps = (dispatch) => ({
 
   setCurrentDescription: (newDescription) => {
     dispatch(setCurrentDescription(newDescription));
+  },
+
+  setSeconds: (value) => {
+    dispatch(setSeconds(value));
+  },
+
+  setMinutes: (value) => {
+    dispatch(setMinutes(value));
   },
 });
 

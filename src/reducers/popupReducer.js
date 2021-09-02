@@ -15,7 +15,7 @@ const initialState = {
   displayErrorMessage: false,
   errorContent: '',
   comment: '',
-  rating: '',
+  rating: 0,
   email: '',
   nickname: '',
 };
@@ -62,7 +62,7 @@ const popupReducer = (state = initialState, action = {}) => {
     case CLEAR_INPUT:
       return {
         ...state,
-        comment: '',
+        [action.name]: action.newValue,
       };
     default:
       return state;

@@ -31,6 +31,10 @@ const Game = ({
   currentDescription,
   setCurrentDescription,
   displayDescription,
+  setMinutes,
+  setSeconds,
+  seconds,
+  minutes,
 }) => (
   // Ici on switch sur les différentes routes de la game
   // On passe d'abord par l'intro ensuite par le plateau
@@ -60,13 +64,17 @@ const Game = ({
         currentDescription={currentDescription}
         setCurrentDescription={setCurrentDescription}
         displayDescription={displayDescription}
+        seconds={seconds}
+        minutes={minutes}
+        setMinutes={setMinutes}
+        setSeconds={setSeconds}
       />
     </Route>
     <Route path="/game/:slug/win">
       {win ? <Win endGame={endGame} /> : <NotFound />}
     </Route>
     <Route path="/game/:slug/loose">
-      <Loose endGame={endGame} />
+      {minutes === 0 && seconds === 0 ? <Loose endGame={endGame} /> : <NotFound />}
     </Route>
   </Switch>
 );
@@ -92,6 +100,10 @@ Game.propTypes = {
   currentDescription: PropTypes.string.isRequired,
   setCurrentDescription: PropTypes.func.isRequired,
   displayDescription: PropTypes.bool.isRequired,
+  setMinutes: PropTypes.func.isRequired,
+  setSeconds: PropTypes.func.isRequired,
+  seconds: PropTypes.number.isRequired,
+  minutes: PropTypes.number.isRequired,
 };
 
 export default Game;
