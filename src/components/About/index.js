@@ -19,7 +19,7 @@ const About = () => (
         sein de l’école O’clock,
         de prochains ajouts de contenu (scénarios) sont prévus pour plus tard. Toute l’équipe est
         heureuse de vous faire
-        partager cette création et espère vous faire passer un bon moment sur notre jeu.
+        partager cette création et espère vous faire passer un bon moment.
       </section>
       <h2 className="about-title">L'équipe</h2>
       <section className="about-section">

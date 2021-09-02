@@ -3,6 +3,10 @@ import sudo from 'src/assets/images/sudo.png';
 import vendredi from 'src/assets/images/vendredi.png';
 import mathmax from 'src/assets/images/mathmax.png';
 import smith from 'src/assets/images/smith.png';
+import simon from 'src/assets/images/simon.png';
+import geoffrey from 'src/assets/images/geoffrey.jpg';
+import valentin from 'src/assets/images/valentin.png';
+import elena from 'src/assets/images/elena.png';
 import ano from 'src/assets/images/ano.svg';
 import git from 'src/assets/images/github.svg';
 import linkedin from 'src/assets/images/linkedin.svg';
@@ -54,14 +58,14 @@ export default [
     teamList: [
       {
         id: 1,
-        image: [ano, git, twitter, linkedin],
+        image: [simon, git, twitter, linkedin],
         name: 'Simon Pejac',
         describe: 'Product Owner - developpeur PHP (symfony)',
         contact: ['https://github.com/SimonP35', 'https://twitter.com/el_coco_corvo', 'https://www.linkedin.com/in/simon-pejac-04305645/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAlwjbMBxiU73fwhR6UYa96eOAvqCIbNz80'],
       },
       {
         id: 2,
-        image: [ano, git, twitter, linkedin],
+        image: [geoffrey, git, twitter, linkedin],
         name: 'Geoffrey Decobert',
         describe: 'Lead Dev Front - developpeur Javascript (react)',
         contact: ['https://github.com/Geoffrey-Dct', 'https://twitter.com/DecobertG', 'https://www.linkedin.com/in/geoffrey-decobert-2a61951bb/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADMbOF4Bwz4M3bU5YuE8OA572tgWtCHCv4M'],
@@ -75,14 +79,14 @@ export default [
       },
       {
         id: 4,
-        image: [ano, git, twitter, linkedin],
+        image: [elena, git, twitter, linkedin],
         name: 'Elena Battisti',
         describe: 'Scrum Master - developpeuse Javascript (react)',
         contact: ['https://github.com/Elenaaab', 'https://twitter.com/Elena_NellZerah', 'https://www.linkedin.com/in/elenabattisti/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAW6aUIBuD7Zp0dk4-vg-kLtXQfVNBhbFvY'],
       },
       {
         id: 5,
-        image: [ano, git, twitter, linkedin],
+        image: [valentin, git, twitter, linkedin],
         name: 'Valentin Van Weydevelt',
         describe: 'Git master - developpeur Javascript (react)',
         contact: ['https://github.com/ValtentinVW', 'https://twitter.com/valentinvw', 'https://www.linkedin.com/in/valentin-van-weydevelt-3146b7208/'],
