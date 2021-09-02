@@ -18,13 +18,6 @@ class GameEnd
 
     public function endGame($game, $user = null)
     {
-        // Si la partie est déjà terminée 
-        // Todo : Affiner la réponse renvoyée au Front
-        
-        // if ($game->getStatut() === 0) {
-        //     return new JsonResponse(["message" => "Cette partie est déjà terminée !"], Response::HTTP_NOT_FOUND);
-        // }
-
         // On set le status de la game sur 0 (terminée)
         $game
         ->setStatus(0);
@@ -58,7 +51,7 @@ class GameEnd
         $end = $game->getEndedAt();
         $score = $end->getTimestamp() - $start->getTimestamp();
 
-        if ($score === 1800) {
+        if ($score >= 1800) {
             $game
             ->setScore(0);  
         }

@@ -59,7 +59,7 @@ carlin:
   picture1: "http://3.238.70.10/images/carlin.svg"
   status: 0
   type: clickable
-  description1:
+  description1: 
 
 ## Signature sur photo ou collier/médaille écrit à la mano Enigme ===> sur le mémo qui induit à cliquer sur tous les animaux ===> Résultat : Nom du carlin
 
@@ -209,7 +209,7 @@ warhammer:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: "Une de mes passions c'est d'en acheter plein et de les mettre dans un tiroir sans les peindre ><"
+  description1: "Une de mes passions c'est d'acheter plein de WarHammers, de les mettre dans un tiroir et de ne jamais les les peindre ><"
 
 car:
   name: car
@@ -256,7 +256,7 @@ coffee:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: Il est jamais froid ce café ?
+  description1: "Mais il est jamais froid ce café ?"
 
 paper:
   name: paper
@@ -267,7 +267,7 @@ paper:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: Une envie pressante ?
+  description1: "Une envie pressante ?"
 
 drawer_l:
   name: drawer_l
@@ -276,11 +276,10 @@ drawer_l:
   width: 1.05%
   height: 2%
   borderradius: 50%
-  picture1: "http://3.238.70.10/images/drawer.png"
+  picture1: "http://3.238.70.10/images/drawer_l.png"
   status: 0
   type: clickable
-  description1: Lo% ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem dolo%que beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi!
-    Recusandae dolo% %, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?
+  description1:
 
 banana:
   name: banana
@@ -302,4 +301,4 @@ exit:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: Le week-end c'est par la !
+  description1: "Le week-end c'est par la !"

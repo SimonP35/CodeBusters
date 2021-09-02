@@ -44,8 +44,8 @@ class CommentController extends AbstractController
         // On désérialise le JSON vers une entité Comment
         $comment = $serializer->deserialize($jsonContent, Comment::class, 'json');
 
+        // On récupère le $user à l'aide du Token et on le set
         $user = $security->getUser();
-
         $comment->setUser($user);
 
         // On valide l'entité avec le service Validator

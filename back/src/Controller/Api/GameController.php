@@ -64,8 +64,18 @@ class GameController extends AbstractController
                 ["message" => "Cette partie n'existe pas"],
                 Response::HTTP_NOT_FOUND
             );
-        }        
-    
+        }
+        
+        // Si la partie est déjà terminée 
+        // Todo : Affiner la réponse renvoyée au Front
+
+        if ($game->getStatus() === 0) {
+            return new JsonResponse(
+                ["message" => "Cette partie est déjà terminée !"],
+                 Response::HTTP_NOT_FOUND
+            );
+        }
+
         // On appelle le service EndGame pour terminer la partie
         $game = $gameEnd->endGame($game);
 
