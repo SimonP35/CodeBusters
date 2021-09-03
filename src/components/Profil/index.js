@@ -11,6 +11,7 @@ const Profil = ({
   email,
   scores,
   toggleDisplaySignin,
+  toggleDisplayUpdatePassword,
   getUserScores,
   isLogged,
 }) => {
@@ -37,7 +38,7 @@ const Profil = ({
               <li className="profil-list-info" key={scoreResult.created_at}>Mon score sur le scénario {scoreResult.scenario} : {Math.ceil(parseInt(scoreResult.score, 10) / 60)} minutes {parseInt(scoreResult.score, 10) % 60} secondes </li>
             ))}
           </ul>
-          {/* Au clic sur un bouton on affiche un popup signin form */}
+          {/* Au clic sur un bouton on affiche un popup */}
           <button
             type="button"
             onClick={() => {
@@ -47,8 +48,15 @@ const Profil = ({
             id="signin-update"
           >Changer mon pseudo
           </button>
-          {/* Au clic sur le lien on ouvre une fenêtre avec le lien pour changer son mdp */}
-          <a className="profil-link-password" href="http://3.238.70.10/reset-password" target="_blank" rel="noreferrer">Changer mon mot de passe</a>
+          <button
+            type="button"
+            onClick={() => {
+              toggleDisplayUpdatePassword();
+            }}
+            className="profil-button"
+            id="signin-update"
+          >Changer mon mot de passe
+          </button>
         </div>
       </main>
       <Footer />
@@ -61,6 +69,7 @@ Profil.propTypes = {
   email: PropTypes.string.isRequired,
   nickname: PropTypes.string.isRequired,
   toggleDisplaySignin: PropTypes.func.isRequired,
+  toggleDisplayUpdatePassword: PropTypes.func.isRequired,
   getUserScores: PropTypes.func.isRequired,
   scores: PropTypes.array.isRequired,
   isLogged: PropTypes.bool.isRequired,

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Login from './Login';
+import UpdatePassword from './UpdatePassword';
 import Signin from './Signin';
 import Comment from './Comment';
 import ErrorMessage from './ErrorMessage';
@@ -12,11 +13,13 @@ const Popup = ({
   displayLogin,
   displaySignin,
   displayComment,
+  displayUpdatePassword,
   displayErrorMessage,
   closedErrormessage,
   toggleDisplaySignin,
   toggleDisplayLogin,
   toggleDisplayComment,
+  toggleDisplayUpdatePassword,
   changeField,
   email,
   isLogged,
@@ -27,6 +30,7 @@ const Popup = ({
   submitLogin,
   submitSignin,
   submitUserUpdate,
+  submitUserPassword,
   submitComment,
   errorContent,
   handleLogOut,
@@ -71,6 +75,15 @@ const Popup = ({
       closedErrormessage={closedErrormessage}
     />
     )}
+    {displayUpdatePassword && (
+      <UpdatePassword
+        password={password}
+        isLogged={isLogged}
+        submitUserPassword={submitUserPassword}
+        toggleDisplayUpdatePassword={toggleDisplayUpdatePassword}
+        changeField={changeField}
+      />
+    )}
   </>
 );
 
@@ -78,11 +91,13 @@ Popup.propTypes = {
   displayLogin: PropTypes.bool.isRequired,
   displaySignin: PropTypes.bool.isRequired,
   displayComment: PropTypes.bool.isRequired,
+  displayUpdatePassword: PropTypes.bool.isRequired,
   displayErrorMessage: PropTypes.bool.isRequired,
   closedErrormessage: PropTypes.func.isRequired,
   toggleDisplaySignin: PropTypes.func.isRequired,
   toggleDisplayLogin: PropTypes.func.isRequired,
   toggleDisplayComment: PropTypes.func.isRequired,
+  toggleDisplayUpdatePassword: PropTypes.func.isRequired,
   changeField: PropTypes.func.isRequired,
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
@@ -93,6 +108,7 @@ Popup.propTypes = {
   submitLogin: PropTypes.func.isRequired,
   submitSignin: PropTypes.func.isRequired,
   submitUserUpdate: PropTypes.func.isRequired,
+  submitUserPassword: PropTypes.func.isRequired,
   submitComment: PropTypes.func.isRequired,
   handleLogOut: PropTypes.func.isRequired,
   errorContent: PropTypes.string.isRequired,
