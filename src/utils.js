@@ -6,7 +6,7 @@ import simon from 'src/assets/images/simon.png';
 import geoffrey from 'src/assets/images/geoffrey.jpg';
 import valentin from 'src/assets/images/valentin.png';
 import elena from 'src/assets/images/elena.png';
-import ano from 'src/assets/images/ano.svg';
+import sacha from 'src/assets/images/sacha.png';
 import git from 'src/assets/images/github.svg';
 import linkedin from 'src/assets/images/linkedin.svg';
 import twitter from 'src/assets/images/twitter.svg';
@@ -73,7 +73,7 @@ export default [
       },
       {
         id: 3,
-        image: [ano, git, twitter, linkedin],
+        image: [sacha, git, twitter, linkedin],
         name: 'Sacha Huynh Van-Hardebolle',
         describe: 'Lead Dev Back - developpeur PHP (symfony)',
         contact: ['https://github.com/Sacha-HH', 'https://twitter.com/HuynhSacha', 'https://www.linkedin.com/in/sacha-huynh-van-hardebolle-9840b591/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAABNp8jQBuqeAxL7ascW8ed-QTxeV0nOnu0U'],
