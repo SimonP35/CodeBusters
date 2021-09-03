@@ -44,7 +44,7 @@ DATABASE_URL="postgresql://db_user:db_password@127.0.0.1:5432/db_name?serverVers
 La liste des endpoints et des routes du Back Office sont listés dans le fichier routes-back.md qui se trouve dans le dossier sprint_0.
 
 **Pour accéder aux endpoints de l'API ou au Back Office, vous devez avoir créé au préalable un user soit via les fixtures soit directement depuis la DB.**
-**Seulement le ROLE_ADMIN est autorisé à naviguer dans les routes ^/back**
+**Seulement le ROLE_ADMIN est autorisé à naviguer dans les routes ^/back**.
 
 NB: Le package symfony/apache-pack étant déjà présent dans le composer.json, vous pouvez l'utiliser pour accéder au Back Office, ou lancer un serveur de dev ```php -S localhost:8000 -t public```
 
