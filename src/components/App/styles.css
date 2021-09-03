@@ -1,4 +1,6 @@
 .app {
   text-align: center;
   position: relative;
+  display:flex;
+  align-items:center;
 }
