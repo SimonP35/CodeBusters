@@ -39,7 +39,7 @@ DATABASE_URL="postgresql://db_user:db_password@127.0.0.1:5432/db_name?serverVers
 (Vérifier que les 2 clés private et public se trouvent bien dans ```/config/jwt``` et qu'elles sont .gitignore)
 (Déplacer les chemins vers ces clés du .env vers votre .env.local)
 
-## Infos
+## Infos :
 
 La liste des endpoints et des routes du Back Office sont listés dans le fichier routes-back.md qui se trouve dans le dossier sprint_0.
 
