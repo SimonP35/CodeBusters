@@ -4,9 +4,7 @@ import {
   TOGGLE_DISPLAY_PICTURE,
   SET_CURRENT_IMG,
   TOGGLE_DISPLAY_INPUT,
-  SET_ANSWER,
   SET_WIN,
-  SET_LOOSE,
   TOGGLE_DISPLAY_DESCRIPTION,
   SET_CURRENT_DESCRIPTION,
   SET_SECONDS,
@@ -22,9 +20,7 @@ const initialState = {
   displayPicture: false,
   currentImg: '',
   displayInput: false,
-  answer: '',
   win: false,
-  loose: false,
   inputGameValue: '',
   id: '',
   displayDescription: false,
@@ -63,20 +59,10 @@ function gameReducer(state = initialState, action = {}) {
         ...state,
         displayInput: !state.displayInput,
       };
-    case SET_ANSWER:
-      return {
-        ...state,
-        answer: action.newAnswer,
-      };
     case SET_WIN:
       return {
         ...state,
-        win: true,
-      };
-    case SET_LOOSE:
-      return {
-        ...state,
-        loose: true,
+        win: action.value,
       };
     case CHANGE_FIELD:
       return {
