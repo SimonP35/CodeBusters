@@ -39,6 +39,9 @@ DATABASE_URL="postgresql://db_user:db_password@127.0.0.1:5432/db_name?serverVers
 (Vérifier que les 2 clés private et public se trouvent bien dans ```/config/jwt``` et qu'elles sont .gitignore)
 (Déplacer les chemins vers ces clés du .env vers votre .env.local)
 
+- Pour utiliser les méthodes du controller ResetPassword, vous devez configurer dans le .env.local le MAILER_DSN :
+```MAILER_DSN=gmail://USERNAME:PASSWORD@default```
+
 ## Infos :
 
 La liste des endpoints et des routes du Back Office sont listés dans le fichier routes-back.md qui se trouve dans le dossier sprint_0.
@@ -53,3 +56,6 @@ NB: Le package symfony/apache-pack étant déjà présent dans le composer.json,
 
 - [Symfony](https://symfony.com/doc/current/index.html)
 - [JWT Token](https://github.com/lexik/LexikJWTAuthenticationBundle)
+- [Nelmio Bundle](https://github.com/nelmio/NelmioApiDocBundle)
+- [Doctrine](https://www.doctrine-project.org/projects/doctrine-orm/en/latest/index.html)
+- [Reset-Password](https://github.com/SymfonyCasts/reset-password-bundle)
