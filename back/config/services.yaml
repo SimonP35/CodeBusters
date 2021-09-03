@@ -36,9 +36,9 @@ services:
                 # Par défaut, le nom de la méthode appelée = nom de l'event
                 event: 'prePersist'
                 entity: 'App\Entity\User'
-            # -
-            #     name: 'doctrine.orm.entity_listener'
-            #     event: 'preUpdate'
-            #     entity: 'App\Entity\User'
+            -
+                name: 'doctrine.orm.entity_listener'
+                event: 'preUpdate'
+                entity: 'App\Entity\User'
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

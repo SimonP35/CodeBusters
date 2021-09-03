@@ -86,13 +86,6 @@ class UserController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-
-            // Si le mot de passe du form n'est pas vide
-            // On le change
-            if ($form->get('password')->getData() != '') {
-                $hashedPassword = $passwordHasher->hasher($user, $form->get('password')->getData());
-                $user->setPassword($hashedPassword);
-            }
             
             $this->getDoctrine()->getManager()->flush();
 

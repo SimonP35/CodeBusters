@@ -4,6 +4,8 @@ namespace App\Service;
 
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 class GameEnd
 {
@@ -48,6 +50,11 @@ class GameEnd
         $start = $game->getCreatedAt();
         $end = $game->getEndedAt();
         $score = $end->getTimestamp() - $start->getTimestamp();
+
+        if ($score >= 1800) {
+            $game
+            ->setScore(0);  
+        }
 
         // On set le score en seconde
         $game

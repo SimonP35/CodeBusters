@@ -15,10 +15,6 @@ h1 {
    margin-bottom: 30px;
 }
 
-.ghost {
-    background-image: url("./images/ghost.jpg");
-}
-
 .table {
     font-size: 1.20rem;
     font-weight: bold;

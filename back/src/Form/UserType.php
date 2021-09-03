@@ -48,27 +48,7 @@ class UserType extends AbstractType
                     'second_options' => ['label' => 'Répéter le mot de passe'],
                 ]);
                 
-            } else {
-                
-                $form->add('password', RepeatedType::class, [
-                    'type' => PasswordType::class,
-                    'invalid_message' => 'Les mots de passe ne correspondent pas.',
-                    'required' => true,
-                    'mapped' => false,
-                    'constraints' => [
-                        new NotCompromisedPassword(),
-                        new Regex('/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&-\/])[A-Za-z\d@$!%*#?&-\/]{8,}$/')
-                    ],
-                    'first_options'  => [
-                        'attr' => [
-                            'placeholder' => "Laisser vide si inchangé...."
-                        ],
-                        'label' => 'Mot de passe',
-                        'help' => "8 lettres, 1 chiffre et 1 caractère spécial (@$!%*#?&-\)"
-                    ],
-                    'second_options' => ['label' => 'Répéter le mot de passe'],
-                ]);
-            }
+            } 
         })
         ->add('nickname',  TextType::class, [
             'label' => 'Pseudo',

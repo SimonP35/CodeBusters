@@ -70,6 +70,11 @@ class Game
      */
     private $scenario;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $answer = "/underscore/diggory/karadoc/franck/length/trinity.pem";
+
     public function __construct()
     {
         $this->comments = new ArrayCollection();
@@ -218,6 +223,18 @@ class Game
     public function setScenario(int $scenario): self
     {
         $this->scenario = $scenario;
+
+        return $this;
+    }
+
+    public function getAnswer(): ?string
+    {
+        return $this->answer;
+    }
+
+    public function setAnswer(string $answer): self
+    {
+        $this->answer = $answer;
 
         return $this;
     }

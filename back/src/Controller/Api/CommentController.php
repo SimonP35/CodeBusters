@@ -6,6 +6,7 @@ use App\Entity\Comment;
 use App\Repository\CommentRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Security;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -35,14 +36,18 @@ class CommentController extends AbstractController
      * 
      * @Route("/create", name="api_comment_create", methods="POST")
      */
-    public function create(Request $request, SerializerInterface $serializer, EntityManagerInterface $em, ValidatorInterface $vi): Response
+    public function create(Request $request, SerializerInterface $serializer, EntityManagerInterface $em, ValidatorInterface $vi, Security $security): Response
     {
         // On récupère le contenu de la requête (du JSON)
         $jsonContent = $request->getContent();
 
         // On désérialise le JSON vers une entité Comment
         $comment = $serializer->deserialize($jsonContent, Comment::class, 'json');
-        
+
+        // On récupère le $user à l'aide du Token et on le set
+        $user = $security->getUser();
+        $comment->setUser($user);
+
         // On valide l'entité avec le service Validator
         $errors = $vi->validate($comment);
 
