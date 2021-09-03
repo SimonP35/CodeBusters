@@ -7,7 +7,7 @@ import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import './intro.scss';
 
-const { scenarios } = utils[3];
+const { scenarios } = utils[1];
 
 const Intro = ({ setWin, setSeconds, setMinutes }) => {
   const { slug } = useParams();

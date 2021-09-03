@@ -5,7 +5,7 @@ import utils from 'src/utils';
 
 import './loose.scss';
 
-const scenario = utils[3].scenarios[0];
+const scenario = utils[1].scenarios[0];
 
 const Loose = ({ endGame }) => {
   useEffect(() => {

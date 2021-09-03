@@ -9,7 +9,7 @@ import classNames from 'classnames';
 import utils from 'src/utils';
 import './scenarios.scss';
 
-const { scenarios } = utils[3];
+const { scenarios } = utils[1];
 
 const Scenarios = ({ isLogged, displayErrorMessage }) => {
   const history = useHistory();

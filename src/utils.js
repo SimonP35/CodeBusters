@@ -12,49 +12,7 @@ import linkedin from 'src/assets/images/linkedin.svg';
 import twitter from 'src/assets/images/twitter.svg';
 import loose from 'src/assets/images/loose.png';
 
-
 export default [
-  {
-    fourMostPopularScenarios: [
-      {
-        id: 1,
-        image: ano,
-        story: 'une histoire',
-        comment: 'un commentaire',
-        description: 'Viens incarner le stagiaire qui devra assurer la mise en prod !',
-        rate: 5,
-        slug: 'vendredi-maudit',
-      },
-      {
-        id: 2,
-        image: ano,
-        story: 'deux histoire',
-        comment: 'deux commentaire',
-        description: 'Viens donc te gâcher le week-end à débugger le code dégueulasse de tonton Maurice !',
-        rate: 4,
-        slug: 'tonton-maurice',
-      },
-      {
-        id: 3,
-        image: ano,
-        story: 'trois histoire',
-        comment: 'trois commentaire',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        rate: 4,
-        slug: '',
-      },
-      {
-        id: 4,
-        image: ano,
-        story: 'quatre histoire',
-        comment: 'quatre commentaire',
-        description: ' Vivamus at nunc hendrerit, imperdiet tellus sit amet, imperdiet tellus. ',
-        rate: 3,
-        slug: '',
-      },
-    ],
-
-  },
   {
     teamList: [
       {
@@ -94,23 +52,6 @@ export default [
       },
     ],
   },
-  {
-    users: [
-      {
-        id: 1,
-        pseudo: 'jojo',
-        email: 'jojo@gmail.com',
-        password: 'coucou',
-      },
-      {
-        id: 2,
-        pseudo: 'bibi',
-        email: 'bibi@gmail.com',
-        password: 'hello',
-      },
-    ],
-  },
-
   {
     scenarios: [
       {
@@ -211,55 +152,5 @@ export default [
         content: 'Franchement c\'est pathétique, t\'as pas honte de dire que t\'es dev toi ?',
       },
     ],
-  },
-  {
-    items: {
-      books: {
-        id: 1,
-        description1: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi! Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?",
-        name: "books",
-        picture1: "http://3.238.70.10/images/book.png",
-        pictureId: 11,
-        statusName: 'booksStatus',
-        status: 0,
-        type: "clickable",
-        x: "22px",
-        y: "99px",
-      },
-
-      button: {
-        id: 2,
-        answer: "/xxx/xxx/xxx/xxx/xxx/yyy.pem",
-        name: "button",
-        statusName: 'buttonStatus',
-        status: 0,
-        type: "inputable",
-        x: "152px",
-        y: "99px",
-      },
-
-      carlin: {
-        id: 3,
-        description1: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias distinctio corrupti autem doloremque beatae consequatur voluptatum. Reiciendis, eos. Laudantium voluptatibus nam itaque aliquid cupiditate hic laborum accusantium sed modi! Recusandae dolorem rem, officia perspiciatis dignissimos ex nemo quae facilis sunt delectus totam repellendus maxime, soluta dolores nihil aspernatur explicabo libero placeat! Corrupti quia expedita tenetur alias officiis, dolor eum?",
-        name: "carlin",
-        picture1: "http://3.238.70.10/images/carlin.png",
-        pictureId: 13,
-        statusName: 'carlinStatus',
-        status: 0,
-        type: "clickable",
-        x: "22px",
-        y: "259px",
-      },
-
-      cat: {
-        id: 4,
-        description1: "Descriptif chat japonais",
-        name: "cat",
-        status: 0,
-        type: "clickable",
-        x: "452px",
-        y: "399px",
-      },
-    },
   },
 ];

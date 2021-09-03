@@ -6,7 +6,7 @@ import utils from 'src/utils';
 
 import './about.scss';
 
-const { teamList } = utils[1];
+const { teamList } = utils[0];
 
 const About = () => (
   <>

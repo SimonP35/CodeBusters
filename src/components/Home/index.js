@@ -9,7 +9,7 @@ import utils from 'src/utils';
 
 import './home.scss';
 
-const { scenarios } = utils[3];
+const { scenarios } = utils[1];
 
 const Home = ({
   isLogged,

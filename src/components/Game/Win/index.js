@@ -8,7 +8,7 @@ import Footer from 'src/components/Footer';
 
 import './win.scss';
 
-const scenario = utils[3].scenarios[0];
+const scenario = utils[1].scenarios[0];
 
 // Doc : yarn add react-youtube
 // https://github.com/tjallingt/react-youtube
