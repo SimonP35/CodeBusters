@@ -21,6 +21,9 @@ const Win = ({ endGame }) => {
 
   return (
     <>
+      <div id="stars" />
+      <div id="stars2" />
+      <div id="stars3" />
       <Header />
       <div className="win-container">
         <h2 className="win-title">BIEN JOUÉ !</h2>

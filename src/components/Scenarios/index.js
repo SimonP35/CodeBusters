@@ -30,6 +30,9 @@ const Scenarios = ({ isLogged, displayErrorMessage }) => {
   };
   return (
     <>
+      <div id="stars" />
+      <div id="stars2" />
+      <div id="stars3" />
       <Header />
       <main className="scenarios-container">
         <div className="scenarios-list">

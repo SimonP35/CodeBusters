@@ -7,6 +7,9 @@ import './noticeContact.scss';
 // == Composant
 const LegalNoticeContact = () => (
   <>
+    <div id="stars" />
+    <div id="stars2" />
+    <div id="stars3" />
     <Header />
     <div className="notice-container">
       <h2 className="notice-title">Mentions légales</h2>
