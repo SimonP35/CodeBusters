@@ -10,11 +10,31 @@ const LegalNoticeContact = () => (
     <Header />
     <div className="notice-container">
       <h2 className="notice-title">Mentions légales</h2>
-      <h3 className="notice-subtitle">SOUS TITRE OPTIONNEL</h3>
-      <p className="notice-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-      <a className="notice-link" href="">LIEN OPTIONNEL</a>
-      <p className="notice-text">CodeBusters est un projet de fin de formation vos données personnelles seront stockée en base de donnée pour vous identifier</p>
-      <button className="notice-button" type="submit">Jouer</button>
+      <h3 className="notice-subtitle">Éditeur</h3>
+      <p className="notice-text">
+        L'édition du site est assurée par le groupe d'étudiants
+        CodeBusters celui-ci n'a pas d'intention commerciale,
+        mais sert de projet de fin d'étude.
+      </p>
+      <h3 className="notice-subtitle">Cookies</h3>
+      <p className="notice-text">
+        Le site CodeBusters n'utilise pas de cookies.
+      </p>
+      <h3 className="notice-subtitle">Collecte des données</h3>
+      <p className="notice-text">
+        Le site assure à l'Utilisateur une collecte et un traitement
+        d'informations personnelles dans le respect de la vie privée
+        conformément à la loi n°78-17 du 6 janvier 1978 relative à
+        l'informatique, aux fichiers et aux libertés.
+      </p>
+      <h3 className="notice-subtitle">Propriété intellectuelle</h3>
+      <p className="notice-text">
+        Toute utilisation, reproduction, diffusion, commercialisation,
+        modification de tout ou partie du site CodeBusters, sans autorisation
+        de l'Éditeur est prohibé.
+      </p>
+      <h3 className="notice-subtitle" href="">Contact</h3>
+      <p className="notice-text">codebusters.trinity@gmail.com</p>
     </div>
     <Footer />
   </>
