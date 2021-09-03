@@ -1,5 +1,13 @@
 @use 'src/styles/vars';
 
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
+
 .home-main {
   display: flex;
   flex-direction: column;
@@ -7,8 +15,13 @@
   align-items: center;
 
   .home-text {
-    color: yellow;
-    margin: 30px;
+    color: white;
+    font-family: "Meta";
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    font-variation-settings: "wght" 900, "ital" 1;
+    margin:10px;
   }
 .popular-scenarios-container {
   display: flex;
@@ -21,7 +34,7 @@
 
   .popular-scenarios-scenario {
     width: 250px;
-    height: 450px;
+    height: 400px;
     margin:10px;
     display: flex;
     flex-direction: column;
@@ -76,7 +89,7 @@
 
 .unavailable {
   width: 260px;
-  height: 460px;
+  height: 415px;
   background-color: rgba(39, 38, 38, 0.644);
   position: absolute;
 }
