@@ -26,10 +26,7 @@ const Board = ({
   currentImg,
   toggleDisplayInput,
   displayInput,
-  answer,
-  setAnswer,
   inputGameValue,
-  setWin,
   win,
   changeField,
   toggleDisplayDescription,
@@ -40,6 +37,7 @@ const Board = ({
   setSeconds,
   seconds,
   minutes,
+  submitAnswer,
 }) => {
   useEffect(() => {
     startGame();
@@ -88,7 +86,6 @@ const Board = ({
             className="board-item"
             onClick={() => {
               toggleDisplayInput();
-              setAnswer(item.answer);
               setCurrentDescription(item.description1);
             }}
           >
@@ -159,10 +156,9 @@ const Board = ({
             inputGameValue={inputGameValue}
             changeField={changeField}
             toggleDisplayInput={toggleDisplayInput}
-            answer={answer}
-            setWin={setWin}
             displayDescription={displayDescription}
             toggleDisplayDescription={toggleDisplayDescription}
+            submitAnswer={submitAnswer}
           />
         )
       }
@@ -209,10 +205,7 @@ Board.propTypes = {
   currentImg: PropTypes.string.isRequired,
   toggleDisplayInput: PropTypes.func.isRequired,
   displayInput: PropTypes.bool.isRequired,
-  answer: PropTypes.string.isRequired,
-  setAnswer: PropTypes.func.isRequired,
   inputGameValue: PropTypes.string.isRequired,
-  setWin: PropTypes.func.isRequired,
   win: PropTypes.bool.isRequired,
   changeField: PropTypes.func.isRequired,
   toggleDisplayDescription: PropTypes.func.isRequired,
@@ -223,5 +216,6 @@ Board.propTypes = {
   setSeconds: PropTypes.func.isRequired,
   seconds: PropTypes.number.isRequired,
   minutes: PropTypes.number.isRequired,
+  submitAnswer: PropTypes.func.isRequired,
 };
 export default Board;

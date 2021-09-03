@@ -6,7 +6,7 @@ import utils from 'src/utils';
 
 import './about.scss';
 
-const { teamList } = utils[1];
+const { teamList } = utils[0];
 
 const About = () => (
   <>
@@ -30,13 +30,13 @@ const About = () => (
               <h4 className="about-profil-name">{teamMember.name}</h4>
               <h5 className="about-profil-describe">{teamMember.describe}</h5>
               <a href={teamMember.contact[0]} className="about-profil-link">
-                <img className="about-profil-image" src={teamMember.image[1]} alt="git-profile" />
+                <img className="about-profil-image-link" src={teamMember.image[1]} alt="git-profile" />
               </a>
               <a href={teamMember.contact[1]} className="about-profil-link">
-                <img className="about-profil-image" src={teamMember.image[2]} alt="twitter-profile" />
+                <img className="about-profil-image-link" src={teamMember.image[2]} alt="twitter-profile" />
               </a>
               <a href={teamMember.contact[2]} className="about-profil-link">
-                <img className="about-profil-image" src={teamMember.image[3]} alt="linkedin-profile" />
+                <img className="about-profil-image-link" src={teamMember.image[3]} alt="linkedin-profile" />
               </a>
             </article>
           </div>

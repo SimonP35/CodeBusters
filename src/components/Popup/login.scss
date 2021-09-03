@@ -21,8 +21,9 @@
     background-color: vars.$color-popup-background;
     color: white;
     padding: 5px;
+    padding-left:10px;
     width: 300px;
-    height: 200px;
+    height: 230px;
     border-radius: 10%;
     border-bottom: 10px solid vars.$color-title-three;
     border-right: 10px solid vars.$color-title-three;
@@ -41,26 +42,20 @@
       -webkit-box-shadow: -4px -2px 6px 0px rgba(0, 0, 0, 0.1);
       -moz-box-shadow: -4px -2px 6px 0px rgba(0, 0, 0, 0.1);
       box-shadow: -3px 1px 6px 0px rgba(0, 0, 0, 0.1);
-      // &:hover {
-      //     transform: rotate(45deg);
-      //     font-size: 1em;
-      //     border: none;
-      //     border-radius: 1em;
-      //   }
+      &:hover {
+          transform: rotate(45deg);
+          font-size: 1em;
+          border: none;
+          border-radius: 1em;
+        }
     }
 
     .login-form {
       margin-top: 15px;
       margin-bottom: 10px;
       color: black;
-    display:flex;
-    flex-direction: column;
-      .login-field {
-        border: none;
-        color: black;
-        margin-bottom: 5px;
-        margin-top: 10px;
-      }
+      display:flex;
+      flex-direction: column;
 
       .login-password-info {
         font-size: 12px;
@@ -70,12 +65,13 @@
       }
 
       .login-button {
-        margin: 5px;
+        margin: 10px;
         border: none;
         color: black;
         font-variation-settings: "wght"900;
         font-family: "Meta";
         background-color: #11ffee00;
+        margin-bottom:30px;
       }
     }
   }

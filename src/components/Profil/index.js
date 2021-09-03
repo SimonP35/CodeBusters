@@ -23,7 +23,7 @@ const Profil = ({
     <>
       <Header />
       <main className="profil-main">
-        <div className="profil-container">
+        <div>
           <h2 className="profil-title">Mon profil</h2>
           <ul className="profil-list">
             <li className="profil-list-item">Pseudo :</li>
@@ -35,7 +35,7 @@ const Profil = ({
             <li className="profil-list-item">Mes résultats :</li>
             {/* Filter + Map sur les scores enregistrés en base qui sont fetch par le middleware */}
             {scores.filter((scoreResults) => scoreResults.score > 150).map((scoreResult) => (
-              <li className="profil-list-info" key={scoreResult.id}>Mon score sur le scénario {scoreResult.scenario} : {Math.ceil(parseInt(scoreResult.score, 10) / 60)} minutes {parseInt(scoreResult.score, 10) % 60} secondes </li>
+              <li className="profil-list-info" key={scoreResult.created_at}>Mon score sur le scénario {scoreResult.scenario} : {Math.ceil(parseInt(scoreResult.score, 10) / 60)} minutes {parseInt(scoreResult.score, 10) % 60} secondes </li>
             ))}
           </ul>
           {/* Au clic sur un bouton on affiche un popup */}
@@ -46,7 +46,7 @@ const Profil = ({
             }}
             className="profil-button"
             id="signin-update"
-          >Mettre mes informations à jour
+          >Changer mon pseudo
           </button>
           <button
             type="button"

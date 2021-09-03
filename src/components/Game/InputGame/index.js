@@ -8,18 +8,11 @@ const InputGame = ({
   inputGameValue,
   changeField,
   toggleDisplayInput,
-  answer,
-  setWin,
-  toggleDisplayDescription,
+  submitAnswer,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    if (inputGameValue === answer && inputGameValue !== '') {
-      setWin();
-    }
-    if (inputGameValue !== answer) {
-      toggleDisplayDescription();
-    }
+    submitAnswer();
     toggleDisplayInput();
   };
   return (
@@ -48,9 +41,7 @@ InputGame.propTypes = {
   changeField: PropTypes.func.isRequired,
   inputGameValue: PropTypes.string.isRequired,
   toggleDisplayInput: PropTypes.func.isRequired,
-  answer: PropTypes.string.isRequired,
-  setWin: PropTypes.func.isRequired,
-  toggleDisplayDescription: PropTypes.func.isRequired,
+  submitAnswer: PropTypes.func.isRequired,
 };
 
 export default InputGame;

@@ -20,11 +20,9 @@ const Game = ({
   currentImg,
   toggleDisplayInput,
   displayInput,
-  answer,
-  setAnswer,
   inputGameValue,
-  setWin,
   win,
+  setWin,
   changeField,
   endGame,
   toggleDisplayDescription,
@@ -35,13 +33,14 @@ const Game = ({
   setSeconds,
   seconds,
   minutes,
+  submitAnswer,
 }) => (
   // Ici on switch sur les différentes routes de la game
   // On passe d'abord par l'intro ensuite par le plateau
   // et pour finir une page win ou loose
   <Switch>
     <Route path="/game/:slug" exact>
-      <Intro startGame={startGame} />
+      <Intro setWin={setWin} setMinutes={setMinutes} setSeconds={setSeconds} />
     </Route>
     <Route path="/game/:slug/board">
       <Board
@@ -54,10 +53,7 @@ const Game = ({
         currentImg={currentImg}
         toggleDisplayInput={toggleDisplayInput}
         displayInput={displayInput}
-        answer={answer}
-        setAnswer={setAnswer}
         inputGameValue={inputGameValue}
-        setWin={setWin}
         win={win}
         changeField={changeField}
         toggleDisplayDescription={toggleDisplayDescription}
@@ -68,6 +64,7 @@ const Game = ({
         minutes={minutes}
         setMinutes={setMinutes}
         setSeconds={setSeconds}
+        submitAnswer={submitAnswer}
       />
     </Route>
     <Route path="/game/:slug/win">
@@ -89,10 +86,7 @@ Game.propTypes = {
   setCurrentImg: PropTypes.func.isRequired,
   toggleDisplayInput: PropTypes.func.isRequired,
   displayInput: PropTypes.bool.isRequired,
-  answer: PropTypes.string.isRequired,
-  setAnswer: PropTypes.func.isRequired,
   inputGameValue: PropTypes.string.isRequired,
-  setWin: PropTypes.func.isRequired,
   win: PropTypes.bool.isRequired,
   changeField: PropTypes.func.isRequired,
   endGame: PropTypes.func.isRequired,
@@ -102,8 +96,10 @@ Game.propTypes = {
   displayDescription: PropTypes.bool.isRequired,
   setMinutes: PropTypes.func.isRequired,
   setSeconds: PropTypes.func.isRequired,
+  setWin: PropTypes.func.isRequired,
   seconds: PropTypes.number.isRequired,
   minutes: PropTypes.number.isRequired,
+  submitAnswer: PropTypes.func.isRequired,
 };
 
 export default Game;

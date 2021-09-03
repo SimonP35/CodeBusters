@@ -23,11 +23,10 @@
     color: white;
     padding: 5px;
     width: 300px;
-    height: 230px;
+    height: 250px;
     border-radius: 10%;
     border-bottom: 10px solid vars.$color-title-five;
     border-right: 10px solid vars.$color-title-five;
-  
 
     .signin-closed {
       transition: all 0.5s ease;
@@ -48,7 +47,6 @@
           border: none;
           border-radius: 1em;
         }
-
     }
 
     .signin-form {
@@ -57,19 +55,11 @@
       color: black;
       padding-bottom:2px;
 
-      .signin-field {
-        border: none;
-        color: black;
-        margin-bottom: 5px;
-        margin-top: 10px;
-      }
-
       .signin-password-info {
         font-size: 12px;
         font-style: italic;
         padding-top:2px;
         padding-bottom:2px;
-
       }
 
       .signin-button {

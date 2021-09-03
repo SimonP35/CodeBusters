@@ -5,12 +5,11 @@ import classNames from 'classnames';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-import banniere from 'src/assets/images/banniere.png';
 import utils from 'src/utils';
 
 import './home.scss';
 
-const { scenarios } = utils[3];
+const { scenarios } = utils[1];
 
 const Home = ({
   isLogged,
@@ -19,9 +18,7 @@ const Home = ({
   <>
     <Header />
     <main className="home-main">
-      <div className="home-banniere">
-        <img className="home-banniere-img" src={banniere} alt="banniere-img" />
-      </div>
+      <p className="home-text">La plateforme d'escape game pour les devs</p>
       <div className="popular-scenarios-container">
         {scenarios.map((scenario) => {
           // renvoi true si la valeur est vrai ce qui permet, à l'aide de className,

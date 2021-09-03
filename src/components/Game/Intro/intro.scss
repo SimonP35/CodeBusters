@@ -15,11 +15,6 @@
   justify-content: flex-start;
   background-color: vars.$color-popup-background;
   box-sizing: border-box;
-  position:relative;
-   left:33%;
-   top:28%;
-   right:auto;
-   bottom:auto;
    width: 700px;
    height: 600px;
    padding:10px;
@@ -51,8 +46,8 @@
     margin:10px;
   }
   .intro-pic {
-    max-width: 300px;
-    max-height: 300px;
+    width: 200px;
+    height: 200px;
     display: inline-flex;
     align-self:center;
     }

@@ -13,13 +13,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   background-color: vars.$color-popup-background;
   box-sizing: border-box;
-  position:relative;
-   left:33%;
-   top:28%;
-   right:auto;
-   bottom:auto;
    width: 700px;
    height: 600px;
    padding:10px;
@@ -52,14 +48,12 @@
     margin:2px;
   }
 
-  .loose-link {
-    margin:2px;
-    padding-top:5px;
-    padding-bottom:5px;
-    font-weight: bold;
-    &:hover {
-      color:red;
-    }
+  .loose-pic {
+    max-width: 55%;
+    max-height: 55%;
+    display:inline-flex;
+  }
+
   }
   .loose-button {
     background-color:#11ffee00 ;
@@ -76,4 +70,4 @@
       cursor:pointer;
     }
 }
-}
+

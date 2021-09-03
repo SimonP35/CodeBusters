@@ -4,8 +4,12 @@ import {
   saveDataGame,
   setLoadingGame,
   END_GAME,
+  SUBMIT_ANSWER,
+  setWin,
+  toggleDisplayDescription,
 } from 'src/actions/game';
 import { setLoading } from 'src/actions/loading';
+import { clearInput } from 'src/actions/popup';
 
 const gameMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
@@ -37,6 +41,30 @@ const gameMiddleware = (store) => (next) => (action) => {
         });
       break;
     }
+    case SUBMIT_ANSWER: {
+      store.dispatch(setLoading());
+      const { inputGameValue, id } = store.getState().game;
+      axios.post(`http://3.238.70.10/api/game/answer/${id}`, { answer: inputGameValue },
+        {
+          headers: {
+            Authorization: `Bearer ${store.getState().auth.token}`,
+          },
+        })
+        .then((response) => {
+          console.log(response);
+          if (response.data.answer) {
+            store.dispatch(setWin(true));
+          }
+          else {
+            store.dispatch(toggleDisplayDescription());
+          }
+          store.dispatch(setLoading());
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      break;
+    }
     case END_GAME: {
       store.dispatch(setLoading());
       const { id } = store.getState().game;
@@ -49,6 +77,7 @@ const gameMiddleware = (store) => (next) => (action) => {
         .then((response) => {
           console.log(response);
           store.dispatch(setLoading());
+          store.dispatch(clearInput('inputGameValue', ''));
         })
         .catch((error) => {
           console.log(error);
