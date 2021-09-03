@@ -20,7 +20,7 @@ DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5
 DATABASE_URL="postgresql://db_user:db_password@127.0.0.1:5432/db_name?serverVersion=13&charset=utf8"
 ```
 
-- Entrer dans le sous-dossier "Back" et entrer dans le terminal la commande suivante :
+- Toujours à la racine du dossier "Back", entrer dans le terminal la commande suivante :
 ```composer install```
 
 - Créer votre database via Doctrine :
