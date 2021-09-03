@@ -10,7 +10,7 @@ book:
   picture1: "http://3.238.70.10/images/book.png"
   status: 0
   type: clickable
-  description1:
+  description1: "A lire en diagonale ?"
 
 ## Description à ajouter en fonction des retours des beta testeurs
 
@@ -50,9 +50,7 @@ carlin:
   picture1: "http://3.238.70.10/images/carlin.png"
   status: 0
   type: clickable
-  description1: ""
-
-# TODO : Trouver l'énigme du Carlin + photo + description (Franck MIB)
+  description1: "J'ai comme l'impression de l'avoir déjà croisé en costume...C'était quoi son prénom déjà ?"
 
 code:
   name: code
@@ -64,7 +62,7 @@ code:
   picture1: "http://3.238.70.10/images/code.png"
   status: 0
   type: clickable
-  description1:
+  description1: "C'est tout cassé T_T"
 
 ## Description à ajouter/modifier en fonction des retours des beta testeurs
 
@@ -102,7 +100,7 @@ memo_rebus:
   picture1: "http://3.238.70.10/images/memo_rebus.png"
   status: 0
   type: clickable
-  description1: 
+  description1: "!important"
 
 memo:
   name: memo
@@ -114,7 +112,7 @@ memo:
   picture1: "http://3.238.70.10/images/memo.png"
   status: 0
   type: clickable
-  description1:
+  description1: "!fun"
 
 duck:
   name: duck
