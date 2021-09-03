@@ -4,6 +4,8 @@ export const TOGGLE_DISPLAY_POPUP_COMMENT = 'TOGGLE_DISPLAY_POPUP_COMMENT';
 export const SUBMIT_COMMENT = 'SUBMIT_COMMENT';
 export const CHANGE_FIELD = 'CHANGE_FIELD';
 export const CLEAR_INPUT = 'CLEAR_INPUT';
+export const TOGGLE_DISPLAY_UPDATE_PASSWORD = 'TOGGLE_DISPLAY_UPDATE_PASSWORD';
+
 
 export const displayErrormessage = (content) => ({
   type: DISPLAY_ERRORMESSAGE,
@@ -14,6 +16,9 @@ export const closedErrormessage = () => ({
 });
 export const toggleDisplayPopupComment = () => ({
   type: TOGGLE_DISPLAY_POPUP_COMMENT,
+});
+export const toggleDisplayUpdatePassword = () => ({
+  type: TOGGLE_DISPLAY_UPDATE_PASSWORD,
 });
 export const submitComment = () => ({
   type: SUBMIT_COMMENT,

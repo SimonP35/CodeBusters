@@ -4,6 +4,7 @@ import {
   SUBMIT_LOGIN,
   SUBMIT_SIGNIN,
   SUBMIT_USER_UPDATE,
+  SUBMIT_USER_PASSWORD,
   SAVE_USER_SCORES,
   GET_USER_SCORES,
 } from 'src/actions/auth';
@@ -63,6 +64,13 @@ function authReducer(state = initialState, action = {}) {
         nickname: '',
       };
     case SUBMIT_USER_UPDATE:
+      return {
+        ...state,
+        email: '',
+        password: '',
+        nickname: '',
+      };
+    case SUBMIT_USER_PASSWORD:
       return {
         ...state,
         email: '',

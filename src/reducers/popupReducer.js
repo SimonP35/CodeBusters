@@ -3,6 +3,7 @@ import {
   DISPLAY_ERRORMESSAGE,
   CLOSED_ERRORMESSAGE,
   TOGGLE_DISPLAY_POPUP_COMMENT,
+  TOGGLE_DISPLAY_UPDATE_PASSWORD,
   SUBMIT_COMMENT,
   CHANGE_FIELD,
   CLEAR_INPUT,
@@ -13,11 +14,13 @@ const initialState = {
   displaySignin: false,
   displayComment: false,
   displayErrorMessage: false,
+  displayUpdatePassword: false,
   errorContent: '',
   comment: '',
   rating: 0,
   email: '',
   nickname: '',
+  password: '',
 };
 
 const popupReducer = (state = initialState, action = {}) => {
@@ -36,6 +39,11 @@ const popupReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         displayComment: !state.displayComment,
+      };
+    case TOGGLE_DISPLAY_UPDATE_PASSWORD:
+      return {
+        ...state,
+        displayUpdatePassword: !state.displayUpdatePassword,
       };
     case DISPLAY_ERRORMESSAGE:
       return {
