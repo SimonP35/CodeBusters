@@ -36,7 +36,6 @@ const Login = ({
             placeholder="Adresse email"
             manageChange={changeField}
             value={email}
-            className="login-field"
           />
           <Field
             name="password"
@@ -44,7 +43,6 @@ const Login = ({
             placeholder="Mot de passe"
             manageChange={changeField}
             value={password}
-            className="login-field"
           />
           <button className="login-button" type="submit">
             OK
