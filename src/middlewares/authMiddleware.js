@@ -4,6 +4,7 @@ import {
   saveUserData,
   SUBMIT_SIGNIN,
   SUBMIT_USER_UPDATE,
+  SUBMIT_USER_PASSWORD,
   GET_USER_SCORES,
   saveUserScores,
   handleLogOut,
@@ -13,6 +14,7 @@ import {
   displayErrormessage,
   SUBMIT_COMMENT,
   clearInput,
+  toggleDisplayUpdatePassword,
 } from 'src/actions/popup';
 import { setLoading } from 'src/actions/loading';
 
@@ -78,13 +80,34 @@ const authMiddleware = (store) => (next) => (action) => {
           },
         })
         .then((response) => {
-          console.log(response);
+          // console.log(response);
           // Lorsqu'on reçoit la réponse, on enregistre le pseudo et l'email
           store.dispatch(toggleDisplayPopupSignin());
           store.dispatch(handleLogOut());
         })
         .catch((error) => {
-          console.log(error);
+          // console.log(error);
+          store.dispatch(displayErrormessage('une erreur s\'est produite, veuillez réessayer'));
+        });
+      break;
+    }
+    case SUBMIT_USER_PASSWORD: {
+      const { password } = store.getState().auth;
+      // On peut modifier son mot de passe
+      axios.patch('http://3.238.70.10/api/user/update', { password: password },
+        {
+          headers: {
+            Authorization: `Bearer ${store.getState().auth.token}`,
+          },
+        })
+        .then((response) => {
+          // console.log(response);
+          // Lorsqu'on reçoit la réponse, on enregistre le mot de passe
+          store.dispatch(toggleDisplayUpdatePassword());
+          store.dispatch(handleLogOut());
+        })
+        .catch((error) => {
+          // console.log(error);
           store.dispatch(displayErrormessage('une erreur s\'est produite, veuillez réessayer'));
         });
       break;
@@ -102,7 +125,7 @@ const authMiddleware = (store) => (next) => (action) => {
       // Lorsqu'on reçoit la réponse, on enregistre le commentaire
       // de l'utilisateur (à lier au scénario)
         .then((response) => {
-          console.log(response);
+          // console.log(response);
           // si la création se passe bien on nettoie le champs
           store.dispatch(setLoading());
           store.dispatch(clearInput('comment', ''));
@@ -123,7 +146,7 @@ const authMiddleware = (store) => (next) => (action) => {
         })
       // Lorsqu'on reçoit la réponse, on envoie le tableau de scores
         .then((response) => {
-          console.log(response);
+          // console.log(response);
           store.dispatch(saveUserScores(response.data.user.games));
         })
         .catch(() => {

@@ -1,15 +1,4 @@
-// .profil-main{
-//   display: flex;
-//   justify-content: center;
-//   .profil-container{
-//     background-color: white;
-//     margin-top: 1em;
-//     width: 50%;
-//     .profil-title {
-//       font-size: 2em;
-//     }
-//   }
-// }
+
 
 @use 'src/styles/vars';
 
@@ -21,11 +10,11 @@
   font-weight: normal;
 }
 
-.profil-container {
+.profil-main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   background-color: vars.$color-popup-background;
   box-sizing: border-box;
    height: 35%;
@@ -71,27 +60,24 @@
     }
 
   .profil-button {
-    text-transform:uppercase;
-    border:none;
-    width:190px;
+    color:white;
+    background-color: vars.$color-background;
+    width:150px;
     height:70px;
     font-family: "Meta";
-    font-size: 15px;
-    padding:12px;
+    text-transform:uppercase;
+    padding:10px;
     margin:10px;
-    background-color:vars.$color-background;
-    color:white;
-    &:hover {
-      text-decoration: underline;
-    }
+    font-size: 15px;
+    border:none;
 
   }
 
   .profil-link-password {
     color:white;
     background-color: vars.$color-background;
-    width:190px;
-    height:50px;
+    width:150px;
+    height:70px;
     font-family: "Meta";
     text-transform:uppercase;
     padding:10px;

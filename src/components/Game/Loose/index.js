@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import utils from 'src/utils';
 import Header from 'src/components/Header';
+import Footer from 'src/components/Footer';
 
 import './loose.scss';
 
@@ -24,10 +25,8 @@ const Loose = ({ endGame }) => {
         <h3 className="loose-subtitle"> Médaille d'or toutes catégories de loose...</h3>
         <p className="loose-text">{scenario.contentloose} </p>
         <h3 className="loose-subtitle">Tu n'as su finir dans le temps imparti </h3>
-        <div className="loose-video-responsive">
-          <a href="https://www.commitstrip.com/fr/2018/11/06/experience-is-a-candle/image.gif">
-            <img src="{scenario.img}" alt="loose" />
-          </a>
+        <div className="loose-pic">
+          <img src={scenario.img} alt="loose" />
         </div>
         <button
           type="button"
@@ -37,6 +36,7 @@ const Loose = ({ endGame }) => {
         >Laisser un commentaire
         </button>
       </div>
+      <Footer />
     </>
   );
 };

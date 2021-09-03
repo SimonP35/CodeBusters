@@ -85,6 +85,7 @@ $shadows-big:    multiple-box-shadow(100);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   background-color: vars.$color-popup-background;
   box-sizing: border-box;
    width: 700px;
@@ -119,14 +120,12 @@ $shadows-big:    multiple-box-shadow(100);
     margin:2px;
   }
 
-  .loose-link {
-    margin:2px;
-    padding-top:5px;
-    padding-bottom:5px;
-    font-weight: bold;
-    &:hover {
-      color:red;
-    }
+  .loose-pic {
+    max-width: 55%;
+    max-height: 55%;
+    display:inline-flex;
+  }
+
   }
   .loose-button {
     background-color:#11ffee00 ;
@@ -143,4 +142,4 @@ $shadows-big:    multiple-box-shadow(100);
       cursor:pointer;
     }
 }
-}
+

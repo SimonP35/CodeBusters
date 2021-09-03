@@ -62,7 +62,7 @@ const Signin = ({
             manageChange={changeField}
             value={password}
           />
-          <p className="signin-password-info">* Le mot de passe doit contenir 8 caractères dont 1 majuscule, 1 chiffre et 1 caractère spécial.</p>
+          <p className="signin-password-info">* Le mot de passe doit contenir au moins 8 caractères dont 1 majuscule, 1 chiffre et 1 caractère spécial.</p>
           <button className="signin-button" type="submit">
             OK
           </button>
