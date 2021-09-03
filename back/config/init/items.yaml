@@ -94,7 +94,7 @@ memo_rebus:
   picture1: "http://3.238.70.10/images/memo_rebus.png"
   status: 0
   type: clickable
-  description1: "!important"
+  description1: "//! important !\\"
 
 memo:
   name: memo
@@ -106,7 +106,7 @@ memo:
   picture1: "http://3.238.70.10/images/memo.png"
   status: 0
   type: clickable
-  description1: "!fun"
+  description1: "//! fun !\\"
 
 duck:
   name: duck
