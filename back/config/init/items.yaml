@@ -12,8 +12,6 @@ book:
   type: clickable
   description1: "A lire en diagonale ?"
 
-## Description à ajouter en fonction des retours des beta testeurs
-
 labyrinth:
   name: labyrinth
   x: 82.3% #(x)
@@ -38,8 +36,6 @@ kaamelott:
   type: clickable
   description1: "Le gras, c'est la vie !"
 
-## Description à ajouter/modifier en fonction des retours des beta testeurs
-
 carlin:
   name: carlin
   x: 35.35% #(x)
@@ -63,8 +59,6 @@ code:
   status: 0
   type: clickable
   description1: "C'est tout cassé T_T"
-
-## Description à ajouter/modifier en fonction des retours des beta testeurs
 
 drawer_r:
   name: drawer_r
