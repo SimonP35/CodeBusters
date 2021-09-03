@@ -6,6 +6,9 @@ import './notFound.scss';
 
 const NotFound = () => (
   <>
+    <div id="stars" />
+    <div id="stars2" />
+    <div id="stars3" />
     <Header />
     <div className="notFound-container">
       <img className="errorimg" src={error} alt="error" />

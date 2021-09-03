@@ -16,6 +16,9 @@ const Home = ({
   displayErrorMessage,
 }) => (
   <>
+    <div id="stars" />
+    <div id="stars2" />
+    <div id="stars3" />
     <Header />
     <main className="home-main">
       <p className="home-text">La plateforme d'escape game pour les devs</p>

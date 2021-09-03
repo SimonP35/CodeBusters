@@ -16,6 +16,9 @@ const Loose = ({ endGame }) => {
   const dispatch = useDispatch();
   return (
     <>
+      <div id="stars" />
+      <div id="stars2" />
+      <div id="stars3" />
       <Header />
       <div className="loose-container">
         <h2 className="loose-title">NUL ! </h2>

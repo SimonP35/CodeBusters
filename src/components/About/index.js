@@ -10,6 +10,9 @@ const { teamList } = utils[0];
 
 const About = () => (
   <>
+    <div id="stars" />
+    <div id="stars2" />
+    <div id="stars3" />
     <Header />
     <div className="about-container">
       <h2 className="about-title">Le projet</h2>

@@ -28,6 +28,9 @@ const Intro = ({ setWin, setSeconds, setMinutes }) => {
         setSeconds(1);
         setMinutes(1);
       })}
+      <div id="stars" />
+      <div id="stars2" />
+      <div id="stars3" />
       <Header />
       <div className="intro-container">
         <h2 className="intro-title">{result.nom}</h2>
