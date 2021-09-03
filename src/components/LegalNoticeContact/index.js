@@ -34,7 +34,7 @@ const LegalNoticeContact = () => (
         de l'Éditeur est prohibé.
       </p>
       <h3 className="notice-subtitle" href="">Contact</h3>
-      <p className="notice-text">codebusters@gmail.com</p>
+      <p className="notice-text">codebusters.trinity@gmail.com</p>
     </div>
     <Footer />
   </>
