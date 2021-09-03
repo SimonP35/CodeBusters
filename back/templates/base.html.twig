@@ -17,14 +17,12 @@
         {% block javascripts %}
 			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
         {% endblock %}
     </head>
 
     {% include 'back/include/_nav.html.twig' %}
 
-    <body id="test">
+    <body>
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -34,21 +32,5 @@
 				<hr>
 				<div class="small text-secondary pb-3 text-center">&#128123; &#128123; &#128123; Le BackOffice des Code Busters &#128123; &#128123; &#128123;</div>
 			</div>
-         <script>
-        VANTA.CLOUDS2({
-        el: '#test',
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        skyColor: 0x70700,
-        cloudColor: 0xf70357,
-        lightColor: 0x2600e3,
-        speed: 0.80,
-        texturePath: "./gallery/noise.png"
-        })
-        </script>
     </body>
 </html>

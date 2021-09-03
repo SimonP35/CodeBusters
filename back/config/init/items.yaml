@@ -91,7 +91,6 @@ button:
   status: 0
   type: inputable
   description1: "Ca sent la mise en prod lundi..."
-  answer: /underscore/diggory/karadoc/franck/length/trinity.pem
 
 memo_rebus:
   name: memo_rebus
