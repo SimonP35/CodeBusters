@@ -1,4 +1,8 @@
 
+.field {
+  margin: .3em;
+  position: relative;
+}
 .field-input {
   width: 100%;
   padding: .7em;
@@ -8,10 +12,10 @@
   height: 2.5em;
 }
 .field-input:focus {
-  border-color: #f17f42;
+  border-color: #2608aa;
 }
 .field-input:focus + .field-label {
-  color: #f17f42;
+  color: #2608aa;
 }
 
 .field--has-content .field-label {
@@ -42,6 +46,8 @@
   100% {
     transform: translateY(0em);
     opacity: 1;
+  }
+}
 
   }
 }

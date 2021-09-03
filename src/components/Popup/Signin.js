@@ -47,7 +47,6 @@ const Signin = ({
             placeholder="nom"
             manageChange={changeField}
             value={nickname}
-            className="signin-field"
           />
           <Field
             type="email"
@@ -55,7 +54,6 @@ const Signin = ({
             placeholder="email"
             manageChange={changeField}
             value={email}
-            className="signin-field"
           />
           <Field
             name="password"
@@ -63,7 +61,6 @@ const Signin = ({
             placeholder="Mot de passe"
             manageChange={changeField}
             value={password}
-            className="signin-field"
           />
           <p className="signin-password-info">* Le mot de passe doit contenir 8 caractères dont 1 majuscule, 1 chiffre et 1 caractère spécial.</p>
           <button className="signin-button" type="submit">
@@ -83,7 +80,6 @@ const Signin = ({
         placeholder={nickname}
         manageChange={changeField}
         value={nickname}
-        className="signin-field"
       />
       <Field
         type="email"
@@ -91,7 +87,6 @@ const Signin = ({
         placeholder={email}
         manageChange={changeField}
         value={email}
-        className="signin-field"
       />
       <button className="signin-button" type="submit">
         OK
