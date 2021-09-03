@@ -59,27 +59,24 @@
     }
 
   .profil-button {
-    text-transform:uppercase;
-    border:none;
-    width:190px;
+    color:white;
+    background-color: vars.$color-background;
+    width:150px;
     height:70px;
     font-family: "Meta";
-    font-size: 15px;
-    padding:12px;
+    text-transform:uppercase;
+    padding:10px;
     margin:10px;
-    background-color:vars.$color-background;
-    color:white;
-    &:hover {
-      text-decoration: underline;
-    }
+    font-size: 15px;
+    border:none;
 
   }
 
   .profil-link-password {
     color:white;
     background-color: vars.$color-background;
-    width:190px;
-    height:50px;
+    width:150px;
+    height:70px;
     font-family: "Meta";
     text-transform:uppercase;
     padding:10px;

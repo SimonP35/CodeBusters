@@ -45,7 +45,7 @@ const Profil = ({
             }}
             className="profil-button"
             id="signin-update"
-          >Mettre mes informations à jour
+          >Changer mon pseudo
           </button>
           {/* Au clic sur le lien on ouvre une fenêtre avec le lien pour changer son mdp */}
           <a className="profil-link-password" href="http://3.238.70.10/reset-password" target="_blank" rel="noreferrer">Changer mon mot de passe</a>
