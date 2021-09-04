@@ -17,12 +17,7 @@ const About = () => (
     <div className="about-container">
       <h2 className="about-title">Le projet</h2>
       <section className="about-text">
-        CodeBusters est un jeu point and click sur navigateur,
-        celui-ci sert de projet à présenter lors de la fin de formation de développeur web au
-        sein de l’école O’clock,
-        de prochains ajouts de contenu (scénarios) sont prévus pour plus tard. Toute l’équipe est
-        heureuse de vous faire
-        partager cette création et espère vous faire passer un bon moment.
+      CodeBusters est une plateforme d’Escape Games en ligne qui gravitent dans l’univers du développement web. Sur un ton décalé, le produit se veut divertissant tout autant que réaliste dans ses énigmes, l propos étant de plonger le joueur dans le milieu en l’invitant à résoudre des énigmes décalées mais instructives. 
       </section>
       <h2 className="about-title">L'équipe</h2>
       <section className="about-section">

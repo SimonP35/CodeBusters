@@ -91,15 +91,15 @@ $shadows-big:    multiple-box-shadow(100);
    height: 600px;
    padding:10px;
    margin:2px;
-   border-bottom: 20px solid vars.$color-title-last ;
-   border-right: 10px solid vars.$color-title-last ;  
+   border-bottom: 20px solid vars.$color-title-five ;
+   border-right: 10px solid vars.$color-title-two ;  
   
 
   .win-title {
     font-family: "Meta";
     font-size: 2rem;
     text-align: center;
-    color: vars.$color-title-first;
+    color: vars.$color-text-title;
     font-variation-settings: "wght" 900, "ital" 1;
     padding-bottom:10px;
     margin:2px;
@@ -107,7 +107,7 @@ $shadows-big:    multiple-box-shadow(100);
    .win-subtitle {
       font-family: "Meta";
       font-variation-settings: "wght" 900, "ital" 1;
-      color:red;
+      color: vars.$color-text-title;
       padding-bottom:10px;
       margin:2px;
       margin-top:10px;

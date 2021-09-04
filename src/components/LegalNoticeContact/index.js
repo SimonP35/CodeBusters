@@ -15,9 +15,8 @@ const LegalNoticeContact = () => (
       <h2 className="notice-title">Mentions légales</h2>
       <h3 className="notice-subtitle">Éditeur</h3>
       <p className="notice-text">
-        L'édition du site est assurée par le groupe d'étudiants
-        CodeBusters celui-ci n'a pas d'intention commerciale,
-        mais sert de projet de fin d'étude.
+        Ce site n'a pas d'intention commerciale.
+        Son édition est gérée par l'équipe de développeurs à l'origine de la création du projet.
       </p>
       <h3 className="notice-subtitle">Cookies</h3>
       <p className="notice-text">
@@ -25,7 +24,7 @@ const LegalNoticeContact = () => (
       </p>
       <h3 className="notice-subtitle">Collecte des données</h3>
       <p className="notice-text">
-        Le site assure à l'Utilisateur une collecte et un traitement
+        Le site assure à l'utilisateur une collecte et un traitement
         d'informations personnelles dans le respect de la vie privée
         conformément à la loi n°78-17 du 6 janvier 1978 relative à
         l'informatique, aux fichiers et aux libertés.
@@ -34,7 +33,7 @@ const LegalNoticeContact = () => (
       <p className="notice-text">
         Toute utilisation, reproduction, diffusion, commercialisation,
         modification de tout ou partie du site CodeBusters, sans autorisation
-        de l'Éditeur est prohibé.
+        de l'éditeur est prohibée.
       </p>
       <h3 className="notice-subtitle" href="">Contact</h3>
       <p className="notice-text">codebusters.trinity@gmail.com</p>
