@@ -73,7 +73,7 @@ class Game
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $answer = "/underscore/diggory/karadoc/franck/length/trinity.pem";
+    private $answer = "underscorediggorykaradocfranklengthtrinity.pem";
 
     public function __construct()
     {

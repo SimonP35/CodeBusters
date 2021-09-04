@@ -6,6 +6,7 @@ use App\Entity\Game;
 use App\Service\GameEnd;
 use App\Service\GameInit;
 use App\Repository\GameRepository;
+use App\Service\CleanAnswer;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -113,16 +114,13 @@ class GameController extends AbstractController
      * 
      * @Route("/answer/{id<\d+>}", name="api_game_check_answer", methods={"POST"})
      */
-    public function checkAnswer(Game $game, Request $request): Response
+    public function checkAnswer(Game $game, Request $request, CleanAnswer $cleanAnswer): Response
     {
-        // On récupère le contenu de la requête (du JSON)
-        $jsonContent = $request->getContent();
-
-        //On décode le JSON pour récupérer la réponse de l'utilisateur
-        $answer = json_decode($jsonContent, true);
+        // On appelle le service qui récupère et traite la réponse de l'utilisateur (pour la "nettoyer" des majuscules, des espaces et des slashs)
+        $answer = $cleanAnswer->clean($request);
 
         // On compare les réponses et on renvoie un status code adapté au Front
-        if ($answer['answer'] === $game->getAnswer()) {
+        if ($answer === $game->getAnswer()) {
             return new JsonResponse(['answer' => true], Response::HTTP_OK);
         } else {
             return new JsonResponse(['answer' => false], Response::HTTP_OK);
