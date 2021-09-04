@@ -139,7 +139,7 @@ cat:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: "Un maneki-neko (招き猫, maneki neko?, aussi appelé chat porte-bonheur ou Tom pour les intimes) est une statue traditionnelle japonaise en céramique ou en  porcelaine, représentant un chat assis et levant la (ou les) patte(s) au niveau de l'oreille, et que l'on trouve fréquemment sur les devantures des magasins, près des   caisses dans les centres commerciaux, dans les salons de pachinko, etc."
+  description1: "Un maneki-neko (招き猫, maneki neko?, aussi appelé chat porte-bonheur ou Tom pour les intimes) est une statue traditionnelle japonaise en céramique ou en  porcelaine, représentant un chat assis et levant la (ou les) patte(s) au niveau de l'oreille, et que l'on trouve fréquemment sur les devantures des magasins, près des caisses dans les centres commerciaux, dans les salons de pachinko, etc."
 
 # Maneki (招き?) vient du verbe maneku (招く?) qui en japonais signifie « inviter » (dans le sens de faire venir) ou « saluer », et neko (猫?) désigne le « chat ». Il s'agit donc littéralement du « chat qui invite ». La tradition veut qu'on mette un de ces chats levant la patte dans les magasins pour attirer la fortune (pécuniaire). La patte gauche est censée attirer les clients, la patte droite l'argent. Il existe ainsi des chats levant les deux pattes et plus rarement les quatre pattes. On trouve souvent des maneki-neko dans les foyers, notamment sous forme de tirelires, de porte-clefs ou d'autres objets.
 
@@ -163,7 +163,7 @@ cup:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: "Trophée du Rappeur-Codeur 2021 : Nettement trop chaud on paye pas d’mine, mais dans c’rap game on est admin"
+  description1: "Trophée du Rappeur-Codeur 2021 : \"Nettement trop chaud on paye pas d’mine, mais dans c’rap game on est admin\""
 
 controller:
   name: controller
