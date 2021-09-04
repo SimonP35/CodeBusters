@@ -231,7 +231,7 @@ coffee:
   borderradius: 0%
   status: 0
   type: nopicture
-  description1: "Mais il est jamais froid ce café ?"
+  description1: "Mais il n'est jamais froid ce café ?"
 
 paper:
   name: paper
@@ -254,7 +254,7 @@ drawer_l:
   picture1: "http://3.238.70.10/images/drawer_l.png"
   status: 0
   type: clickable
-  description1: "J'aurai pas du l'ouvir..."
+  description1: "Je n'aurais pas du l'ouvir..."
 
 banana:
   name: banana
