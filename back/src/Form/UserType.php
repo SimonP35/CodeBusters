@@ -46,8 +46,7 @@ class UserType extends AbstractType
                         'help' => "8 lettres, 1 chiffre et 1 caractère spécial (@$!%*#?&-\)"
                     ],
                     'second_options' => ['label' => 'Répéter le mot de passe'],
-                ]);
-                
+                ]);  
             } 
         })
         ->add('nickname',  TextType::class, [
