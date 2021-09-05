@@ -117,7 +117,7 @@ class GameController extends AbstractController
     {
         // On appelle le service qui récupère et traite la réponse de l'utilisateur (pour la "nettoyer" des majuscules, des espaces et des slashs)
         $answer = $cleanAnswer->clean($request);
-
+        
         // On compare les réponses et on renvoie un status code adapté au Front
         if ($answer === $game->getAnswer()) {
             return new JsonResponse(['answer' => true], Response::HTTP_OK);
