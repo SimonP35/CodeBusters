@@ -16,7 +16,7 @@ h1 {
    color: white; 
 }
 
-label {
+label, small, legend, p {
     color: white; 
 }
 
