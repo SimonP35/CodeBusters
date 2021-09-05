@@ -25,3 +25,7 @@ label {
     font-weight: bold;
     font-style: oblique;
 }
+
+.nav-link {
+    color: white; 
+}
