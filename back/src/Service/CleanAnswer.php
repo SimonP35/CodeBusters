@@ -18,8 +18,8 @@ class CleanAnswer
         $toLowerAnswer = strtolower($answer['answer']);
 
         // On supprime les characters "espace" et "slash"
-        $oldChar = [" ", "/"];
-        $newChar = ["", ""];
+        $oldChar = [" ", "/", "%franck%"];
+        $newChar = ["", "", "frank"];
 
         $cleanAnswer = str_replace($oldChar, $newChar, $toLowerAnswer);
 
