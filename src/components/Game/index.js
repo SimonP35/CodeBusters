@@ -34,13 +34,14 @@ const Game = ({
   seconds,
   minutes,
   submitAnswer,
+  isLogged,
 }) => (
   // Ici on switch sur les différentes routes de la game
   // On passe d'abord par l'intro ensuite par le plateau
   // et pour finir une page win ou loose
   <Switch>
     <Route path="/game/:slug" exact>
-      <Intro setWin={setWin} setMinutes={setMinutes} setSeconds={setSeconds} />
+      <Intro setWin={setWin} setMinutes={setMinutes} setSeconds={setSeconds} isLogged={isLogged} />
     </Route>
     <Route path="/game/:slug/board">
       <Board
@@ -100,6 +101,7 @@ Game.propTypes = {
   seconds: PropTypes.number.isRequired,
   minutes: PropTypes.number.isRequired,
   submitAnswer: PropTypes.func.isRequired,
+  isLogged: PropTypes.bool.isRequired,
 };
 
 export default Game;
