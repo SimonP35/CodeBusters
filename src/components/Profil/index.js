@@ -21,6 +21,9 @@ const Profil = ({
 
   return (
     <>
+      <div id="stars" />
+      <div id="stars2" />
+      <div id="stars3" />
       <Header />
       <main className="profil-main">
         <div>

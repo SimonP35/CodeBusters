@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory, useParams, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import utils from 'src/utils';
@@ -9,7 +9,12 @@ import './intro.scss';
 
 const { scenarios } = utils[1];
 
-const Intro = ({ setWin, setSeconds, setMinutes }) => {
+const Intro = ({
+  setWin,
+  setSeconds,
+  setMinutes,
+  isLogged,
+}) => {
   const { slug } = useParams();
   const result = scenarios.find((item) => item.slug === slug);
 
@@ -40,14 +45,13 @@ const Intro = ({ setWin, setSeconds, setMinutes }) => {
           type="button"
           className="intro-button"
           onClick={() => {
-            // startGame();
             redirectionToBoard();
           }}
         >Lancez la partie
         </button>
-        {/* {!loadingGame && }; */}
       </div>
       <Footer />
+      {!isLogged && <Redirect to="/" />}
     </>
   );
 };
@@ -56,6 +60,7 @@ Intro.propTypes = {
   setWin: PropTypes.func.isRequired,
   setMinutes: PropTypes.func.isRequired,
   setSeconds: PropTypes.func.isRequired,
+  isLogged: PropTypes.bool.isRequired,
 };
 
 export default Intro;

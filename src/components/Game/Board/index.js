@@ -134,6 +134,7 @@ const Board = ({
     displayPicture && (
       <div className="image-container">
         <button
+          className="image-button"
           type="button"
           onClick={() => {
             toggleDisplayPicture();
@@ -166,6 +167,7 @@ const Board = ({
         displayDescription && (
           <div className="description-container">
             <button
+              className="description-button"
               type="button"
               onClick={() => {
                 toggleDisplayDescription();
