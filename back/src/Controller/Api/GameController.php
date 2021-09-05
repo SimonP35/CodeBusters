@@ -115,7 +115,7 @@ class GameController extends AbstractController
      */
     public function checkAnswer(Game $game, Request $request, CleanAnswer $cleanAnswer): Response
     {
-        // On appelle le service qui récupère et traite la réponse de l'utilisateur (pour la "nettoyer" des majuscules, des espaces et des slashs)
+        // On appelle le service qui récupère et traite la réponse de l'utilisateur
         $answer = $cleanAnswer->clean($request);
         
         // On compare les réponses et on renvoie un status code adapté au Front

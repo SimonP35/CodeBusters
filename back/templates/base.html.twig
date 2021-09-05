@@ -23,34 +23,8 @@
 
     {% include 'back/include/_nav.html.twig' %}
 
-    <body>
-		<div class="background">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+    <body class="background" {% if app.request.get('_route') is same as 'app_login' %}style="overflow: hidden"{% endif %}>
+        {% include 'back/include/_star.html.twig' %}
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -61,6 +35,5 @@
                 <div class="small text-secondary pb-3 text-center">&#128123; &#128123; &#128123; Le BackOffice des Code Busters &#128123; &#128123; &#128123;</div>
                 </div>
             </div>
-        </div>
     </body>
 </html>

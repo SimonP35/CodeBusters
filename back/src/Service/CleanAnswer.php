@@ -17,12 +17,13 @@ class CleanAnswer
         // On met en lowercase la réponse
         $toLowerAnswer = strtolower($answer['answer']);
 
-        // On supprime les characters "espace" et "slash"
+        // On supprime les characters "espace", "slash" et on remplace "franck" par "frank" (on accepte les 2 orthographes)
         $oldChar = [" ", "/", "franck"];
         $newChar = ["", "", "frank"];
 
         $cleanAnswer = str_replace($oldChar, $newChar, $toLowerAnswer);
 
+        // On renvoie la réponse "nettoyée"
         return $cleanAnswer;
     }
 }
