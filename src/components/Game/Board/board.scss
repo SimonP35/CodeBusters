@@ -22,12 +22,16 @@
     width: 1200px;
     height: 675px;
   }
+  .image-button{
+    position: relative;
+    left: 590px
+  }
   .description {
     font-size: 1.5em;
     font-weight: bold;
     color: black;
-    background-color: white;
-    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.719);
+    border-radius: 10px;
     width: 600px;
     height:200px;
     display: flex;
@@ -50,13 +54,18 @@
     font-size: 1.5em;
     font-weight: bold;
     color: black;
-    background-color: white;
-    border-radius: 50%;
-    width: 600px;
-    height:200px;
+    background-color: rgba(255, 255, 255, 0.719);
+    border-radius: 10px;
+    width: 20em;
+    min-height:5em;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1em;
+  }
+  .description-button{
+    position: relative;
+    left:230px
   }
 }
 

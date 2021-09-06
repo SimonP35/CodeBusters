@@ -8,12 +8,10 @@
     font-weight: normal;
   }
   .title-container {
-    padding-bottom: 10px;
-    width: 90vw;
-    height: 15vh;
-    display: inline;
-
+    
     .title-title {
+      padding-left: 0.8em;
+      margin-top: 0.5em;
       transition: all 0.5s;
       -webkit-text-stroke: 2px vars.$color-title-contouring;
       font-variation-settings: "wght" 900, "ital" 1;

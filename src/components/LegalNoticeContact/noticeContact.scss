@@ -37,12 +37,39 @@
       color: vars.$color-text-title;
       padding-bottom:1%;
       margin-top:2%;
-
     }
   .notice-text {
     font-family:'Quicksand', sans-serif; 
     padding-left:50px;
     padding-right:50px;
     margin:2px;
+  }
+
+  .notice-link {
+    margin:1%;
+    padding-top:5px;
+    padding-bottom:3%;
+    font-weight: bold;
+    &:hover {
+      color:red;
+    }
+  }
+  .notice-button {
+    background-color: red;
+    color:white;
+    display:inline-block;
+    text-transform:uppercase;
+    font-weight: bold;
+    border:none;
+    width:15%;
+    height:7%;
+    position:absolute;
+      left:42%;
+      right:auto;
+      top:91%;
+      bottom:auto;
+      border-radius:10px;
+      font-family: "Meta";
+
   }
 }
