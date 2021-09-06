@@ -23,8 +23,7 @@
 
     {% include 'back/include/_nav.html.twig' %}
 
-    <body class="background" {% if app.request.get('_route') is same as 'app_login' or app.request.get('_route') is same as 'app_forgot_password_request' or app.request.get('_route') is same as 'app_check_email' or app.request.get('_route') is same as 'app_reset_password' %}style="overflow: hidden"{% endif %}>
-        {% include 'back/include/_star.html.twig' %}
+    <body class="background">
             <div class="container">
                 <div class="row">
                     <div class="col">
