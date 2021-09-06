@@ -11,6 +11,8 @@ import git from 'src/assets/images/github.svg';
 import linkedin from 'src/assets/images/linkedin.svg';
 import twitter from 'src/assets/images/twitter.svg';
 import loose from 'src/assets/images/loose.png';
+import shell from 'src/assets/images/shell.png';
+import python from 'src/assets/images/python.png';
 
 export default [
   {
@@ -65,7 +67,7 @@ export default [
         description: 'Vendredi, 17h30...Tu t\'apprêtes à partir quand tu reçois un message de ton boss sur Schlag. Le client exige la mise en prod du code que Maurice a laissé tout cassé pour 18h. Tu sais ce qu\'on dit sur les mises en prod du vendredi...',
         pic: vendredi,
         comment: 'Jeu très cool, j\'ai adoré ! ',
-        rate: 4,
+        rate: 5,
         slug: 'vendredi-maudit',
         status: 1,
       },
@@ -95,7 +97,7 @@ export default [
         description: 'Plus violent que Predator, plus cruel qu\'Alien, plus destructeur que Godzilla: le combat ultime entre Javascript le Givré et Typescript le Titan. Un seul des deux survivra.',
         pic: mathmax,
         comment: 'je savais pas ce que c\'était typescript mais ca a l\'air trop balese en fait',
-        rate: 4,
+        rate: 5,
         slug: 'math-max',
         status: 0,
 
@@ -113,6 +115,38 @@ export default [
         comment: 'c\'est quoi ce truc de dingue encore ? Ils sont vraiment loin les gars qui ont écrit le scénar !',
         rate: 5,
         slug: 'instance-de-trop',
+        status: 0,
+
+      },
+      {
+        id: 5,
+        nom: 'Le dresseur de Python',
+        src: 'https://www.youtube.com/watch?v=1AnG04qnLqI',
+        contentwin: 'L\'indenteur fou de Python !',
+        contentloose: 'Tu devais pas être le premier à ranger ta chambre quand t\'étais môme ou j\'me trompe? ',
+        img: loose,
+        timer: 30,
+        description: 'Chaque minute, l\'étau du serpent se reserre pour toi... Un seul moyen de lui échapper : réparer l\'indentation du code afin que le script s\'exécute !',
+        pic: python,
+        comment: 'MDR je verrai plus mes erreurs de syntaxe en python du même oeil',
+        rate: 3,
+        slug: 'dresseur-de-python',
+        status: 0,
+
+      },
+      {
+        id: 6,
+        nom: 'Serial Basher',
+        src: 'https://www.youtube.com/watch?v=1AnG04qnLqI',
+        contentwin: 'Enfin quelqu\'un qui se sert d\'un shell proprement !',
+        contentloose: 'Perdu dans les tréfonds de ton système d\'exploitation !',
+        img: loose,
+        timer: 30,
+        description: 'Tu savais qu\'en anglais, bash signifie "frapper violemment" ? Bon ben maintenant, tu le sais. Alors prends ton gourdin, un twix, et saute dans le système d\'expploitation. ',
+        pic: shell,
+        comment: 'Clairement, on respecte pas un shell comme on devrait',
+        rate: 4,
+        slug: 'serial-basher',
         status: 0,
 
       },

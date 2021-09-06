@@ -89,7 +89,7 @@ $shadows-big:    multiple-box-shadow(100);
   background-color: vars.$color-popup-background;
   box-sizing: border-box;
    width: 700px;
-   height: 600px;
+   height: 700px;
    padding:10px;
    margin:2px;
    border-bottom: 20px solid vars.$color-title-five ;
@@ -121,8 +121,9 @@ $shadows-big:    multiple-box-shadow(100);
   }
 
   .loose-pic {
-    max-width: 65%;
-    max-height: 65%;
+    max-width: 70%;
+    max-height: 70%;
+    left:30%;
     display:inline-flex;
   }
 

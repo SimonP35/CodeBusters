@@ -29,7 +29,7 @@ function MyTimer({ expiryTimestamp, setMinutes, setSeconds }) {
 const Timer = ({ setSeconds, setMinutes }) => {
   const time = new Date();
   // console.log(time);
-  time.setSeconds(time.getSeconds() + 50); // 1800 = 30 minutes
+  time.setSeconds(time.getSeconds() + 1800); // 1800 = 30 minutes
   return (
     <div>
       <MyTimer expiryTimestamp={time} setSeconds={setSeconds} setMinutes={setMinutes} />
