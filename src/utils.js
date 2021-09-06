@@ -142,7 +142,7 @@ export default [
         contentloose: 'Perdu dans les tréfonds de ton système d\'exploitation !',
         img: loose,
         timer: 30,
-        description: 'Tu savais qu\'en anglais, bash signifie "frapper violemment" ? Bon ben maintenant, tu le sais. Alors prends ton gourdin, un twix, et saute dans le système d\'expploitation. ',
+        description: 'Tu savais qu\'en anglais, bash signifie "frapper violemment" ? Bon ben maintenant, tu le sais. Alors prends ton gourdin, un twix, et saute dans le système d\'exploitation. ',
         pic: shell,
         comment: 'Clairement, on respecte pas un shell comme on devrait',
         rate: 4,
