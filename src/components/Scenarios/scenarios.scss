@@ -20,14 +20,12 @@
   box-sizing: border-box;
   border-bottom: 20px solid vars.$color-title-four;
   border-right: 10px solid vars.$color-title-five;
-
   .scenarios-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 10px;
     padding: 10px;
-
     .scenarios-scenario {
       width: 400px;
       height:390px;
@@ -104,6 +102,7 @@
       }
     }
   }
+  
   .unavailable{
     width: 413px;
     height: 410px;
