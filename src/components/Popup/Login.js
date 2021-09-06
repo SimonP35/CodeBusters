@@ -10,6 +10,7 @@ const Login = ({
   email,
   password,
   submitLogin,
+  clearInput,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -24,6 +25,7 @@ const Login = ({
           className="login-closed"
           onClick={() => {
             toggleDisplayLogin();
+            clearInput('password', '');
           }}
         >
           x
@@ -61,6 +63,7 @@ Login.propTypes = {
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   submitLogin: PropTypes.func.isRequired,
+  clearInput: PropTypes.func.isRequired,
 
 };
 

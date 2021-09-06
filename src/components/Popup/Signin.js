@@ -13,6 +13,7 @@ const Signin = ({
   submitSignin,
   submitUserUpdate,
   isLogged,
+  clearInput,
 }) => {
 // if islogged = false submitSignin / sinon submitUserUpdate via authmiddleware
   const handleSubmit = (evt) => {
@@ -33,6 +34,9 @@ const Signin = ({
           className="signin-closed"
           onClick={() => {
             toggleDisplaySignin();
+            clearInput('password', '');
+            clearInput('email', '');
+            clearInput('nickname', '');
           }}
         >       x
         </button>
@@ -109,6 +113,7 @@ Signin.propTypes = {
   submitSignin: PropTypes.func.isRequired,
   submitUserUpdate: PropTypes.func.isRequired,
   isLogged: PropTypes.bool.isRequired,
+  clearInput: PropTypes.func.isRequired,
 
 };
 

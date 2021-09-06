@@ -15,6 +15,7 @@ import {
   SUBMIT_COMMENT,
   clearInput,
   toggleDisplayUpdatePassword,
+  saveErrorMessage,
 } from 'src/actions/popup';
 import { setLoading } from 'src/actions/loading';
 
@@ -39,7 +40,8 @@ const authMiddleware = (store) => (next) => (action) => {
         .catch((error) => {
           // console.log(error.response);
           store.dispatch(displayErrormessage(error.response.data.message));
-          store.dispatch(clearInput());
+          store.dispatch(clearInput('password', ''));
+          store.dispatch(clearInput('email', ''));
           store.dispatch(setLoading());
         });
       break;
@@ -62,7 +64,21 @@ const authMiddleware = (store) => (next) => (action) => {
         .catch((error) => {
           // console.log(error);
           // console.log(error.response);
-          store.dispatch(displayErrormessage(error.response.data.errors.detail));
+          // store.dispatch(displayErrormessage(error.response.data.newErrors));
+          if (error.response.data.newErrors.email !== undefined) {
+            store.dispatch(saveErrorMessage('errorEmail', error.response.data.newErrors.email));
+          }
+          if (error.response.data.newErrors.password !== undefined) {
+            store.dispatch(saveErrorMessage('errorPassword', error.response.data.newErrors.password));
+          }
+          if (error.response.data.newErrors.nickname !== undefined) {
+            store.dispatch(saveErrorMessage('errorNickname', error.response.data.newErrors.nickname));
+          }
+          const { errorEmail, errorPassword, errorNickname } = store.getState().popup;
+          store.dispatch(displayErrormessage(`${errorEmail}\n${errorPassword}\n${errorNickname}`));
+          store.dispatch(clearInput('errorEmail', ''));
+          store.dispatch(clearInput('errorPassword', ''));
+          store.dispatch(clearInput('errorNickname', ''));
           store.dispatch(clearInput('email', ''));
           store.dispatch(clearInput('nickname', ''));
           store.dispatch(clearInput('password', ''));
@@ -71,6 +87,7 @@ const authMiddleware = (store) => (next) => (action) => {
       break;
     }
     case SUBMIT_USER_UPDATE: {
+      store.dispatch(setLoading());
       const { nickname, email } = store.getState().auth;
       // On peut modifier son pseudo
       axios.patch('http://3.238.70.10/api/user/update', { nickname: nickname, email: email },
@@ -79,19 +96,22 @@ const authMiddleware = (store) => (next) => (action) => {
             Authorization: `Bearer ${store.getState().auth.token}`,
           },
         })
-        .then((response) => {
+        .then(() => {
           // console.log(response);
           // Lorsqu'on reçoit la réponse, on enregistre le pseudo et l'email
           store.dispatch(toggleDisplayPopupSignin());
           store.dispatch(handleLogOut());
+          store.dispatch(setLoading());
         })
-        .catch((error) => {
+        .catch(() => {
           // console.log(error);
           store.dispatch(displayErrormessage('une erreur s\'est produite, veuillez réessayer'));
+          store.dispatch(setLoading());
         });
       break;
     }
     case SUBMIT_USER_PASSWORD: {
+      store.dispatch(setLoading());
       const { password } = store.getState().auth;
       // On peut modifier son mot de passe
       axios.patch('http://3.238.70.10/api/user/update', { password: password },
@@ -100,15 +120,17 @@ const authMiddleware = (store) => (next) => (action) => {
             Authorization: `Bearer ${store.getState().auth.token}`,
           },
         })
-        .then((response) => {
+        .then(() => {
           // console.log(response);
           // Lorsqu'on reçoit la réponse, on enregistre le mot de passe
           store.dispatch(toggleDisplayUpdatePassword());
           store.dispatch(handleLogOut());
+          store.dispatch(setLoading());
         })
-        .catch((error) => {
+        .catch(() => {
           // console.log(error);
           store.dispatch(displayErrormessage('une erreur s\'est produite, veuillez réessayer'));
+          store.dispatch(setLoading());
         });
       break;
     }
@@ -124,7 +146,7 @@ const authMiddleware = (store) => (next) => (action) => {
         })
       // Lorsqu'on reçoit la réponse, on enregistre le commentaire
       // de l'utilisateur (à lier au scénario)
-        .then((response) => {
+        .then(() => {
           // console.log(response);
           // si la création se passe bien on nettoie le champs
           store.dispatch(setLoading());
@@ -133,11 +155,13 @@ const authMiddleware = (store) => (next) => (action) => {
         })
         .catch(() => {
           // console.log(error.response);
-          // store.dispatch(displayErrormessage(error.response.data.errors.detail));
+          store.dispatch(displayErrormessage('Une erreur s\'est produite, veuillez réessayer'));
+          store.dispatch(setLoading());
         });
       break;
     }
     case GET_USER_SCORES: {
+      store.dispatch(setLoading());
       axios.get('http://3.238.70.10/api/user/read',
         {
           headers: {
@@ -148,9 +172,11 @@ const authMiddleware = (store) => (next) => (action) => {
         .then((response) => {
           // console.log(response);
           store.dispatch(saveUserScores(response.data.user.games));
+          store.dispatch(setLoading());
         })
         .catch(() => {
           // console.log(error.response);
+          store.dispatch(setLoading());
         });
       break;
     }

@@ -34,6 +34,7 @@ const Popup = ({
   submitComment,
   errorContent,
   handleLogOut,
+  clearInput,
 }) => (
   <>
     {displayLogin && (
@@ -43,6 +44,7 @@ const Popup = ({
       email={email}
       password={password}
       submitLogin={submitLogin}
+      clearInput={clearInput}
     />
     )}
     {displaySignin && (
@@ -56,6 +58,7 @@ const Popup = ({
       submitSignin={submitSignin}
       submitUserUpdate={submitUserUpdate}
       handleLogOut={handleLogOut}
+      clearInput={clearInput}
     />
     )}
 
@@ -112,6 +115,7 @@ Popup.propTypes = {
   submitComment: PropTypes.func.isRequired,
   handleLogOut: PropTypes.func.isRequired,
   errorContent: PropTypes.string.isRequired,
+  clearInput: PropTypes.func.isRequired,
 };
 
 export default Popup;
