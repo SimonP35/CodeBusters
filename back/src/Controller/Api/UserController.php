@@ -50,10 +50,8 @@ class UserController extends AbstractController
             $newErrors = [];
 
             foreach ($errors as $error) {
-                $newErrors[$error->getPropertyPath()] = $error->getMessage();
+                $newErrors[$error->getPropertyPath()] = $error->getPropertyPath() . " : " . $error->getMessage();
             }
-            
-            // dd($newErrors);
 
             // On renvoie les différentes erreurs sous forme de tableau
             return $this->json(['newErrors' => $newErrors], Response::HTTP_UNPROCESSABLE_ENTITY);
