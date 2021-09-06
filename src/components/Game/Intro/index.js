@@ -39,8 +39,8 @@ const Intro = ({
       <Header />
       <div className="intro-container">
         <h2 className="intro-title">{result.nom}</h2>
-        <img src={result.pic} alt="scenario" />
         <p className="intro-description">{result.description}</p>
+        <img src={result.pic} alt="scenario" />
         <button
           type="button"
           className="intro-button"

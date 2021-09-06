@@ -24,7 +24,7 @@ const Loose = ({ endGame }) => {
         <h2 className="loose-title">NUL ! </h2>
         <h3 className="loose-subtitle"> Médaille d'or toutes catégories de loose...</h3>
         <p className="loose-text">{scenario.contentloose} </p>
-        <h3 className="loose-subtitle">Tu n'as su finir dans le temps imparti </h3>
+        <h3 className="loose-subtitle">Tu n'as pas pu finir dans le temps imparti </h3>
         <div className="loose-pic">
           <img src={scenario.img} alt="loose" />
         </div>

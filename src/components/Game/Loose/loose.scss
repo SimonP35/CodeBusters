@@ -17,18 +17,18 @@
   background-color: vars.$color-popup-background;
   box-sizing: border-box;
    width: 700px;
-   height: 600px;
+   height: 700px;
    padding:10px;
    margin:2px;
-   border-bottom: 20px solid vars.$color-title-last ;
-   border-right: 10px solid vars.$color-title-last ;  
+   border-bottom: 20px solid vars.$color-title-five ;
+   border-right: 10px solid vars.$color-title-two ;  
   
 
   .loose-title {
     font-family: "Meta";
     font-size: 2rem;
     text-align: center;
-    color: vars.$color-title-first;
+    color: vars.$color-text-title;
     font-variation-settings: "wght" 900, "ital" 1;
     padding-bottom:10px;
     margin:2px;
@@ -36,7 +36,7 @@
    .loose-subtitle {
       font-family: "Meta";
       font-variation-settings: "wght" 900, "ital" 1;
-      color:red;
+      color: vars.$color-text-title;
       padding-bottom:10px;
       margin:2px;
       margin-top:10px;
@@ -49,8 +49,9 @@
   }
 
   .loose-pic {
-    max-width: 55%;
-    max-height: 55%;
+    max-width: 70%;
+    max-height: 70%;
+    left:30%;
     display:inline-flex;
   }
 

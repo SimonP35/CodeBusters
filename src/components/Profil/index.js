@@ -49,7 +49,7 @@ const Profil = ({
             }}
             className="profil-button"
             id="signin-update"
-          >Changer mon pseudo
+          >Changer mes informations
           </button>
           <button
             type="button"

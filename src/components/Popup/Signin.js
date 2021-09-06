@@ -34,7 +34,7 @@ const Signin = ({
           onClick={() => {
             toggleDisplaySignin();
           }}
-        >       x
+        >       +
         </button>
         {
         !isLogged
@@ -88,6 +88,7 @@ const Signin = ({
         manageChange={changeField}
         value={email}
       />
+      <p className="signin-password-info">* Vous devrez vous reconnecter suite aux modifications du profil.</p>
       <button className="signin-button" type="submit">
         OK
       </button>
