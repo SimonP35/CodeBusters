@@ -28,7 +28,7 @@ const Login = ({
             clearInput('password', '');
           }}
         >
-          x
+          +
         </button>
         <form className="login-form" onSubmit={handleSubmit}>
           Me connecter

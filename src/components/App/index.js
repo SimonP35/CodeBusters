@@ -11,6 +11,5 @@ const App = () => (
     <Pages />
   </div>
 );
-
 // == Export
 export default App;
