@@ -47,8 +47,10 @@ class UserController extends AbstractController
         // Si la validation rencontre des erreurs
         if (count($errors) > 0) {
             
+            // On créé un nouveau tableau d'erreur
             $newErrors = [];
 
+            // On le parcourt
             foreach ($errors as $error) {
                 $newErrors[$error->getPropertyPath()] = $error->getPropertyPath() . " : " . $error->getMessage();
             }
