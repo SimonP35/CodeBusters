@@ -1,0 +1,172 @@
+@use 'src/styles/reset';
+@use 'src/styles/vars';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+// MEDIA QUERIES : 
+
+// MOBILE / TAB DEVICE
+
+ @media (max-width:700px) {
+
+   body {
+     display:flex;
+     background: #020949;
+     margin:0;
+     font-family: 'Quicksand', sans-serif;
+   }
+
+   @font-face {
+     src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+       format("woff2");
+     font-family: "Meta";
+     font-style: normal;
+     font-weight: normal;
+   }
+   .mobile-back {
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100vw;
+     height: 100vh;
+     position: fixed;
+     top: 0;
+     background-color: rgba(15, 15, 15, 0.39);
+   }
+
+   .mobile-container {
+  
+     background-color:vars.$color-popup-background;
+     width: 400px;
+     height: 600px;
+     position:absolute;
+     box-sizing: border-box;
+     border-bottom: 10px solid vars.$color-title-two ;
+     border-top: 10px solid vars.$color-title-four ;  
+     border-left: 10px solid vars.$color-title-first ;  
+     border-right: 10px solid vars.$color-title-last ;  
+     display:flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     z-index:2;
+     backdrop-filter: blur(100px);
+  
+   .mobile-title {
+     font-family: "Meta";
+     font-size: 30px;
+     text-align: center;
+     color: vars.$color-title-first;
+     text-shadow: 4px 2.5px 2px vars.$color-title-two;
+     font-variation-settings: "wght" 900, "ital" 1;
+     padding-bottom:10px;
+     margin:2px;
+   }
+   .mobile-subtitle {
+     font-family: "Meta";
+     font-variation-settings: "wght" 900, "ital" 1;
+     color:red;
+     padding-bottom:4px;
+     margin:2px;
+   }
+  
+   .mobile-text {
+     font-family:'Quicksand', sans-serif; 
+     padding-left:50px;
+     padding-right:50px;
+     margin:2px;
+     padding-top:10px;
+   }
+   }
+ }
+ // IPAD DEVICE
+
+ @media(max-width:1200px){
+
+   body {
+     display:flex;
+     background: #020949;
+     margin:0;
+     font-family: 'Quicksand', sans-serif;
+   }
+
+   .mobile-back {
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100vw;
+     height: 100vh;
+     position: fixed;
+     top: 0;
+     background-color: rgba(15, 15, 15, 0.39);
+   }
+
+     .mobile-container {
+
+   background-color:vars.$color-popup-background;
+   padding:5px;
+   width: 500px;
+   height: 500px;
+   position:absolute;
+   top:auto;
+   bottom:auto;
+   left:auto;
+   right:auto;
+   box-sizing: border-box;
+   margin :auto;
+   border-bottom: 20px solid vars.$color-title-two ;
+   border-top: 20px solid vars.$color-title-four ;  
+   border-left: 20px solid vars.$color-title-first ;  
+   border-right: 20px solid vars.$color-title-last ;  
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 2;
+   backdrop-filter: blur(500px);
+
+
+ .mobile-title {
+   font-family: "Meta";
+   font-size: 30px;
+   text-align: center;
+   color: vars.$color-title-first;
+   text-shadow: 4px 2.5px 2px vars.$color-title-two;
+   font-variation-settings: "wght" 900, "ital" 1;
+   padding-bottom:10px;
+   margin:2px;
+ }
+ .mobile-subtitle {
+   font-family: "Meta";
+   font-variation-settings: "wght" 900, "ital" 1;
+   color:red;
+   padding-bottom:4px;
+   margin:2px;
+ }
+
+ .mobile-close {
+  color: red;
+}
+
+ .mobile-text {
+   font-family:'Quicksand', sans-serif; 
+   padding-left:50px;
+   padding-right:50px;
+   margin:2px;
+   padding-top:10px;
+ }
+ }
+   }
+
+   // NORMAL DISPLAY
+
+// @media(min-width:1200px){
+
+body {
+  background: vars.$color-background;
+  font-family: 'Quicksand', sans-serif;  
+}
+
+// }
+

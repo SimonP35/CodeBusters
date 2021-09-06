@@ -30,7 +30,9 @@
           font-variation-settings: "wght" 900, "ital" 1;
           text-shadow: none;
         }
-      
+        @media screen and (max-width: 768px) {
+          font-size: 2rem;
+      }
     }
   }
   

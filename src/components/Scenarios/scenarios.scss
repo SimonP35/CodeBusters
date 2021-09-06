@@ -20,14 +20,13 @@
   box-sizing: border-box;
   border-bottom: 20px solid vars.$color-title-five ;
   border-right: 10px solid vars.$color-title-two ;  
-
+}
   .scenarios-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 10px;
     padding: 10px;
-
     .scenarios-scenario {
       width: 400px;
       height:400px;
@@ -104,11 +103,12 @@
       }
     }
   }
+  
   .unavailable{
     width: 413px;
     height: 410px;
     margin-top:3px;
     background-color: rgba(39, 38, 38, 0.644);
     position: absolute;
-   } 
+   }
 }
