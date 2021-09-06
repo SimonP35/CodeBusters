@@ -48,10 +48,9 @@ class UserController extends AbstractController
         if (count($errors) > 0) {
             
             $newErrors = [];
-            $newErrors['detail'] = "";
 
             foreach ($errors as $error) {
-                $newErrors['detail'] .= $error->getPropertyPath() . " : " . $error->getMessage() . "<br>";
+                $newErrors[$error->getPropertyPath()] = $error->getMessage();
             }
             
             // dd($newErrors);
