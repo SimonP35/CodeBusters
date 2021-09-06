@@ -47,7 +47,7 @@ class UserController extends AbstractController
         $newErrors = [];
 
         foreach ($errors as $error) {
-            $newErrors[$error->getPropertyPath()][] = $error->getMessage();
+            $newErrors[] = $error->getPropertyPath() . ' : ' . $error->getMessage();
         }
 
         // Si la validation rencontre des erreurs
