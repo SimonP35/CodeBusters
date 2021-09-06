@@ -44,19 +44,20 @@ class UserController extends AbstractController
         // On valide l'entité avec le service Validator
         $errors = $validator->validate($user);
 
-        $newErrors = [];
-
-        foreach ($errors as $error) {
-            $newErrors[$error->getPropertyPath()][] = $error->getMessage();
-        }
-
         // Si la validation rencontre des erreurs
         if (count($errors) > 0) {
+            
+            $newErrors = [];
+            $newErrors['detail'] = "";
 
-            $errorsString = (string) $errors;
+            foreach ($errors as $error) {
+                $newErrors['detail'] .= $error->getPropertyPath() . " : " . $error->getMessage() . "<br>";
+            }
+            
+            // dd($newErrors);
 
             // On renvoie les différentes erreurs sous forme de tableau
-            return $this->json(['errorsString' => $errorsString], Response::HTTP_UNPROCESSABLE_ENTITY);
+            return $this->json(['newErrors' => $newErrors], Response::HTTP_UNPROCESSABLE_ENTITY);
         }
 
         // On persist, on flush
