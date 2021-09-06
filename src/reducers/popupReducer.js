@@ -7,6 +7,7 @@ import {
   SUBMIT_COMMENT,
   CHANGE_FIELD,
   CLEAR_INPUT,
+  SAVE_ERROR_MESSAGE,
 } from 'src/actions/popup';
 
 const initialState = {
@@ -16,6 +17,9 @@ const initialState = {
   displayErrorMessage: false,
   displayUpdatePassword: false,
   errorContent: '',
+  errorEmail: '',
+  errorPassword: '',
+  errorNickname: '',
   comment: '',
   rating: 0,
   email: '',
@@ -68,6 +72,11 @@ const popupReducer = (state = initialState, action = {}) => {
         rating: '',
       };
     case CLEAR_INPUT:
+      return {
+        ...state,
+        [action.name]: action.newValue,
+      };
+    case SAVE_ERROR_MESSAGE:
       return {
         ...state,
         [action.name]: action.newValue,

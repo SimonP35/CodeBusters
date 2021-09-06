@@ -14,12 +14,12 @@
     background-color: vars.$color-popup-background;
     color: white;
     padding: 5px;
-    width: 300px;
+    width: 380px;
     height: 200px;
     border-radius: 10%;
+    display: flex;
     border-bottom: 10px solid vars.$color-title-two;
     border-right: 10px solid vars.$color-title-two;
-
 
     .errormessage-closed {
       transition: all 0.5s ease;
@@ -37,7 +37,8 @@
     }
     .errormessage-content {
       color: black;
-      margin-top:30%;
+      align-self: center;
+      width: 100%;
     }
   }
 }
