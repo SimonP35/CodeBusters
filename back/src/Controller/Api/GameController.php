@@ -41,8 +41,12 @@ class GameController extends AbstractController
 
         // Si la validation rencontre des erreurs
         if (count($errors) > 0) {
+            
+            // 
+            $errorsString = (string) $errors;
+
             // On renvoie les différentes erreurs sous forme de tableau
-            return $this->json(['errors' => $errors], Response::HTTP_UNPROCESSABLE_ENTITY);
+            return $this->json(['errorsString' => $errorsString], Response::HTTP_UNPROCESSABLE_ENTITY);
         }
 
         // On persist, on flush
