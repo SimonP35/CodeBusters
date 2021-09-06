@@ -1,19 +1,19 @@
 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-<nav class="dark navbar-dark bg-light container-fluid py-3">
+<nav class="navbar-dark bg-dark container-fluid py-3">
 	<div class="row">
 		<div class="col-6">
 			<ul class="nav nav-pills ms-3">
 				<li class="nav-item">
-					<a class="nav-link text-muted {% block User %}{% endblock %}" href="{{ path('back_user_list') }}">Users</a>
+					<a class="nav-link {% if app.request.get('_route') is same as 'back_user_list' %}active{% endif %}" href="{{ path('back_user_list') }}">Users</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link text-muted {% block Comment %}{% endblock %}" href="{{ path('back_comment_list') }}">Comments</a>
+					<a class="nav-link {% if app.request.get('_route') is same as 'back_comment_list' %}active{% endif %}" href="{{ path('back_comment_list') }}">Comments</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link text-muted {% block Score %}{% endblock %}" href="{{ path('back_score_list') }}">High Scores</a>
+					<a class="nav-link {% if app.request.get('_route') is same as 'back_score_list' %}active{% endif %}" href="{{ path('back_score_list') }}">High Scores</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link text-muted {% block Game %}{% endblock %}" href="{{ path('back_game_list') }}">Games</a>
+					<a class="nav-link {% if app.request.get('_route') is same as 'back_game_list' %}active{% endif %}" href="{{ path('back_game_list') }}">Games</a>
 				</li>
 			</ul>
 		</div>

@@ -4,8 +4,6 @@ namespace App\Service;
 
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Response;
 
 class GameEnd
 {

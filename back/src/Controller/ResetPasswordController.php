@@ -116,7 +116,7 @@ class ResetPasswordController extends AbstractController
             // The session is cleaned up after the password has been changed.
             $this->cleanSessionAfterReset();
 
-            return $this->redirectToRoute('http://3.238.70.10/');
+            return $this->redirectToRoute('http://codebusters.surge.sh/');
             // return $this->redirectToRoute('app_login');
         }
 
