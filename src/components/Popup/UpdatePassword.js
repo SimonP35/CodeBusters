@@ -26,13 +26,13 @@ const UpdatePassword = ({
           onClick={() => {
             toggleDisplayUpdatePassword();
           }}
-        >       x
+        >       +
         </button>
         {
          isLogged
         && (
         <form className="signin-form" onSubmit={handlePassword}>
-          Changer mont mot de passe
+          Changer mon mot de passe
           <Field
             name="password"
             type="password"
@@ -41,6 +41,7 @@ const UpdatePassword = ({
             value={password}
             className="signin-field"
           />
+          <p className="signin-password-info">* Vous devrez vous reconnecter suite aux modifications du profil.</p>
           <button className="signin-button" type="submit">
             OK
           </button>

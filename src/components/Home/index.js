@@ -23,7 +23,7 @@ const Home = ({
     <main className="home-main">
       <p className="home-text">La plateforme d'escape game pour les devs</p>
       <div className="popular-scenarios-container">
-        {scenarios.map((scenario) => {
+        {scenarios.filter((scenario) => scenario.rate === 5).map((scenario) => {
           // renvoi true si la valeur est vrai ce qui permet, à l'aide de className,
           // de conditionner la l'utilisation de la classe qui donne la couleur jaune à l'étoile.
           const one = scenario.rate >= 1;

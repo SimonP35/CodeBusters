@@ -15,29 +15,28 @@
   justify-content: flex-start;
   background-color: vars.$color-popup-background;
   box-sizing: border-box;
-   width: 35%;
-   height: 35%;
-   padding:2%;
-   margin:1%;
-   border-bottom: 20px solid vars.$color-title-last ;
-   border-right: 10px solid vars.$color-title-last ;  
+  width: 50%;
+  height: 35%;
+  margin: 1em auto;
+  border-bottom: 20px solid vars.$color-title-five ;
+  border-right: 10px solid vars.$color-title-two ;   
   
 
   .notice-title {
     font-family: "Meta";
     font-size: 2rem;
     text-align: center;
-    color: vars.$color-title-first;
+    color: vars.$color-text-title;
     font-variation-settings: "wght" 900, "ital" 1;
-    padding-bottom:3%;
-    margin:2px;
+    padding:1%;
+    text-transform: uppercase;
   }
    .notice-subtitle {
       font-family: "Meta";
       font-variation-settings: "wght" 900, "ital" 1;
-      color:red;
-      padding-bottom:3%;
-      margin:2px;
+      color: vars.$color-text-title;
+      padding-bottom:1%;
+      margin-top:2%;
     }
   .notice-text {
     font-family:'Quicksand', sans-serif; 

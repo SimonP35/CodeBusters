@@ -26,7 +26,7 @@ const Login = ({
             toggleDisplayLogin();
           }}
         >
-          x
+          +
         </button>
         <form className="login-form" onSubmit={handleSubmit}>
           Me connecter

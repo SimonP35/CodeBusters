@@ -26,7 +26,7 @@ const Comment = ({
           onClick={() => {
             toggleDisplayComment();
           }}
-        >       x
+        >       +
         </button>
         <form className="comment-form" onSubmit={handleSubmit}>
           <h3 className="comment-title">Ton commentaire :</h3>
