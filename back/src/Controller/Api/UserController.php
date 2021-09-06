@@ -47,7 +47,7 @@ class UserController extends AbstractController
         $newErrors = [];
 
         foreach ($errors as $error) {
-            $newErrors[] = $error->getPropertyPath() . ' : ' . $error->getMessage();
+            $newErrors[$error->getPropertyPath()][] = $error->getMessage();
         }
 
         // Si la validation rencontre des erreurs
@@ -56,7 +56,7 @@ class UserController extends AbstractController
             $errorsString = (string) $errors;
 
             // On renvoie les différentes erreurs sous forme de tableau
-            return $this->json(['newErrors' => $newErrors], Response::HTTP_UNPROCESSABLE_ENTITY);
+            return $this->json(['errorsString' => $errorsString], Response::HTTP_UNPROCESSABLE_ENTITY);
         }
 
         // On persist, on flush
