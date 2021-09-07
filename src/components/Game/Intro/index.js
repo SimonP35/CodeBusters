@@ -40,7 +40,7 @@ const Intro = ({
       <div className="intro-container">
         <h2 className="intro-title">{result.nom}</h2>
         <p className="intro-description">{result.description}</p>
-        <img src={result.pic} alt="scenario" />
+        <img className="intro-img" src={result.pic} alt="scenario" />
         <button
           type="button"
           className="intro-button"
