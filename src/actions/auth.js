@@ -4,7 +4,7 @@ export const SAVE_USER_DATA = 'SAVE_USER_DATA';
 export const CLICK_ON_LOGOUT = 'CLICK_ON_LOGOUT';
 export const SUBMIT_SIGNIN = 'SUBMIT_SIGNIN';
 export const SUBMIT_USER_UPDATE = 'SUBMIT_USER_UPDATE';
-export const SAVE_USER_UPDATE = 'SAVE_USER_UPDATE';
+export const SUBMIT_USER_PASSWORD = 'SUBMIT_USER_PASSWORD';
 export const GET_USER_SCORES = 'GET_USER_SCORES';
 export const SAVE_USER_SCORES = 'SAVE_USER_SCORES';
 
@@ -17,11 +17,7 @@ export const saveUserData = (id, nickname, email, token) => ({
   email: email,
   token: token,
 });
-export const saveUserUpdate = (nickname, email) => ({
-  type: SAVE_USER_UPDATE,
-  nickname: nickname,
-  email: email,
-});
+
 export const saveUserScores = (scores) => ({
   type: SAVE_USER_SCORES,
   scores: scores,
@@ -40,6 +36,9 @@ export const submitLogin = () => ({
 });
 export const submitUserUpdate = () => ({
   type: SUBMIT_USER_UPDATE,
+});
+export const submitUserPassword = () => ({
+  type: SUBMIT_USER_PASSWORD,
 });
 export const getUserScores = () => ({
   type: GET_USER_SCORES,

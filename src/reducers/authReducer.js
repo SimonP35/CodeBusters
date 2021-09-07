@@ -1,10 +1,10 @@
 import {
   SAVE_USER_DATA,
-  SAVE_USER_UPDATE,
   CLICK_ON_LOGOUT,
   SUBMIT_LOGIN,
   SUBMIT_SIGNIN,
   SUBMIT_USER_UPDATE,
+  SUBMIT_USER_PASSWORD,
   SAVE_USER_SCORES,
   GET_USER_SCORES,
 } from 'src/actions/auth';
@@ -70,18 +70,17 @@ function authReducer(state = initialState, action = {}) {
         password: '',
         nickname: '',
       };
-    case SAVE_USER_UPDATE:
-      return {
-        ...state,
-        nickname: action.nickname,
-        email: action.email,
-      };
-    case CLEAR_INPUT:
+    case SUBMIT_USER_PASSWORD:
       return {
         ...state,
         email: '',
         password: '',
         nickname: '',
+      };
+    case CLEAR_INPUT:
+      return {
+        ...state,
+        [action.name]: action.newValue,
       };
     case SAVE_USER_SCORES:
       return {

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import Field from './Field';
 import './signin.scss';
-import { handleLogOut } from '../../actions/auth';
 
 const Signin = ({
   toggleDisplaySignin,
@@ -14,6 +13,7 @@ const Signin = ({
   submitSignin,
   submitUserUpdate,
   isLogged,
+  clearInput,
 }) => {
 // if islogged = false submitSignin / sinon submitUserUpdate via authmiddleware
   const handleSubmit = (evt) => {
@@ -24,10 +24,6 @@ const Signin = ({
   const handleUpdate = (evt) => {
     evt.preventDefault();
     submitUserUpdate();
-    handleLogOut();
-    console.log("logout ok");
-    toggleDisplaySignin();
-    console.log("toggle ok");
   };
 
   return (
@@ -38,8 +34,11 @@ const Signin = ({
           className="signin-closed"
           onClick={() => {
             toggleDisplaySignin();
+            clearInput('password', '');
+            clearInput('email', '');
+            clearInput('nickname', '');
           }}
-        >       x
+        >       +
         </button>
         {
         !isLogged
@@ -52,7 +51,6 @@ const Signin = ({
             placeholder="nom"
             manageChange={changeField}
             value={nickname}
-            className="signin-field"
           />
           <Field
             type="email"
@@ -60,7 +58,6 @@ const Signin = ({
             placeholder="email"
             manageChange={changeField}
             value={email}
-            className="signin-field"
           />
           <Field
             name="password"
@@ -68,13 +65,11 @@ const Signin = ({
             placeholder="Mot de passe"
             manageChange={changeField}
             value={password}
-            className="signin-field"
           />
-          <p className="signin-password-info">* Le mot de passe doit contenir 8 caractères dont 1 majuscule, 1 chiffre et 1 caractère spécial.</p>
+          <p className="signin-password-info">* Le mot de passe doit contenir au moins 8 caractères dont 1 majuscule, 1 chiffre et 1 caractère spécial.</p>
           <button className="signin-button" type="submit">
             OK
           </button>
-          
         </form>
         )
         }
@@ -89,7 +84,6 @@ const Signin = ({
         placeholder={nickname}
         manageChange={changeField}
         value={nickname}
-        className="signin-field"
       />
       <Field
         type="email"
@@ -97,8 +91,8 @@ const Signin = ({
         placeholder={email}
         manageChange={changeField}
         value={email}
-        className="signin-field"
       />
+      <p className="signin-password-info">* Vous devrez vous reconnecter suite aux modifications du profil.</p>
       <button className="signin-button" type="submit">
         OK
       </button>
@@ -120,6 +114,7 @@ Signin.propTypes = {
   submitSignin: PropTypes.func.isRequired,
   submitUserUpdate: PropTypes.func.isRequired,
   isLogged: PropTypes.bool.isRequired,
+  clearInput: PropTypes.func.isRequired,
 
 };
 

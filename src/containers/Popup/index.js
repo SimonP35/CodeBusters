@@ -9,12 +9,15 @@ import {
   handleLogOut,
   submitSignin,
   submitUserUpdate,
+  submitUserPassword,
 } from 'src/actions/auth';
 import {
   changeField,
   closedErrormessage,
   toggleDisplayPopupComment,
+  toggleDisplayUpdatePassword,
   submitComment,
+  clearInput,
 } from 'src/actions/popup';
 import { toggleDisplayInput, submitAnswer } from 'src/actions/game';
 // === mapStateToProps
@@ -23,6 +26,7 @@ const mapStateToProps = (state) => ({
   displayLogin: state.popup.displayLogin,
   displaySignin: state.popup.displaySignin,
   displayComment: state.popup.displayComment,
+  displayUpdatePassword: state.popup.displayUpdatePassword,
   displayErrorMessage: state.popup.displayErrorMessage,
   comment: state.popup.comment,
   rating: state.popup.rating,
@@ -43,6 +47,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   toggleDisplayLogin: () => {
     dispatch(toggleDisplayPopupLogin());
+  },
+  toggleDisplayUpdatePassword: () => {
+    dispatch(toggleDisplayUpdatePassword());
   },
   changeField: (newValue, identifier) => {
     dispatch(changeField(newValue, identifier));
@@ -73,6 +80,12 @@ const mapDispatchToProps = (dispatch) => ({
   },
   submitUserUpdate: () => {
     dispatch(submitUserUpdate());
+  },
+  submitUserPassword: () => {
+    dispatch(submitUserPassword());
+  },
+  clearInput: (name, newValue) => {
+    dispatch(clearInput(name, newValue));
   },
 });
 

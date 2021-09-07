@@ -14,18 +14,19 @@
     background-color: vars.$color-popup-background;
     color: white;
     padding: 5px;
-    width: 300px;
+    width: 380px;
     height: 200px;
     border-radius: 10%;
-    border-bottom: 10px solid vars.$color-title-three;
-    border-right: 10px solid vars.$color-title-three;
+    display: flex;
+    border-bottom: 10px solid vars.$color-title-two;
+    border-right: 10px solid vars.$color-title-two;
 
     .errormessage-closed {
       transition: all 0.5s ease;
       position: absolute;
       background-color: vars.$color-background;
       padding: 1.5px 7px;
-      left: 50%;
+      left: 49.5%;
       margin-top: -15px;
       border-radius: 50%;
       border: 2px solid vars.$color-popup-background;
@@ -33,13 +34,11 @@
       -webkit-box-shadow: -4px -2px 6px 0px rgba(0, 0, 0, 0.1);
       -moz-box-shadow: -4px -2px 6px 0px rgba(0, 0, 0, 0.1);
       box-shadow: -3px 1px 6px 0px rgba(0, 0, 0, 0.1);
-
-
     }
     .errormessage-content {
       color: black;
-      margin-bottom: 5px;
-      margin-top: 10px;
+      align-self: center;
+      width: 100%;
     }
   }
 }

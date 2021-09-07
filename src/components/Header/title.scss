@@ -8,16 +8,10 @@
     font-weight: normal;
   }
   .title-container {
-    box-sizing: border-box;
-    margin: 0;
-    padding-top: 5px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    width: 100vw;
-    height: 15vh;
-
+    
     .title-title {
+      padding-left: 0.8em;
+      margin-top: 0.5em;
       transition: all 0.5s;
       -webkit-text-stroke: 2px vars.$color-title-contouring;
       font-variation-settings: "wght" 900, "ital" 1;
@@ -36,7 +30,9 @@
           font-variation-settings: "wght" 900, "ital" 1;
           text-shadow: none;
         }
-      
+        @media screen and (max-width: 768px) {
+          font-size: 2rem;
+      }
     }
   }
   

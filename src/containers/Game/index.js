@@ -9,11 +9,13 @@ import {
   setCurrentImg,
   toggleDisplayInput,
   setAnswer,
-  setWin,
   submitAnswer,
   endGame,
   toggleDisplayDescription,
   setCurrentDescription,
+  setSeconds,
+  setMinutes,
+  setWin,
 } from 'src/actions/game';
 
 import { changeField, toggleDisplayPopupComment } from 'src/actions/popup';
@@ -29,11 +31,12 @@ const mapStateToProps = (state) => ({
   displayPicture: state.game.displayPicture,
   currentImg: state.game.currentImg,
   displayInput: state.game.displayInput,
-  answer: state.game.answer,
   inputGameValue: state.game.inputGameValue,
   win: state.game.win,
   displayDescription: state.game.displayDescription,
   currentDescription: state.game.currentDescription,
+  seconds: state.game.seconds,
+  minutes: state.game.minutes,
 });
 
 // === mapDispatchToProps
@@ -60,10 +63,6 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(setAnswer(newAnswer));
   },
 
-  setWin: () => {
-    dispatch(setWin());
-  },
-
   submitAnswer: () => {
     dispatch(submitAnswer());
   },
@@ -87,6 +86,19 @@ const mapDispatchToProps = (dispatch) => ({
   setCurrentDescription: (newDescription) => {
     dispatch(setCurrentDescription(newDescription));
   },
+
+  setWin: (value) => {
+    dispatch(setWin(value));
+  },
+
+  setSeconds: (value) => {
+    dispatch(setSeconds(value));
+  },
+
+  setMinutes: (value) => {
+    dispatch(setMinutes(value));
+  },
+
 });
 
 // === création de l'assistant

@@ -26,10 +26,6 @@
   width: 200px;
   height: 200px;
   border:none;
-  position:absolute;
-  left:50%;
-  margin:auto;
-  top:50%;
   border-radius: 10%;
   border-bottom: 5px solid vars.$color-title-last ;
   border-top: 5px solid vars.$color-title-four ;  
@@ -75,7 +71,7 @@
     position: absolute;
     background-color: vars.$color-background;
     padding: 1.5px 7px;
-    left: 50%;
+    left: 49.5%;
     margin-left: 30px;
     margin-top: -20px;
     border-radius: 50%;

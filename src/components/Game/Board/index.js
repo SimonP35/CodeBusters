@@ -26,16 +26,18 @@ const Board = ({
   currentImg,
   toggleDisplayInput,
   displayInput,
-  answer,
-  setAnswer,
   inputGameValue,
-  setWin,
   win,
   changeField,
   toggleDisplayDescription,
   currentDescription,
   setCurrentDescription,
   displayDescription,
+  setMinutes,
+  setSeconds,
+  seconds,
+  minutes,
+  submitAnswer,
 }) => {
   useEffect(() => {
     startGame();
@@ -44,8 +46,9 @@ const Board = ({
   return (
     <>
       <Bot />
-      <Timer />
+      <Timer setSeconds={setSeconds} setMinutes={setMinutes} />
       <img className="board-background" src={background} alt="" />
+      {/* ON TE VOIT PETIT COQUIN ! */}
       <Link className="board-home-link" to="/">&#8962;</Link>
       {changeInArray(items).map((item) => (
         <div key={item.name}>
@@ -83,7 +86,6 @@ const Board = ({
             className="board-item"
             onClick={() => {
               toggleDisplayInput();
-              setAnswer(item.answer);
               setCurrentDescription(item.description1);
             }}
           >
@@ -132,6 +134,7 @@ const Board = ({
     displayPicture && (
       <div className="image-container">
         <button
+          className="image-button"
           type="button"
           onClick={() => {
             toggleDisplayPicture();
@@ -154,10 +157,9 @@ const Board = ({
             inputGameValue={inputGameValue}
             changeField={changeField}
             toggleDisplayInput={toggleDisplayInput}
-            answer={answer}
-            setWin={setWin}
             displayDescription={displayDescription}
             toggleDisplayDescription={toggleDisplayDescription}
+            submitAnswer={submitAnswer}
           />
         )
       }
@@ -165,6 +167,7 @@ const Board = ({
         displayDescription && (
           <div className="description-container">
             <button
+              className="description-button"
               type="button"
               onClick={() => {
                 toggleDisplayDescription();
@@ -183,6 +186,13 @@ const Board = ({
         </>
       )
       }
+      {
+        seconds === 0 && minutes === 0 && (
+          <>
+            <Redirect to={`/game/${slug}/loose`} />
+          </>
+        )
+      }
     </>
   );
 };
@@ -197,15 +207,17 @@ Board.propTypes = {
   currentImg: PropTypes.string.isRequired,
   toggleDisplayInput: PropTypes.func.isRequired,
   displayInput: PropTypes.bool.isRequired,
-  answer: PropTypes.string.isRequired,
-  setAnswer: PropTypes.func.isRequired,
   inputGameValue: PropTypes.string.isRequired,
-  setWin: PropTypes.func.isRequired,
   win: PropTypes.bool.isRequired,
   changeField: PropTypes.func.isRequired,
   toggleDisplayDescription: PropTypes.func.isRequired,
   currentDescription: PropTypes.string.isRequired,
   setCurrentDescription: PropTypes.func.isRequired,
   displayDescription: PropTypes.bool.isRequired,
+  setMinutes: PropTypes.func.isRequired,
+  setSeconds: PropTypes.func.isRequired,
+  seconds: PropTypes.number.isRequired,
+  minutes: PropTypes.number.isRequired,
+  submitAnswer: PropTypes.func.isRequired,
 };
 export default Board;

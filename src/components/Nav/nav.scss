@@ -9,6 +9,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top:25px;
 
 
   .nav-link {
@@ -30,5 +31,9 @@
     }
 
   }
+  @media screen and (max-width: 768px) {
+    width: 350px;
+    height: 25px;
+}
 
 }

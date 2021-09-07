@@ -5,26 +5,25 @@ import classNames from 'classnames';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-// import Loader from 'src/components/Loader';
-import banniere from 'src/assets/images/banniere.png';
 import utils from 'src/utils';
 
 import './home.scss';
 
-const { scenarios } = utils[3];
+const { scenarios } = utils[1];
 
 const Home = ({
   isLogged,
   displayErrorMessage,
 }) => (
   <>
+    <div id="stars" />
+    <div id="stars2" />
+    <div id="stars3" />
     <Header />
     <main className="home-main">
-      <div className="home-banniere">
-        <img className="home-banniere-img" src={banniere} alt="banniere-img" />
-      </div>
+      <p className="home-text">La plateforme d'escape game pour les devs</p>
       <div className="popular-scenarios-container">
-        {scenarios.map((scenario) => {
+        {scenarios.filter((scenario) => scenario.rate === 5).map((scenario) => {
           // renvoi true si la valeur est vrai ce qui permet, à l'aide de className,
           // de conditionner la l'utilisation de la classe qui donne la couleur jaune à l'étoile.
           const one = scenario.rate >= 1;
@@ -85,13 +84,15 @@ const Home = ({
                scenario.status === 0
                 && (
                   <>
-                    <div className="unavailable" />
                     <div
-                      className="popular-scenarios-scenario"
-                      key={scenario.id}
+                      className="unavailable"
                       onClick={() => {
                         displayErrorMessage('Désolé mais ce scénario est actuellement indisponible');
                       }}
+                    />
+                    <div
+                      className="popular-scenarios-scenario"
+                      key={scenario.id}
                     >
                       <img className="popular-scenarios-scenario-image" src={scenario.pic} alt="scenario-img" />
                       <h3 className="popular-scenarios-subtitle">{scenario.nom}</h3>
@@ -114,7 +115,6 @@ const Home = ({
         })}
       </div>
     </main>
-    {/* <Loader /> */}
     <Footer />
   </>
 );

@@ -6,222 +6,163 @@
 
 // MOBILE / TAB DEVICE
 
-@media (min-width:600px) {
+// @media (max-width:700px) {
 
-  body {
-    display:flex;
-    background: #020949;
-    margin:0;
-    font-family: 'Quicksand', sans-serif;
-  }
+//   body {
+//     display:flex;
+//     background: #020949;
+//     margin:0;
+//     font-family: 'Quicksand', sans-serif;
+//   }
 
-  @font-face {
-    src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
-      format("woff2");
-    font-family: "Meta";
-    font-style: normal;
-    font-weight: normal;
-  }
-  .mobile-back {
+//   @font-face {
+//     src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+//       format("woff2");
+//     font-family: "Meta";
+//     font-style: normal;
+//     font-weight: normal;
+//   }
+//   .mobile-back {
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    background-color: rgba(15, 15, 15, 0.39);
-  }
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100vw;
+//     height: 100vh;
+//     position: fixed;
+//     top: 0;
+//     background-color: rgba(15, 15, 15, 0.39);
+//   }
 
-  .mobile-container {
+//   .mobile-container {
   
-    background-color:vars.$color-popup-background;
-    width: 400px;;
-    height: 600px;
-    position:absolute;
-    box-sizing: border-box;
-    border-bottom: 10px solid vars.$color-title-two ;
-    border-top: 10px solid vars.$color-title-four ;  
-    border-left: 10px solid vars.$color-title-first ;  
-    border-right: 10px solid vars.$color-title-last ;  
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index:2;
-    backdrop-filter: blur(100px);
+//     background-color:vars.$color-popup-background;
+//     width: 400px;;
+//     height: 600px;
+//     position:absolute;
+//     box-sizing: border-box;
+//     border-bottom: 10px solid vars.$color-title-two ;
+//     border-top: 10px solid vars.$color-title-four ;  
+//     border-left: 10px solid vars.$color-title-first ;  
+//     border-right: 10px solid vars.$color-title-last ;  
+//     display:flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     z-index:2;
+//     backdrop-filter: blur(100px);
   
-  .mobile-title {
-    font-family: "Meta";
-    font-size: 30px;
-    text-align: center;
-    color: vars.$color-title-first;
-    text-shadow: 4px 2.5px 2px vars.$color-title-two;
-    font-variation-settings: "wght" 900, "ital" 1;
-    padding-bottom:10px;
-    margin:2px;
-  }
-  .mobile-subtitle {
-    font-family: "Meta";
-    font-variation-settings: "wght" 900, "ital" 1;
-    color:red;
-    padding-bottom:4px;
-    margin:2px;
-  }
+//   .mobile-title {
+//     font-family: "Meta";
+//     font-size: 30px;
+//     text-align: center;
+//     color: vars.$color-title-first;
+//     text-shadow: 4px 2.5px 2px vars.$color-title-two;
+//     font-variation-settings: "wght" 900, "ital" 1;
+//     padding-bottom:10px;
+//     margin:2px;
+//   }
+//   .mobile-subtitle {
+//     font-family: "Meta";
+//     font-variation-settings: "wght" 900, "ital" 1;
+//     color:red;
+//     padding-bottom:4px;
+//     margin:2px;
+//   }
   
-  .mobile-text {
-    font-family:'Quicksand', sans-serif; 
-    padding-left:50px;
-    padding-right:50px;
-    margin:2px;
-    padding-top:10px;
-  }
-  }
-}
-// IPAD DEVICE
+//   .mobile-text {
+//     font-family:'Quicksand', sans-serif; 
+//     padding-left:50px;
+//     padding-right:50px;
+//     margin:2px;
+//     padding-top:10px;
+//   }
+//   }
+// }
+// // IPAD DEVICE
 
-@media(min-width:900px){
+// @media(max-width:1200px){
 
-  body {
-    display:flex;
-    background: #020949;
-    margin:0;
-    font-family: 'Quicksand', sans-serif;
-  }
+//   body {
+//     display:flex;
+//     background: #020949;
+//     margin:0;
+//     font-family: 'Quicksand', sans-serif;
+//   }
 
-  .mobile-back {
+//   .mobile-back {
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    background-color: rgba(15, 15, 15, 0.39);
-  }
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100vw;
+//     height: 100vh;
+//     position: fixed;
+//     top: 0;
+//     background-color: rgba(15, 15, 15, 0.39);
+//   }
 
-    .mobile-container {
+//     .mobile-container {
 
-  background-color:vars.$color-popup-background;
-  padding:5px;
-  width: 500px;
-  height: 500px;
-  position:absolute;
-  top:auto;
-  bottom:auto;
-  left:auto;
-  right:auto;
-  box-sizing: border-box;
-  margin :auto;
-  border-bottom: 20px solid vars.$color-title-two ;
-  border-top: 20px solid vars.$color-title-four ;  
-  border-left: 20px solid vars.$color-title-first ;  
-  border-right: 20px solid vars.$color-title-last ;  
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-  backdrop-filter: blur(500px);
+//   background-color:vars.$color-popup-background;
+//   padding:5px;
+//   width: 500px;
+//   height: 500px;
+//   position:absolute;
+//   top:auto;
+//   bottom:auto;
+//   left:auto;
+//   right:auto;
+//   box-sizing: border-box;
+//   margin :auto;
+//   border-bottom: 20px solid vars.$color-title-two ;
+//   border-top: 20px solid vars.$color-title-four ;  
+//   border-left: 20px solid vars.$color-title-first ;  
+//   border-right: 20px solid vars.$color-title-last ;  
+//   display:flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   z-index: 2;
+//   backdrop-filter: blur(500px);
 
 
-.mobile-title {
-  font-family: "Meta";
-  font-size: 30px;
-  text-align: center;
-  color: vars.$color-title-first;
-  text-shadow: 4px 2.5px 2px vars.$color-title-two;
-  font-variation-settings: "wght" 900, "ital" 1;
-  padding-bottom:10px;
-  margin:2px;
-}
-.mobile-subtitle {
-  font-family: "Meta";
-  font-variation-settings: "wght" 900, "ital" 1;
-  color:red;
-  padding-bottom:4px;
-  margin:2px;
-}
+// .mobile-title {
+//   font-family: "Meta";
+//   font-size: 30px;
+//   text-align: center;
+//   color: vars.$color-title-first;
+//   text-shadow: 4px 2.5px 2px vars.$color-title-two;
+//   font-variation-settings: "wght" 900, "ital" 1;
+//   padding-bottom:10px;
+//   margin:2px;
+// }
+// .mobile-subtitle {
+//   font-family: "Meta";
+//   font-variation-settings: "wght" 900, "ital" 1;
+//   color:red;
+//   padding-bottom:4px;
+//   margin:2px;
+// }
 
-.mobile-text {
-  font-family:'Quicksand', sans-serif; 
-  padding-left:50px;
-  padding-right:50px;
-  margin:2px;
-  padding-top:10px;
-}
-}
-  }
+// .mobile-text {
+//   font-family:'Quicksand', sans-serif; 
+//   padding-left:50px;
+//   padding-right:50px;
+//   margin:2px;
+//   padding-top:10px;
+// }
+// }
+//   }
 
 // NORMAL DISPLAY
 
-@media(min-width:1200px){
+// @media(min-width:1200px){
 
 body {
-  display:flex;
   background: vars.$color-background;
-  margin:0;
-  max-width: 100;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand', sans-serif;  
 }
 
-.mobile-back {
-
-  display: none;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  background-color: rgba(15, 15, 15, 0.39);
-}
-
-.mobile-container {
-
-  background-color:vars.$color-popup-background;
-  padding:5px;
-  width: 300px;
-  height: 500px;
-  position:absolute;
-  margin :auto;
-  border-bottom: 20px solid vars.$color-title-two ;
-  border-top: 20px solid vars.$color-title-four ;  
-  border-left: 20px solid vars.$color-title-first ;  
-  border-right: 20px solid vars.$color-title-last ;  
-  display:none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-.mobile-title {
-  font-family: "Meta";
-  font-size: 30px;
-  text-align: center;
-  color: vars.$color-title-first;
-  text-shadow: 4px 2.5px 2px vars.$color-title-two;
-  font-variation-settings: "wght" 900, "ital" 1;
-  padding-bottom:10px;
-  margin:2px;
-}
-.mobile-subtitle {
-  font-family: "Meta";
-  font-variation-settings: "wght" 900, "ital" 1;
-  color:red;
-  padding-bottom:4px;
-  margin:2px;
-}
-
-.mobile-text {
-  font-family:'Quicksand', sans-serif; 
-  padding-left:50px;
-  padding-right:50px;
-  margin:2px;
-  padding-top:10px;
-}
-}
-
-}
+// }
 

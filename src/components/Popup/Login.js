@@ -10,6 +10,7 @@ const Login = ({
   email,
   password,
   submitLogin,
+  clearInput,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -24,9 +25,10 @@ const Login = ({
           className="login-closed"
           onClick={() => {
             toggleDisplayLogin();
+            clearInput('password', '');
           }}
         >
-          x
+          +
         </button>
         <form className="login-form" onSubmit={handleSubmit}>
           Me connecter
@@ -36,7 +38,6 @@ const Login = ({
             placeholder="Adresse email"
             manageChange={changeField}
             value={email}
-            className="login-field"
           />
           <Field
             name="password"
@@ -44,7 +45,6 @@ const Login = ({
             placeholder="Mot de passe"
             manageChange={changeField}
             value={password}
-            className="login-field"
           />
           <button className="login-button" type="submit">
             OK
@@ -53,7 +53,6 @@ const Login = ({
         </form>
       </div>
     </div>
-
   );
 };
 
@@ -64,6 +63,7 @@ Login.propTypes = {
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   submitLogin: PropTypes.func.isRequired,
+  clearInput: PropTypes.func.isRequired,
 
 };
 

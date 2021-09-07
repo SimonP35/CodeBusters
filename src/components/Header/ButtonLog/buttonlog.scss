@@ -9,12 +9,9 @@ align-items: center;
 justify-content: space-around;
 width:250px;
 height:100px;
-position:absolute;
-top:5%;
-right:5%;
 border:none;
 font-family: 'Quicksand', sans-serif;
-
+margin-top: 2em;
 
   .log-button {
 
@@ -40,4 +37,7 @@ font-size:12px;
     font-weight: bolder;
     font-size:12px;
   }
+  @media screen and (max-width: 768px) {
+    margin: auto;
+  } 
 }

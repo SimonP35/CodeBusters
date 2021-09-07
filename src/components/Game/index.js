@@ -20,24 +20,28 @@ const Game = ({
   currentImg,
   toggleDisplayInput,
   displayInput,
-  answer,
-  setAnswer,
   inputGameValue,
-  setWin,
   win,
+  setWin,
   changeField,
   endGame,
   toggleDisplayDescription,
   currentDescription,
   setCurrentDescription,
   displayDescription,
+  setMinutes,
+  setSeconds,
+  seconds,
+  minutes,
+  submitAnswer,
+  isLogged,
 }) => (
   // Ici on switch sur les différentes routes de la game
   // On passe d'abord par l'intro ensuite par le plateau
   // et pour finir une page win ou loose
   <Switch>
     <Route path="/game/:slug" exact>
-      <Intro startGame={startGame} />
+      <Intro setWin={setWin} setMinutes={setMinutes} setSeconds={setSeconds} isLogged={isLogged} />
     </Route>
     <Route path="/game/:slug/board">
       <Board
@@ -50,23 +54,25 @@ const Game = ({
         currentImg={currentImg}
         toggleDisplayInput={toggleDisplayInput}
         displayInput={displayInput}
-        answer={answer}
-        setAnswer={setAnswer}
         inputGameValue={inputGameValue}
-        setWin={setWin}
         win={win}
         changeField={changeField}
         toggleDisplayDescription={toggleDisplayDescription}
         currentDescription={currentDescription}
         setCurrentDescription={setCurrentDescription}
         displayDescription={displayDescription}
+        seconds={seconds}
+        minutes={minutes}
+        setMinutes={setMinutes}
+        setSeconds={setSeconds}
+        submitAnswer={submitAnswer}
       />
     </Route>
     <Route path="/game/:slug/win">
-      {win ? <Win endGame={endGame} /> : <NotFound />}
+      {win && isLogged ? <Win endGame={endGame} /> : <NotFound />}
     </Route>
     <Route path="/game/:slug/loose">
-      <Loose endGame={endGame} />
+      {isLogged && minutes === 0 && seconds === 0 ? <Loose endGame={endGame} /> : <NotFound />}
     </Route>
   </Switch>
 );
@@ -81,10 +87,7 @@ Game.propTypes = {
   setCurrentImg: PropTypes.func.isRequired,
   toggleDisplayInput: PropTypes.func.isRequired,
   displayInput: PropTypes.bool.isRequired,
-  answer: PropTypes.string.isRequired,
-  setAnswer: PropTypes.func.isRequired,
   inputGameValue: PropTypes.string.isRequired,
-  setWin: PropTypes.func.isRequired,
   win: PropTypes.bool.isRequired,
   changeField: PropTypes.func.isRequired,
   endGame: PropTypes.func.isRequired,
@@ -92,6 +95,13 @@ Game.propTypes = {
   currentDescription: PropTypes.string.isRequired,
   setCurrentDescription: PropTypes.func.isRequired,
   displayDescription: PropTypes.bool.isRequired,
+  setMinutes: PropTypes.func.isRequired,
+  setSeconds: PropTypes.func.isRequired,
+  setWin: PropTypes.func.isRequired,
+  seconds: PropTypes.number.isRequired,
+  minutes: PropTypes.number.isRequired,
+  submitAnswer: PropTypes.func.isRequired,
+  isLogged: PropTypes.bool.isRequired,
 };
 
 export default Game;

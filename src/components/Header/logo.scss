@@ -2,17 +2,11 @@
 
 .logo-container {
 
-  display: inline-block;
-  position:absolute;
-  left:1%;
-  top:1%;
-
   .logo-logo {
-  max-width: 4em;
-  max-height: 4em;
-  cursor:pointer;
-
+  max-width: 10em;
+  max-height: 10em;
   }
-
-  
+  @media screen and (max-width: 768px) {
+    display: none;
+  } 
 }

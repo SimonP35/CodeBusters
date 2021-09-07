@@ -16,6 +16,7 @@ const mapDispatchToProps = (dispatch) => ({
   displayErrorMessage: (content) => {
     dispatch(displayErrormessage(content));
   },
+
 });
 
 // === création de l'assistant

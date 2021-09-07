@@ -8,7 +8,7 @@ import './bot.scss';
 // Custom hook for setInterval :
 // SOURCE INFO :  https://overreacted.io/making-setinterval-declarative-with-react-hooks/
 
-const displayMessages = utils[4].messages;
+const displayMessages = utils[2].messages;
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();

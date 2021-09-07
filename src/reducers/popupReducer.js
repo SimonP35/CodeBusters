@@ -3,9 +3,11 @@ import {
   DISPLAY_ERRORMESSAGE,
   CLOSED_ERRORMESSAGE,
   TOGGLE_DISPLAY_POPUP_COMMENT,
+  TOGGLE_DISPLAY_UPDATE_PASSWORD,
   SUBMIT_COMMENT,
   CHANGE_FIELD,
   CLEAR_INPUT,
+  SAVE_ERROR_MESSAGE,
 } from 'src/actions/popup';
 
 const initialState = {
@@ -13,11 +15,16 @@ const initialState = {
   displaySignin: false,
   displayComment: false,
   displayErrorMessage: false,
+  displayUpdatePassword: false,
   errorContent: '',
+  errorEmail: '',
+  errorPassword: '',
+  errorNickname: '',
   comment: '',
-  rating: '',
+  rating: 0,
   email: '',
   nickname: '',
+  password: '',
 };
 
 const popupReducer = (state = initialState, action = {}) => {
@@ -36,6 +43,11 @@ const popupReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         displayComment: !state.displayComment,
+      };
+    case TOGGLE_DISPLAY_UPDATE_PASSWORD:
+      return {
+        ...state,
+        displayUpdatePassword: !state.displayUpdatePassword,
       };
     case DISPLAY_ERRORMESSAGE:
       return {
@@ -62,7 +74,12 @@ const popupReducer = (state = initialState, action = {}) => {
     case CLEAR_INPUT:
       return {
         ...state,
-        comment: '',
+        [action.name]: action.newValue,
+      };
+    case SAVE_ERROR_MESSAGE:
+      return {
+        ...state,
+        [action.name]: action.newValue,
       };
     default:
       return state;

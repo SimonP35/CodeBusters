@@ -22,9 +22,21 @@
     width: 1200px;
     height: 675px;
   }
+  .image-button{
+    position: relative;
+    left: 590px
+  }
   .description {
     font-size: 1.5em;
-    color: white;
+    font-weight: bold;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.719);
+    border-radius: 10px;
+    width: 600px;
+    height:200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
  
 }
@@ -40,14 +52,27 @@
   background-color: rgba(15, 15, 15, 0.39);
   .description-nopicture {
     font-size: 1.5em;
-    align-self: center;
-    color: white;
+    font-weight: bold;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.719);
+    border-radius: 10px;
+    width: 20em;
+    min-height:5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+  }
+  .description-button{
+    position: relative;
+    left:230px
   }
 }
 
 .board-home-link {
   position: fixed;
-  top: 50px;
-  left: 50px;
-  font-size: 2em;
+  top: 1%;
+  left: 1%;
+  font-size: 3em;
+  color: red;
 }
