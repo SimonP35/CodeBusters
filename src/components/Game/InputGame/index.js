@@ -23,7 +23,7 @@ const InputGame = ({
           <Field
             name="inputGameValue"
             type="text"
-            placeholder="Votre réponse"
+            placeholder="Votre réponse: /1/2/3/4/5/6.pem"
             manageChange={changeField}
             value={inputGameValue}
             className="InputGame-field"

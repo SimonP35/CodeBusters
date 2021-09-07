@@ -69,10 +69,10 @@ const Game = ({
       />
     </Route>
     <Route path="/game/:slug/win">
-      {win ? <Win endGame={endGame} /> : <NotFound />}
+      {win && isLogged ? <Win endGame={endGame} /> : <NotFound />}
     </Route>
     <Route path="/game/:slug/loose">
-      {minutes === 0 && seconds === 0 ? <Loose endGame={endGame} /> : <NotFound />}
+      {isLogged && minutes === 0 && seconds === 0 ? <Loose endGame={endGame} /> : <NotFound />}
     </Route>
   </Switch>
 );

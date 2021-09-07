@@ -100,7 +100,8 @@ $shadows-big:    multiple-box-shadow(100);
     font-size: 1.5rem;
     text-align: center;
     font-variation-settings: "wght" 900, "ital" 1;
-    margin:1.5em;
+    margin-top:1.5em;
+    margin-bottom: 2.5em;
   }
 .popular-scenarios-container {
   display: flex;
@@ -142,6 +143,7 @@ $shadows-big:    multiple-box-shadow(100);
 
     .popular-scenarios-scenario-rate ul {
       display: flex;
+      margin:0.8em;
     }
 
     .--gold {

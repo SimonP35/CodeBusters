@@ -9,7 +9,7 @@ import {
   toggleDisplayDescription,
 } from 'src/actions/game';
 import { setLoading } from 'src/actions/loading';
-import { clearInput } from 'src/actions/popup';
+import { clearInput, displayErrormessage } from 'src/actions/popup';
 
 const gameMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
@@ -60,8 +60,9 @@ const gameMiddleware = (store) => (next) => (action) => {
           }
           store.dispatch(setLoading());
         })
-        .catch((error) => {
-          console.log(error);
+        .catch(() => {
+          store.dispatch(displayErrormessage('une erreur s\'est produite, veuillez réessayer'));
+          store.dispatch(setLoading());
         });
       break;
     }
@@ -74,13 +75,12 @@ const gameMiddleware = (store) => (next) => (action) => {
             Authorization: `Bearer ${store.getState().auth.token}`,
           },
         })
-        .then((response) => {
-          console.log(response);
+        .then(() => {
           store.dispatch(setLoading());
           store.dispatch(clearInput('inputGameValue', ''));
         })
-        .catch((error) => {
-          console.log(error);
+        .catch(() => {
+          store.dispatch(setLoading());
         });
       break;
     }
