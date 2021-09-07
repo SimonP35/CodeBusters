@@ -14,11 +14,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
   background-color: vars.$color-popup-background;
   box-sizing: border-box;
-  width: 50%;
-  height: 35%;
+  width: 40%;
+  height: 40em;
   margin: 1em auto;
   border-bottom: 20px solid vars.$color-title-five ;
   border-right: 10px solid vars.$color-title-two ;  
@@ -32,14 +32,14 @@
     color: vars.$color-text-title;
     font-variation-settings: "wght"900, "ital"1;
     padding-bottom: 10px;
-    margin: 2px;
+    margin: 1em;
     padding-top:5px;
   }
    .profil-list {
       font-family: "Meta";
       font-variation-settings: "wght" 900, "ital" 1;
       padding-bottom:10px;
-      margin:2px;
+      margin:2em;
       text-align: left;
       text-transform: uppercase;
 
@@ -48,7 +48,7 @@
     color:red;
     padding-left:50px;
     padding-right:50px;
-    margin:2px;
+    margin:0.5em;
   }
 
       &-info {
@@ -56,7 +56,7 @@
         color:black;
         padding-left:50px;
         padding-right:50px;
-        margin:2px;
+        margin:0.5em;
         font-weight: lighter;
         text-transform: lowercase;
       }
@@ -70,21 +70,7 @@
     font-family: "Meta";
     text-transform:uppercase;
     padding:10px;
-    margin:10px;
-    font-size: 15px;
-    border:none;
-
-  }
-
-  .profil-link-password {
-    color:white;
-    background-color: vars.$color-background;
-    width:150px;
-    height:70px;
-    font-family: "Meta";
-    text-transform:uppercase;
-    padding:10px;
-    margin:10px;
+    margin:1em;
     font-size: 15px;
     border:none;
 
