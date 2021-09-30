@@ -14,4 +14,3 @@ Chaque partie démarre avec une mise en contexte et le joueur est accompagné pa
 - Lead Dev Front React (Javascript) : Geoffrey DECOBERT
 - Lead Dev Back Symfony (PHP) : Sacha HUYNH VAN-HARDEBOLLE
 - Product Owner / Dev Back Symfony (PHP) : Simon PEJAC
-- Git Master / Dev Front End React (Javascript) : Valentin VAN WEYDEVELT
