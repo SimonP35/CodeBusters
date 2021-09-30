@@ -8,7 +8,7 @@ Le principe du jeu est de terminer le parcours d’énigmes dans un temps donné
 
 Chaque partie démarre avec une mise en contexte et le joueur est accompagné par un timer et un bot qui lui envoie quelques punchlines dans son évolution.
 
-### La Team
+### L'équipe du projet
 
 - Scrum-master / Dev Front End React (Javascript) : Elena BATTISTI
 - Lead Dev Front React (Javascript) : Geoffrey DECOBERT
