@@ -12,5 +12,6 @@ Chaque partie démarre avec une mise en contexte et le joueur est accompagné pa
 
 - Dev Front End React (Javascript) : Elena BATTISTI
 - Dev Front End React (Javascript) : Geoffrey DECOBERT
+- Dev Front End React (Javascript) : Valentin VAN WEYDEVELT
 - Dev Back End Symfony (PHP) : Sacha HUYNH VAN-HARDEBOLLE
 - Dev Back End Symfony (PHP) : Simon PEJAC
