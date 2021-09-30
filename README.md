@@ -10,7 +10,7 @@ Chaque partie démarre avec une mise en contexte et le joueur est accompagné pa
 
 ### L'équipe du projet
 
-- Scrum-master / Dev Front End React (Javascript) : Elena BATTISTI
-- Lead Dev Front React (Javascript) : Geoffrey DECOBERT
-- Lead Dev Back Symfony (PHP) : Sacha HUYNH VAN-HARDEBOLLE
-- Product Owner / Dev Back Symfony (PHP) : Simon PEJAC
+- Dev Front End React (Javascript) : Elena BATTISTI
+- Dev Front End React (Javascript) : Geoffrey DECOBERT
+- Dev Back End Symfony (PHP) : Sacha HUYNH VAN-HARDEBOLLE
+- Dev Back End Symfony (PHP) : Simon PEJAC
