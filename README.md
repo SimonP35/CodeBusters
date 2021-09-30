@@ -1,4 +1,4 @@
-# Projet-CodeBusters
+# CodeBusters
 
 ## La Team
 
