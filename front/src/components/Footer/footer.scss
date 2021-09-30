@@ -1,0 +1,25 @@
+@use 'src/styles/vars';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+.footer-container {
+ display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  height: 15vh;
+  width: 100vw;
+  margin-bottom: 4em;
+  .footer-link {
+  color:yellow;
+  &:hover {
+    color:vars.$color-nav-link-hover;
+    cursor:pointer;
+  }
+  }
+  
+  .footer-date {
+    color:yellow;
+    margin-right:10px;
+  }
+}

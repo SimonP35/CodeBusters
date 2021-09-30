@@ -1,0 +1,75 @@
+@use 'src/styles/vars';
+
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.notice-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: vars.$color-popup-background;
+  box-sizing: border-box;
+  width: 50%;
+  height: 35%;
+  margin: 1em auto;
+  border-bottom: 20px solid vars.$color-title-five ;
+  border-right: 10px solid vars.$color-title-two ;   
+  
+
+  .notice-title {
+    font-family: "Meta";
+    font-size: 2rem;
+    text-align: center;
+    color: vars.$color-text-title;
+    font-variation-settings: "wght" 900, "ital" 1;
+    padding:1%;
+    text-transform: uppercase;
+  }
+   .notice-subtitle {
+      font-family: "Meta";
+      font-variation-settings: "wght" 900, "ital" 1;
+      color: vars.$color-text-title;
+      padding-bottom:1%;
+      margin-top:2%;
+    }
+  .notice-text {
+    font-family:'Quicksand', sans-serif; 
+    padding-left:50px;
+    padding-right:50px;
+    margin:2px;
+  }
+
+  .notice-link {
+    margin:1%;
+    padding-top:5px;
+    padding-bottom:3%;
+    font-weight: bold;
+    &:hover {
+      color:red;
+    }
+  }
+  .notice-button {
+    background-color: red;
+    color:white;
+    display:inline-block;
+    text-transform:uppercase;
+    font-weight: bold;
+    border:none;
+    width:15%;
+    height:7%;
+    position:absolute;
+      left:42%;
+      right:auto;
+      top:91%;
+      bottom:auto;
+      border-radius:10px;
+      font-family: "Meta";
+
+  }
+}

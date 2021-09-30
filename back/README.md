@@ -1,24 +1,15 @@
-# Projet-CodeBusters
+# Back
 
-## La Team :
-
-- Scrum-master / Dev Front End React (Javascript) : Elena BATTISTI
-- Lead Dev Front React (Javascript) : Geoffrey DECOBERT
-- Lead Dev Back Symfony (PHP) : Sacha HUYNH VAN-HARDEBOLLE
-- Product Owner / Dev Back Symfony (PHP) : Simon PEJAC
-- Git Master / Dev Front End React (Javascript) : Valentin VAN WEYDEVELT
-
-## Instructions :
+## Instructions
 
 - Cloner le projet :
 ```git clone git@github.com:O-clock-Trinity/projet-codebusters.git```
 
 - Créer un .env.local à la racine du dossier "back" avec les informations de votre database :
-```
-DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
-DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7"
-DATABASE_URL="postgresql://db_user:db_password@127.0.0.1:5432/db_name?serverVersion=13&charset=utf8"
-```
+
+```DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"```
+```DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7"```
+```DATABASE_URL="postgresql://db_user:db_password@127.0.0.1:5432/db_name?serverVersion=13&charset=utf8"```
 
 - Toujours à la racine du dossier "back", entrer dans le terminal la commande suivante :
 ```composer install```
@@ -42,7 +33,7 @@ DATABASE_URL="postgresql://db_user:db_password@127.0.0.1:5432/db_name?serverVers
 - Pour utiliser les méthodes du controller ResetPassword, vous devez configurer dans le .env.local le MAILER_DSN :
 ```MAILER_DSN=gmail://USERNAME:PASSWORD@default```
 
-## Infos :
+## Infos
 
 La liste des endpoints et des routes du Back Office sont listés dans le fichier routes-back.md qui se trouve dans le dossier sprint_0.
 
@@ -51,8 +42,7 @@ La liste des endpoints et des routes du Back Office sont listés dans le fichier
 
 NB: Le package symfony/apache-pack étant déjà présent dans le composer.json, vous pouvez l'utiliser pour accéder au Back Office, ou lancer un serveur de dev ```php -S localhost:8000 -t public```
 
-
-## Documentation :
+## Documentation
 
 - [Symfony](https://symfony.com/doc/current/index.html)
 - [JWT Token](https://github.com/lexik/LexikJWTAuthenticationBundle)

@@ -1,0 +1,177 @@
+@use 'src/styles/vars';
+
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@function multiple-box-shadow($n) {
+  $value: '#{random(2000)}px #{random(2000)}px #FFF';
+  @for $i from 2 through $n
+    {$value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';}
+
+  @return unquote($value)
+
+};
+$shadows-small:  multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big:    multiple-box-shadow(100);
+
+#stars{
+  position: absolute; 
+  left: -100px; 
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows-small;
+  animation: animStar 50s linear infinite;
+  
+  &:after{
+    position: absolute;
+    top: 2000px;
+    content: " ";
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-small;
+  }
+}  
+#stars2{
+  position: absolute;
+  left: -100px; 
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows-medium;;
+  animation: animStar 100s linear infinite;
+
+    
+  &:after{
+    position: absolute;
+    top: 2000px;
+    content: " ";
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-medium
+  }
+}  
+#stars3{
+  position: absolute;
+  left: -100px;  
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $shadows-big;
+  animation: animStar 150s linear infinite;
+    
+  &:after{
+    position: absolute;
+    top: 2000px;
+    content: " ";
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $shadows-big;
+  }
+}
+@keyframes animStar{
+  from	{
+    transform: translateY(0px)
+  }
+  to	{	
+    transform: translateY(-2000px)
+  }
+}
+.home-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+
+  .home-text {
+    color: white;
+    font-family: "Meta";
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    font-variation-settings: "wght" 900, "ital" 1;
+    margin-top:1.5em;
+    margin-bottom: 2.5em;
+  }
+.popular-scenarios-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 3px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: vars.$color-popup-background;
+
+  .popular-scenarios-scenario {
+    width: 250px;
+    height: 400px;
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgb(165, 159, 159);
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    .popular-scenarios-scenario-image {
+      width: 150px;
+      height: 150px;
+      border: 2px solid black;
+
+    }
+
+    .popular-scenarios-scenario-text {
+      color: black;
+      border: none;
+      padding: 5px;
+      text-align: justify;
+      margin: 2px;
+      box-sizing: border-box;
+      width: 200px;
+      height: 230px;
+    }
+
+    .popular-scenarios-scenario-rate ul {
+      display: flex;
+      margin:0.8em;
+    }
+
+    .--gold {
+      color: yellow;
+    }
+
+    .scenario-star {
+      color: black;
+    }
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  .popular-scenarios-subtitle {
+    font-family: "Meta";
+    font-variation-settings: "wght"900, "ital"1;
+    color: red;
+    padding-bottom: 2px;
+    margin: 2px;
+  }
+}
+
+.unavailable {
+  width: 260px;
+  height: 415px;
+  background-color: rgba(39, 38, 38, 0.644);
+  position: absolute;
+}
+}

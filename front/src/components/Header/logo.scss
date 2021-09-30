@@ -1,0 +1,12 @@
+@use 'src/styles/vars';
+
+.logo-container {
+
+  .logo-logo {
+  max-width: 10em;
+  max-height: 10em;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  } 
+}
